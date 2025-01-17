@@ -23,19 +23,19 @@ void readMatrix(Matriz &matriz, const std::string filename)
         if (!file || !file.is_open())
             throw std::runtime_error("Erro ao abrir o arquivo");
 
-        int linhas, colunas;
+        int linhas{0}, colunas{0};
         file >> linhas >> colunas;
 
         matriz = Matriz(linhas, colunas);
 
-        int i, j;
-        double valor;
+        int i{0}, j{0};
+        double valor{0.0f};
 
-        /* while (file >> i >> j >> valor)
-         {
-             matriz.insert(i, j, valor);
-         }
-        */
+        while (file >> i >> j >> valor)
+        {
+            matriz.insert(i, j, valor);
+        }
+
         file.close();
     }
     catch (const std::exception &e)
@@ -94,13 +94,34 @@ void salvarMatriz(const Matriz &matriz, unordered_map &matrizes)
     }
 }
 
+void escolherMatrizes(string &filename, string &filename2, const unordered_map &matrizes)
+{
+    std::cout << "Coloque o nome da primeira matriz: ";
+    std::getline(std::cin, filename);
+
+    if (!existeMatriz(filename, matrizes))
+    {
+        std::cout << "Matriz não encontrada" << std::endl;
+        return;
+    }
+
+    std::cout << "Coloque o nome da segunda matriz: ";
+    std::getline(std::cin, filename2);
+
+    if (!existeMatriz(filename2, matrizes))
+    {
+        std::cout << "Matriz não encontrada" << std::endl;
+        return;
+    }
+}
+
 void printMatrizes(const unordered_map &matrizes)
 {
     for (const auto &par : matrizes)
     {
-        std::cout << "-----------------" << std::endl;
-        std::cout << par.first << std::endl;
-        std::cout << "-----------------" << std::endl;
+        std::cout << "------------------" << std::endl;
+        std::cout << par.first << " |" << par.second.getLinhas() << " x " << par.second.getColunas() << "|" << std::endl;
+        std::cout << "-----------------=" << std::endl;
     }
 }
 
@@ -109,6 +130,7 @@ int main()
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     std::cout << "Bem-vindo ao programa de manipulação de matrizes esparsas" << std::endl;
+    std::cout << "-----------------------------------------------------------" << std::endl;
 
     unordered_map matrizes;
 
@@ -145,6 +167,8 @@ int main()
         {
             std::cout << "Qual matriz deseja imprimir?" << std::endl;
 
+            printMatrizes(matrizes);
+
             std::cout << "Coloque o nome do arquivo que deseja imprimir: ";
             string filename;
             std::getline(std::cin, filename);
@@ -160,25 +184,9 @@ int main()
 
             printMatrizes(matrizes);
 
-            std::cout << "Coloque o nome da primeira matriz: ";
-            string filename;
-            std::getline(std::cin, filename);
+            std::string filename, filename2;
 
-            if (!existeMatriz(filename, matrizes))
-            {
-                std::cout << "Matriz não encontrada" << std::endl;
-                break;
-            }
-
-            std::cout << "Coloque o nome da segunda matriz: ";
-            string filename2;
-            std::getline(std::cin, filename2);
-
-            if (!existeMatriz(filename2, matrizes))
-            {
-                std::cout << "Matriz não encontrada" << std::endl;
-                break;
-            }
+            escolherMatrizes(filename, filename2, matrizes);
 
             Matriz matriz = sum(matrizes[filename], matrizes[filename2]);
 
@@ -195,25 +203,9 @@ int main()
 
             printMatrizes(matrizes);
 
-            std::cout << "Coloque o nome da primeira matriz: ";
-            std::string filename;
-            std::getline(std::cin, filename);
+            std::string filename, filename2;
 
-            if (!existeMatriz(filename, matrizes))
-            {
-                std::cout << "Matriz não encontrada" << std::endl;
-                break;
-            }
-
-            std::cout << "Coloque o nome da segunda matriz: ";
-            std::string filename2;
-            std::getline(std::cin, filename2);
-
-            if (!existeMatriz(filename2, matrizes))
-            {
-                std::cout << "Matriz não encontrada" << std::endl;
-                break;
-            }
+            escolherMatrizes(filename, filename2, matrizes);
 
             Matriz matriz = sum(matrizes[filename], matrizes[filename2]);
 

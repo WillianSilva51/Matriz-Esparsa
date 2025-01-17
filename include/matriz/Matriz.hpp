@@ -20,6 +20,14 @@ public:
 
     ~Matriz();
 
+    int getLinhas() const;
+
+    int getColunas() const;
+
+    void limpar();
+
+    Matriz &operator=(const Matriz &matriz);
+
     // Função que irá inserir um valor em um local específico da lista
     // Deverá ser feita uma verificação dos valores
     // ****** INCOMPLETA *******

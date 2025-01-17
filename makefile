@@ -66,7 +66,7 @@ all: $(OUTPUT)
 
 # Criar diretórios se não existirem
 $(OUTPUT_DIR) $(OBJ_DIR):
-	@if not exist $@ ($(MKDIR) $@)
+	@if not exist $@ ($(MKDIR) $@) || if not exist $@ then ($(MKDIR) $@)
 
 # Compilar arquivos .cpp em arquivos .o
 $(OBJ_DIR)/%.o: $(SRC_DIRS)/%.cpp | $(OBJ_DIR)
