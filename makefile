@@ -36,12 +36,16 @@ ifeq ($(OS),Windows_NT)
 	FIXPATH = $(subst /,\,$1)
 	EXT = .exe
 	Cleanup = cls
+	CommandCreate = if not exist $@ ($(MKDIR) $@)
+	ExecuteTest = python $(TESTS_DIR)/run_tests.py $(TESTS_DIR)/cases.tio
 else
 	RM = rm -f
 	MKDIR = mkdir -p
 	FIXPATH = $1
 	EXT = .run
 	Cleanup = clear
+	CommandCreate = if not exist $@ then ($(MKDIR) $@)
+	ExecuteTest = python3 $(TESTS_DIR)/run_tests.py $(TESTS_DIR)/cases.tio
 endif
 
 # Encontrar todos os arquivos .cpp nos diretórios de src, /**/* sub
@@ -66,7 +70,7 @@ all: $(OUTPUT)
 
 # Criar diretórios se não existirem
 $(OUTPUT_DIR) $(OBJ_DIR):
-	@if not exist $@ ($(MKDIR) $@) || if not exist $@ then ($(MKDIR) $@)
+	@$(CommandCreate)
 
 # Compilar arquivos .cpp em arquivos .o
 $(OBJ_DIR)/%.o: $(SRC_DIRS)/%.cpp | $(OBJ_DIR)
@@ -120,7 +124,7 @@ docs:
 # Regra para executar testes
 test: all
 	@echo "Executando os testes..."
-	@python $(TESTS_DIR)/run_tests.py $(TESTS_DIR)/cases.tio || python3 $(TESTS_DIR)/run_tests.py $(TESTS_DIR)/cases.tio
+	@$(ExecuteTest)
 
 ## Regra para inicializar a estrutura de diretórios
 init:

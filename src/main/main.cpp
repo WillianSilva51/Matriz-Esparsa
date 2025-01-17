@@ -121,7 +121,7 @@ void printMatrizes(const unordered_map &matrizes)
     {
         std::cout << "------------------" << std::endl;
         std::cout << par.first << " |" << par.second.getLinhas() << " x " << par.second.getColunas() << "|" << std::endl;
-        std::cout << "-----------------=" << std::endl;
+        std::cout << "------------------" << std::endl;
     }
 }
 
