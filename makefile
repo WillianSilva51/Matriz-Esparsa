@@ -44,7 +44,7 @@ else
 	FIXPATH = $1
 	EXT = .run
 	Cleanup = clear
-	CommandCreate = if not exist $@ then ($(MKDIR) $@)
+	CommandCreate = if [ ! -d "$@" ]; then mkdir "$@"; fi
 	ExecuteTest = python3 $(TESTS_DIR)/run_tests.py $(TESTS_DIR)/cases.tio
 endif
 
