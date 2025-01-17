@@ -52,10 +52,35 @@ int Matriz::getColunas() const
 
 Matriz::~Matriz()
 {
+
+    Node *aux = cabecalho->abaixo;
+    limpar();
+
+    while (aux != cabecalho){
+        Node *temp = aux;
+        aux = aux->abaixo;
+        delete temp;
+    }
 }
 
 void Matriz::limpar()
 {
+
+    Node *linhaAtual = cabecalho->abaixo;
+    Node *colunaAtual = linhaAtual->direita;
+    Node *aux = cabecalho->abaixo;
+
+    while (linhaAtual != aux) {
+        while (colunaAtual != linhaAtual) {
+            Node *temp = colunaAtual;
+            colunaAtual = colunaAtual->direita;
+            delete temp;
+        }
+        Node *temp = linhaAtual;
+        linhaAtual = linhaAtual->abaixo;
+        delete temp;
+    }
+
 }
 
 Matriz &Matriz::operator=(const Matriz &matriz)
