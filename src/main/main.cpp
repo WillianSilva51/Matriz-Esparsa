@@ -227,7 +227,7 @@ int main()
             break;
         }
 
-        std::system("pause");
+        std::system("pause || read -p 'Pressione enter para continuar...' var");
         std::system("cls||clear");
     }
 }
