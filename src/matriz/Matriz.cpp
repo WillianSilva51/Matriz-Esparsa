@@ -1,10 +1,8 @@
 #include "matriz/Matriz.hpp"
 
-Matriz::Matriz() : linhas(0), colunas(0)
+Matriz::Matriz() : cabecalho(new Node(0, 0, 0)), linhas(0), colunas(0)
 {
-    cabecalho = new Node(0, 0, 0);
-    cabecalho->direita = cabecalho;
-    cabecalho->abaixo = cabecalho;
+    cabecalho->direita = cabecalho->abaixo = cabecalho;
 }
 
 Matriz::Matriz(const int &lin, const int &col)
@@ -40,6 +38,26 @@ Matriz::Matriz(const int &lin, const int &col)
     auxColuna->direita = cabecalho;
 }
 
+IteratorM Matriz::begin()
+{
+    return IteratorM();
+}
+
+IteratorM Matriz::end()
+{
+    return IteratorM();
+}
+
+IteratorM Matriz::begin() const
+{
+    return IteratorM();
+}
+
+IteratorM Matriz::end() const
+{
+    return IteratorM();
+}
+
 int Matriz::getLinhas() const
 {
     return linhas;
@@ -52,94 +70,73 @@ int Matriz::getColunas() const
 
 Matriz::~Matriz()
 {
-
     limpar();
 }
 
 void Matriz::limpar()
 {
-
     Node *linhaAtual = cabecalho->abaixo;
     Node *colunaAtual = linhaAtual->direita;
     Node *aux = cabecalho->abaixo;
 
-    while (linhaAtual != aux) {
-        while (colunaAtual != linhaAtual) {
+    while (linhaAtual != aux)
+    {
+        while (colunaAtual != linhaAtual)
+        {
             Node *temp = colunaAtual;
             colunaAtual = colunaAtual->direita;
             delete temp;
-        }   
+        }
         Node *temp = linhaAtual;
         linhaAtual = linhaAtual->abaixo;
         delete temp;
     }
-
 }
 
 Matriz &Matriz::operator=(const Matriz &matriz)
 {
-    // Evitar autoatribuição
     if (this == &matriz)
         return *this;
 
-    // Limpar a matriz atual
-    limpar(); // Supondo que exista um método para desalocar a matriz atual
+    limpar();
 
-    // Copiar as dimensões
-    this->linhas = matriz.linhas;
-    this->colunas = matriz.colunas;
+    linhas = matriz.linhas;
+    colunas = matriz.colunas;
 
-    // Criar o cabeçalho
     cabecalho = new Node(0, 0, 0);
-    cabecalho->direita = cabecalho;
-    cabecalho->abaixo = cabecalho;
+    cabecalho->direita = cabecalho->abaixo = cabecalho;
 
-    // Criar os nós das linhas
     Node *auxLinha = cabecalho;
-    for (int i = 1; i <= linhas; ++i)
+    for (int i = 1; i <= linhas; i++)
     {
         Node *novo = new Node(i, 0, 0);
         auxLinha->abaixo = novo;
         novo->direita = novo;
         auxLinha = novo;
     }
-
     auxLinha->abaixo = cabecalho;
 
-    // Criar os nós das colunas
-
     Node *auxColuna = cabecalho;
-    for (int j = 1; j <= colunas; ++j)
+    for (int j = 1; j <= colunas; j++)
     {
         Node *novo = new Node(0, j, 0);
         auxColuna->direita = novo;
         novo->abaixo = novo;
         auxColuna = novo;
     }
-
     auxColuna->direita = cabecalho;
 
-    // Copiar os valores
-    Node *linhaAtual = matriz.cabecalho->abaixo;
-    Node *linhaDestino = cabecalho->abaixo;
+    Node *auxM = matriz.cabecalho->abaixo;
 
-    while (linhaAtual != matriz.cabecalho)
+    while (auxM != matriz.cabecalho)
     {
-        Node *noAtual = linhaAtual->direita;
-        Node *noDestino = linhaDestino->direita;
-
-        while (noAtual != linhaAtual)
+        Node *auxN = auxM->direita;
+        while (auxN != auxM)
         {
-            Node *novo = new Node(noAtual->linha, noAtual->coluna, noAtual->valor);
-            noDestino->direita = novo;
-            novo->direita = novo;
-            noDestino = novo;
-            noAtual = noAtual->direita;
+            insert(auxN->linha, auxN->coluna, auxN->valor);
+            auxN = auxN->direita;
         }
-
-        noDestino->direita = linhaDestino;
-        linhaAtual = linhaAtual->abaixo;
-        linhaDestino = linhaDestino->abaixo;
+        auxM = auxM->abaixo;
     }
 
     return *this;
@@ -203,6 +200,32 @@ void Matriz::insert(const int &posI, const int &posJ, const double &value)
 }
 
 double Matriz::get(const int &posI, const int &posJ)
+{
+    if (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)
+        throw std::invalid_argument("Erro: Local de acesso inválido");
+
+    Node *auxLinha = cabecalho;
+
+    while (auxLinha->linha < posI && auxLinha->abaixo != cabecalho)
+    {
+        auxLinha = auxLinha->abaixo;
+    }
+
+    Node *auxColuna = auxLinha;
+    while (auxColuna->coluna < posJ && auxColuna->direita != auxLinha)
+    {
+        auxColuna = auxColuna->direita;
+
+        if (auxColuna->coluna == posJ)
+        {
+            return auxColuna->valor;
+        }
+    }
+
+    return 0;
+}
+
+double Matriz::get(const int &posI, const int &posJ) const
 {
     if (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)
         throw std::invalid_argument("Erro: Local de acesso inválido");

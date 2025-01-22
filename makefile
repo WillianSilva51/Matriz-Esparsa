@@ -128,7 +128,7 @@ test: all
 
 ## Regra para inicializar a estrutura de diretórios
 init:
-	@mkdir "$(SRC_DIRS)/main" "$(INCLUDE_DIRS)" "$(LIB_DIRS)" "$(TESTS_DIR)/log" 2>nul || echo "Alguns diretorios ja existem."
+	@mkdir "$(SRC_DIRS)/Main" "$(INCLUDE_DIRS)" "$(LIB_DIRS)" "$(TESTS_DIR)/log" 2>nul || echo "Alguns diretorios ja existem."
 	@$(Cleanup)
 
 .PHONY: all clean run test docs init
