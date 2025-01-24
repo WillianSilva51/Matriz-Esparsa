@@ -78,12 +78,54 @@ public:
 
     ~Matriz();
 
+    /**
+     * @brief Inicializa um iterador que aponta para o primeiro elemento significativo da matriz.
+     *
+     * Esta função permite obter um iterador para o primeiro nó principal da matriz esparsa
+     * (localizado logo abaixo do cabeçalho), facilitando o acesso aos elementos e a
+     * manipulação da estrutura de dados. O iterador retornado aponta para o primeiro
+     * nó relevante da linha principal, permitindo assim percorrer as colunas de forma
+     * apropriada.
+     *
+     * @return Retorna um objeto de iterador (IteratorM) posicionado no início da matriz esparsa.
+     *
+     * @note Esse método presume que a matriz está devidamente inicializada e que o cabeçalho
+     *       aponta para posicionamentos válidos da estrutura.
+     */
     IteratorM begin();
 
+    /**
+     * @brief Iterador que aponta para o final da matriz.
+     *
+     * Esta função provê um objeto IteratorM associado à lista principal
+     * de nós da matriz esparsa, indicando uma posição que corresponde
+     * ao final da estrutura de dados.
+     *
+     * @return IteratorM Objeto iterador apontando para o final da matriz.
+     */
     IteratorM end();
 
+    /**
+     * @brief Iterador que aponta para o primeiro elemento significativo da matriz (versão const).
+     *
+     * Esta função é uma sobrecarga da função begin() que permite obter um iterador
+     * para o primeiro nó principal da matriz esparsa, sem permitir alterações nos
+     * valores da matriz. O iterador retornado aponta para o primeiro nó relevante
+     *
+     * @return IteratorM Objeto iterador apontando para o início da matriz.
+     *
+     */
     IteratorM begin() const;
 
+    /**
+     * @brief Iterador que aponta para o final da matriz (versão const).
+     *
+     * Esta função é uma sobrecarga da função end() que permite obter um iterador
+     * para o final da matriz esparsa, sem permitir alterações nos valores da matriz.
+     * O iterador retornado aponta para o final da estrutura de dados.
+     *
+     * @return IteratorM Objeto iterador apontando para o final da matriz.
+     */
     IteratorM end() const;
 
     /**
@@ -108,13 +150,12 @@ public:
 
     void limpar();
 
-    Matriz &operator=(const Matriz &matriz);
-
     void insert(const int &posI, const int &posJ, const double &value);
 
     /**
      * @brief Retorna o valor armazenado na matriz em uma posição específica.
      *
+     * @details
      * Esta função busca o valor localizado na linha e coluna indicadas
      * por @p posI e @p posJ. Se não houver nenhum valor armazenado nessa
      * posição (ou seja, se o nó correspondente não existir), a função

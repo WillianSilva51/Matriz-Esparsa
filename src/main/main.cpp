@@ -1,7 +1,7 @@
 /**
  *  @authors
  * - Antonio Willian Silva Oliveira - 567294 (
- * - Iago de Oliveira Lo - matricula (
+ * - Iago de Oliveira Lo - 565321 (
  */
 
 #include <fstream>
@@ -11,7 +11,7 @@
 using string = std::string;
 using unordered_map = std::unordered_map<string, Matriz>;
 
-enum Opcoes
+enum Opcoes // Enumeração para as opções do menu
 {
     LER_MATRIZ = 1,
     IMPRIMIR_MATRIZ,
@@ -276,8 +276,10 @@ int main()
         }
 
         default:
+        {
             std::cout << "Opção inválida" << std::endl;
             break;
+        }
         }
 
         std::system("pause || read -p 'Pressione enter para continuar...' var");

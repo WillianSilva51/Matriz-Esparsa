@@ -1,4 +1,5 @@
 #include "matriz/Matriz.hpp"
+#include <iomanip>
 
 Matriz::Matriz() : cabecalho(new Node(0, 0, 0)), linhas(0), colunas(0)
 {
@@ -14,8 +15,7 @@ Matriz::Matriz(const int &lin, const int &col)
     colunas = col;
 
     cabecalho = new Node(0, 0, 0);
-    cabecalho->direita = cabecalho;
-    cabecalho->abaixo = cabecalho;
+    cabecalho->direita = cabecalho->abaixo = cabecalho;
 
     Node *auxLinha = cabecalho;
     for (int i = 1; i <= lin; i++)
@@ -40,22 +40,22 @@ Matriz::Matriz(const int &lin, const int &col)
 
 IteratorM Matriz::begin()
 {
-    return IteratorM();
+    return IteratorM(cabecalho->abaixo, cabecalho->abaixo->direita);
 }
 
 IteratorM Matriz::end()
 {
-    return IteratorM();
+    return IteratorM(cabecalho);
 }
 
 IteratorM Matriz::begin() const
 {
-    return IteratorM();
+    return IteratorM(cabecalho->abaixo, cabecalho->abaixo->direita);
 }
 
 IteratorM Matriz::end() const
 {
-    return IteratorM();
+    return IteratorM(cabecalho);
 }
 
 int Matriz::getLinhas() const
@@ -93,55 +93,6 @@ void Matriz::limpar()
     }
 }
 
-Matriz &Matriz::operator=(const Matriz &matriz)
-{
-    if (this == &matriz)
-        return *this;
-
-    limpar();
-
-    linhas = matriz.linhas;
-    colunas = matriz.colunas;
-
-    cabecalho = new Node(0, 0, 0);
-    cabecalho->direita = cabecalho->abaixo = cabecalho;
-
-    Node *auxLinha = cabecalho;
-    for (int i = 1; i <= linhas; i++)
-    {
-        Node *novo = new Node(i, 0, 0);
-        auxLinha->abaixo = novo;
-        novo->direita = novo;
-        auxLinha = novo;
-    }
-    auxLinha->abaixo = cabecalho;
-
-    Node *auxColuna = cabecalho;
-    for (int j = 1; j <= colunas; j++)
-    {
-        Node *novo = new Node(0, j, 0);
-        auxColuna->direita = novo;
-        novo->abaixo = novo;
-        auxColuna = novo;
-    }
-    auxColuna->direita = cabecalho;
-
-    Node *auxM = matriz.cabecalho->abaixo;
-
-    while (auxM != matriz.cabecalho)
-    {
-        Node *auxN = auxM->direita;
-        while (auxN != auxM)
-        {
-            insert(auxN->linha, auxN->coluna, auxN->valor);
-            auxN = auxN->direita;
-        }
-        auxM = auxM->abaixo;
-    }
-
-    return *this;
-}
-
 void Matriz::insert(const int &posI, const int &posJ, const double &value)
 {
     // Não armazena valores iguais a zero
@@ -169,7 +120,7 @@ void Matriz::insert(const int &posI, const int &posJ, const double &value)
     // Verifica se o nó já existe
     if (aux->direita->coluna == posJ)
     {
-        aux->direita->valor = value; // Atualiza o valor
+        aux->direita->atualizaValor(value); // Atualiza o valor
         return;
     }
 
@@ -263,12 +214,12 @@ void Matriz::print()
 
             if (noAtual->linha == i && noAtual->coluna == j && noAtual != aux)
             {
-                std::cout << noAtual->valor;
+                std::cout << std::fixed << std::setprecision(1) << noAtual->valor;
                 noAtual = noAtual->direita;
             }
             else
             {
-                std::cout << "0";
+                std::cout << "0.0";
             }
             std::cout << " ";
         }

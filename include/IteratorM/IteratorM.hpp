@@ -22,6 +22,8 @@ public:
 
     IteratorM() : cabecalho(nullptr), current(nullptr) {}
 
+    IteratorM(Node *cabecalho, Node *current = nullptr) : cabecalho(cabecalho), current(current) {}
+
     reference operator*()
     {
         return current->valor;
@@ -44,11 +46,6 @@ public:
 
     IteratorM &operator++()
     {
-        if (current == cabecalho)
-            current = current->abaixo->direita;
-
-        current = current->direita;
-        return *this;
     }
 };
 
