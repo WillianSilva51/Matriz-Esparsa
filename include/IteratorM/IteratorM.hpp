@@ -46,6 +46,21 @@ public:
 
     IteratorM &operator++()
     {
+
+    current = current->direita;  // Avança para o próximo nó na linha
+
+    // Se avançamos além da última coluna, vamos para a primeira coluna da próxima linha
+    if (current == cabecalho || current->coluna == 0) {
+        current = current->abaixo->direita;
+    }
+
+    return *this;
+    }
+
+    // Comparação para verificar se o iterador é diferente de outro
+    bool operator!=(const IteratorM &other) const
+    {
+        return current != other.current;
     }
 };
 
