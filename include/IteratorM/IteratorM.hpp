@@ -1,7 +1,7 @@
 #ifndef ITERATORM_HPP
 #define ITERATORM_HPP
 
-#include "Matriz/Matriz.hpp"
+#include "matriz/Matriz.hpp"
 
 class Matriz;
 

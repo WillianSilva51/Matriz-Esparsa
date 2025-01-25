@@ -7,8 +7,9 @@ Matriz::Matriz() : cabecalho(new Node(0, 0, 0)), linhas(0), colunas(0)
 }
 
 Matriz::Matriz(const int &lin, const int &col)
+
 {
-    if (lin <= 0 || col <= 0)
+    if (lin <= 0 || col <= 0) 
         throw std::invalid_argument("Erro: Tamanho de matriz inválido, insira valores maiores que 0");
 
     linhas = lin;
