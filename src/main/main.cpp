@@ -342,14 +342,14 @@ Matriz multiply(const Matriz &matrizA, const Matriz &matrizB)
     Matriz matriz(matrizA.getLinhas(), matrizB.getColunas());
 
     // Percorrendo as linhas de matrizA e as colunas de matrizB
-    for (int i = 0, linha = matrizA.getLinhas(); i < linha; i++)
+    for (int i = 1, linha = matrizA.getLinhas(); i < linha; i++)
     {   
-        for (int j = 0, coluna = matrizB.getColunas(); j < coluna; j++)
+        for (int j = 1, coluna = matrizB.getColunas(); j < coluna; j++)
         {
             double valor = 0;
 
             // Calculando o produto escalar entre a linha i de A e a coluna j de B
-            for (int k = 0; k < matrizA.getColunas(); k++) {
+            for (int k = 1; k < matrizA.getColunas(); k++) {
                 valor += matrizA.get(i, k) * matrizB.get(k, j);
             }
 
