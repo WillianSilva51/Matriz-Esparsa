@@ -76,6 +76,13 @@ public:
      */
     Matriz(const int &ln, const int &cl);
 
+    /**
+     * @brief Destrutor da classe Matriz.
+     *
+     * Este destrutor é responsável por liberar os recursos alocados pela instância da classe Matriz.
+     * Ele chama a função limpar() para garantir que toda a memória dinâmica utilizada pela matriz
+     * seja devidamente desalocada, evitando vazamentos de memória.
+     */
     ~Matriz();
 
     /**
@@ -148,8 +155,58 @@ public:
      */
     int getColunas() const;
 
+    /**
+     * @brief Limpa a matriz esparsa, removendo todos os nós.
+     *
+     * @details
+     * Esta função percorre todos os nós da matriz esparsa, começando pelo nó
+     * imediatamente abaixo do cabeçalho e, em seguida, removendo todos os nós
+     * em cada linha e coluna. A função utiliza dois loops aninhados: o loop
+     * externo percorre cada linha da matriz, enquanto o loop interno percorre
+     * cada nó em uma linha específica. Cada nó é deletado para liberar a memória
+     * alocada dinamicamente.
+     *
+     * Variáveis:
+     * - linhaAtual: Ponteiro para o nó atual na linha que está sendo processada.
+     * - colunaAtual: Ponteiro para o nó atual na coluna que está sendo processada.
+     * - aux: Ponteiro auxiliar que aponta para o nó imediatamente abaixo do cabeçalho.
+     *
+     * O loop externo continua até que todas as linhas tenham sido processadas,
+     * e o loop interno continua até que todos os nós em uma linha específica
+     * tenham sido deletados.
+     */
     void limpar();
 
+    /**
+     * @brief Insere um valor em uma posição específica da matriz esparsa.
+     *
+     * Esta função permite inserir uma nova célula com valor diferente de zero
+     * em uma matriz esparsa, levando em conta sua organização em listas
+     * duplamente encadeadas na horizontal e vertical. Qualquer valor igual a zero
+     * é ignorado, pois não se armazena valores nulos na estrutura. Caso a posição
+     * informada não seja válida, uma exceção de argumento inválido é lançada.
+     *
+     * @param posI Índice da linha na qual a célula será inserida.
+     *             Deve ser um valor positivo e menor ou igual ao número total
+     *             de linhas da matriz.
+     * @param posJ Índice da coluna na qual a célula será inserida.
+     *             Deve ser um valor positivo e menor ou igual ao número total
+     *             de colunas da matriz.
+     * @param value Valor a ser armazenado na nova célula. Valores iguais a zero
+     *              não são inseridos na matriz.
+     *
+     * @throws std::invalid_argument Lançada quando (posI, posJ) excede os
+     *                               limites de linhas ou colunas definidos
+     *                               para a matriz.
+     *
+     * @details
+     * A função percorre primeiro a lista horizontal (linha) correspondente
+     * para localizar a posição adequada. Caso já exista um nó na mesma coluna,
+     * o valor é atualizado. Se não existir, cria-se um novo nó para armazenar
+     * o valor na posição indicada. Após isso, a função também atualiza a
+     * referência vertical (coluna), posicionando o novo nó de forma adequada
+     * na estrutura de dados.
+     */
     void insert(const int &posI, const int &posJ, const double &value);
 
     /**

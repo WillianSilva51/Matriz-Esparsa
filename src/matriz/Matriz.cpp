@@ -9,7 +9,7 @@ Matriz::Matriz() : cabecalho(new Node(0, 0, 0)), linhas(0), colunas(0)
 Matriz::Matriz(const int &lin, const int &col)
 
 {
-    if (lin <= 0 || col <= 0) 
+    if (lin <= 0 || col <= 0)
         throw std::invalid_argument("Erro: Tamanho de matriz inválido, insira valores maiores que 0");
 
     linhas = lin;
@@ -46,7 +46,7 @@ IteratorM Matriz::begin()
 
 IteratorM Matriz::end()
 {
-    return IteratorM(cabecalho);
+    return IteratorM(cabecalho, cabecalho->direita);
 }
 
 IteratorM Matriz::begin() const
@@ -56,7 +56,7 @@ IteratorM Matriz::begin() const
 
 IteratorM Matriz::end() const
 {
-    return IteratorM(cabecalho);
+    return IteratorM(cabecalho, cabecalho->direita);
 }
 
 int Matriz::getLinhas() const
@@ -156,22 +156,17 @@ double Matriz::get(const int &posI, const int &posJ)
     if (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)
         throw std::invalid_argument("Erro: Local de acesso inválido");
 
-    Node *auxLinha = cabecalho;
+    IteratorM it = begin();
 
-    while (auxLinha->linha < posI && auxLinha->abaixo != cabecalho)
+    while (it != end())
     {
-        auxLinha = auxLinha->abaixo;
-    }
+        if (it.current->linha == posI && it.current->coluna == posJ)
+            return *it;
 
-    Node *auxColuna = auxLinha;
-    while (auxColuna->coluna < posJ && auxColuna->direita != auxLinha)
-    {
-        auxColuna = auxColuna->direita;
+        if (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))
+            return 0;
 
-        if (auxColuna->coluna == posJ)
-        {
-            return auxColuna->valor;
-        }
+        ++it;
     }
 
     return 0;
@@ -182,22 +177,17 @@ double Matriz::get(const int &posI, const int &posJ) const
     if (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)
         throw std::invalid_argument("Erro: Local de acesso inválido");
 
-    Node *auxLinha = cabecalho;
+    IteratorM it = begin();
 
-    while (auxLinha->linha < posI && auxLinha->abaixo != cabecalho)
+    while (it != end())
     {
-        auxLinha = auxLinha->abaixo;
-    }
+        if (it.current->linha == posI && it.current->coluna == posJ)
+            return *it;
 
-    Node *auxColuna = auxLinha;
-    while (auxColuna->coluna < posJ && auxColuna->direita != auxLinha)
-    {
-        auxColuna = auxColuna->direita;
+        if (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))
+            return 0;
 
-        if (auxColuna->coluna == posJ)
-        {
-            return auxColuna->valor;
-        }
+        ++it;
     }
 
     return 0;
@@ -205,28 +195,24 @@ double Matriz::get(const int &posI, const int &posJ) const
 
 void Matriz::print()
 {
-    Node *linhaAtual = cabecalho->abaixo;
-    Node *noAtual = linhaAtual->direita;
-    Node *aux = cabecalho->abaixo;
+    IteratorM it = begin();
+    
     for (int i = 1; i <= linhas; i++)
     {
         for (int j = 1; j <= colunas; j++)
         {
-
-            if (noAtual->linha == i && noAtual->coluna == j && noAtual != aux)
+            if (it.current->linha == i && it.current->coluna == j)
             {
-                std::cout << std::fixed << std::setprecision(1) << noAtual->valor;
-                noAtual = noAtual->direita;
+                std::cout << std::fixed << std::setprecision(1) << *it;
+                ++it;
             }
             else
             {
                 std::cout << "0.0";
             }
             std::cout << " ";
+            
         }
         std::cout << std::endl;
-        linhaAtual = linhaAtual->abaixo;
-        aux = aux->abaixo;
-        noAtual = linhaAtual->direita;
     }
 }

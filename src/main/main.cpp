@@ -63,6 +63,23 @@ void readMatrix(Matriz &matriz, const std::string filename);
  */
 Matriz sum(const Matriz &matrixA, const Matriz &matrizB);
 
+/**
+ * @brief Multiplica duas matrizes e retorna a matriz resultante.
+ *
+ * Esta função realiza a multiplicação de duas matrizes, matrizA e matrizB, e retorna a matriz resultante.
+ * A multiplicação de matrizes é possível apenas se o número de colunas de matrizA for igual ao número de linhas de matrizB.
+ * Caso contrário, uma exceção std::invalid_argument será lançada.
+ *
+ * @param matrizA A primeira matriz a ser multiplicada.
+ * @param matrizB A segunda matriz a ser multiplicada.
+ * @return Matriz A matriz resultante da multiplicação de matrizA e matrizB.
+ * @throws std::invalid_argument Se o número de colunas de matrizA for diferente do número de linhas de matrizB.
+ *
+ * @details
+ * A multiplicação de matrizes é realizada da seguinte forma:
+ * - Para cada linha i de matrizA e cada coluna j de matrizB, calcula-se o produto escalar entre a linha i de matrizA e a coluna j de matrizB.
+ * - O valor resultante é inserido na posição (i, j) da matriz resultante.
+ */
 Matriz multiply(const Matriz &matrizA, const Matriz &matrizB);
 
 /**
@@ -116,24 +133,6 @@ void escolherMatrizes(string &filename, string &filename2);
  */
 void printMatrizes(const unordered_map &matrizes);
 
-/**
- * @file main.cpp
- * @brief Programa para manipulação de matrizes esparsas.
- *
- * Este programa permite ao usuário ler, imprimir, somar e multiplicar matrizes esparsas.
- * As matrizes são armazenadas em um mapa não ordenado (unordered_map) e identificadas pelo nome do arquivo de origem.
- *
- * @details O programa exibe um menu com as seguintes opções:
- * - Ler Matriz: Lê uma matriz a partir de um arquivo e a armazena no mapa.
- * - Imprimir Matriz: Imprime uma matriz armazenada no mapa.
- * - Somar Matrizes: Soma duas matrizes armazenadas no mapa e exibe o resultado.
- * - Multiplicar Matrizes: Multiplica duas matrizes armazenadas no mapa e exibe o resultado.
- * - Sair: Encerra o programa.
- *
- * @note O programa utiliza a codificação "pt_BR.UTF-8" para suportar caracteres especiais em português.
- *
- * @return 0 Indica que o programa foi encerrado com sucesso.
- */
 int main()
 {
     setlocale(LC_ALL, "pt_BR.UTF-8");
@@ -141,7 +140,7 @@ int main()
     std::cout << "Bem-vindo ao programa de manipulação de matrizes esparsas" << std::endl;
     std::cout << "-----------------------------------------------------------" << std::endl;
 
-    unordered_map matrizes;
+    unordered_map matrizes; /**< Mapa associativo para armazenar as matrizes */
 
     while (true)
     {
@@ -254,7 +253,7 @@ int main()
 
             try
             {
-                Matriz matriz = multiply(matrizes[filename], matrizes[filename2]);
+                matriz = multiply(matrizes[filename], matrizes[filename2]);
             }
             catch (const std::exception &e)
             {
@@ -278,6 +277,8 @@ int main()
         default:
         {
             std::cout << "Opção inválida" << std::endl;
+            std::cin.clear();
+            std::cin.ignore();
             break;
         }
         }
@@ -323,8 +324,7 @@ Matriz sum(const Matriz &matrixA, const Matriz &matrizB)
         {
             double valor = matrixA.get(i, j) + matrizB.get(i, j);
 
-            if (valor != 0)
-                matriz.insert(i, j, valor);
+            matriz.insert(i, j, valor);
         }
     }
 
@@ -334,7 +334,8 @@ Matriz sum(const Matriz &matrixA, const Matriz &matrizB)
 Matriz multiply(const Matriz &matrizA, const Matriz &matrizB)
 {
     // Verificação se a multiplicação é possível
-    if (matrizA.getColunas() != matrizB.getLinhas()) {
+    if (matrizA.getColunas() != matrizB.getLinhas())
+    {
         throw std::invalid_argument("Erro: As matrizes precisam ter o mesmo número de colunas e linhas");
     }
 
@@ -343,24 +344,23 @@ Matriz multiply(const Matriz &matrizA, const Matriz &matrizB)
 
     // Percorrendo as linhas de matrizA e as colunas de matrizB
     for (int i = 1, linha = matrizA.getLinhas(); i <= linha; i++)
-    {   
+    {
         for (int j = 1, coluna = matrizB.getColunas(); j <= coluna; j++)
         {
             double valor = 0;
 
             // Calculando o produto escalar entre a linha i de A e a coluna j de B
-            for (int k = 1; k < matrizA.getColunas(); k++) {
+            for (int k = 1; k <= matrizA.getColunas(); k++)
+            {
                 valor += matrizA.get(i, k) * matrizB.get(k, j);
             }
 
-            // Inserindo o valor calculado na matriz resultante
             matriz.insert(i, j, valor);
         }
     }
 
-    return matriz;  // Retorna a matriz resultante
+    return matriz; // Retorna a matriz resultante
 }
-
 
 bool existeMatriz(const std::string filename, const unordered_map &matrizes)
 {

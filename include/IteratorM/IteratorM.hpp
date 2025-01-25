@@ -5,13 +5,21 @@
 
 class Matriz;
 
+/**
+ * @class IteratorM
+ * @brief Iterador para percorrer uma matriz esparsa.
+ *
+ * A classe IteratorM fornece um iterador para percorrer os elementos de uma matriz esparsa.
+ *
+ * @friend class Matriz
+ */
 class IteratorM
 {
     friend class Matriz;
 
 private:
-    Node *cabecalho;
-    Node *current;
+    Node *cabecalho; /**< Ponteiro para o nó de cabeçalho. */
+    Node *current;   /**< Ponteiro para o nó atual. */
 
 public:
     using iterator_category = std::forward_iterator_tag;
@@ -20,47 +28,122 @@ public:
     using pointer = double *;
     using reference = double &;
 
+    /**
+     * @brief Construtor padrão.
+     *
+     * Inicializa o iterador com ponteiros nulos.
+     */
     IteratorM() : cabecalho(nullptr), current(nullptr) {}
 
-    IteratorM(Node *cabecalho, Node *current = nullptr) : cabecalho(cabecalho), current(current) {}
+    /**
+     * @brief Construtor com parâmetros.
+     *
+     * Inicializa o iterador com o nó de cabeçalho e o nó atual.
+     *
+     * @param cabecalho Ponteiro para o nó de cabeçalho.
+     * @param current Ponteiro para o nó atual (padrão é nullptr).
+     */
+    IteratorM(Node *cabecalho, Node *current) : cabecalho(cabecalho), current(current)
+    {
+        while (current == cabecalho)
+        {
+            cabecalho = cabecalho->abaixo;
+            current = current->abaixo->direita;
+        }
+    }
 
+    /**
+     * @brief Operador de desreferenciação.
+     *
+     * Retorna uma referência ao valor do nó atual.
+     *
+     * @return Referência ao valor do nó atual.
+     */
     reference operator*()
     {
         return current->valor;
     }
 
+    /**
+     * @brief Operador de desreferenciação (const).
+     *
+     * Retorna uma referência constante ao valor do nó atual.
+     *
+     * @return Referência constante ao valor do nó atual.
+     */
     reference operator*() const
     {
         return current->valor;
     }
 
+    /**
+     * @brief Operador de acesso a membro (const).
+     *
+     * Retorna um ponteiro constante para o valor do nó atual.
+     *
+     * @return Ponteiro constante para o valor do nó atual.
+     */
     pointer operator->()
     {
         return &current->valor;
     }
 
+    /**
+     * @brief Operador de acesso a membro (const).
+     *
+     * Retorna um ponteiro constante para o valor do nó atual.
+     *
+     * @return Ponteiro constante para o valor do nó atual.
+     */
     pointer operator->() const
     {
         return &current->valor;
     }
 
+    /**
+     * @brief Operador de incremento prefixado.
+     *
+     * Avança o iterador para o próximo elemento na matriz esparsa.
+     *
+     * @return Referência ao próprio iterador após o incremento.
+     */
     IteratorM &operator++()
     {
+        current = current->direita;
 
-    current = current->direita;  // Avança para o próximo nó na linha
+        while (current == cabecalho)
+        {
+            cabecalho = cabecalho->abaixo;
+            current = current->abaixo->direita;
+        }
 
-    // Se avançamos além da última coluna, vamos para a primeira coluna da próxima linha
-    if (current == cabecalho || current->coluna == 0) {
-        current = current->abaixo->direita;
+        return *this;
     }
 
-    return *this;
-    }
-
-    // Comparação para verificar se o iterador é diferente de outro
-    bool operator!=(const IteratorM &other) const
+    /**
+     * @brief Operador de igualdade.
+     *
+     * Compara se dois iteradores são iguais.
+     *
+     * @param it Iterador a ser comparado.
+     * @return true se os iteradores são iguais, false caso contrário.
+     */
+    bool operator==(const IteratorM &it) const
     {
-        return current != other.current;
+        return cabecalho == it.cabecalho && current == it.current;
+    }
+
+    /**
+     * @brief Operador de desigualdade.
+     *
+     * Compara se dois iteradores são diferentes.
+     *
+     * @param it Iterador a ser comparado.
+     * @return true se os iteradores são diferentes, false caso contrário.
+     */
+    bool operator!=(const IteratorM &it) const
+    {
+        return cabecalho != it.cabecalho || current != it.current;
     }
 };
 
