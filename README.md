@@ -1,74 +1,82 @@
 # Matriz Esparsa
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/WillianSilva51/Matriz-Esparsa?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/WillianSilva51/Matriz-Esparsa?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/WillianSilva51/Matriz-Esparsa?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/WillianSilva51/Matriz-Esparsa?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/WillianSilva51/Matriz-Esparsa?style=for-the-badge)
 
-<img src="imagem.png" alt="Exemplo imagem">
+<img src="https://camo.githubusercontent.com/fb5d9d15615241bc12d95c439765e57c9f8b57477bda0c93dd39a7892f6b8cea/68747470733a2f2f7261772e6769746875622e636f6d2f417274687572417373756e63616f2f4d617472697a5f457370617273612f6d61737465722f696d672f6d617472697a5f657370617273615f6c697374615f656e636164656164615f63697263756c61722e676966" alt="Matriz Esparsa" loading="lazy" style="max-width:100%;">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+> Este projeto implementa uma Matriz Esparsa eficiente, otimizando espaço ao armazenar somente valores diferentes de zero.
 
 ### Ajustes e melhorias
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
+As próximas atualizações para a Matriz Esparsa serão:
 
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
+- [x] Implementar inserção e remoção dinâmicas
+- [ ] Otimizar a busca de elementos
+- [ ] Adicionar testes automatizados
+- [ ] Melhorar documentação de uso
+- [ ] Suporte a diferentes tipos de dados
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-- Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-- Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-- Você leu `<guia / link / documentação_relacionada_ao_projeto>`.
+- Git instalado
+- Compilador C++ instalado
+- Makefile instalado
+- Sistema operacional Windows / Linux / Mac
+- Consultou a [documentação](docs/DOCUMENTATION.md)
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Compilando a Matriz Esparsa
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+Para compilar a Matriz Esparsa, siga estas etapas:
 
 Linux e macOS:
 
 ```
-<comando_de_instalação>
+make
 ```
 
 Windows:
 
 ```
-<comando_de_instalação>
+mingw32-make
 ```
 
-## ☕ Usando <nome_do_projeto>
+## ☕ Executando a Matriz Esparsa
 
-Para usar <nome_do_projeto>, siga estas etapas:
+Para usar a Matriz Esparsa, execute o seguinte comando:
 
+Windows:
 ```
-<exemplo_de_uso>
+bin/Matriz-Esparsa.exe
 ```
 
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Forneça uma referência de opções para pontos de bônus!
+Linux e macOS:
+```
+./bin/Matriz-Esparsa
+```
 
-## 📫 Contribuindo para <nome_do_projeto>
+Personalize os exemplos conforme necessário.
 
-Para contribuir com <nome_do_projeto>, siga estas etapas:
+## 📫 Contribuindo para Matriz Esparsa
+
+Para contribuir com a Matriz Esparsa:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
 3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+4. Envie para o branch original: `git push origin Matriz-Esparsa/<local>`
 5. Crie a solicitação de pull.
 
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+Consulte [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## 🤝 Colaboradores
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+Agradecimentos especiais aos seguintes colaboradores:
 
 <table>
   <tr>
@@ -99,10 +107,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-## 😄 Seja um dos contribuidores
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
-
 ## 📝 Licença
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+Este projeto está sob licença. Consulte [LICENÇA](LICENSE) para mais informações.

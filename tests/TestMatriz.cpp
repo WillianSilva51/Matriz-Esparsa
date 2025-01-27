@@ -1,38 +1,169 @@
-//Arquivo de testes para a Matriz Esparsa
 #include <iostream>
+#include <fstream>
+#include <stdexcept>
+#include <chrono>
 #include "matriz/Matriz.hpp"
+#include <cassert>
+#include "utils/utils.hpp"
 
-void testeInsercao() {
-    Matriz matriz;
+// Função de teste de inserção
+void testeInsercao()
+{
+    Matriz matriz(5, 5);
     matriz.insert(1, 1, 1);
+    std::cout<<"entrou" << std::endl;
+    assert(matriz.get(1, 1) == 1); // Garantir que o valor foi inserido corretamente
+    std::cout << "Teste de inserção passou" << std::endl;
+}
 
-    if (matriz.get(1, 1) != 1) {
-        std::cout << "Erro no teste de inserção" << std::endl;
-    } else {
-        std::cout << "Teste de inserção passou" << std::endl;
+// Função de teste de soma de matrizes
+void testeSoma(const Matriz &A, const Matriz &B, const Matriz &soma)
+{
+    std::cout<<"sla"<<std::endl;
+    Matriz D = sum(A, B);
+
+    // Verificando as dimensões
+    if (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())
+    {
+        throw std::runtime_error("Erro: Dimensões incorretas na soma das matrizes.");
     }
+    std::cout<<"sla"<<std::endl;
+    // Verificando cada valor da matriz resultante
+    for (int i = 1; i <= soma.getLinhas(); i++)
+    {
+        for (int j = 1; j <= soma.getColunas(); j++)
+        {
+            if (D.get(i, j) != soma.get(i, j))
+            {
+                throw std::runtime_error("Erro na soma das matrizes: Valor incorreto na posição (" +
+                                         std::to_string(i) + ", " + std::to_string(j) + "). Esperado: " +
+                                         std::to_string(soma.get(i, j)) + ", Obtido: " + std::to_string(D.get(i, j)));
+            }
+        }
+    }
+
+    std::cout << "Teste de soma passou" << std::endl;
 }
 
-void testeSoma() {
-    Matriz matriz;
-    matriz.insert(1, 1, 1);
-    matriz.insert(2, 2, 1);
-    matriz.insert(3, 3, 1);
-    matriz.insert(1, 3, 1);
+// Função de teste de multiplicação de matrizes
+void testeMultiplicacao(const Matriz &A, const Matriz &B, const Matriz &soma)
+{
+    Matriz D = multiply(A, B);
 
-    Matriz matriz2;
-    matriz2.insert(1, 1, 1);
-    matriz2.insert(2, 2, 1);
-    matriz2.insert(3, 3, 1);
-    matriz2.insert(1, 3, 1);
-    matriz2.insert(2, 3, 1);
+    // Verificando as dimensões
+    if (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())
+    {
+        throw std::runtime_error("Erro: Dimensões incorretas na multiplicação das matrizes.");
+    }
 
-    Matriz matriz3 = matriz + matriz2;
+    // Verificando cada valor da matriz resultante
+    for (int i = 1; i <= soma.getLinhas(); i++)
+    {
+        for (int j = 1; j <= soma.getColunas(); j++)
+        {
+            if (D.get(i, j) != soma.get(i, j))
+            {
+                throw std::runtime_error("Erro na multiplicação das matrizes: Valor incorreto na posição (" +
+                                         std::to_string(i) + ", " + std::to_string(j) + "). Esperado: " +
+                                         std::to_string(soma.get(i, j)) + ", Obtido: " + std::to_string(D.get(i, j)));
+            }
+        }
+    }
 
-
+    std::cout << "Teste de multiplicação passou" << std::endl;
 }
 
-int main() {
-    testeInsercao();
+// Função para ler uma matriz de um arquivo
+Matriz leitura(const std::string &arquivo)
+{
+    std::ifstream file("tests/arquivosTestes/" + arquivo); // Abre o arquivo
+    if (!file.is_open())
+    {
+        throw std::runtime_error("Erro ao abrir o arquivo: " + arquivo);
+    }
+
+    int linhas, colunas;
+    file >> linhas >> colunas;
+
+    Matriz matriz(linhas, colunas);
+
+    int linha, coluna;
+    double valor;
+    while (file >> linha >> coluna >> valor)
+    {                                        // Lê os valores da matriz
+        matriz.insert(linha, coluna, valor); // Insere na matriz
+    }
+
+    file.close(); // Fecha o arquivo
+    return matriz;
+}
+
+// Função para verificar se um arquivo existe
+bool arquivoExiste(const std::string &caminho)
+{
+    std::ifstream file(caminho);
+    return file.good();
+}
+
+// Função para medir a performance
+void testePerformance()
+{
+    Matriz A(1000, 1000);
+    Matriz B(1000, 1000);
+
+    // Preenche as matrizes com valores
+    for (int i = 1; i <= 1000; ++i)
+    {
+        for (int j = 1; j <= 1000; ++j)
+        {
+            A.insert(i, j, i + j);
+            B.insert(i, j, i - j);
+        }
+    }
+
+    auto inicio = std::chrono::high_resolution_clock::now();
+    Matriz soma = sum(A, B); // Soma as matrizes
+    auto fim = std::chrono::high_resolution_clock::now();
+
+    auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(fim - inicio);
+    std::cout << "Tempo para soma: " << duracao.count() << "ms" << std::endl;
+}
+
+int main()
+{
+    try
+    {
+        // Verificando se os arquivos existem
+        if (!arquivoExiste("tests/arquivosTestes/Matrix1.txt"))
+        {
+            throw std::runtime_error("Arquivo Matrix1.txt não encontrado.");
+        }
+        if (!arquivoExiste("tests/arquivosTestes/Matrix2.txt"))
+        {
+            throw std::runtime_error("Arquivo Matrix2.txt não encontrado.");
+        }
+        if (!arquivoExiste("tests/arquivosTestes/MatrixResult.txt"))
+        {
+            throw std::runtime_error("Arquivo MatrixResult.txt não encontrado.");
+        }
+
+        // Lê as matrizes de arquivos
+        Matriz A = leitura("Matrix1.txt");
+        Matriz B = leitura("Matrix2.txt");
+        Matriz soma = leitura("MatrixResult.txt");
+        Matriz multi = leitura("MatrixMulti.txt");
+        std::cout << "Matrizes lidas com sucesso" << std::endl;
+        // Executa os testes
+        testeSoma(A, B, soma);
+        std::cout<<"soma correta"<<std::endl;
+        testeMultiplicacao(A, B, multi);
+        testeInsercao();    // Teste básico de inserção
+        testePerformance(); // Teste de performance para matrizes grandes
+    }
+    catch (const std::runtime_error &e)
+    {
+        std::cerr << "Erro main: " << e.what() << std::endl;
+    }
+
     return 0;
 }

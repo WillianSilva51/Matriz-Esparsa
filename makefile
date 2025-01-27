@@ -37,7 +37,8 @@ ifeq ($(OS),Windows_NT)
 	EXT = .exe
 	Cleanup = cls
 	CommandCreate = if not exist $@ ($(MKDIR) $@)
-	ExecuteTest = python $(TESTS_DIR)/run_tests.py $(TESTS_DIR)/cases.tio
+	ExecuteTest = g++ $(CXXFLAGS) $(TESTS_DIR)/TestMatriz.cpp objects/matriz/Matriz.o $(INCLUDES) -o $(TESTS_DIR)/TestMatriz$(EXT)
+
 else
 	RM = rm -f
 	MKDIR = mkdir -p
@@ -125,6 +126,7 @@ docs:
 test: all
 	@echo "Executando os testes..."
 	@$(ExecuteTest)
+	@$(TESTS_DIR)/TestMatriz$(EXT)
 
 ## Regra para inicializar a estrutura de diretórios
 init:
