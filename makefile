@@ -46,7 +46,7 @@ else
 	EXT = .run
 	Cleanup = clear
 	CommandCreate = if [ ! -d "$@" ]; then mkdir "$@"; fi
-	ExecuteTest = python3 $(TESTS_DIR)/run_tests.py $(TESTS_DIR)/cases.tio
+	ExecuteTest = g++ $(CXXFLAGS) $(TESTS_DIR)/TestMatriz.cpp objects/matriz/Matriz.o $(INCLUDES) -o $(TESTS_DIR)/TestMatriz$(EXT)
 endif
 
 # Encontrar todos os arquivos .cpp nos diretórios de src, /**/* sub
