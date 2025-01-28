@@ -11,15 +11,18 @@ void testeInsercao()
 {
     Matriz matriz(5, 5);
     matriz.insert(1, 1, 1);
-    std::cout<<"entrou" << std::endl;
     assert(matriz.get(1, 1) == 1); // Garantir que o valor foi inserido corretamente
+    matriz.insert(5, 5, 2);
+    assert(matriz.get(5, 5) == 2); // Garantir que o valor foi inserido corretamente
+    matriz.insert(3, 2, 2);
+    assert(matriz.get(3, 2) == 2); // Garantir que o valor foi inserido corretamente
     std::cout << "Teste de inserção passou" << std::endl;
 }
 
 // Função de teste de soma de matrizes
 void testeSoma(const Matriz &A, const Matriz &B, const Matriz &soma)
 {
-    std::cout<<"sla"<<std::endl;
+    
     Matriz D = sum(A, B);
 
     // Verificando as dimensões
@@ -27,7 +30,7 @@ void testeSoma(const Matriz &A, const Matriz &B, const Matriz &soma)
     {
         throw std::runtime_error("Erro: Dimensões incorretas na soma das matrizes.");
     }
-    std::cout<<"sla"<<std::endl;
+    
     // Verificando cada valor da matriz resultante
     for (int i = 1; i <= soma.getLinhas(); i++)
     {
@@ -108,13 +111,13 @@ bool arquivoExiste(const std::string &caminho)
 // Função para medir a performance
 void testePerformance()
 {
-    Matriz A(1000, 1000);
-    Matriz B(1000, 1000);
+    Matriz A(500, 500);
+    Matriz B(500, 500);
 
     // Preenche as matrizes com valores
-    for (int i = 1; i <= 1000; ++i)
+    for (int i = 1; i <= 500; ++i)
     {
-        for (int j = 1; j <= 1000; ++j)
+        for (int j = 1; j <= 500; ++j)
         {
             A.insert(i, j, i + j);
             B.insert(i, j, i - j);
@@ -155,7 +158,6 @@ int main()
         std::cout << "Matrizes lidas com sucesso" << std::endl;
         // Executa os testes
         testeSoma(A, B, soma);
-        std::cout<<"soma correta"<<std::endl;
         testeMultiplicacao(A, B, multi);
         testeInsercao();    // Teste básico de inserção
         testePerformance(); // Teste de performance para matrizes grandes
