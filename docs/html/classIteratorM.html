@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Matriz Esparsa: Referência da Classe IteratorM</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Matriz Esparsa<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">O projeto visa otimizar o armazenamento e as operações em matrizes esparsas, que possuem maioria de elementos zero. Armazenando apenas os valores não nulos, economiza-se memória e acelera-se operações como soma, multiplicação e inversão. Um exemplo prático é o uso de matrizes em programas de planilha como o Excel.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Tipos Públicos</a> &#124;
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#friends">Amigos</a> &#124;
+<a href="classIteratorM-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle"><div class="title">Referência da Classe IteratorM</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Iterador para percorrer uma matriz esparsa.  
+ <a href="classIteratorM.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="IteratorM_8hpp_source.html">IteratorM.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos Públicos</h2></td></tr>
+<tr class="memitem:a3003ca727c300406f186135bcc696788" id="r_a3003ca727c300406f186135bcc696788"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a3003ca727c300406f186135bcc696788">iterator_category</a> = std::forward_iterator_tag</td></tr>
+<tr class="separator:a3003ca727c300406f186135bcc696788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0bf401a7e3da68296e841b32824467" id="r_aad0bf401a7e3da68296e841b32824467"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#aad0bf401a7e3da68296e841b32824467">difference_type</a> = std::ptrdiff_t</td></tr>
+<tr class="separator:aad0bf401a7e3da68296e841b32824467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae64e0cae0d56a70417e4899b740f3b" id="r_a2ae64e0cae0d56a70417e4899b740f3b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a2ae64e0cae0d56a70417e4899b740f3b">value_type</a> = double</td></tr>
+<tr class="separator:a2ae64e0cae0d56a70417e4899b740f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67adb08fe732eedfa5172953d01ac2ef" id="r_a67adb08fe732eedfa5172953d01ac2ef"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">pointer</a> = double *</td></tr>
+<tr class="separator:a67adb08fe732eedfa5172953d01ac2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaea49efe6d3b3e086c1da26c697526c" id="r_abaea49efe6d3b3e086c1da26c697526c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">reference</a> = double &amp;</td></tr>
+<tr class="separator:abaea49efe6d3b3e086c1da26c697526c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:aa9aad03200da4dedde254b87f8b9f913" id="r_aa9aad03200da4dedde254b87f8b9f913"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#aa9aad03200da4dedde254b87f8b9f913">IteratorM</a> ()</td></tr>
+<tr class="memdesc:aa9aad03200da4dedde254b87f8b9f913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão.  <br /></td></tr>
+<tr class="separator:aa9aad03200da4dedde254b87f8b9f913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add04cb6264feaa7a09d922e2498360db" id="r_add04cb6264feaa7a09d922e2498360db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#add04cb6264feaa7a09d922e2498360db">IteratorM</a> (<a class="el" href="structNode.html">Node</a> *cabecalho, <a class="el" href="structNode.html">Node</a> *current)</td></tr>
+<tr class="memdesc:add04cb6264feaa7a09d922e2498360db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor com parâmetros.  <br /></td></tr>
+<tr class="separator:add04cb6264feaa7a09d922e2498360db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e5464078dbc7979472ebe70791d83b" id="r_a92e5464078dbc7979472ebe70791d83b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a92e5464078dbc7979472ebe70791d83b">operator*</a> ()</td></tr>
+<tr class="memdesc:a92e5464078dbc7979472ebe70791d83b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de desreferenciação.  <br /></td></tr>
+<tr class="separator:a92e5464078dbc7979472ebe70791d83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd743e71d325e39db7623779d4aa1b46" id="r_abd743e71d325e39db7623779d4aa1b46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#abd743e71d325e39db7623779d4aa1b46">operator*</a> () const</td></tr>
+<tr class="memdesc:abd743e71d325e39db7623779d4aa1b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de desreferenciação (const).  <br /></td></tr>
+<tr class="separator:abd743e71d325e39db7623779d4aa1b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1be39ae06bd0b099ad0f728689de94c9" id="r_a1be39ae06bd0b099ad0f728689de94c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a1be39ae06bd0b099ad0f728689de94c9">operator-&gt;</a> ()</td></tr>
+<tr class="memdesc:a1be39ae06bd0b099ad0f728689de94c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de acesso a membro (const).  <br /></td></tr>
+<tr class="separator:a1be39ae06bd0b099ad0f728689de94c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6366134c5544bb8e93a974e9f7d0ec84" id="r_a6366134c5544bb8e93a974e9f7d0ec84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a6366134c5544bb8e93a974e9f7d0ec84">operator-&gt;</a> () const</td></tr>
+<tr class="memdesc:a6366134c5544bb8e93a974e9f7d0ec84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de acesso a membro (const).  <br /></td></tr>
+<tr class="separator:a6366134c5544bb8e93a974e9f7d0ec84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d799e6c31323e9f9afc4e80438e3da0" id="r_a5d799e6c31323e9f9afc4e80438e3da0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classIteratorM.html">IteratorM</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a5d799e6c31323e9f9afc4e80438e3da0">operator++</a> ()</td></tr>
+<tr class="memdesc:a5d799e6c31323e9f9afc4e80438e3da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de incremento prefixado.  <br /></td></tr>
+<tr class="separator:a5d799e6c31323e9f9afc4e80438e3da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f921a41f3d1e58896872a2740d29833" id="r_a6f921a41f3d1e58896872a2740d29833"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a6f921a41f3d1e58896872a2740d29833">operator==</a> (const <a class="el" href="classIteratorM.html">IteratorM</a> &amp;it) const</td></tr>
+<tr class="memdesc:a6f921a41f3d1e58896872a2740d29833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de igualdade.  <br /></td></tr>
+<tr class="separator:a6f921a41f3d1e58896872a2740d29833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd0df0464eb6bffa1e74479cb485c99" id="r_aafd0df0464eb6bffa1e74479cb485c99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#aafd0df0464eb6bffa1e74479cb485c99">operator!=</a> (const <a class="el" href="classIteratorM.html">IteratorM</a> &amp;it) const</td></tr>
+<tr class="memdesc:aafd0df0464eb6bffa1e74479cb485c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de desigualdade.  <br /></td></tr>
+<tr class="separator:aafd0df0464eb6bffa1e74479cb485c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+Amigos</h2></td></tr>
+<tr class="memitem:a24a0f67956fdfafc3154410dda29bf05" id="r_a24a0f67956fdfafc3154410dda29bf05"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIteratorM.html#a24a0f67956fdfafc3154410dda29bf05">Matriz</a></td></tr>
+<tr class="separator:a24a0f67956fdfafc3154410dda29bf05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Iterador para percorrer uma matriz esparsa. </p>
+<p>A classe <a class="el" href="classIteratorM.html" title="Iterador para percorrer uma matriz esparsa.">IteratorM</a> fornece um iterador para percorrer os elementos de uma matriz esparsa.</p>
+<p>@friend class <a class="el" href="classMatriz.html" title="Classe que representa uma matriz esparsa.">Matriz</a> </p>
+</div><h2 class="groupheader">Documentação das definições de tipos</h2>
+<a id="aad0bf401a7e3da68296e841b32824467" name="aad0bf401a7e3da68296e841b32824467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0bf401a7e3da68296e841b32824467">&#9670;&#160;</a></span>difference_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classIteratorM.html#aad0bf401a7e3da68296e841b32824467">IteratorM::difference_type</a> =  std::ptrdiff_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3003ca727c300406f186135bcc696788" name="a3003ca727c300406f186135bcc696788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3003ca727c300406f186135bcc696788">&#9670;&#160;</a></span>iterator_category</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classIteratorM.html#a3003ca727c300406f186135bcc696788">IteratorM::iterator_category</a> =  std::forward_iterator_tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67adb08fe732eedfa5172953d01ac2ef" name="a67adb08fe732eedfa5172953d01ac2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67adb08fe732eedfa5172953d01ac2ef">&#9670;&#160;</a></span>pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">IteratorM::pointer</a> =  double *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abaea49efe6d3b3e086c1da26c697526c" name="abaea49efe6d3b3e086c1da26c697526c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaea49efe6d3b3e086c1da26c697526c">&#9670;&#160;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">IteratorM::reference</a> =  double &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ae64e0cae0d56a70417e4899b740f3b" name="a2ae64e0cae0d56a70417e4899b740f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae64e0cae0d56a70417e4899b740f3b">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classIteratorM.html#a2ae64e0cae0d56a70417e4899b740f3b">IteratorM::value_type</a> =  double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="aa9aad03200da4dedde254b87f8b9f913" name="aa9aad03200da4dedde254b87f8b9f913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9aad03200da4dedde254b87f8b9f913">&#9670;&#160;</a></span>IteratorM() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IteratorM::IteratorM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor padrão. </p>
+<p>Inicializa o iterador com ponteiros nulos. </p>
+<div class="fragment"><div class="line"><span class="lineno">   36</span>: cabecalho(<span class="keyword">nullptr</span>), current(<span class="keyword">nullptr</span>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="add04cb6264feaa7a09d922e2498360db" name="add04cb6264feaa7a09d922e2498360db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add04cb6264feaa7a09d922e2498360db">&#9670;&#160;</a></span>IteratorM() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IteratorM::IteratorM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>cabecalho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structNode.html">Node</a> *&#160;</td>
+          <td class="paramname"><em>current</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor com parâmetros. </p>
+<p>Inicializa o iterador com o nó de cabeçalho e o nó atual.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cabecalho</td><td>Ponteiro para o nó de cabeçalho. </td></tr>
+    <tr><td class="paramname">current</td><td>Ponteiro para o nó atual (padrão é nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>                                              : cabecalho(cabecalho), current(current)</div>
+<div class="line"><span class="lineno">   47</span>    {</div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">while</span> (current == cabecalho)</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            cabecalho = cabecalho-&gt;<a class="code hl_variable" href="structNode.html#aad364c157638e1ab1667553325470723">abaixo</a>;</div>
+<div class="line"><span class="lineno">   51</span>            current = current-&gt;<a class="code hl_variable" href="structNode.html#aad364c157638e1ab1667553325470723">abaixo</a>-&gt;<a class="code hl_variable" href="structNode.html#a30f66714469c4152b77e3832ab278b2d">direita</a>;</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="ttc" id="astructNode_html_a30f66714469c4152b77e3832ab278b2d"><div class="ttname"><a href="structNode.html#a30f66714469c4152b77e3832ab278b2d">Node::direita</a></div><div class="ttdeci">Node * direita</div><div class="ttdef"><b>Definição</b> Node.hpp:13</div></div>
+<div class="ttc" id="astructNode_html_aad364c157638e1ab1667553325470723"><div class="ttname"><a href="structNode.html#aad364c157638e1ab1667553325470723">Node::abaixo</a></div><div class="ttdeci">Node * abaixo</div><div class="ttdef"><b>Definição</b> Node.hpp:14</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="aafd0df0464eb6bffa1e74479cb485c99" name="aafd0df0464eb6bffa1e74479cb485c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd0df0464eb6bffa1e74479cb485c99">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IteratorM::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIteratorM.html">IteratorM</a> &amp;&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de desigualdade. </p>
+<p>Compara se dois iteradores são diferentes.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">it</td><td>Iterador a ser comparado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se os iteradores são diferentes, false caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>    {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> cabecalho != it.cabecalho || current != it.current;</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a92e5464078dbc7979472ebe70791d83b" name="a92e5464078dbc7979472ebe70791d83b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92e5464078dbc7979472ebe70791d83b">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">reference</a> IteratorM::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de desreferenciação. </p>
+<p>Retorna uma referência ao valor do nó atual.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Referência ao valor do nó atual. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>    {</div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">return</span> current-&gt;<a class="code hl_variable" href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">valor</a>;</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="ttc" id="astructNode_html_a393dcc9a0fe69032baa0efba9146dbed"><div class="ttname"><a href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">Node::valor</a></div><div class="ttdeci">double valor</div><div class="ttdef"><b>Definição</b> Node.hpp:17</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abd743e71d325e39db7623779d4aa1b46" name="abd743e71d325e39db7623779d4aa1b46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd743e71d325e39db7623779d4aa1b46">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">reference</a> IteratorM::operator* </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de desreferenciação (const). </p>
+<p>Retorna uma referência constante ao valor do nó atual.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Referência constante ao valor do nó atual. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span> current-&gt;<a class="code hl_variable" href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">valor</a>;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5d799e6c31323e9f9afc4e80438e3da0" name="a5d799e6c31323e9f9afc4e80438e3da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d799e6c31323e9f9afc4e80438e3da0">&#9670;&#160;</a></span>operator++()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIteratorM.html">IteratorM</a> &amp; IteratorM::operator++ </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de incremento prefixado. </p>
+<p>Avança o iterador para o próximo elemento na matriz esparsa.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Referência ao próprio iterador após o incremento. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        current = current-&gt;<a class="code hl_variable" href="structNode.html#a30f66714469c4152b77e3832ab278b2d">direita</a>;</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">while</span> (current == cabecalho)</div>
+<div class="line"><span class="lineno">  115</span>        {</div>
+<div class="line"><span class="lineno">  116</span>            cabecalho = cabecalho-&gt;<a class="code hl_variable" href="structNode.html#aad364c157638e1ab1667553325470723">abaixo</a>;</div>
+<div class="line"><span class="lineno">  117</span>            current = current-&gt;<a class="code hl_variable" href="structNode.html#aad364c157638e1ab1667553325470723">abaixo</a>-&gt;<a class="code hl_variable" href="structNode.html#a30f66714469c4152b77e3832ab278b2d">direita</a>;</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1be39ae06bd0b099ad0f728689de94c9" name="a1be39ae06bd0b099ad0f728689de94c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be39ae06bd0b099ad0f728689de94c9">&#9670;&#160;</a></span>operator-&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">pointer</a> IteratorM::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de acesso a membro (const). </p>
+<p>Retorna um ponteiro constante para o valor do nó atual.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Ponteiro constante para o valor do nó atual. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>    {</div>
+<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">return</span> &amp;current-&gt;<a class="code hl_variable" href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">valor</a>;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6366134c5544bb8e93a974e9f7d0ec84" name="a6366134c5544bb8e93a974e9f7d0ec84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6366134c5544bb8e93a974e9f7d0ec84">&#9670;&#160;</a></span>operator-&gt;() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">pointer</a> IteratorM::operator-&gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de acesso a membro (const). </p>
+<p>Retorna um ponteiro constante para o valor do nó atual.</p>
+<dl class="section return"><dt>Retorna</dt><dd>Ponteiro constante para o valor do nó atual. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> &amp;current-&gt;<a class="code hl_variable" href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">valor</a>;</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6f921a41f3d1e58896872a2740d29833" name="a6f921a41f3d1e58896872a2740d29833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f921a41f3d1e58896872a2740d29833">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IteratorM::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIteratorM.html">IteratorM</a> &amp;&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de igualdade. </p>
+<p>Compara se dois iteradores são iguais.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">it</td><td>Iterador a ser comparado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se os iteradores são iguais, false caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">return</span> cabecalho == it.cabecalho &amp;&amp; current == it.current;</div>
+<div class="line"><span class="lineno">  134</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentação dos símbolos amigos e relacionados</h2>
+<a id="a24a0f67956fdfafc3154410dda29bf05" name="a24a0f67956fdfafc3154410dda29bf05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a0f67956fdfafc3154410dda29bf05">&#9670;&#160;</a></span>Matriz</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classMatriz.html">Matriz</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>include/IteratorM/<a class="el" href="IteratorM_8hpp_source.html">IteratorM.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

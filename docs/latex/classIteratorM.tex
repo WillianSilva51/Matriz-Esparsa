@@ -1,0 +1,328 @@
+\doxysection{Referência da Classe IteratorM}
+\label{classIteratorM}\index{IteratorM@{IteratorM}}
+
+
+Iterador para percorrer uma matriz esparsa.  
+
+
+
+
+{\ttfamily \#include $<$Iterator\+M.\+hpp$>$}
+
+\doxysubsubsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+using \textbf{ iterator\+\_\+category} = std\+::forward\+\_\+iterator\+\_\+tag
+\item 
+using \textbf{ difference\+\_\+type} = std\+::ptrdiff\+\_\+t
+\item 
+using \textbf{ value\+\_\+type} = double
+\item 
+using \textbf{ pointer} = double $\ast$
+\item 
+using \textbf{ reference} = double \&
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ IteratorM} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\textbf{ IteratorM} (\textbf{ Node} $\ast$cabecalho, \textbf{ Node} $\ast$current)
+\begin{DoxyCompactList}\small\item\em Construtor com parâmetros. \end{DoxyCompactList}\item 
+\textbf{ reference} \textbf{ operator$\ast$} ()
+\begin{DoxyCompactList}\small\item\em Operador de desreferenciação. \end{DoxyCompactList}\item 
+\textbf{ reference} \textbf{ operator$\ast$} () const
+\begin{DoxyCompactList}\small\item\em Operador de desreferenciação (const). \end{DoxyCompactList}\item 
+\textbf{ pointer} \textbf{ operator-\/$>$} ()
+\begin{DoxyCompactList}\small\item\em Operador de acesso a membro (const). \end{DoxyCompactList}\item 
+\textbf{ pointer} \textbf{ operator-\/$>$} () const
+\begin{DoxyCompactList}\small\item\em Operador de acesso a membro (const). \end{DoxyCompactList}\item 
+\textbf{ IteratorM} \& \textbf{ operator++} ()
+\begin{DoxyCompactList}\small\item\em Operador de incremento prefixado. \end{DoxyCompactList}\item 
+bool \textbf{ operator==} (const \textbf{ IteratorM} \&it) const
+\begin{DoxyCompactList}\small\item\em Operador de igualdade. \end{DoxyCompactList}\item 
+bool \textbf{ operator!=} (const \textbf{ IteratorM} \&it) const
+\begin{DoxyCompactList}\small\item\em Operador de desigualdade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Amigos}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ Matriz}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Iterador para percorrer uma matriz esparsa. 
+
+A classe \doxyref{IteratorM}{p.}{classIteratorM} fornece um iterador para percorrer os elementos de uma matriz esparsa.
+
+@friend class \doxyref{Matriz}{p.}{classMatriz} 
+
+\doxysubsection{Documentação das definições de tipos}
+\label{classIteratorM_aad0bf401a7e3da68296e841b32824467} 
+\index{IteratorM@{IteratorM}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!IteratorM@{IteratorM}}
+\doxysubsubsection{difference\_type}
+{\footnotesize\ttfamily using \textbf{ Iterator\+M\+::difference\+\_\+type} =  std\+::ptrdiff\+\_\+t}
+
+\label{classIteratorM_a3003ca727c300406f186135bcc696788} 
+\index{IteratorM@{IteratorM}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!IteratorM@{IteratorM}}
+\doxysubsubsection{iterator\_category}
+{\footnotesize\ttfamily using \textbf{ Iterator\+M\+::iterator\+\_\+category} =  std\+::forward\+\_\+iterator\+\_\+tag}
+
+\label{classIteratorM_a67adb08fe732eedfa5172953d01ac2ef} 
+\index{IteratorM@{IteratorM}!pointer@{pointer}}
+\index{pointer@{pointer}!IteratorM@{IteratorM}}
+\doxysubsubsection{pointer}
+{\footnotesize\ttfamily using \textbf{ Iterator\+M\+::pointer} =  double $\ast$}
+
+\label{classIteratorM_abaea49efe6d3b3e086c1da26c697526c} 
+\index{IteratorM@{IteratorM}!reference@{reference}}
+\index{reference@{reference}!IteratorM@{IteratorM}}
+\doxysubsubsection{reference}
+{\footnotesize\ttfamily using \textbf{ Iterator\+M\+::reference} =  double \&}
+
+\label{classIteratorM_a2ae64e0cae0d56a70417e4899b740f3b} 
+\index{IteratorM@{IteratorM}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!IteratorM@{IteratorM}}
+\doxysubsubsection{value\_type}
+{\footnotesize\ttfamily using \textbf{ Iterator\+M\+::value\+\_\+type} =  double}
+
+
+
+\doxysubsection{Construtores e Destrutores}
+\label{classIteratorM_aa9aad03200da4dedde254b87f8b9f913} 
+\index{IteratorM@{IteratorM}!IteratorM@{IteratorM}}
+\index{IteratorM@{IteratorM}!IteratorM@{IteratorM}}
+\doxysubsubsection{IteratorM()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Iterator\+M\+::\+IteratorM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor padrão. 
+
+Inicializa o iterador com ponteiros nulos. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ :\ cabecalho(\textcolor{keyword}{nullptr}),\ current(\textcolor{keyword}{nullptr})\ \{\}}
+
+\end{DoxyCode}
+\label{classIteratorM_add04cb6264feaa7a09d922e2498360db} 
+\index{IteratorM@{IteratorM}!IteratorM@{IteratorM}}
+\index{IteratorM@{IteratorM}!IteratorM@{IteratorM}}
+\doxysubsubsection{IteratorM()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Iterator\+M\+::\+IteratorM (\begin{DoxyParamCaption}\item[{\textbf{ Node} $\ast$}]{cabecalho,  }\item[{\textbf{ Node} $\ast$}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor com parâmetros. 
+
+Inicializa o iterador com o nó de cabeçalho e o nó atual.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cabecalho} & Ponteiro para o nó de cabeçalho. \\
+\hline
+{\em current} & Ponteiro para o nó atual (padrão é nullptr). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ cabecalho(cabecalho),\ current(current)}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ ==\ cabecalho)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ cabecalho\ =\ cabecalho-\/>abaixo;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>abaixo-\/>direita;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{classIteratorM_aafd0df0464eb6bffa1e74479cb485c99} 
+\index{IteratorM@{IteratorM}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!IteratorM@{IteratorM}}
+\doxysubsubsection{operator"!=()}
+{\footnotesize\ttfamily bool Iterator\+M\+::operator!= (\begin{DoxyParamCaption}\item[{const \textbf{ IteratorM} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de desigualdade. 
+
+Compara se dois iteradores são diferentes.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em it} & Iterador a ser comparado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se os iteradores são diferentes, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145\ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabecalho\ !=\ it.cabecalho\ ||\ current\ !=\ it.current;}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{classIteratorM_a92e5464078dbc7979472ebe70791d83b} 
+\index{IteratorM@{IteratorM}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!IteratorM@{IteratorM}}
+\doxysubsubsection{operator$\ast$()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ reference} Iterator\+M\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de desreferenciação. 
+
+Retorna uma referência ao valor do nó atual.
+
+\begin{DoxyReturn}{Retorna}
+Referência ao valor do nó atual. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>valor;}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{classIteratorM_abd743e71d325e39db7623779d4aa1b46} 
+\index{IteratorM@{IteratorM}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!IteratorM@{IteratorM}}
+\doxysubsubsection{operator$\ast$()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ reference} Iterator\+M\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de desreferenciação (const). 
+
+Retorna uma referência constante ao valor do nó atual.
+
+\begin{DoxyReturn}{Retorna}
+Referência constante ao valor do nó atual. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ current-\/>valor;}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{classIteratorM_a5d799e6c31323e9f9afc4e80438e3da0} 
+\index{IteratorM@{IteratorM}!operator++@{operator++}}
+\index{operator++@{operator++}!IteratorM@{IteratorM}}
+\doxysubsubsection{operator++()}
+{\footnotesize\ttfamily \textbf{ IteratorM} \& Iterator\+M\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de incremento prefixado. 
+
+Avança o iterador para o próximo elemento na matriz esparsa.
+
+\begin{DoxyReturn}{Retorna}
+Referência ao próprio iterador após o incremento. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ current\ =\ current-\/>direita;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (current\ ==\ cabecalho)}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ cabecalho\ =\ cabecalho-\/>abaixo;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ current-\/>abaixo-\/>direita;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{classIteratorM_a1be39ae06bd0b099ad0f728689de94c9} 
+\index{IteratorM@{IteratorM}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!IteratorM@{IteratorM}}
+\doxysubsubsection{operator-\/$>$()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ pointer} Iterator\+M\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de acesso a membro (const). 
+
+Retorna um ponteiro constante para o valor do nó atual.
+
+\begin{DoxyReturn}{Retorna}
+Ponteiro constante para o valor do nó atual. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&current-\/>valor;}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{classIteratorM_a6366134c5544bb8e93a974e9f7d0ec84} 
+\index{IteratorM@{IteratorM}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!IteratorM@{IteratorM}}
+\doxysubsubsection{operator-\/$>$()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ pointer} Iterator\+M\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de acesso a membro (const). 
+
+Retorna um ponteiro constante para o valor do nó atual.
+
+\begin{DoxyReturn}{Retorna}
+Ponteiro constante para o valor do nó atual. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&current-\/>valor;}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{classIteratorM_a6f921a41f3d1e58896872a2740d29833} 
+\index{IteratorM@{IteratorM}!operator==@{operator==}}
+\index{operator==@{operator==}!IteratorM@{IteratorM}}
+\doxysubsubsection{operator==()}
+{\footnotesize\ttfamily bool Iterator\+M\+::operator== (\begin{DoxyParamCaption}\item[{const \textbf{ IteratorM} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de igualdade. 
+
+Compara se dois iteradores são iguais.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em it} & Iterador a ser comparado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se os iteradores são iguais, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabecalho\ ==\ it.cabecalho\ \&\&\ current\ ==\ it.current;}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação dos símbolos amigos e relacionados}
+\label{classIteratorM_a24a0f67956fdfafc3154410dda29bf05} 
+\index{IteratorM@{IteratorM}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!IteratorM@{IteratorM}}
+\doxysubsubsection{Matriz}
+{\footnotesize\ttfamily friend class \textbf{ Matriz}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Iterator\+M/\textbf{ Iterator\+M.\+hpp}\end{DoxyCompactItemize}

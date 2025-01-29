@@ -124,18 +124,3174 @@
 {\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
 Vers\'E3o 1.0\par\page\page\vertalt
 \pard\plain 
-\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \'CDndice\par
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Sum\'E1rio\par
 \pard\plain \par
 {\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
 \pard\plain 
 \sect \sbkpage \pgndec \pgnrestart
 \sect \sectd \sbknone
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\par \pard\plain 
+\par \pard\plain 
+\pard\plain \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Matriz Esparsa\par \pard\plain 
+{\tc\tcl1 \v Matriz Esparsa}
+{\xe \v Matriz Esparsa}
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+     \par
+{\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \zwjEste projeto implementa uma {\b Matriz} Esparsa eficiente, otimizando espa\'E7o ao armazenar somente valores diferentes de zero. \par
+}{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{{\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Ajustes e melhorias
+\par}
+{\tc\tcl3 \v Ajustes e melhorias}
+As pr\'F3ximas atualiza\'E7\'F5es para a {\b Matriz} Esparsa ser\'E3o:\par
+{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+[x] Implementar inser\'E7\'E3o e remo\'E7\'E3o din\'E2micas\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+[ ] Otimizar a busca de elementos\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+[x] Adicionar testes automatizados\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+[ ] Melhorar documenta\'E7\'E3o de uso\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+[ ] Suporte a diferentes tipos de dados\par}
+\par
+\par}
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'F0\'9F\'92\'BB Pr\'C3\'A9-requisitos
+\par}
+{\tc\tcl2 \v \'F0\'9F\'92\'BB Pr\'C3\'A9-requisitos}
+Antes de come\'E7ar, verifique se voc\'EA atendeu aos seguintes requisitos:\par
+{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Git instalado\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Compilador C++ instalado\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Makefile instalado\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Sistema operacional Windows / Linux / Mac\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Consultou a documenta\'E7\'E3o\par}
+\par
+\par}
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'F0\'9F\'9A\'80 Compilando a Matriz Esparsa
+\par}
+{\tc\tcl2 \v \'F0\'9F\'9A\'80 Compilando a Matriz Esparsa}
+Para compilar a {\b Matriz} Esparsa, siga estas etapas:\par
+Linux e macOS:\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid make\par
+}
+\par
+Windows:\par
+{
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid mingw32-make\par
+}
+\par}
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'E2\'98\'95 Executando a Matriz Esparsa
+\par}
+{\tc\tcl2 \v \'E2\'98\'95 Executando a Matriz Esparsa}
+Para usar a {\b Matriz} Esparsa, execute o seguinte comando:\par
+Windows: {
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid bin/Matriz-Esparsa.exe\par
+}
+\par
+Linux e macOS: {
+\par
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid ./bin/Matriz-Esparsa\par
+}
+\par
+Personalize os exemplos conforme necess\'E1rio.\par}
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'F0\'9F\'93\'AB Contribuindo para Matriz Esparsa
+\par}
+{\tc\tcl2 \v \'F0\'9F\'93\'AB Contribuindo para Matriz Esparsa}
+Para contribuir com a {\b Matriz} Esparsa:\par
+{
+\par
+\pard\plain \s140\fi-360\li360\widctlpar\fs20\cgrid 
+1.\tab Bifurque este reposit\'F3rio.\par
+\pard\plain \s140\fi-360\li360\widctlpar\fs20\cgrid 
+2.\tab Crie um branch: {\f2 git checkout -b <nome_branch>} .\par
+\pard\plain \s140\fi-360\li360\widctlpar\fs20\cgrid 
+3.\tab Fa\'E7a suas altera\'E7\'F5es e confirme-as: \'91git commit -m \'92<mensagem_commit>'{\f2 } \par
+\pard\plain \s140\fi-360\li360\widctlpar\fs20\cgrid 
+4.\tab {\f2 Envie para o branch original:} git push origin Matriz-Esparsa/<local>`\par
+\pard\plain \s140\fi-360\li360\widctlpar\fs20\cgrid 
+5.\tab Crie a solicita\'E7\'E3o de pull.\par}
+\par
+Consulte {\f2 como criar uma solicita\'E7\'E3o pull}.\par}
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'F0\'9F\'A4\'9D Colaboradores
+\par}
+{\tc\tcl2 \v \'F0\'9F\'A4\'9D Colaboradores}
+Agradecimentos especiais aos seguintes colaboradores:\par
+\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx2916
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx5832
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr \brdrs\brdrw10 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\qc {\f2 \par
+ {\sub  {\b Iuri Silva}  }  }  \cell }{\qc {\f2 \par
+ {\sub  {\b Mark Zuckerberg}  }  }  \cell }{\qc {\f2 \par
+ {\sub  {\b Steve Jobs}  }  }   \cell }
+\pard \widctlpar\intbl\adjustright
+{\row }
+\pard\plain
+\par
+\par}
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{{\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\'F0\'9F\'93\'9D Licen\'C3\'A7a
+\par}
+{\tc\tcl2 \v \'F0\'9F\'93\'9D Licen\'C3\'A7a}
+Este projeto est\'E1 sob licen\'E7a. Consulte [LICEN\'C7A](LICENSE) para mais informa\'E7\'F5es. \par}
+}}
 
 \pard\plain \sect\sbkpage
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
-\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \'CDndice\par 
+\'CDndice dos Componentes\par \pard\plain 
+{\tc \v \'CDndice dos Componentes}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Lista de Classes\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Aqui est\'E3o as classes, estruturas, uni\'F5es e interfaces e suas respectivas descri\'E7\'F5es:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b IteratorM} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador para percorrer uma matriz esparsa })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Matriz} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Classe que representa uma matriz esparsa })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b Node} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Representa um n\'F3 em uma matriz esparsa })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACX \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\'CDndice dos Arquivos\par \pard\plain 
+{\tc \v \'CDndice dos Arquivos}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Lista de Arquivos\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Esta \'E9 a lista de todos os arquivos e suas respectivas descri\'E7\'F5es:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b include/IteratorM/{\b IteratorM.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/matriz/{\b Matriz.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/node/{\b Node.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/utils/{\b utils.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/main/{\b main.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/matriz/{\b Matriz.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b tests/{\b TestMatriz.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Classes{\tc \v Classes}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Classe IteratorM\par \pard\plain 
+{\tc\tcl2 \v IteratorM}
+{\xe \v IteratorM}
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador para percorrer uma matriz esparsa. }}\par
+{
+{\f2 #include <IteratorM.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Tipos P\'FAblicos\par
 \pard\plain 
-{\tc \v \'CDndice}
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+using {\b iterator_category} = std::forward_iterator_tag\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+using {\b difference_type} = std::ptrdiff_t\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+using {\b value_type} = double\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+using {\b pointer} = double *\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+using {\b reference} = double &\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b IteratorM} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor padr\'E3o. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b IteratorM} ({\b Node} *cabecalho, {\b Node} *current)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor com par\'E2metros. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b reference} {\b operator*} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de desreferencia\'E7\'E3o. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b reference} {\b operator*} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de desreferencia\'E7\'E3o (const). }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pointer} {\b operator->} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de acesso a membro (const). }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b pointer} {\b operator->} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de acesso a membro (const). }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b IteratorM} & {\b operator++} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de incremento prefixado. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b operator==} (const {\b IteratorM} &it) const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de igualdade. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b operator!=} (const {\b IteratorM} &it) const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de desigualdade. }{
+}\par
+}\par}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Amigos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Matriz}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descri\'E7\'E3o detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador para percorrer uma matriz esparsa. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A classe {\b IteratorM} fornece um iterador para percorrer os elementos de uma matriz esparsa.\par
+@friend class {\b Matriz} \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documenta\'E7\'E3o das defini\'E7\'F5es de tipos\par
+\pard\plain 
+{\xe \v difference_type\:IteratorM}
+{\xe \v IteratorM\:difference_type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+using {\b IteratorM::difference_type} =  std::ptrdiff_t}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v iterator_category\:IteratorM}
+{\xe \v IteratorM\:iterator_category}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+using {\b IteratorM::iterator_category} =  std::forward_iterator_tag}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v pointer\:IteratorM}
+{\xe \v IteratorM\:pointer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+using {\b IteratorM::pointer} =  double *}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v reference\:IteratorM}
+{\xe \v IteratorM\:reference}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+using {\b IteratorM::reference} =  double &}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v value_type\:IteratorM}
+{\xe \v IteratorM\:value_type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+using {\b IteratorM::value_type} =  double}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Construtores e Destrutores\par
+\pard\plain 
+{\xe \v IteratorM\:IteratorM}
+{\xe \v IteratorM\:IteratorM}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+IteratorM::IteratorM (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor padr\'E3o. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Inicializa o iterador com ponteiros nulos. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 36 : cabecalho({\cf17 nullptr}), current({\cf17 nullptr}) \{\}\par
+}
+}
+{\xe \v IteratorM\:IteratorM}
+{\xe \v IteratorM\:IteratorM}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+IteratorM::IteratorM ({\b Node} *  {\i cabecalho}, {\b Node} *  {\i current}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor com par\'E2metros. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Inicializa o iterador com o n\'F3 de cabe\'E7alho e o n\'F3 atual.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i cabecalho} \cell }{Ponteiro para o n\'F3 de cabe\'E7alho. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i current} \cell }{Ponteiro para o n\'F3 atual (padr\'E3o \'E9 nullptr). \cell }
+{\row }
+}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 46                                               : cabecalho(cabecalho), current(current)\par
+47     \{\par
+48         {\cf19 while} (current == cabecalho)\par
+49         \{\par
+50             cabecalho = cabecalho->abaixo;\par
+51             current = current->abaixo->direita;\par
+52         \}\par
+53     \}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documenta\'E7\'E3o das fun\'E7\'F5es\par
+\pard\plain 
+{\xe \v operator!=\:IteratorM}
+{\xe \v IteratorM\:operator!=}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool IteratorM::operator!= (const {\b IteratorM} &  {\i it}) const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de desigualdade. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Compara se dois iteradores s\'E3o diferentes.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i it} \cell }{Iterador a ser comparado. \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+true se os iteradores s\'E3o diferentes, false caso contr\'E1rio. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 145     \{\par
+146         {\cf19 return} cabecalho != it.cabecalho || current != it.current;\par
+147     \}\par
+}
+}
+{\xe \v operator*\:IteratorM}
+{\xe \v IteratorM\:operator*}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b reference} IteratorM::operator* (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de desreferencia\'E7\'E3o. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna uma refer\'EAncia ao valor do n\'F3 atual.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Refer\'EAncia ao valor do n\'F3 atual. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 63     \{\par
+64         {\cf19 return} current->valor;\par
+65     \}\par
+}
+}
+{\xe \v operator*\:IteratorM}
+{\xe \v IteratorM\:operator*}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b reference} IteratorM::operator* () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de desreferencia\'E7\'E3o (const). }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna uma refer\'EAncia constante ao valor do n\'F3 atual.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Refer\'EAncia constante ao valor do n\'F3 atual. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 75     \{\par
+76         {\cf19 return} current->valor;\par
+77     \}\par
+}
+}
+{\xe \v operator++\:IteratorM}
+{\xe \v IteratorM\:operator++}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b IteratorM} & IteratorM::operator++ (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de incremento prefixado. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Avan\'E7a o iterador para o pr\'F3ximo elemento na matriz esparsa.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Refer\'EAncia ao pr\'F3prio iterador ap\'F3s o incremento. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 111     \{\par
+112         current = current->direita;\par
+113 \par
+114         {\cf19 while} (current == cabecalho)\par
+115         \{\par
+116             cabecalho = cabecalho->abaixo;\par
+117             current = current->abaixo->direita;\par
+118         \}\par
+119 \par
+120         {\cf19 return} *{\cf17 this};\par
+121     \}\par
+}
+}
+{\xe \v operator->\:IteratorM}
+{\xe \v IteratorM\:operator->}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b pointer} IteratorM::operator-> (){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de acesso a membro (const). }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna um ponteiro constante para o valor do n\'F3 atual.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Ponteiro constante para o valor do n\'F3 atual. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 87     \{\par
+88         {\cf19 return} &current->valor;\par
+89     \}\par
+}
+}
+{\xe \v operator->\:IteratorM}
+{\xe \v IteratorM\:operator->}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b pointer} IteratorM::operator-> () const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de acesso a membro (const). }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna um ponteiro constante para o valor do n\'F3 atual.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Ponteiro constante para o valor do n\'F3 atual. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 99     \{\par
+100         {\cf19 return} &current->valor;\par
+101     \}\par
+}
+}
+{\xe \v operator==\:IteratorM}
+{\xe \v IteratorM\:operator==}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool IteratorM::operator== (const {\b IteratorM} &  {\i it}) const{\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Operador de igualdade. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Compara se dois iteradores s\'E3o iguais.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i it} \cell }{Iterador a ser comparado. \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+true se os iteradores s\'E3o iguais, false caso contr\'E1rio. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 132     \{\par
+133         {\cf19 return} cabecalho == it.cabecalho && current == it.current;\par
+134     \}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documenta\'E7\'E3o dos s\'EDmbolos amigos e relacionados\par
+\pard\plain 
+{\xe \v Matriz\:IteratorM}
+{\xe \v IteratorM\:Matriz}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+friend class {\b Matriz}{\f2 [friend]}}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa classe foi gerada a partir do seguinte arquivo:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+include/IteratorM/{\b IteratorM.hpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Classe Matriz\par \pard\plain 
+{\tc\tcl2 \v Matriz}
+{\xe \v Matriz}
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Classe que representa uma matriz esparsa. }}\par
+{
+{\f2 #include <Matriz.hpp>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Matriz} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor padr\'E3o da classe {\b Matriz}. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Matriz} (const int &ln, const int &cl)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor da classe {\b Matriz} que inicializa uma matriz esparsa com linhas e colunas especificadas. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b ~Matriz} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Destrutor da classe {\b Matriz}. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b IteratorM} {\b begin} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Inicializa um iterador que aponta para o primeiro elemento significativo da matriz. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b IteratorM} {\b end} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador que aponta para o final da matriz. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b IteratorM} {\b begin} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador que aponta para o primeiro elemento significativo da matriz (vers\'E3o const). }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b IteratorM} {\b end} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador que aponta para o final da matriz (vers\'E3o const). }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getLinhas} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna a quantidade de linhas da matriz. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b getColunas} () const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna a quantidade de colunas da matriz. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b limpar} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Limpa a matriz esparsa, removendo todos os n\'F3s. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b insert} (const int &posI, const int &posJ, const double &value)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Insere um valor em uma posi\'E7\'E3o espec\'EDfica da matriz esparsa. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b get} (const int &posI, const int &posJ)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna o valor armazenado na matriz em uma posi\'E7\'E3o espec\'EDfica. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b get} (const int &posI, const int &posJ) const\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna o valor armazenado na matriz em uma posi\'E7\'E3o espec\'EDfica (vers\'E3o const). }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b print} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Imprime a matriz no console. }{
+}\par
+}\par}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descri\'E7\'E3o detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Classe que representa uma matriz esparsa. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A classe {\b Matriz} implementa uma estrutura de dados para armazenar matrizes esparsas, onde a maioria dos elementos s\'E3o zeros. Utiliza uma lista encadeada de n\'F3s para armazenar apenas os elementos n\'E3o-zero, economizando mem\'F3ria e permitindo opera\'E7\'F5es eficientes.\par
+A matriz \'E9 representada por um n\'F3-cabe\'E7alho que atua como sentinela para a estrutura interna. Este n\'F3-cabe\'E7alho aponta para si mesmo em ambas as dire\'E7\'F5es (direita e abaixo) quando a matriz est\'E1 vazia. A classe fornece m\'E9todos para inserir, acessar e remover elementos, al\'E9m de obter o n\'FAmero de linhas e colunas e imprimir a matriz.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Observa\'E7\'E3o\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{
+\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+A matriz \'E9 inicializada com um n\'F3-cabe\'E7alho que aponta para si mesmo.\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Os \'EDndices das linhas e colunas come\'E7am em 1.\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+A inser\'E7\'E3o de elementos \'E9 feita apenas em posi\'E7\'F5es v\'E1lidas (dentro dos limites da matriz).\par}
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Aviso\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{
+\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+A tentativa de acessar ou inserir elementos em posi\'E7\'F5es inv\'E1lidas (fora dos limites da matriz) resultar\'E1 em uma exce\'E7\'E3o std::invalid_argument. \par}
+}}}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Construtores e Destrutores\par
+\pard\plain 
+{\xe \v Matriz\:Matriz}
+{\xe \v Matriz\:Matriz}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Matriz::Matriz ()}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor padr\'E3o da classe {\b Matriz}. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Este construtor inicializa os valores de linhas e colunas com zero e cria o n\'F3-cabe\'E7alho. Este n\'F3-cabe\'E7alho atua como sentinela para a estrutura interna da matriz, permitindo opera\'E7\'F5es de inser\'E7\'E3o, remo\'E7\'E3o e acesso eficientes. Inicialmente, o n\'F3-cabe\'E7alho aponta para si mesmo em ambas as dire\'E7\'F5es (direita e abaixo), indicando que a matriz ainda n\'E3o possui elementos de dados. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 4                : cabecalho({\cf17 new} Node(0, 0, 0)), linhas(0), colunas(0)\par
+5 \{\par
+6     cabecalho->direita = cabecalho->abaixo = cabecalho;\par
+7 \}\par
+}
+}
+{\xe \v Matriz\:Matriz}
+{\xe \v Matriz\:Matriz}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Matriz::Matriz (const int &  {\i ln}, const int &  {\i cl})}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor da classe {\b Matriz} que inicializa uma matriz esparsa com linhas e colunas especificadas. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Este construtor verifica primeiro se os valores passados para o n\'FAmero de linhas (lin) e colunas (col) s\'E3o maiores que zero. Caso contr\'E1rio, \'E9 lan\'E7ada uma exce\'E7\'E3o std::invalid_argument, garantindo que somente matrizes com dimens\'F5es v\'E1lidas sejam criadas.\par
+Em seguida, s\'E3o inicializadas:{
+\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+As vari\'E1veis internas para armazenar a quantidade de linhas e colunas.\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Um n\'F3-cabe\'E7alho que serve como refer\'EAncia principal da estrutura, mantendo la\'E7os para si mesmo tanto \'E0 direita quanto abaixo.\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Um conjunto de n\'F3s auxiliares, linkados entre si de maneira circular:{
+\par
+\pard\plain \s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+N\'F3s respons\'E1veis pelas linhas (um n\'F3 para cada linha),\par
+\pard\plain \s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+N\'F3s respons\'E1veis pelas colunas (um n\'F3 para cada coluna).\par}
+}
+Cada n\'F3 de linha aponta para si mesmo \'E0 direita, enquanto cada n\'F3 de coluna aponta para si mesmo abaixo, formando estruturas circulares independentes para linhas e colunas, todas centralizadas no n\'F3-cabe\'E7alho.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i lin} \cell }{Quantidade de linhas da matriz (deve ser um valor maior que zero). \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i col} \cell }{Quantidade de colunas da matriz (deve ser um valor maior que zero).\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Exce\'E7\'F5es\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i std::invalid_argument} \cell }{Exce\'E7\'E3o lan\'E7ada quando lin ou col s\'E3o menores ou iguais a zero. \cell }
+{\row }
+}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 11 \{\par
+12     {\cf19 if} (lin <= 0 || col <= 0)\par
+13         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Tamanho de matriz inv\'E1lido, insira valores maiores que 0"});\par
+14 \par
+15     linhas = lin;\par
+16     colunas = col;\par
+17 \par
+18     cabecalho = {\cf17 new} Node(0, 0, 0);\par
+19     cabecalho->direita = cabecalho->abaixo = cabecalho;\par
+20 \par
+21     Node *auxLinha = cabecalho;\par
+22     {\cf19 for} ({\cf18 int} i = 1; i <= lin; i++)\par
+23     \{\par
+24         Node *novo = {\cf17 new} Node(i, 0, 0);\par
+25         auxLinha->abaixo = novo;\par
+26         novo->direita = novo;\par
+27         auxLinha = novo;\par
+28     \}\par
+29     auxLinha->abaixo = cabecalho;\par
+30 \par
+31     Node *auxColuna = cabecalho;\par
+32     {\cf19 for} ({\cf18 int} j = 1; j <= col; j++)\par
+33     \{\par
+34         Node *novo = {\cf17 new} Node(0, j, 0);\par
+35         auxColuna->direita = novo;\par
+36         novo->abaixo = novo;\par
+37         auxColuna = novo;\par
+38     \}\par
+39     auxColuna->direita = cabecalho;\par
+40 \}\par
+}
+}
+{\xe \v ~Matriz\:Matriz}
+{\xe \v Matriz\:~Matriz}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Matriz::~Matriz ()}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Destrutor da classe {\b Matriz}. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Este destrutor \'E9 respons\'E1vel por liberar os recursos alocados pela inst\'E2ncia da classe {\b Matriz}. Ele chama a fun\'E7\'E3o {\b limpar()} para garantir que toda a mem\'F3ria din\'E2mica utilizada pela matriz seja devidamente desalocada, evitando vazamentos de mem\'F3ria. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 73 \{\par
+74     limpar();\par
+75 \}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documenta\'E7\'E3o das fun\'E7\'F5es\par
+\pard\plain 
+{\xe \v begin\:Matriz}
+{\xe \v Matriz\:begin}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b IteratorM} Matriz::begin ()}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Inicializa um iterador que aponta para o primeiro elemento significativo da matriz. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o permite obter um iterador para o primeiro n\'F3 principal da matriz esparsa (localizado logo abaixo do cabe\'E7alho), facilitando o acesso aos elementos e a manipula\'E7\'E3o da estrutura de dados. O iterador retornado aponta para o primeiro n\'F3 relevante da linha principal, permitindo assim percorrer as colunas de forma apropriada.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Retorna um objeto de iterador ({\b IteratorM}) posicionado no in\'EDcio da matriz esparsa.\par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Observa\'E7\'E3o\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Esse m\'E9todo presume que a matriz est\'E1 devidamente inicializada e que o cabe\'E7alho aponta para posicionamentos v\'E1lidos da estrutura. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 43 \{\par
+44     {\cf19 return} IteratorM(cabecalho->abaixo, cabecalho->abaixo->direita);\par
+45 \}\par
+}
+}
+{\xe \v begin\:Matriz}
+{\xe \v Matriz\:begin}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b IteratorM} Matriz::begin () const}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador que aponta para o primeiro elemento significativo da matriz (vers\'E3o const). }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o \'E9 uma sobrecarga da fun\'E7\'E3o {\b begin()} que permite obter um iterador para o primeiro n\'F3 principal da matriz esparsa, sem permitir altera\'E7\'F5es nos valores da matriz. O iterador retornado aponta para o primeiro n\'F3 relevante\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{\b IteratorM} Objeto iterador apontando para o in\'EDcio da matriz. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 53 \{\par
+54     {\cf19 return} IteratorM(cabecalho->abaixo, cabecalho->abaixo->direita);\par
+55 \}\par
+}
+}
+{\xe \v end\:Matriz}
+{\xe \v Matriz\:end}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b IteratorM} Matriz::end ()}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador que aponta para o final da matriz. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o prov\'EA um objeto {\b IteratorM} associado \'E0 lista principal de n\'F3s da matriz esparsa, indicando uma posi\'E7\'E3o que corresponde ao final da estrutura de dados.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{\b IteratorM} Objeto iterador apontando para o final da matriz. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 48 \{\par
+49     {\cf19 return} IteratorM(cabecalho, cabecalho->direita);\par
+50 \}\par
+}
+}
+{\xe \v end\:Matriz}
+{\xe \v Matriz\:end}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b IteratorM} Matriz::end () const}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador que aponta para o final da matriz (vers\'E3o const). }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o \'E9 uma sobrecarga da fun\'E7\'E3o {\b end()} que permite obter um iterador para o final da matriz esparsa, sem permitir altera\'E7\'F5es nos valores da matriz. O iterador retornado aponta para o final da estrutura de dados.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{\b IteratorM} Objeto iterador apontando para o final da matriz. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 58 \{\par
+59     {\cf19 return} IteratorM(cabecalho, cabecalho->direita);\par
+60 \}\par
+}
+}
+{\xe \v get\:Matriz}
+{\xe \v Matriz\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double Matriz::get (const int &  {\i posI}, const int &  {\i posJ})}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna o valor armazenado na matriz em uma posi\'E7\'E3o espec\'EDfica. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o busca o valor localizado na linha e coluna indicadas por {\f2 posI}  e {\f2 posJ} . Se n\'E3o houver nenhum valor armazenado nessa posi\'E7\'E3o (ou seja, se o n\'F3 correspondente n\'E3o existir), a fun\'E7\'E3o retornar\'E1 0. Caso a posi\'E7\'E3o seja inv\'E1lida, ser\'E1 lan\'E7ada uma exce\'E7\'E3o do tipo std::invalid_argument.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i posI} \cell }{\'CDndice da linha solicitada. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i posJ} \cell }{\'CDndice da coluna solicitada. \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+O valor do tipo double encontrado na posi\'E7\'E3o indicada, ou 0 caso n\'E3o exista nenhum valor armazenado.\par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Exce\'E7\'F5es\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i std::invalid_argument} \cell }{Se {\f2 posI}  ou {\f2 posJ}  forem menores ou iguais a 0 ou excederem as dimens\'F5es da matriz. \cell }
+{\row }
+}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 155 \{\par
+156     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+157         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+158 \par
+159     IteratorM it = begin();\par
+160 \par
+161     {\cf19 while} (it != end())\par
+162     \{\par
+163         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
+164             {\cf19 return} *it;\par
+165 \par
+166         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
+167             {\cf19 return} 0;\par
+168 \par
+169         ++it;\par
+170     \}\par
+171 \par
+172     {\cf19 return} 0;\par
+173 \}\par
+}
+}
+{\xe \v get\:Matriz}
+{\xe \v Matriz\:get}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double Matriz::get (const int &  {\i posI}, const int &  {\i posJ}) const}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna o valor armazenado na matriz em uma posi\'E7\'E3o espec\'EDfica (vers\'E3o const). }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Mesma funcionalidade da vers\'E3o n\'E3o-const, mas permite consultar valores em matrizes constantes, sem modific\'E1-las.\par
+Esta fun\'E7\'E3o \'E9 uma sobrecarga da fun\'E7\'E3o {\b get()} que permite consultar valores em matrizes constantes, sem alterar seu conte\'FAdo. A diferen\'E7a \'E9 que esta vers\'E3o n\'E3o permite alterar o conte\'FAdo da matriz, garantindo a integridade dos dados.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i posI} \cell }{\'CDndice da linha solicitada. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i posJ} \cell }{\'CDndice da coluna solicitada. \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+O valor do tipo double encontrado na posi\'E7\'E3o indicada, ou 0\par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Exce\'E7\'F5es\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i std::invalid_argument} \cell }{Se {\f2 posI}  ou {\f2 posJ}  forem menores ou iguais a 0 ou excederem as dimens\'F5es da matriz. \cell }
+{\row }
+}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 176 \{\par
+177     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+178         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+179 \par
+180     IteratorM it = begin();\par
+181 \par
+182     {\cf19 while} (it != end())\par
+183     \{\par
+184         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
+185             {\cf19 return} *it;\par
+186 \par
+187         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
+188             {\cf19 return} 0;\par
+189 \par
+190         ++it;\par
+191     \}\par
+192 \par
+193     {\cf19 return} 0;\par
+194 \}\par
+}
+}
+{\xe \v getColunas\:Matriz}
+{\xe \v Matriz\:getColunas}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Matriz::getColunas () const}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna a quantidade de colunas da matriz. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+N\'FAmero de colunas da matriz.\par
+}}Semelhante a {\b getLinhas()}, utilizada para consultar o total de colunas da estrutura. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 68 \{\par
+69     {\cf19 return} colunas;\par
+70 \}\par
+}
+}
+{\xe \v getLinhas\:Matriz}
+{\xe \v Matriz\:getLinhas}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Matriz::getLinhas () const}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Retorna a quantidade de linhas da matriz. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+N\'FAmero de linhas da matriz.\par
+}}Esta fun\'E7\'E3o permite consultar o total de linhas para verifica\'E7\'E3o de limites ou para itera\'E7\'F5es relacionadas ao tamanho da matriz. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 63 \{\par
+64     {\cf19 return} linhas;\par
+65 \}\par
+}
+}
+{\xe \v insert\:Matriz}
+{\xe \v Matriz\:insert}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Matriz::insert (const int &  {\i posI}, const int &  {\i posJ}, const double &  {\i value})}}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Insere um valor em uma posi\'E7\'E3o espec\'EDfica da matriz esparsa. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o permite inserir uma nova c\'E9lula com valor diferente de zero em uma matriz esparsa, levando em conta sua organiza\'E7\'E3o em listas duplamente encadeadas na horizontal e vertical. Qualquer valor igual a zero \'E9 ignorado, pois n\'E3o se armazena valores nulos na estrutura. Caso a posi\'E7\'E3o informada n\'E3o seja v\'E1lida, uma exce\'E7\'E3o de argumento inv\'E1lido \'E9 lan\'E7ada.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i posI} \cell }{\'CDndice da linha na qual a c\'E9lula ser\'E1 inserida. Deve ser um valor positivo e menor ou igual ao n\'FAmero total de linhas da matriz. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i posJ} \cell }{\'CDndice da coluna na qual a c\'E9lula ser\'E1 inserida. Deve ser um valor positivo e menor ou igual ao n\'FAmero total de colunas da matriz. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i value} \cell }{Valor a ser armazenado na nova c\'E9lula. Valores iguais a zero n\'E3o s\'E3o inseridos na matriz.\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Exce\'E7\'F5es\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i std::invalid_argument} \cell }{Lan\'E7ada quando (posI, posJ) excede os limites de linhas ou colunas definidos para a matriz.\cell }
+{\row }
+}
+A fun\'E7\'E3o percorre primeiro a lista horizontal (linha) correspondente para localizar a posi\'E7\'E3o adequada. Caso j\'E1 exista um n\'F3 na mesma coluna, o valor \'E9 atualizado. Se n\'E3o existir, cria-se um novo n\'F3 para armazenar o valor na posi\'E7\'E3o indicada. Ap\'F3s isso, a fun\'E7\'E3o tamb\'E9m atualiza a refer\'EAncia vertical (coluna), posicionando o novo n\'F3 de forma adequada na estrutura de dados. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 98 \{\par
+99     {\cf20 // N\'E3o armazena valores iguais a zero}\par
+100     {\cf19 if} (value == 0)\par
+101         {\cf19 return};\par
+102 \par
+103     {\cf20 // Valida\'E7\'E3o dos \'EDndices}\par
+104     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+105         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de inser\'E7\'E3o inv\'E1lido"});\par
+106 \par
+107     {\cf20 // Busca na lista horizontal (linha)}\par
+108     Node *linhaAtual = cabecalho;\par
+109     {\cf19 while} (linhaAtual->linha < posI)\par
+110     \{\par
+111         linhaAtual = linhaAtual->abaixo;\par
+112     \}\par
+113 \par
+114     {\cf20 // Procura pela posi\'E7\'E3o correta na linha}\par
+115     Node *aux = linhaAtual;\par
+116     {\cf19 while} (aux->direita != linhaAtual && aux->direita->coluna < posJ)\par
+117     \{\par
+118         aux = aux->direita;\par
+119     \}\par
+120 \par
+121     {\cf20 // Verifica se o n\'F3 j\'E1 existe}\par
+122     {\cf19 if} (aux->direita->coluna == posJ)\par
+123     \{\par
+124         aux->direita->atualizaValor(value); {\cf20 // Atualiza o valor}\par
+125         {\cf19 return};\par
+126     \}\par
+127 \par
+128     {\cf20 // Cria um novo n\'F3}\par
+129     Node *novo = {\cf17 new} Node(posI, posJ, value);\par
+130 \par
+131     {\cf20 // Insere o n\'F3 na lista horizontal}\par
+132     novo->direita = aux->direita;\par
+133     aux->direita = novo;\par
+134 \par
+135     {\cf20 // Busca na lista vertical (coluna)}\par
+136     Node *colunaAtual = cabecalho;\par
+137     {\cf19 while} (colunaAtual->coluna < posJ)\par
+138     \{\par
+139         colunaAtual = colunaAtual->direita;\par
+140     \}\par
+141 \par
+142     {\cf20 // Procura pela posi\'E7\'E3o correta na coluna}\par
+143     aux = colunaAtual;\par
+144     {\cf19 while} (aux->abaixo != colunaAtual && aux->abaixo->linha < posI)\par
+145     \{\par
+146         aux = aux->abaixo;\par
+147     \}\par
+148 \par
+149     {\cf20 // Insere o n\'F3 na lista vertical}\par
+150     novo->abaixo = aux->abaixo;\par
+151     aux->abaixo = novo;\par
+152 \}\par
+}
+}
+{\xe \v limpar\:Matriz}
+{\xe \v Matriz\:limpar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Matriz::limpar ()}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Limpa a matriz esparsa, removendo todos os n\'F3s. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o percorre todos os n\'F3s da matriz esparsa, come\'E7ando pelo n\'F3 imediatamente abaixo do cabe\'E7alho e, em seguida, removendo todos os n\'F3s em cada linha e coluna. A fun\'E7\'E3o utiliza dois loops aninhados: o loop externo percorre cada linha da matriz, enquanto o loop interno percorre cada n\'F3 em uma linha espec\'EDfica. Cada n\'F3 \'E9 deletado para liberar a mem\'F3ria alocada dinamicamente.\par
+Vari\'E1veis:{
+\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+linhaAtual: Ponteiro para o n\'F3 atual na linha que est\'E1 sendo processada.\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+colunaAtual: Ponteiro para o n\'F3 atual na coluna que est\'E1 sendo processada.\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+aux: Ponteiro auxiliar que aponta para o n\'F3 imediatamente abaixo do cabe\'E7alho.\par}
+O loop externo continua at\'E9 que todas as linhas tenham sido processadas, e o loop interno continua at\'E9 que todos os n\'F3s em uma linha espec\'EDfica tenham sido deletados. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 78 \{\par
+79     Node *linhaAtual = cabecalho->abaixo;\par
+80     Node *colunaAtual = linhaAtual->direita;\par
+81     Node *aux = cabecalho->abaixo;\par
+82 \par
+83     {\cf19 while} (linhaAtual != aux)\par
+84     \{\par
+85         {\cf19 while} (colunaAtual != linhaAtual)\par
+86         \{\par
+87             Node *temp = colunaAtual;\par
+88             colunaAtual = colunaAtual->direita;\par
+89             {\cf17 delete} temp;\par
+90         \}\par
+91         Node *temp = linhaAtual;\par
+92         linhaAtual = linhaAtual->abaixo;\par
+93         {\cf17 delete} temp;\par
+94     \}\par
+95 \}\par
+}
+}
+{\xe \v print\:Matriz}
+{\xe \v Matriz\:print}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Matriz::print ()}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Imprime a matriz no console. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Exibe todas as linhas e colunas da matriz, mostrando os valores armazenados. Para posi\'E7\'F5es onde n\'E3o h\'E1 valor armazenado (na forma esparsa), \'E9 imprimido o n\'FAmero 0. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 197 \{\par
+198     IteratorM it = begin();\par
+199     \par
+200     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
+201     \{\par
+202         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
+203         \{\par
+204             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
+205             \{\par
+206                 std::cout << std::fixed << std::setprecision(1) << *it;\par
+207                 ++it;\par
+208             \}\par
+209             {\cf19 else}\par
+210             \{\par
+211                 std::cout << {\cf22 "0.0"};\par
+212             \}\par
+213             std::cout << {\cf22 " "};\par
+214             \par
+215         \}\par
+216         std::cout << std::endl;\par
+217     \}\par
+218 \}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa classe foi gerada a partir dos seguintes arquivos:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+include/matriz/{\b Matriz.hpp}\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+src/matriz/{\b Matriz.cpp}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia da Estrutura Node\par \pard\plain 
+{\tc\tcl2 \v Node}
+{\xe \v Node}
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Representa um n\'F3 em uma matriz esparsa. }}\par
+{
+{\f2 #include <Node.hpp>}}\par
+Diagrama de colabora\'E7\'E3o para Node:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "structNode__coll__graph.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Membros P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Node} (const int &{\b linha}, const int &{\b coluna}, const double &{\b valor})\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor da classe {\b Node}. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b atualizaValor} (const double &novoValor)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Atualiza o valor do n\'F3. }{
+}\par
+}\par}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Atributos P\'FAblicos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Node} * {\b direita}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Node} * {\b abaixo}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b linha}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b coluna}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+double {\b valor}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descri\'E7\'E3o detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Representa um n\'F3 em uma matriz esparsa. \par
+}
+
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta struct \'E9 usada para representar um n\'F3 em uma matriz esparsa, que cont\'E9m ponteiros para os n\'F3s \'E0 direita e abaixo, bem como a linha, coluna e valor do elemento. \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Construtores e Destrutores\par
+\pard\plain 
+{\xe \v Node\:Node}
+{\xe \v Node\:Node}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+Node::Node (const int &  {\i linha}, const int &  {\i coluna}, const double &  {\i valor}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Construtor da classe {\b Node}. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Este construtor inicializa um objeto {\b Node} com os valores fornecidos para linha, coluna e valor.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i linha} \cell }{Refer\'EAncia constante para o n\'FAmero da linha. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i coluna} \cell }{Refer\'EAncia constante para o n\'FAmero da coluna. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i valor} \cell }{Refer\'EAncia constante para o valor armazenado no n\'F3. \cell }
+{\row }
+}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 28                                                                    : linha(linha), coluna(coluna), valor(valor)\par
+29     \{\par
+30         direita = {\cf17 nullptr};\par
+31         abaixo = {\cf17 nullptr};\par
+32     \}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documenta\'E7\'E3o das fun\'E7\'F5es\par
+\pard\plain 
+{\xe \v atualizaValor\:Node}
+{\xe \v Node\:atualizaValor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Node::atualizaValor (const double &  {\i novoValor}){\f2 [inline]}}}
+\par
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Atualiza o valor do n\'F3. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o atualiza o valor armazenado no n\'F3 com um novo valor fornecido.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i novoValor} \cell }{O novo valor que substituir\'E1 o valor atual do n\'F3. \cell }
+{\row }
+}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 42     \{\par
+43         valor = novoValor;\par
+44     \}\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Atributos\par
+\pard\plain 
+{\xe \v abaixo\:Node}
+{\xe \v Node\:abaixo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Node}* Node::abaixo}}
+\par
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ponteiro para o pr\'F3ximo n\'F3 na mesma coluna. \par
+}}
+{\xe \v coluna\:Node}
+{\xe \v Node\:coluna}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Node::coluna}}
+\par
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+N\'FAmero da coluna onde o n\'F3 est\'E1 localizado. \par
+}}
+{\xe \v direita\:Node}
+{\xe \v Node\:direita}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Node}* Node::direita}}
+\par
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Ponteiro para o pr\'F3ximo n\'F3 na mesma linha. \par
+}}
+{\xe \v linha\:Node}
+{\xe \v Node\:linha}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Node::linha}}
+\par
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+N\'FAmero da linha onde o n\'F3 est\'E1 localizado. \par
+}}
+{\xe \v valor\:Node}
+{\xe \v Node\:valor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+double Node::valor}}
+\par
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Valor armazenado no n\'F3. \par
+}}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+A documenta\'E7\'E3o para essa estrutura foi gerada a partir do seguinte arquivo:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+include/node/{\b Node.hpp}\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Arquivos{\tc \v Arquivos}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo include/IteratorM/IteratorM.hpp\par \pard\plain 
+{\tc\tcl2 \v include/IteratorM/IteratorM.hpp}
+{\xe \v include/IteratorM/IteratorM.hpp}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "matriz/Matriz.hpp"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Gr\'E1fico de depend\'EAncia de inclus\'F5es para IteratorM.hpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "IteratorM_8hpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Este grafo mostra quais arquivos est\'E3o direta ou indiretamente relacionados com esse arquivo:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "IteratorM_8hpp__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b IteratorM}{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Iterador para percorrer uma matriz esparsa. }}\par}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+IteratorM.hpp\par \pard\plain 
+{\tc\tcl2 \v include/IteratorM/IteratorM.hpp}
+{\xe \v include/IteratorM/IteratorM.hpp}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+Ir para a documenta\'E7\'E3o desse arquivo.\par
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf21 #ifndef ITERATORM_HPP}\par
+2 {\cf21 #define ITERATORM_HPP}\par
+3 \par
+4 {\cf21 #include "matriz/Matriz.hpp"}\par
+5 \par
+6 {\cf17 class }Matriz;\par
+7 \par
+16 {\cf17 class }IteratorM\par
+17 \{\par
+18     {\cf17 friend} {\cf17 class }Matriz;\par
+19 \par
+20 {\cf17 private}:\par
+21     Node *cabecalho; \par
+22     Node *current;   \par
+24 {\cf17 public}:\par
+25     {\cf17 using }iterator_category = std::forward_iterator_tag;\par
+26     {\cf17 using }difference_type = std::ptrdiff_t;\par
+27     {\cf17 using }value_type = double;\par
+28     {\cf17 using }pointer = {\cf18 double} *;\par
+29     {\cf17 using }reference = {\cf18 double} &;\par
+30 \par
+36     IteratorM() : cabecalho(nullptr), current(nullptr) \{\}\par
+37 \par
+46     IteratorM(Node *cabecalho, Node *current) : cabecalho(cabecalho), current(current)\par
+47     \{\par
+48         {\cf19 while} (current == cabecalho)\par
+49         \{\par
+50             cabecalho = cabecalho->abaixo;\par
+51             current = current->abaixo->direita;\par
+52         \}\par
+53     \}\par
+54 \par
+62     reference operator*()\par
+63     \{\par
+64         {\cf19 return} current->valor;\par
+65     \}\par
+66 \par
+74     reference operator*(){\cf17  const}\par
+75 {\cf17     }\{\par
+76         {\cf19 return} current->valor;\par
+77     \}\par
+78 \par
+86     pointer operator->()\par
+87     \{\par
+88         {\cf19 return} &current->valor;\par
+89     \}\par
+90 \par
+98     pointer operator->(){\cf17  const}\par
+99 {\cf17     }\{\par
+100         {\cf19 return} &current->valor;\par
+101     \}\par
+102 \par
+110     IteratorM &operator++()\par
+111     \{\par
+112         current = current->direita;\par
+113 \par
+114         {\cf19 while} (current == cabecalho)\par
+115         \{\par
+116             cabecalho = cabecalho->abaixo;\par
+117             current = current->abaixo->direita;\par
+118         \}\par
+119 \par
+120         {\cf19 return} *{\cf17 this};\par
+121     \}\par
+122 \par
+131     {\cf18 bool} operator==({\cf17 const} IteratorM &it){\cf17  const}\par
+132 {\cf17     }\{\par
+133         {\cf19 return} cabecalho == it.cabecalho && current == it.current;\par
+134     \}\par
+135 \par
+144     {\cf18 bool} operator!=({\cf17 const} IteratorM &it){\cf17  const}\par
+145 {\cf17     }\{\par
+146         {\cf19 return} cabecalho != it.cabecalho || current != it.current;\par
+147     \}\par
+148 \};\par
+149 \par
+150 {\cf21 #endif}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo include/matriz/Matriz.hpp\par \pard\plain 
+{\tc\tcl2 \v include/matriz/Matriz.hpp}
+{\xe \v include/matriz/Matriz.hpp}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include "node/Node.hpp"}\par
+{\f2 #include "IteratorM/IteratorM.hpp"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Gr\'E1fico de depend\'EAncia de inclus\'F5es para Matriz.hpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "Matriz_8hpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Este grafo mostra quais arquivos est\'E3o direta ou indiretamente relacionados com esse arquivo:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "Matriz_8hpp__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+class {\b Matriz}{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Classe que representa uma matriz esparsa. }}\par}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Matriz.hpp\par \pard\plain 
+{\tc\tcl2 \v include/matriz/Matriz.hpp}
+{\xe \v include/matriz/Matriz.hpp}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+Ir para a documenta\'E7\'E3o desse arquivo.\par
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf21 #ifndef MATRIZ_HPP}\par
+2 {\cf21 #define MATRIZ_HPP}\par
+3 \par
+4 {\cf21 #include <iostream>}\par
+5 {\cf21 #include "node/Node.hpp"}\par
+6 {\cf21 #include "IteratorM/IteratorM.hpp"}\par
+7 \par
+32 {\cf17 class }Matriz\par
+33 \{\par
+34 {\cf17 private}:\par
+35     Node *cabecalho; \par
+36     {\cf18 int} linhas;      \par
+37     {\cf18 int} colunas;     \par
+39 {\cf17 public}:\par
+50     Matriz();\par
+51 \par
+77     Matriz({\cf17 const} {\cf18 int} &ln, {\cf17 const} {\cf18 int} &cl);\par
+78 \par
+86     ~Matriz();\par
+87 \par
+102     IteratorM begin();\par
+103 \par
+113     IteratorM end();\par
+114 \par
+125     IteratorM begin() {\cf17 const};\par
+126 \par
+136     IteratorM end() {\cf17 const};\par
+137 \par
+146     {\cf18 int} getLinhas() {\cf17 const};\par
+147 \par
+156     {\cf18 int} getColunas() {\cf17 const};\par
+157 \par
+178     {\cf18 void} limpar();\par
+179 \par
+210     {\cf18 void} insert({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ, {\cf17 const} {\cf18 double} &value);\par
+211 \par
+230     {\cf18 double} get({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ);\par
+231 \par
+251     {\cf18 double} get({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ) {\cf17 const};\par
+252 \par
+260     {\cf18 void} print();\par
+261 \};\par
+262 \par
+263 {\cf21 #endif}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo include/node/Node.hpp\par \pard\plain 
+{\tc\tcl2 \v include/node/Node.hpp}
+{\xe \v include/node/Node.hpp}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Este grafo mostra quais arquivos est\'E3o direta ou indiretamente relacionados com esse arquivo:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "Node_8hpp__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Componentes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b Node}{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Representa um n\'F3 em uma matriz esparsa. }}\par}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Node.hpp\par \pard\plain 
+{\tc\tcl2 \v include/node/Node.hpp}
+{\xe \v include/node/Node.hpp}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+Ir para a documenta\'E7\'E3o desse arquivo.\par
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf21 #ifndef NODE_HPP}\par
+2 {\cf21 #define NODE_HPP}\par
+3 \par
+11 {\cf17 struct }Node\par
+12 \{\par
+13     Node *direita; \par
+14     Node *abaixo;  \par
+15     {\cf18 int} linha;     \par
+16     {\cf18 int} coluna;    \par
+17     {\cf18 double} valor;  \par
+28     Node({\cf17 const} {\cf18 int} &linha, {\cf17 const} {\cf18 int} &coluna, {\cf17 const} {\cf18 double} &valor) : linha(linha), coluna(coluna), valor(valor)\par
+29     \{\par
+30         direita = {\cf17 nullptr};\par
+31         abaixo = {\cf17 nullptr};\par
+32     \}\par
+33 \par
+41     {\cf18 void} atualizaValor({\cf17 const} {\cf18 double} &novoValor)\par
+42     \{\par
+43         valor = novoValor;\par
+44     \}\par
+45 \};\par
+46 \par
+47 {\cf21 #endif}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo include/utils/utils.hpp\par \pard\plain 
+{\tc\tcl2 \v include/utils/utils.hpp}
+{\xe \v include/utils/utils.hpp}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "matriz/Matriz.hpp"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Gr\'E1fico de depend\'EAncia de inclus\'F5es para utils.hpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "utils_8hpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Este grafo mostra quais arquivos est\'E3o direta ou indiretamente relacionados com esse arquivo:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "utils_8hpp__dep__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Matriz} {\b sum} (const {\b Matriz} &matrixA, const {\b Matriz} &matrizB)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Soma duas matrizes de mesmo tamanho. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Matriz} {\b multiply} (const {\b Matriz} &matrizA, const {\b Matriz} &matrizB)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Multiplica duas matrizes e retorna a matriz resultante. }{
+}\par
+}\par}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+{\xe \v multiply\:utils.hpp}
+{\xe \v utils.hpp\:multiply}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Matriz} multiply (const {\b Matriz} &  {\i matrizA}, const {\b Matriz} &  {\i matrizB})}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Multiplica duas matrizes e retorna a matriz resultante. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o realiza a multiplica\'E7\'E3o de duas matrizes, matrizA e matrizB, e retorna a matriz resultante. A multiplica\'E7\'E3o de matrizes \'E9 poss\'EDvel apenas se o n\'FAmero de colunas de matrizA for igual ao n\'FAmero de linhas de matrizB. Caso contr\'E1rio, uma exce\'E7\'E3o std::invalid_argument ser\'E1 lan\'E7ada.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matrizA} \cell }{A primeira matriz a ser multiplicada. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matrizB} \cell }{A segunda matriz a ser multiplicada. \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{\b Matriz} A matriz resultante da multiplica\'E7\'E3o de matrizA e matrizB. \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Exce\'E7\'F5es\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i std::invalid_argument} \cell }{Se o n\'FAmero de colunas de matrizA for diferente do n\'FAmero de linhas de matrizB.\cell }
+{\row }
+}
+A multiplica\'E7\'E3o de matrizes \'E9 realizada da seguinte forma:{
+\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Para cada linha i de matrizA e cada coluna j de matrizB, calcula-se o produto escalar entre a linha i de matrizA e a coluna j de matrizB.\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+O valor resultante \'E9 inserido na posi\'E7\'E3o (i, j) da matriz resultante. \par}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 61 \{\par
+62     {\cf20 // Verifica\'E7\'E3o se a multiplica\'E7\'E3o \'E9 poss\'EDvel}\par
+63     {\cf19 if} (matrizA.getColunas() != matrizB.getLinhas())\par
+64     \{\par
+65         {\cf19 throw} std::invalid_argument({\cf22 "Erro: As matrizes precisam ter o mesmo n\'FAmero de colunas e linhas"});\par
+66     \}\par
+67 \par
+68     {\cf20 // Criando a matriz resultante (C)}\par
+69     Matriz matriz(matrizA.getLinhas(), matrizB.getColunas());\par
+70 \par
+71     {\cf20 // Percorrendo as linhas de matrizA e as colunas de matrizB}\par
+72     {\cf19 for} ({\cf18 int} i = 1, linha = matrizA.getLinhas(); i <= linha; i++)\par
+73     \{\par
+74         {\cf19 for} ({\cf18 int} j = 1, coluna = matrizB.getColunas(); j <= coluna; j++)\par
+75         \{\par
+76             {\cf18 double} valor = 0;\par
+77 \par
+78             {\cf20 // Calculando o produto escalar entre a linha i de A e a coluna j de B}\par
+79             {\cf19 for} ({\cf18 int} k = 1; k <= matrizA.getColunas(); k++)\par
+80             \{\par
+81                 valor += matrizA.get(i, k) * matrizB.get(k, j);\par
+82             \}\par
+83 \par
+84             matriz.insert(i, j, valor);\par
+85         \}\par
+86     \}\par
+87 \par
+88     {\cf19 return} matriz; {\cf20 // Retorna a matriz resultante}\par
+89 \}\par
+}
+}
+{\xe \v sum\:utils.hpp}
+{\xe \v utils.hpp\:sum}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Matriz} sum (const {\b Matriz} &  {\i matrixA}, const {\b Matriz} &  {\i matrizB})}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Soma duas matrizes de mesmo tamanho. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o realiza a soma elemento a elemento das matrizes passadas por par\'E2metro, retornando uma nova matriz com o resultado.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matrixA} \cell }{Primeira matriz de entrada, cujas dimens\'F5es (linhas e colunas) devem ser iguais \'E0s de {\f2 matrizB} . \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matrizB} \cell }{Segunda matriz de entrada, com dimens\'F5es compat\'EDveis com {\f2 matrixA} , para que a soma seja realizada corretamente.\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Exce\'E7\'F5es\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i std::invalid_argument} \cell }{Exce\'E7\'E3o lan\'E7ada caso as matrizes fornecidas n\'E3o possuam as mesmas dimens\'F5es, impossibilitando a opera\'E7\'E3o de soma.\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Uma nova matriz que representa o resultado da soma elemento a elemento de {\f2 matrixA}  e {\f2 matrizB} , mantendo as mesmas dimens\'F5es das matrizes de entrada. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 24 \{\par
+25     {\cf19 if} (matrixA.getLinhas() != matrizB.getLinhas() || matrixA.getColunas() != matrizB.getColunas())\par
+26         {\cf19 throw} std::invalid_argument({\cf22 "Erro: As matrizes n\'E3o possuem o mesmo tamanho"});\par
+27 \par
+28     Matriz matriz(matrixA.getLinhas(), matrixA.getColunas());\par
+29 \par
+30     {\cf19 for} ({\cf18 int} i = 1, linha = matrixA.getLinhas(); i <= linha; i++)\par
+31     \{\par
+32         {\cf19 for} ({\cf18 int} j = 1, coluna = matrixA.getColunas(); j <= coluna; j++)\par
+33         \{\par
+34             {\cf18 double} valor = matrixA.get(i, j) + matrizB.get(i, j);\par
+35 \par
+36             matriz.insert(i, j, valor);\par
+37         \}\par
+38     \}\par
+39 \par
+40     {\cf19 return} matriz;\par
+41 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+utils.hpp\par \pard\plain 
+{\tc\tcl2 \v include/utils/utils.hpp}
+{\xe \v include/utils/utils.hpp}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+Ir para a documenta\'E7\'E3o desse arquivo.\par
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 1 {\cf21 #ifndef UTILS_HPP}\par
+2 {\cf21 #define UTILS_HPP}\par
+3 \par
+4 {\cf21 #include "matriz/Matriz.hpp"}\par
+5 \par
+23 Matriz sum({\cf17 const} Matriz &matrixA, {\cf17 const} Matriz &matrizB)\par
+24 \{\par
+25     {\cf19 if} (matrixA.getLinhas() != matrizB.getLinhas() || matrixA.getColunas() != matrizB.getColunas())\par
+26         {\cf19 throw} std::invalid_argument({\cf22 "Erro: As matrizes n\'E3o possuem o mesmo tamanho"});\par
+27 \par
+28     Matriz matriz(matrixA.getLinhas(), matrixA.getColunas());\par
+29 \par
+30     {\cf19 for} ({\cf18 int} i = 1, linha = matrixA.getLinhas(); i <= linha; i++)\par
+31     \{\par
+32         {\cf19 for} ({\cf18 int} j = 1, coluna = matrixA.getColunas(); j <= coluna; j++)\par
+33         \{\par
+34             {\cf18 double} valor = matrixA.get(i, j) + matrizB.get(i, j);\par
+35 \par
+36             matriz.insert(i, j, valor);\par
+37         \}\par
+38     \}\par
+39 \par
+40     {\cf19 return} matriz;\par
+41 \}\par
+42 \par
+60 Matriz multiply({\cf17 const} Matriz &matrizA, {\cf17 const} Matriz &matrizB)\par
+61 \{\par
+62     {\cf20 // Verifica\'E7\'E3o se a multiplica\'E7\'E3o \'E9 poss\'EDvel}\par
+63     {\cf19 if} (matrizA.getColunas() != matrizB.getLinhas())\par
+64     \{\par
+65         {\cf19 throw} std::invalid_argument({\cf22 "Erro: As matrizes precisam ter o mesmo n\'FAmero de colunas e linhas"});\par
+66     \}\par
+67 \par
+68     {\cf20 // Criando a matriz resultante (C)}\par
+69     Matriz matriz(matrizA.getLinhas(), matrizB.getColunas());\par
+70 \par
+71     {\cf20 // Percorrendo as linhas de matrizA e as colunas de matrizB}\par
+72     {\cf19 for} ({\cf18 int} i = 1, linha = matrizA.getLinhas(); i <= linha; i++)\par
+73     \{\par
+74         {\cf19 for} ({\cf18 int} j = 1, coluna = matrizB.getColunas(); j <= coluna; j++)\par
+75         \{\par
+76             {\cf18 double} valor = 0;\par
+77 \par
+78             {\cf20 // Calculando o produto escalar entre a linha i de A e a coluna j de B}\par
+79             {\cf19 for} ({\cf18 int} k = 1; k <= matrizA.getColunas(); k++)\par
+80             \{\par
+81                 valor += matrizA.get(i, k) * matrizB.get(k, j);\par
+82             \}\par
+83 \par
+84             matriz.insert(i, j, valor);\par
+85         \}\par
+86     \}\par
+87 \par
+88     {\cf19 return} matriz; {\cf20 // Retorna a matriz resultante}\par
+89 \}\par
+90 \par
+91 {\cf21 #endif}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo README.md\par \pard\plain 
+{\tc\tcl2 \v README.md}
+{\xe \v README.md}
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo src/main/main.cpp\par \pard\plain 
+{\tc\tcl2 \v src/main/main.cpp}
+{\xe \v src/main/main.cpp}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <fstream>}\par
+{\f2 #include <unordered_map>}\par
+{\f2 #include "matriz/Matriz.hpp"}\par
+{\f2 #include "utils/utils.hpp"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Gr\'E1fico de depend\'EAncia de inclus\'F5es para main.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "main_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Defini\'E7\'F5es de Tipos\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+using {\b string} = std::string\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+using {\b unordered_map} = std::unordered_map< {\b string}, {\b Matriz} >\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Enumera\'E7\'F5es\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+enum {\b Opcoes} \{ {\b LER_MATRIZ} = 1
+, {\b IMPRIMIR_MATRIZ}
+, {\b SOMAR_MATRIZES}
+, {\b MULTIPLICAR_MATRIZES}
+, {\b SAIR}
+ \}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b readMatrix} ({\b Matriz} &matriz, const {\b std::string} filename)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+L\'EA dados de um arquivo e insere em uma matriz esparsa. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b existeMatriz} (const {\b std::string} filename, const {\b unordered_map} &matrizes)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Verifica se existe uma matriz previamente armazenada em um {\f2 unordered_map} . }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b salvarMatriz} (const {\b Matriz} &matriz, {\b unordered_map} &matrizes)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Salva uma matriz em um mapa associativo de matrizes, permitindo que seja recuperada posteriormente. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b escolherMatrizes} ({\b string} &filename, {\b string} &filename2)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Solicita ao usu\'E1rio o nome de duas matrizes a serem processadas. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b printMatrizes} (const {\b unordered_map} &matrizes)\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Exibe informa\'E7\'F5es sobre as matrizes armazenadas em um std::unordered_map. }{
+}\par
+}\par}
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Defini\'E7\'F5es dos tipos\par
+\pard\plain 
+{\xe \v string\:main.cpp}
+{\xe \v main.cpp\:string}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+using {\b string} =  std::string}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Autores\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+{
+\par
+\pard\plain \s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Antonio Willian Silva Oliveira - 567294 (\par
+\pard\plain \s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Iago de Oliveira Lo - 565321 ( \par}
+}}}}
+{\xe \v unordered_map\:main.cpp}
+{\xe \v main.cpp\:unordered_map}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+using {\b unordered_map} =  std::unordered_map<{\b string}, {\b Matriz}>}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Enumera\'E7\'F5es\par
+\pard\plain 
+{\xe \v Opcoes\:main.cpp}
+{\xe \v main.cpp\:Opcoes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+enum {\b Opcoes}}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Enumeradores:\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{\xe \v LER_MATRIZ\:main.cpp}
+{\xe \v main.cpp\:LER_MATRIZ}
+{\qr LER_MATRIZ{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+\cell }{\cell }{\row }
+{\xe \v IMPRIMIR_MATRIZ\:main.cpp}
+{\xe \v main.cpp\:IMPRIMIR_MATRIZ}
+{\qr IMPRIMIR_MATRIZ{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+\cell }{\cell }{\row }
+{\xe \v SOMAR_MATRIZES\:main.cpp}
+{\xe \v main.cpp\:SOMAR_MATRIZES}
+{\qr SOMAR_MATRIZES{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+\cell }{\cell }{\row }
+{\xe \v MULTIPLICAR_MATRIZES\:main.cpp}
+{\xe \v main.cpp\:MULTIPLICAR_MATRIZES}
+{\qr MULTIPLICAR_MATRIZES{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+\cell }{\cell }{\row }
+{\xe \v SAIR\:main.cpp}
+{\xe \v main.cpp\:SAIR}
+{\qr SAIR{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+\cell }{\cell }{\row }
+}
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 16 \{\par
+17     LER_MATRIZ = 1,\par
+18     IMPRIMIR_MATRIZ,\par
+19     SOMAR_MATRIZES,\par
+20     MULTIPLICAR_MATRIZES,\par
+21     SAIR\par
+22 \};\par
+}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+{\xe \v escolherMatrizes\:main.cpp}
+{\xe \v main.cpp\:escolherMatrizes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void escolherMatrizes ({\b string} &  {\i filename}, {\b string} &  {\i filename2})}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Solicita ao usu\'E1rio o nome de duas matrizes a serem processadas. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i filename} \cell }{Refer\'EAncia para a string que armazenar\'E1 o nome da primeira matriz. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i filename2} \cell }{Refer\'EAncia para a string que armazenar\'E1 o nome da segunda matriz. \cell }
+{\row }
+}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 323 \{\par
+324     std::cout << {\cf22 "Coloque o nome da primeira matriz: "};\par
+325     std::getline(std::cin, filename);\par
+326 \par
+327     std::cout << {\cf22 "Coloque o nome da segunda matriz: "};\par
+328     std::getline(std::cin, filename2);\par
+329 \}\par
+}
+}
+{\xe \v existeMatriz\:main.cpp}
+{\xe \v main.cpp\:existeMatriz}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool existeMatriz (const {\b std::string}  {\i filename}, const {\b unordered_map} &  {\i matrizes})}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Verifica se existe uma matriz previamente armazenada em um {\f2 unordered_map} . }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o realiza uma busca no {\f2 unordered_map}  pelo nome do arquivo ({\f2 filename} ) para determinar se j\'E1 existe uma matriz associada a ele.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i filename} \cell }{O nome do arquivo cujo registro de matriz deve ser verificado. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matrizes} \cell }{O {\f2 unordered_map}  que mant\'E9m o mapeamento entre nomes de arquivos e matrizes. \cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Retorna {\f2 true}  se existir a matriz correspondente ao nome do arquivo; caso contr\'E1rio, {\f2 false} .\par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Observa\'E7\'E3o\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+O uso do {\f2 unordered_map}  permite que a busca ocorra de maneira eficiente, pois a busca possui complexidade m\'E9dia O(1). \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 278 \{\par
+279     {\cf19 return} matrizes.find(filename) != matrizes.end();\par
+280 \}\par
+}
+}
+{\xe \v main\:main.cpp}
+{\xe \v main.cpp\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int main ()}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+< Mapa associativo para armazenar as matrizes\par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 100 \{\par
+101     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
+102 \par
+103     std::cout << {\cf22 "Bem-vindo ao programa de manipula\'E7\'E3o de matrizes esparsas"} << std::endl;\par
+104     std::cout << {\cf22 "-----------------------------------------------------------"} << std::endl;\par
+105 \par
+106     unordered_map matrizes; \par
+108     {\cf19 while} ({\cf17 true})\par
+109     \{\par
+110         std::cout << {\cf22 "Escolha uma op\'E7\'E3o:"} << std::endl;\par
+111         std::cout << {\cf22 "[1] - Ler Matriz"} << std::endl;\par
+112         std::cout << {\cf22 "[2] - Imprimir Matriz"} << std::endl;\par
+113         std::cout << {\cf22 "[3] - Somar Matrizes"} << std::endl;\par
+114         std::cout << {\cf22 "[4] - Multiplicar Matrizes"} << std::endl;\par
+115         std::cout << {\cf22 "[5] - Sair"} << std::endl;\par
+116         {\cf18 int} opcao;\par
+117         std::cin >> opcao;\par
+118         std::cin.ignore();\par
+119 \par
+120         {\cf19 switch} (opcao)\par
+121         \{\par
+122         {\cf19 case} LER_MATRIZ:\par
+123         \{\par
+124             {\cf18 string} filename;\par
+125 \par
+126             std::cout << {\cf22 "Digite o nome do arquivo: "};\par
+127             std::getline(std::cin, filename);\par
+128 \par
+129             Matriz matriz;\par
+130 \par
+131             {\cf19 try}\par
+132             \{\par
+133                 readMatrix(matriz, filename);\par
+134             \}\par
+135             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+136             \{\par
+137                 std::cerr << e.what() << {\cf23 '\\n'};\par
+138                 {\cf19 break};\par
+139             \}\par
+140 \par
+141             matrizes.insert(std::make_pair(filename, matriz));\par
+142             {\cf19 break};\par
+143         \}\par
+144 \par
+145         {\cf19 case} IMPRIMIR_MATRIZ:\par
+146         \{\par
+147             std::cout << {\cf22 "Qual matriz deseja imprimir?"} << std::endl;\par
+148 \par
+149             printMatrizes(matrizes);\par
+150 \par
+151             std::cout << {\cf22 "Coloque o nome do arquivo que deseja imprimir: "};\par
+152             {\cf18 string} filename;\par
+153             std::getline(std::cin, filename);\par
+154 \par
+155             {\cf19 if} (existeMatriz(filename, matrizes))\par
+156                 matrizes[filename].print();\par
+157 \par
+158             {\cf19 else}\par
+159                 std::cout << {\cf22 "Matriz n\'E3o encontrada"} << std::endl;\par
+160 \par
+161             {\cf19 break};\par
+162         \}\par
+163 \par
+164         {\cf19 case} SOMAR_MATRIZES:\par
+165         \{\par
+166             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para somar"} << std::endl;\par
+167 \par
+168             printMatrizes(matrizes);\par
+169 \par
+170             std::string filename, filename2;\par
+171 \par
+172             escolherMatrizes(filename, filename2);\par
+173 \par
+174             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
+175             \{\par
+176                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
+177                 {\cf19 break};\par
+178             \}\par
+179 \par
+180             Matriz matriz;\par
+181 \par
+182             {\cf19 try}\par
+183             \{\par
+184                 matriz = sum(matrizes[filename], matrizes[filename2]);\par
+185             \}\par
+186             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+187             \{\par
+188                 std::cerr << e.what() << {\cf23 '\\n'};\par
+189                 {\cf19 break};\par
+190             \}\par
+191 \par
+192             matriz.print();\par
+193 \par
+194             salvarMatriz(matriz, matrizes);\par
+195 \par
+196             {\cf19 break};\par
+197         \}\par
+198 \par
+199         {\cf19 case} MULTIPLICAR_MATRIZES:\par
+200         \{\par
+201             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para multiplicar"} << std::endl;\par
+202 \par
+203             printMatrizes(matrizes);\par
+204 \par
+205             std::string filename, filename2;\par
+206 \par
+207             escolherMatrizes(filename, filename2);\par
+208 \par
+209             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
+210             \{\par
+211                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
+212                 {\cf19 break};\par
+213             \}\par
+214 \par
+215             Matriz matriz;\par
+216 \par
+217             {\cf19 try}\par
+218             \{\par
+219                 matriz = multiply(matrizes[filename], matrizes[filename2]);\par
+220             \}\par
+221             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+222             \{\par
+223                 std::cerr << e.what() << {\cf23 '\\n'};\par
+224                 {\cf19 break};\par
+225             \}\par
+226 \par
+227             matriz.print();\par
+228 \par
+229             salvarMatriz(matriz, matrizes);\par
+230 \par
+231             {\cf19 break};\par
+232         \}\par
+233 \par
+234         {\cf19 case} SAIR:\par
+235         \{\par
+236             std::cout << {\cf22 "Saindo..."} << std::endl;\par
+237             {\cf19 return} 0;\par
+238         \}\par
+239 \par
+240         {\cf19 default}:\par
+241         \{\par
+242             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
+243             std::cin.clear();\par
+244             std::cin.ignore();\par
+245             {\cf19 break};\par
+246         \}\par
+247         \}\par
+248 \par
+249         std::system({\cf22 "pause || read -p 'Pressione enter para continuar...' var"});\par
+250         std::system({\cf22 "cls||clear"});\par
+251     \}\par
+252 \}\par
+}
+}
+{\xe \v printMatrizes\:main.cpp}
+{\xe \v main.cpp\:printMatrizes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void printMatrizes (const {\b unordered_map} &  {\i matrizes})}}
+\par
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Exibe informa\'E7\'F5es sobre as matrizes armazenadas em um std::unordered_map. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matrizes} \cell }{Um std::unordered_map que mapeia uma chave (nome da matriz) para uma inst\'E2ncia de uma classe que fornece m\'E9todos getLinhas() e getColunas().\cell }
+{\row }
+}
+As dimens\'F5es exibidas s\'E3o obtidas diretamente da inst\'E2ncia armazenada em cada valor do map. A exibi\'E7\'E3o \'E9 formatada para melhor leitura e compreens\'E3o dos dados de cada matriz. \par
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 332 \{\par
+333     {\cf19 for} ({\cf17 const} {\cf17 auto} &par : matrizes)\par
+334     \{\par
+335         std::cout << {\cf22 "------------------"} << std::endl;\par
+336         std::cout << par.first << {\cf22 " |"} << par.second.getLinhas() << {\cf22 " x "} << par.second.getColunas() << {\cf22 "|"} << std::endl;\par
+337         std::cout << {\cf22 "------------------"} << std::endl;\par
+338     \}\par
+339 \}\par
+}
+}
+{\xe \v readMatrix\:main.cpp}
+{\xe \v main.cpp\:readMatrix}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void readMatrix ({\b Matriz} &  {\i matriz}, const {\b std::string}  {\i filename})}}
+\par
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+L\'EA dados de um arquivo e insere em uma matriz esparsa. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o abre um arquivo contendo o n\'FAmero de linhas e colunas de uma matriz, seguido por m\'FAltiplas linhas que descrevem itens n\'E3o nulos da matriz. Cada linha deve conter \'EDndices (i, j) e o valor correspondente.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matriz} \cell }{Refer\'EAncia para o objeto {\b Matriz} que ser\'E1 inicializado e populado. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i filename} \cell }{Nome do arquivo a ser lido (sem o caminho completo).\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Exce\'E7\'F5es\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i std::runtime_error} \cell }{Quando n\'E3o \'E9 poss\'EDvel acessar ou abrir o arquivo.\cell }
+{\row }
+}
+{
+\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+O arquivo \'E9 aberto a partir do diret\'F3rio "src/arquivos/" concatenado ao nome do arquivo passado em {\f2 filename} .\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Os primeiros valores lidos do arquivo correspondem ao n\'FAmero de linhas ({\f2 linhas} ) e de colunas ({\f2 colunas} ) para inicializar corretamente a matriz.\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Em seguida, cada conjunto de tr\'EAs valores (\'EDndice de linha, \'EDndice de coluna e valor) \'E9 lido e inserido na matriz usando {\f2 matriz.insert()} .\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Caso o arquivo n\'E3o seja encontrado ou ocorra algum outro problema, \'E9 gerada uma exce\'E7\'E3o do tipo {\f2 std::runtime_error} . \par}
+}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 255 \{\par
+256     std::ifstream file({\cf22 "src/arquivos/"} + filename);\par
+257 \par
+258     {\cf19 if} (!file || !file.is_open())\par
+259         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo"});\par
+260 \par
+261     {\cf18 int} linhas\{0\}, colunas\{0\};\par
+262     file >> linhas >> colunas;\par
+263 \par
+264     matriz = Matriz(linhas, colunas);\par
+265 \par
+266     {\cf18 int} i\{0\}, j\{0\};\par
+267     {\cf18 double} valor\{0.0f\};\par
+268 \par
+269     {\cf19 while} (file >> i >> j >> valor)\par
+270     \{\par
+271         matriz.insert(i, j, valor);\par
+272     \}\par
+273 \par
+274     file.close();\par
+275 \}\par
+}
+}
+{\xe \v salvarMatriz\:main.cpp}
+{\xe \v main.cpp\:salvarMatriz}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void salvarMatriz (const {\b Matriz} &  {\i matriz}, {\b unordered_map} &  {\i matrizes})}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Salva uma matriz em um mapa associativo de matrizes, permitindo que seja recuperada posteriormente. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+A fun\'E7\'E3o solicita ao usu\'E1rio se deseja salvar a matriz atual. Caso a resposta seja afirmativa, \'E9 solicitado um nome para identificar a nova matriz no mapa. Se esse nome j\'E1 existir, o usu\'E1rio \'E9 informado para tentar novamente com outro nome. Em caso de sucesso, a matriz \'E9 inserida no mapa com a chave fornecida pelo usu\'E1rio, e \'E9 exibida uma mensagem de confirma\'E7\'E3o.\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Par\'E2metros\par}
+\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matriz} \cell }{Objeto do tipo {\b Matriz} que ser\'E1 salvo. \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i matrizes} \cell }{Estrutura (unordered_map) onde a matriz ser\'E1 armazenada, associada a um nome (string).\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Observa\'E7\'E3o\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Essa fun\'E7\'E3o n\'E3o retorna valores. \'C9 importante que o usu\'E1rio insira corretamente as op\'E7\'F5es (s ou n) para prosseguir ou cancelar o salvamento, e que forne\'E7a um nome v\'E1lido quando optar por salvar a matriz. \par
+}}}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 283 \{\par
+284     {\cf19 while} ({\cf17 true})\par
+285     \{\par
+286         std::cout << {\cf22 "Deseja salvar a matriz? [s/n]: "};\par
+287         {\cf18 char} resposta;\par
+288         std::cin >> resposta;\par
+289         std::cin.ignore();\par
+290 \par
+291         {\cf19 if} (resposta == {\cf23 'n'} || resposta == {\cf23 'N'})\par
+292             {\cf19 break};\par
+293 \par
+294         {\cf19 else} {\cf19 if} (resposta == {\cf23 's'} || resposta == {\cf23 'S'})\par
+295         \{\par
+296             std::cout << {\cf22 "Digite o nome que deseja salvar a matriz: "};\par
+297             {\cf18 string} filename;\par
+298 \par
+299             std::getline(std::cin, filename);\par
+300 \par
+301             {\cf19 if} (existeMatriz(filename, matrizes))\par
+302             \{\par
+303                 std::cout << {\cf22 "J\'E1 existe uma matriz com esse nome, tente outro nome para salvar"} << std::endl;\par
+304                 {\cf19 break};\par
+305             \}\par
+306 \par
+307             matrizes.insert(std::make_pair(filename, matriz));\par
+308 \par
+309             std::cout << {\cf22 "Matriz salva com sucesso"} << std::endl;\par
+310 \par
+311             {\cf19 break};\par
+312         \}\par
+313 \par
+314         {\cf19 else}\par
+315         \{\par
+316             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
+317             {\cf19 break};\par
+318         \}\par
+319     \}\par
+320 \}\par
+}
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo src/matriz/Matriz.cpp\par \pard\plain 
+{\tc\tcl2 \v src/matriz/Matriz.cpp}
+{\xe \v src/matriz/Matriz.cpp}
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "matriz/Matriz.hpp"}\par
+{\f2 #include <iomanip>}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Gr\'E1fico de depend\'EAncia de inclus\'F5es para Matriz.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "Matriz_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Refer\'EAncia do Arquivo tests/TestMatriz.cpp\par \pard\plain 
+{\tc\tcl2 \v tests/TestMatriz.cpp}
+{\xe \v tests/TestMatriz.cpp}
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
+{\f2 #include <fstream>}\par
+{\f2 #include <stdexcept>}\par
+{\f2 #include <chrono>}\par
+{\f2 #include "matriz/Matriz.hpp"}\par
+{\f2 #include <cassert>}\par
+{\f2 #include "utils/utils.hpp"}\par
+}
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Gr\'E1fico de depend\'EAncia de inclus\'F5es para TestMatriz.cpp:{
+\pard\plain 
+\par\pard \qc {\field\flddirty {\*\fldinst INCLUDEPICTURE "TestMatriz_8cpp__incl.png" \\d \\*MERGEFORMAT}{\fldrslt IMAGE}}\par
+}
+\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b testeInsercao} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b testeSoma} (const {\b Matriz} &A, const {\b Matriz} &B, const {\b Matriz} &soma)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b testeMultiplicacao} (const {\b Matriz} &A, const {\b Matriz} &B, const {\b Matriz} &soma)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Matriz} {\b leitura} (const {\b std::string} &arquivo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+bool {\b arquivoExiste} (const {\b std::string} &caminho)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b testePerformance} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Fun\'E7\'F5es\par
+\pard\plain 
+{\xe \v arquivoExiste\:TestMatriz.cpp}
+{\xe \v TestMatriz.cpp\:arquivoExiste}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+bool arquivoExiste (const {\b std::string} &  {\i caminho})}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 106 \{\par
+107     std::ifstream file(caminho);\par
+108     {\cf19 return} file.good();\par
+109 \}\par
+}
+}
+{\xe \v leitura\:TestMatriz.cpp}
+{\xe \v TestMatriz.cpp\:leitura}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Matriz} leitura (const {\b std::string} &  {\i arquivo})}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 81 \{\par
+82     std::ifstream file({\cf22 "tests/arquivosTestes/"} + arquivo); {\cf20 // Abre o arquivo}\par
+83     {\cf19 if} (!file.is_open())\par
+84     \{\par
+85         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo: "} + arquivo);\par
+86     \}\par
+87 \par
+88     {\cf18 int} linhas, colunas;\par
+89     file >> linhas >> colunas;\par
+90 \par
+91     Matriz matriz(linhas, colunas);\par
+92 \par
+93     {\cf18 int} linha, coluna;\par
+94     {\cf18 double} valor;\par
+95     {\cf19 while} (file >> linha >> coluna >> valor)\par
+96     \{                                        {\cf20 // L\'EA os valores da matriz}\par
+97         matriz.insert(linha, coluna, valor); {\cf20 // Insere na matriz}\par
+98     \}\par
+99 \par
+100     file.close(); {\cf20 // Fecha o arquivo}\par
+101     {\cf19 return} matriz;\par
+102 \}\par
+}
+}
+{\xe \v main\:TestMatriz.cpp}
+{\xe \v TestMatriz.cpp\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int main ()}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 136 \{\par
+137     {\cf19 try}\par
+138     \{\par
+139         {\cf20 // Verificando se os arquivos existem}\par
+140         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix1.txt"}))\par
+141         \{\par
+142             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix1.txt n\'E3o encontrado."});\par
+143         \}\par
+144         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix2.txt"}))\par
+145         \{\par
+146             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix2.txt n\'E3o encontrado."});\par
+147         \}\par
+148         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/MatrixResult.txt"}))\par
+149         \{\par
+150             {\cf19 throw} std::runtime_error({\cf22 "Arquivo MatrixResult.txt n\'E3o encontrado."});\par
+151         \}\par
+152 \par
+153         {\cf20 // L\'EA as matrizes de arquivos}\par
+154         Matriz A = leitura({\cf22 "Matrix1.txt"});\par
+155         Matriz B = leitura({\cf22 "Matrix2.txt"});\par
+156         Matriz soma = leitura({\cf22 "MatrixResult.txt"});\par
+157         Matriz multi = leitura({\cf22 "MatrixMulti.txt"});\par
+158         std::cout << {\cf22 "Matrizes lidas com sucesso"} << std::endl;\par
+159         {\cf20 // Executa os testes}\par
+160         testeSoma(A, B, soma);\par
+161         testeMultiplicacao(A, B, multi);\par
+162         testeInsercao();    {\cf20 // Teste b\'E1sico de inser\'E7\'E3o}\par
+163         testePerformance(); {\cf20 // Teste de performance para matrizes grandes}\par
+164     \}\par
+165     {\cf19 catch} ({\cf17 const} std::runtime_error &e)\par
+166     \{\par
+167         std::cerr << {\cf22 "Erro main: "} << e.what() << std::endl;\par
+168     \}\par
+169 \par
+170     {\cf19 return} 0;\par
+171 \}\par
+}
+}
+{\xe \v testeInsercao\:TestMatriz.cpp}
+{\xe \v TestMatriz.cpp\:testeInsercao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void testeInsercao ()}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 11 \{\par
+12     Matriz matriz(5, 5);\par
+13     matriz.insert(1, 1, 1);\par
+14     assert(matriz.get(1, 1) == 1); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+15     matriz.insert(5, 5, 2);\par
+16     assert(matriz.get(5, 5) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+17     matriz.insert(3, 2, 2);\par
+18     assert(matriz.get(3, 2) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+19     std::cout << {\cf22 "Teste de inser\'E7\'E3o passou"} << std::endl;\par
+20 \}\par
+}
+}
+{\xe \v testeMultiplicacao\:TestMatriz.cpp}
+{\xe \v TestMatriz.cpp\:testeMultiplicacao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void testeMultiplicacao (const {\b Matriz} &  {\i A}, const {\b Matriz} &  {\i B}, const {\b Matriz} &  {\i soma})}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 53 \{\par
+54     Matriz D = multiply(A, B);\par
+55 \par
+56     {\cf20 // Verificando as dimens\'F5es}\par
+57     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
+58     \{\par
+59         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na multiplica\'E7\'E3o das matrizes."});\par
+60     \}\par
+61 \par
+62     {\cf20 // Verificando cada valor da matriz resultante}\par
+63     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
+64     \{\par
+65         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
+66         \{\par
+67             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
+68             \{\par
+69                 {\cf19 throw} std::runtime_error({\cf22 "Erro na multiplica\'E7\'E3o das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
+70                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
+71                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
+72             \}\par
+73         \}\par
+74     \}\par
+75 \par
+76     std::cout << {\cf22 "Teste de multiplica\'E7\'E3o passou"} << std::endl;\par
+77 \}\par
+}
+}
+{\xe \v testePerformance\:TestMatriz.cpp}
+{\xe \v TestMatriz.cpp\:testePerformance}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void testePerformance ()}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 113 \{\par
+114     Matriz A(500, 500);\par
+115     Matriz B(500, 500);\par
+116 \par
+117     {\cf20 // Preenche as matrizes com valores}\par
+118     {\cf19 for} ({\cf18 int} i = 1; i <= 500; ++i)\par
+119     \{\par
+120         {\cf19 for} ({\cf18 int} j = 1; j <= 500; ++j)\par
+121         \{\par
+122             A.insert(i, j, i + j);\par
+123             B.insert(i, j, i - j);\par
+124         \}\par
+125     \}\par
+126 \par
+127     {\cf17 auto} inicio = std::chrono::high_resolution_clock::now();\par
+128     Matriz soma = sum(A, B); {\cf20 // Soma as matrizes}\par
+129     {\cf17 auto} fim = std::chrono::high_resolution_clock::now();\par
+130 \par
+131     {\cf17 auto} duracao = std::chrono::duration_cast<std::chrono::milliseconds>(fim - inicio);\par
+132     std::cout << {\cf22 "Tempo para soma: "} << duracao.count() << {\cf22 "ms"} << std::endl;\par
+133 \}\par
+}
+}
+{\xe \v testeSoma\:TestMatriz.cpp}
+{\xe \v TestMatriz.cpp\:testeSoma}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void testeSoma (const {\b Matriz} &  {\i A}, const {\b Matriz} &  {\i B}, const {\b Matriz} &  {\i soma})}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 24 \{\par
+25     \par
+26     Matriz D = sum(A, B);\par
+27 \par
+28     {\cf20 // Verificando as dimens\'F5es}\par
+29     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
+30     \{\par
+31         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na soma das matrizes."});\par
+32     \}\par
+33     \par
+34     {\cf20 // Verificando cada valor da matriz resultante}\par
+35     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
+36     \{\par
+37         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
+38         \{\par
+39             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
+40             \{\par
+41                 {\cf19 throw} std::runtime_error({\cf22 "Erro na soma das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
+42                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
+43                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
+44             \}\par
+45         \}\par
+46     \}\par
+47 \par
+48     std::cout << {\cf22 "Teste de soma passou"} << std::endl;\par
+49 \}\par
+}
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Sum\'E1rio\par 
+\pard\plain 
+{\tc \v Sum\'E1rio}
 {\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
 }

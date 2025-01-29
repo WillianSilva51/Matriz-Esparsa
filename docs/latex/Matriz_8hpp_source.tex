@@ -1,0 +1,50 @@
+\doxysection{Matriz.\+hpp}
+\label{Matriz_8hpp_source}\index{include/matriz/Matriz.hpp@{include/matriz/Matriz.hpp}}
+\textbf{ Ir para a documentação desse arquivo.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MATRIZ\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MATRIZ\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}node/Node.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IteratorM/IteratorM.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }Matriz}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ Node\ *cabecalho;\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ linhas;\ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ colunas;\ \ \ \ \ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ Matriz();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00077\ \ \ \ \ Matriz(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&ln,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&cl);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00086\ \ \ \ \ \string~Matriz();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00102\ \ \ \ \ IteratorM\ begin();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00113\ \ \ \ \ IteratorM\ end();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00125\ \ \ \ \ IteratorM\ begin()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00136\ \ \ \ \ IteratorM\ end()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{int}\ getLinhas()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{int}\ getColunas()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{void}\ limpar();}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{void}\ insert(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&posI,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&posJ,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \&value);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{double}\ get(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&posI,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&posJ);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordtype}{double}\ get(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&posI,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&posJ)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{void}\ print();}
+\DoxyCodeLine{00261\ \};}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

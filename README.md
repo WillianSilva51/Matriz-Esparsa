@@ -16,7 +16,7 @@ As próximas atualizações para a Matriz Esparsa serão:
 
 - [x] Implementar inserção e remoção dinâmicas
 - [ ] Otimizar a busca de elementos
-- [ ] Adicionar testes automatizados
+- [x] Adicionar testes automatizados
 - [ ] Melhorar documentação de uso
 - [ ] Suporte a diferentes tipos de dados
 

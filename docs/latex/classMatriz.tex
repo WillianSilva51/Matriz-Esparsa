@@ -1,0 +1,578 @@
+\doxysection{Referência da Classe Matriz}
+\label{classMatriz}\index{Matriz@{Matriz}}
+
+
+Classe que representa uma matriz esparsa.  
+
+
+
+
+{\ttfamily \#include $<$Matriz.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Matriz} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxyref{Matriz}{p.}{classMatriz}. \end{DoxyCompactList}\item 
+\textbf{ Matriz} (const int \&ln, const int \&cl)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Matriz}{p.}{classMatriz} que inicializa uma matriz esparsa com linhas e colunas especificadas. \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Matriz} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxyref{Matriz}{p.}{classMatriz}. \end{DoxyCompactList}\item 
+\textbf{ IteratorM} \textbf{ begin} ()
+\begin{DoxyCompactList}\small\item\em Inicializa um iterador que aponta para o primeiro elemento significativo da matriz. \end{DoxyCompactList}\item 
+\textbf{ IteratorM} \textbf{ end} ()
+\begin{DoxyCompactList}\small\item\em Iterador que aponta para o final da matriz. \end{DoxyCompactList}\item 
+\textbf{ IteratorM} \textbf{ begin} () const
+\begin{DoxyCompactList}\small\item\em Iterador que aponta para o primeiro elemento significativo da matriz (versão const). \end{DoxyCompactList}\item 
+\textbf{ IteratorM} \textbf{ end} () const
+\begin{DoxyCompactList}\small\item\em Iterador que aponta para o final da matriz (versão const). \end{DoxyCompactList}\item 
+int \textbf{ get\+Linhas} () const
+\begin{DoxyCompactList}\small\item\em Retorna a quantidade de linhas da matriz. \end{DoxyCompactList}\item 
+int \textbf{ get\+Colunas} () const
+\begin{DoxyCompactList}\small\item\em Retorna a quantidade de colunas da matriz. \end{DoxyCompactList}\item 
+void \textbf{ limpar} ()
+\begin{DoxyCompactList}\small\item\em Limpa a matriz esparsa, removendo todos os nós. \end{DoxyCompactList}\item 
+void \textbf{ insert} (const int \&posI, const int \&posJ, const double \&value)
+\begin{DoxyCompactList}\small\item\em Insere um valor em uma posição específica da matriz esparsa. \end{DoxyCompactList}\item 
+double \textbf{ get} (const int \&posI, const int \&posJ)
+\begin{DoxyCompactList}\small\item\em Retorna o valor armazenado na matriz em uma posição específica. \end{DoxyCompactList}\item 
+double \textbf{ get} (const int \&posI, const int \&posJ) const
+\begin{DoxyCompactList}\small\item\em Retorna o valor armazenado na matriz em uma posição específica (versão const). \end{DoxyCompactList}\item 
+void \textbf{ print} ()
+\begin{DoxyCompactList}\small\item\em Imprime a matriz no console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa uma matriz esparsa. 
+
+A classe \doxyref{Matriz}{p.}{classMatriz} implementa uma estrutura de dados para armazenar matrizes esparsas, onde a maioria dos elementos são zeros. Utiliza uma lista encadeada de nós para armazenar apenas os elementos não-\/zero, economizando memória e permitindo operações eficientes.
+
+A matriz é representada por um nó-\/cabeçalho que atua como sentinela para a estrutura interna. Este nó-\/cabeçalho aponta para si mesmo em ambas as direções (direita e abaixo) quando a matriz está vazia. A classe fornece métodos para inserir, acessar e remover elementos, além de obter o número de linhas e colunas e imprimir a matriz.
+
+\begin{DoxyNote}{Observação}
+
+\begin{DoxyItemize}
+\item A matriz é inicializada com um nó-\/cabeçalho que aponta para si mesmo.
+\item Os índices das linhas e colunas começam em 1.
+\item A inserção de elementos é feita apenas em posições válidas (dentro dos limites da matriz).
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyWarning}{Aviso}
+
+\begin{DoxyItemize}
+\item A tentativa de acessar ou inserir elementos em posições inválidas (fora dos limites da matriz) resultará em uma exceção std\+::invalid\+\_\+argument. 
+\end{DoxyItemize}
+\end{DoxyWarning}
+
+
+\doxysubsection{Construtores e Destrutores}
+\label{classMatriz_a7de756301bddbc4b0b5d2a0f2b1fc695} 
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{Matriz()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \doxyref{Matriz}{p.}{classMatriz}. 
+
+Este construtor inicializa os valores de linhas e colunas com zero e cria o nó-\/cabeçalho. Este nó-\/cabeçalho atua como sentinela para a estrutura interna da matriz, permitindo operações de inserção, remoção e acesso eficientes. Inicialmente, o nó-\/cabeçalho aponta para si mesmo em ambas as direções (direita e abaixo), indicando que a matriz ainda não possui elementos de dados. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ cabecalho(\textcolor{keyword}{new}\ Node(0,\ 0,\ 0)),\ linhas(0),\ colunas(0)}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ cabecalho-\/>direita\ =\ cabecalho-\/>abaixo\ =\ cabecalho;}
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a721eb10993176937db61ef9449d6c585} 
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{Matriz()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}\item[{const int \&}]{ln,  }\item[{const int \&}]{cl }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxyref{Matriz}{p.}{classMatriz} que inicializa uma matriz esparsa com linhas e colunas especificadas. 
+
+Este construtor verifica primeiro se os valores passados para o número de linhas (lin) e colunas (col) são maiores que zero. Caso contrário, é lançada uma exceção std\+::invalid\+\_\+argument, garantindo que somente matrizes com dimensões válidas sejam criadas.
+
+Em seguida, são inicializadas\+:
+\begin{DoxyItemize}
+\item As variáveis internas para armazenar a quantidade de linhas e colunas.
+\item Um nó-\/cabeçalho que serve como referência principal da estrutura, mantendo laços para si mesmo tanto à direita quanto abaixo.
+\item Um conjunto de nós auxiliares, linkados entre si de maneira circular\+:
+\begin{DoxyItemize}
+\item Nós responsáveis pelas linhas (um nó para cada linha),
+\item Nós responsáveis pelas colunas (um nó para cada coluna).
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Cada nó de linha aponta para si mesmo à direita, enquanto cada nó de coluna aponta para si mesmo abaixo, formando estruturas circulares independentes para linhas e colunas, todas centralizadas no nó-\/cabeçalho.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lin} & Quantidade de linhas da matriz (deve ser um valor maior que zero). \\
+\hline
+{\em col} & Quantidade de colunas da matriz (deve ser um valor maior que zero).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Exceção lançada quando lin ou col são menores ou iguais a zero. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (lin\ <=\ 0\ ||\ col\ <=\ 0)}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Tamanho\ de\ matriz\ inválido,\ insira\ valores\ maiores\ que\ 0"{}});}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ linhas\ =\ lin;}
+\DoxyCodeLine{00016\ \ \ \ \ colunas\ =\ col;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ cabecalho\ =\ \textcolor{keyword}{new}\ Node(0,\ 0,\ 0);}
+\DoxyCodeLine{00019\ \ \ \ \ cabecalho-\/>direita\ =\ cabecalho-\/>abaixo\ =\ cabecalho;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ Node\ *auxLinha\ =\ cabecalho;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ lin;\ i++)}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Node\ *novo\ =\ \textcolor{keyword}{new}\ Node(i,\ 0,\ 0);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ auxLinha-\/>abaixo\ =\ novo;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ novo-\/>direita\ =\ novo;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ auxLinha\ =\ novo;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ auxLinha-\/>abaixo\ =\ cabecalho;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ Node\ *auxColuna\ =\ cabecalho;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <=\ col;\ j++)}
+\DoxyCodeLine{00033\ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ Node\ *novo\ =\ \textcolor{keyword}{new}\ Node(0,\ j,\ 0);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ auxColuna-\/>direita\ =\ novo;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ novo-\/>abaixo\ =\ novo;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ auxColuna\ =\ novo;}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ auxColuna-\/>direita\ =\ cabecalho;}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a2092b7a289ecec369e1da407d5839f5a} 
+\index{Matriz@{Matriz}!````~Matriz@{$\sim$Matriz}}
+\index{````~Matriz@{$\sim$Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{$\sim$Matriz()}
+{\footnotesize\ttfamily Matriz\+::$\sim$\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \doxyref{Matriz}{p.}{classMatriz}. 
+
+Este destrutor é responsável por liberar os recursos alocados pela instância da classe \doxyref{Matriz}{p.}{classMatriz}. Ele chama a função \doxyref{limpar()}{p.}{classMatriz_a45b783c49e5a4175487b121f5615790c} para garantir que toda a memória dinâmica utilizada pela matriz seja devidamente desalocada, evitando vazamentos de memória. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ limpar();}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c} 
+\index{Matriz@{Matriz}!begin@{begin}}
+\index{begin@{begin}!Matriz@{Matriz}}
+\doxysubsubsection{begin()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ IteratorM} Matriz\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa um iterador que aponta para o primeiro elemento significativo da matriz. 
+
+Esta função permite obter um iterador para o primeiro nó principal da matriz esparsa (localizado logo abaixo do cabeçalho), facilitando o acesso aos elementos e a manipulação da estrutura de dados. O iterador retornado aponta para o primeiro nó relevante da linha principal, permitindo assim percorrer as colunas de forma apropriada.
+
+\begin{DoxyReturn}{Retorna}
+Retorna um objeto de iterador (\doxyref{IteratorM}{p.}{classIteratorM}) posicionado no início da matriz esparsa.
+\end{DoxyReturn}
+\begin{DoxyNote}{Observação}
+Esse método presume que a matriz está devidamente inicializada e que o cabeçalho aponta para posicionamentos válidos da estrutura. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ IteratorM(cabecalho-\/>abaixo,\ cabecalho-\/>abaixo-\/>direita);}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a7ddf93c221713ab6f84a09d1d860379d} 
+\index{Matriz@{Matriz}!begin@{begin}}
+\index{begin@{begin}!Matriz@{Matriz}}
+\doxysubsubsection{begin()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ IteratorM} Matriz\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Iterador que aponta para o primeiro elemento significativo da matriz (versão const). 
+
+Esta função é uma sobrecarga da função \doxyref{begin()}{p.}{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c} que permite obter um iterador para o primeiro nó principal da matriz esparsa, sem permitir alterações nos valores da matriz. O iterador retornado aponta para o primeiro nó relevante
+
+\begin{DoxyReturn}{Retorna}
+\doxyref{IteratorM}{p.}{classIteratorM} Objeto iterador apontando para o início da matriz. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ IteratorM(cabecalho-\/>abaixo,\ cabecalho-\/>abaixo-\/>direita);}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a50d46c6366b07dda1da18bcfcea762df} 
+\index{Matriz@{Matriz}!end@{end}}
+\index{end@{end}!Matriz@{Matriz}}
+\doxysubsubsection{end()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \textbf{ IteratorM} Matriz\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Iterador que aponta para o final da matriz. 
+
+Esta função provê um objeto \doxyref{IteratorM}{p.}{classIteratorM} associado à lista principal de nós da matriz esparsa, indicando uma posição que corresponde ao final da estrutura de dados.
+
+\begin{DoxyReturn}{Retorna}
+\doxyref{IteratorM}{p.}{classIteratorM} Objeto iterador apontando para o final da matriz. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ IteratorM(cabecalho,\ cabecalho-\/>direita);}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a6782e1dd06775c6a4efccba3ffc85716} 
+\index{Matriz@{Matriz}!end@{end}}
+\index{end@{end}!Matriz@{Matriz}}
+\doxysubsubsection{end()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \textbf{ IteratorM} Matriz\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Iterador que aponta para o final da matriz (versão const). 
+
+Esta função é uma sobrecarga da função \doxyref{end()}{p.}{classMatriz_a50d46c6366b07dda1da18bcfcea762df} que permite obter um iterador para o final da matriz esparsa, sem permitir alterações nos valores da matriz. O iterador retornado aponta para o final da estrutura de dados.
+
+\begin{DoxyReturn}{Retorna}
+\doxyref{IteratorM}{p.}{classIteratorM} Objeto iterador apontando para o final da matriz. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ IteratorM(cabecalho,\ cabecalho-\/>direita);}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a9062dbfd6809c9d0a4f177f6df0269d6} 
+\index{Matriz@{Matriz}!get@{get}}
+\index{get@{get}!Matriz@{Matriz}}
+\doxysubsubsection{get()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Matriz\+::get (\begin{DoxyParamCaption}\item[{const int \&}]{posI,  }\item[{const int \&}]{posJ }\end{DoxyParamCaption})}
+
+
+
+Retorna o valor armazenado na matriz em uma posição específica. 
+
+Esta função busca o valor localizado na linha e coluna indicadas por {\ttfamily posI} e {\ttfamily posJ}. Se não houver nenhum valor armazenado nessa posição (ou seja, se o nó correspondente não existir), a função retornará 0. Caso a posição seja inválida, será lançada uma exceção do tipo std\+::invalid\+\_\+argument.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posI} & Índice da linha solicitada. \\
+\hline
+{\em posJ} & Índice da coluna solicitada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O valor do tipo double encontrado na posição indicada, ou 0 caso não exista nenhum valor armazenado.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Se {\ttfamily posI} ou {\ttfamily posJ} forem menores ou iguais a 0 ou excederem as dimensões da matriz. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{if}\ (posI\ <=\ 0\ ||\ posI\ >\ linhas\ ||\ posJ\ <=\ 0\ ||\ posJ\ >\ colunas)}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ IteratorM\ it\ =\ begin();}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{while}\ (it\ !=\ end())}
+\DoxyCodeLine{00162\ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it.current-\/>linha\ ==\ posI\ \&\&\ it.current-\/>coluna\ ==\ posJ)}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *it;}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it.current-\/>linha\ >\ posI\ ||\ (it.current-\/>linha\ ==\ posI\ \&\&\ it.current-\/>coluna\ >\ posJ))}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ ++it;}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00173\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a9a5f501398bc63f5bf99c9061eea5b12} 
+\index{Matriz@{Matriz}!get@{get}}
+\index{get@{get}!Matriz@{Matriz}}
+\doxysubsubsection{get()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Matriz\+::get (\begin{DoxyParamCaption}\item[{const int \&}]{posI,  }\item[{const int \&}]{posJ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna o valor armazenado na matriz em uma posição específica (versão const). 
+
+Mesma funcionalidade da versão não-\/const, mas permite consultar valores em matrizes constantes, sem modificá-\/las.
+
+Esta função é uma sobrecarga da função \doxyref{get()}{p.}{classMatriz_a9062dbfd6809c9d0a4f177f6df0269d6} que permite consultar valores em matrizes constantes, sem alterar seu conteúdo. A diferença é que esta versão não permite alterar o conteúdo da matriz, garantindo a integridade dos dados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posI} & Índice da linha solicitada. \\
+\hline
+{\em posJ} & Índice da coluna solicitada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O valor do tipo double encontrado na posição indicada, ou 0
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Se {\ttfamily posI} ou {\ttfamily posJ} forem menores ou iguais a 0 ou excederem as dimensões da matriz. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176\ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{if}\ (posI\ <=\ 0\ ||\ posI\ >\ linhas\ ||\ posJ\ <=\ 0\ ||\ posJ\ >\ colunas)}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ IteratorM\ it\ =\ begin();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{while}\ (it\ !=\ end())}
+\DoxyCodeLine{00183\ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it.current-\/>linha\ ==\ posI\ \&\&\ it.current-\/>coluna\ ==\ posJ)}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *it;}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it.current-\/>linha\ >\ posI\ ||\ (it.current-\/>linha\ ==\ posI\ \&\&\ it.current-\/>coluna\ >\ posJ))}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ ++it;}
+\DoxyCodeLine{00191\ \ \ \ \ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00194\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a598a301d6e02ba9669e806116f15c396} 
+\index{Matriz@{Matriz}!getColunas@{getColunas}}
+\index{getColunas@{getColunas}!Matriz@{Matriz}}
+\doxysubsubsection{getColunas()}
+{\footnotesize\ttfamily int Matriz\+::get\+Colunas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna a quantidade de colunas da matriz. 
+
+\begin{DoxyReturn}{Retorna}
+Número de colunas da matriz.
+\end{DoxyReturn}
+Semelhante a \doxyref{get\+Linhas()}{p.}{classMatriz_aac16f51b920e0ae269f5e2b78fa9fad5}, utilizada para consultar o total de colunas da estrutura. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ colunas;}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_aac16f51b920e0ae269f5e2b78fa9fad5} 
+\index{Matriz@{Matriz}!getLinhas@{getLinhas}}
+\index{getLinhas@{getLinhas}!Matriz@{Matriz}}
+\doxysubsubsection{getLinhas()}
+{\footnotesize\ttfamily int Matriz\+::get\+Linhas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna a quantidade de linhas da matriz. 
+
+\begin{DoxyReturn}{Retorna}
+Número de linhas da matriz.
+\end{DoxyReturn}
+Esta função permite consultar o total de linhas para verificação de limites ou para iterações relacionadas ao tamanho da matriz. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ linhas;}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_add3295e730032050b85b6e9598c005db} 
+\index{Matriz@{Matriz}!insert@{insert}}
+\index{insert@{insert}!Matriz@{Matriz}}
+\doxysubsubsection{insert()}
+{\footnotesize\ttfamily void Matriz\+::insert (\begin{DoxyParamCaption}\item[{const int \&}]{posI,  }\item[{const int \&}]{posJ,  }\item[{const double \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Insere um valor em uma posição específica da matriz esparsa. 
+
+Esta função permite inserir uma nova célula com valor diferente de zero em uma matriz esparsa, levando em conta sua organização em listas duplamente encadeadas na horizontal e vertical. Qualquer valor igual a zero é ignorado, pois não se armazena valores nulos na estrutura. Caso a posição informada não seja válida, uma exceção de argumento inválido é lançada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posI} & Índice da linha na qual a célula será inserida. Deve ser um valor positivo e menor ou igual ao número total de linhas da matriz. \\
+\hline
+{\em posJ} & Índice da coluna na qual a célula será inserida. Deve ser um valor positivo e menor ou igual ao número total de colunas da matriz. \\
+\hline
+{\em value} & Valor a ser armazenado na nova célula. Valores iguais a zero não são inseridos na matriz.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::invalid\+\_\+argument} & Lançada quando (posI, posJ) excede os limites de linhas ou colunas definidos para a matriz.\\
+\hline
+\end{DoxyExceptions}
+A função percorre primeiro a lista horizontal (linha) correspondente para localizar a posição adequada. Caso já exista um nó na mesma coluna, o valor é atualizado. Se não existir, cria-\/se um novo nó para armazenar o valor na posição indicada. Após isso, a função também atualiza a referência vertical (coluna), posicionando o novo nó de forma adequada na estrutura de dados. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ Não\ armazena\ valores\ iguais\ a\ zero}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ ==\ 0)}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//\ Validação\ dos\ índices}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (posI\ <=\ 0\ ||\ posI\ >\ linhas\ ||\ posJ\ <=\ 0\ ||\ posJ\ >\ colunas)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ inserção\ inválido"{}});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//\ Busca\ na\ lista\ horizontal\ (linha)}}
+\DoxyCodeLine{00108\ \ \ \ \ Node\ *linhaAtual\ =\ cabecalho;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{while}\ (linhaAtual-\/>linha\ <\ posI)}
+\DoxyCodeLine{00110\ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ linhaAtual\ =\ linhaAtual-\/>abaixo;}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ Procura\ pela\ posição\ correta\ na\ linha}}
+\DoxyCodeLine{00115\ \ \ \ \ Node\ *aux\ =\ linhaAtual;}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux-\/>direita\ !=\ linhaAtual\ \&\&\ aux-\/>direita-\/>coluna\ <\ posJ)}
+\DoxyCodeLine{00117\ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>direita;}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ nó\ já\ existe}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (aux-\/>direita-\/>coluna\ ==\ posJ)}
+\DoxyCodeLine{00123\ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ aux-\/>direita-\/>atualizaValor(value);\ \textcolor{comment}{//\ Atualiza\ o\ valor}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ Cria\ um\ novo\ nó}}
+\DoxyCodeLine{00129\ \ \ \ \ Node\ *novo\ =\ \textcolor{keyword}{new}\ Node(posI,\ posJ,\ value);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ Insere\ o\ nó\ na\ lista\ horizontal}}
+\DoxyCodeLine{00132\ \ \ \ \ novo-\/>direita\ =\ aux-\/>direita;}
+\DoxyCodeLine{00133\ \ \ \ \ aux-\/>direita\ =\ novo;}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//\ Busca\ na\ lista\ vertical\ (coluna)}}
+\DoxyCodeLine{00136\ \ \ \ \ Node\ *colunaAtual\ =\ cabecalho;}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{while}\ (colunaAtual-\/>coluna\ <\ posJ)}
+\DoxyCodeLine{00138\ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ colunaAtual\ =\ colunaAtual-\/>direita;}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\ Procura\ pela\ posição\ correta\ na\ coluna}}
+\DoxyCodeLine{00143\ \ \ \ \ aux\ =\ colunaAtual;}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux-\/>abaixo\ !=\ colunaAtual\ \&\&\ aux-\/>abaixo-\/>linha\ <\ posI)}
+\DoxyCodeLine{00145\ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>abaixo;}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//\ Insere\ o\ nó\ na\ lista\ vertical}}
+\DoxyCodeLine{00150\ \ \ \ \ novo-\/>abaixo\ =\ aux-\/>abaixo;}
+\DoxyCodeLine{00151\ \ \ \ \ aux-\/>abaixo\ =\ novo;}
+\DoxyCodeLine{00152\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_a45b783c49e5a4175487b121f5615790c} 
+\index{Matriz@{Matriz}!limpar@{limpar}}
+\index{limpar@{limpar}!Matriz@{Matriz}}
+\doxysubsubsection{limpar()}
+{\footnotesize\ttfamily void Matriz\+::limpar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa a matriz esparsa, removendo todos os nós. 
+
+Esta função percorre todos os nós da matriz esparsa, começando pelo nó imediatamente abaixo do cabeçalho e, em seguida, removendo todos os nós em cada linha e coluna. A função utiliza dois loops aninhados\+: o loop externo percorre cada linha da matriz, enquanto o loop interno percorre cada nó em uma linha específica. Cada nó é deletado para liberar a memória alocada dinamicamente.
+
+Variáveis\+:
+\begin{DoxyItemize}
+\item linha\+Atual\+: Ponteiro para o nó atual na linha que está sendo processada.
+\item coluna\+Atual\+: Ponteiro para o nó atual na coluna que está sendo processada.
+\item aux\+: Ponteiro auxiliar que aponta para o nó imediatamente abaixo do cabeçalho.
+\end{DoxyItemize}
+
+O loop externo continua até que todas as linhas tenham sido processadas, e o loop interno continua até que todos os nós em uma linha específica tenham sido deletados. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ Node\ *linhaAtual\ =\ cabecalho-\/>abaixo;}
+\DoxyCodeLine{00080\ \ \ \ \ Node\ *colunaAtual\ =\ linhaAtual-\/>direita;}
+\DoxyCodeLine{00081\ \ \ \ \ Node\ *aux\ =\ cabecalho-\/>abaixo;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{while}\ (linhaAtual\ !=\ aux)}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (colunaAtual\ !=\ linhaAtual)}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ Node\ *temp\ =\ colunaAtual;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ colunaAtual\ =\ colunaAtual-\/>direita;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ Node\ *temp\ =\ linhaAtual;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ linhaAtual\ =\ linhaAtual-\/>abaixo;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\label{classMatriz_af8987741da4cabe0aa054f2e8b077a97} 
+\index{Matriz@{Matriz}!print@{print}}
+\index{print@{print}!Matriz@{Matriz}}
+\doxysubsubsection{print()}
+{\footnotesize\ttfamily void Matriz\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime a matriz no console. 
+
+Exibe todas as linhas e colunas da matriz, mostrando os valores armazenados. Para posições onde não há valor armazenado (na forma esparsa), é imprimido o número 0. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00197\ \{}
+\DoxyCodeLine{00198\ \ \ \ \ IteratorM\ it\ =\ begin();}
+\DoxyCodeLine{00199\ \ \ \ \ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ linhas;\ i++)}
+\DoxyCodeLine{00201\ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <=\ colunas;\ j++)}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it.current-\/>linha\ ==\ i\ \&\&\ it.current-\/>coluna\ ==\ j)}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::fixed\ <<\ std::setprecision(1)\ <<\ *it;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++it;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}0.0"{}};}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00217\ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/matriz/\textbf{ Matriz.\+hpp}\item 
+src/matriz/\textbf{ Matriz.\+cpp}\end{DoxyCompactItemize}

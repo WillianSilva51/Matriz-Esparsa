@@ -1,0 +1,483 @@
+\doxysection{Referência do Arquivo src/main/main.cpp}
+\label{main_8cpp}\index{src/main/main.cpp@{src/main/main.cpp}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include "{}matriz/\+Matriz.\+hpp"{}}\newline
+{\ttfamily \#include "{}utils/utils.\+hpp"{}}\newline
+Gráfico de dependência de inclusões para main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+using \textbf{ string} = std\+::string
+\item 
+using \textbf{ unordered\+\_\+map} = std\+::unordered\+\_\+map$<$ \textbf{ string}, \textbf{ Matriz} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ Opcoes} \{ \newline
+\textbf{ LER\+\_\+\+MATRIZ} = 1
+, \textbf{ IMPRIMIR\+\_\+\+MATRIZ}
+, \textbf{ SOMAR\+\_\+\+MATRIZES}
+, \textbf{ MULTIPLICAR\+\_\+\+MATRIZES}
+, \newline
+\textbf{ SAIR}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ read\+Matrix} (\textbf{ Matriz} \&matriz, const \textbf{ std\+::string} filename)
+\begin{DoxyCompactList}\small\item\em Lê dados de um arquivo e insere em uma matriz esparsa. \end{DoxyCompactList}\item 
+bool \textbf{ existe\+Matriz} (const \textbf{ std\+::string} filename, const \textbf{ unordered\+\_\+map} \&matrizes)
+\begin{DoxyCompactList}\small\item\em Verifica se existe uma matriz previamente armazenada em um {\ttfamily unordered\+\_\+map}. \end{DoxyCompactList}\item 
+void \textbf{ salvar\+Matriz} (const \textbf{ Matriz} \&matriz, \textbf{ unordered\+\_\+map} \&matrizes)
+\begin{DoxyCompactList}\small\item\em Salva uma matriz em um mapa associativo de matrizes, permitindo que seja recuperada posteriormente. \end{DoxyCompactList}\item 
+void \textbf{ escolher\+Matrizes} (\textbf{ string} \&filename, \textbf{ string} \&filename2)
+\begin{DoxyCompactList}\small\item\em Solicita ao usuário o nome de duas matrizes a serem processadas. \end{DoxyCompactList}\item 
+void \textbf{ print\+Matrizes} (const \textbf{ unordered\+\_\+map} \&matrizes)
+\begin{DoxyCompactList}\small\item\em Exibe informações sobre as matrizes armazenadas em um std\+::unordered\+\_\+map. \end{DoxyCompactList}\item 
+int \textbf{ main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Definições dos tipos}
+\label{main_8cpp_aca454f84dd198a937af6499dd758aa3d} 
+\index{main.cpp@{main.cpp}!string@{string}}
+\index{string@{string}!main.cpp@{main.cpp}}
+\doxysubsubsection{string}
+{\footnotesize\ttfamily using \textbf{ string} =  std\+::string}
+
+\begin{DoxyAuthor}{Autores}
+
+\begin{DoxyItemize}
+\item Antonio Willian Silva Oliveira -\/ 567294 (
+\item Iago de Oliveira Lo -\/ 565321 ( 
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\label{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6} 
+\index{main.cpp@{main.cpp}!unordered\_map@{unordered\_map}}
+\index{unordered\_map@{unordered\_map}!main.cpp@{main.cpp}}
+\doxysubsubsection{unordered\_map}
+{\footnotesize\ttfamily using \textbf{ unordered\+\_\+map} =  std\+::unordered\+\_\+map$<$\textbf{ string}, \textbf{ Matriz}$>$}
+
+
+
+\doxysubsection{Enumerações}
+\label{main_8cpp_afc7b89e9b222cd8c2a531906c5d4b6b4} 
+\index{main.cpp@{main.cpp}!Opcoes@{Opcoes}}
+\index{Opcoes@{Opcoes}!main.cpp@{main.cpp}}
+\doxysubsubsection{Opcoes}
+{\footnotesize\ttfamily enum \textbf{ Opcoes}}
+
+\begin{DoxyEnumFields}{Enumeradores}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LER\_MATRIZ@{LER\_MATRIZ}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!LER\_MATRIZ@{LER\_MATRIZ}}}\label{main_8cpp_afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef} 
+LER\+\_\+\+MATRIZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMPRIMIR\_MATRIZ@{IMPRIMIR\_MATRIZ}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!IMPRIMIR\_MATRIZ@{IMPRIMIR\_MATRIZ}}}\label{main_8cpp_afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec} 
+IMPRIMIR\+\_\+\+MATRIZ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOMAR\_MATRIZES@{SOMAR\_MATRIZES}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!SOMAR\_MATRIZES@{SOMAR\_MATRIZES}}}\label{main_8cpp_afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56} 
+SOMAR\+\_\+\+MATRIZES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTIPLICAR\_MATRIZES@{MULTIPLICAR\_MATRIZES}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!MULTIPLICAR\_MATRIZES@{MULTIPLICAR\_MATRIZES}}}\label{main_8cpp_afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c} 
+MULTIPLICAR\+\_\+\+MATRIZES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SAIR@{SAIR}!main.cpp@{main.cpp}}\index{main.cpp@{main.cpp}!SAIR@{SAIR}}}\label{main_8cpp_afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755} 
+SAIR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ LER\_MATRIZ\ =\ 1,}
+\DoxyCodeLine{00018\ \ \ \ \ IMPRIMIR\_MATRIZ,}
+\DoxyCodeLine{00019\ \ \ \ \ SOMAR\_MATRIZES,}
+\DoxyCodeLine{00020\ \ \ \ \ MULTIPLICAR\_MATRIZES,}
+\DoxyCodeLine{00021\ \ \ \ \ SAIR}
+\DoxyCodeLine{00022\ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções}
+\label{main_8cpp_acd6381edd1d4ddcc77245a1887607307} 
+\index{main.cpp@{main.cpp}!escolherMatrizes@{escolherMatrizes}}
+\index{escolherMatrizes@{escolherMatrizes}!main.cpp@{main.cpp}}
+\doxysubsubsection{escolherMatrizes()}
+{\footnotesize\ttfamily void escolher\+Matrizes (\begin{DoxyParamCaption}\item[{\textbf{ string} \&}]{filename,  }\item[{\textbf{ string} \&}]{filename2 }\end{DoxyParamCaption})}
+
+
+
+Solicita ao usuário o nome de duas matrizes a serem processadas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em filename} & Referência para a string que armazenará o nome da primeira matriz. \\
+\hline
+{\em filename2} & Referência para a string que armazenará o nome da segunda matriz. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00323\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Coloque\ o\ nome\ da\ primeira\ matriz:\ "{}};}
+\DoxyCodeLine{00325\ \ \ \ \ std::getline(std::cin,\ filename);}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Coloque\ o\ nome\ da\ segunda\ matriz:\ "{}};}
+\DoxyCodeLine{00328\ \ \ \ \ std::getline(std::cin,\ filename2);}
+\DoxyCodeLine{00329\ \}}
+
+\end{DoxyCode}
+\label{main_8cpp_aa2c1a3e96a2c6e834cacd5a9405cb603} 
+\index{main.cpp@{main.cpp}!existeMatriz@{existeMatriz}}
+\index{existeMatriz@{existeMatriz}!main.cpp@{main.cpp}}
+\doxysubsubsection{existeMatriz()}
+{\footnotesize\ttfamily bool existe\+Matriz (\begin{DoxyParamCaption}\item[{const \textbf{ std\+::string}}]{filename,  }\item[{const \textbf{ unordered\+\_\+map} \&}]{matrizes }\end{DoxyParamCaption})}
+
+
+
+Verifica se existe uma matriz previamente armazenada em um {\ttfamily unordered\+\_\+map}. 
+
+Esta função realiza uma busca no {\ttfamily unordered\+\_\+map} pelo nome do arquivo ({\ttfamily filename}) para determinar se já existe uma matriz associada a ele.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em filename} & O nome do arquivo cujo registro de matriz deve ser verificado. \\
+\hline
+{\em matrizes} & O {\ttfamily unordered\+\_\+map} que mantém o mapeamento entre nomes de arquivos e matrizes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna {\ttfamily true} se existir a matriz correspondente ao nome do arquivo; caso contrário, {\ttfamily false}.
+\end{DoxyReturn}
+\begin{DoxyNote}{Observação}
+O uso do {\ttfamily unordered\+\_\+map} permite que a busca ocorra de maneira eficiente, pois a busca possui complexidade média O(1). 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00278\ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordflow}{return}\ matrizes.find(filename)\ !=\ matrizes.end();}
+\DoxyCodeLine{00280\ \}}
+
+\end{DoxyCode}
+\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{main()}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+$<$ Mapa associativo para armazenar as matrizes
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ setlocale(LC\_ALL,\ \textcolor{stringliteral}{"{}pt\_BR.UTF-\/8"{}});}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Bem-\/vindo\ ao\ programa\ de\ manipulação\ de\ matrizes\ esparsas"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00104\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ unordered\_map\ matrizes;\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{00109\ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Escolha\ uma\ opção:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ -\/\ Ler\ Matriz"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ -\/\ Imprimir\ Matriz"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ -\/\ Somar\ Matrizes"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[4]\ -\/\ Multiplicar\ Matrizes"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[5]\ -\/\ Sair"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ opcao;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ std::cin\ >>\ opcao;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (opcao)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LER\_MATRIZ:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ filename;}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ nome\ do\ arquivo:\ "{}};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(std::cin,\ filename);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ Matriz\ matriz;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ readMatrix(matriz,\ filename);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what()\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ matrizes.insert(std::make\_pair(filename,\ matriz));}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ IMPRIMIR\_MATRIZ:}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Qual\ matriz\ deseja\ imprimir?"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ printMatrizes(matrizes);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Coloque\ o\ nome\ do\ arquivo\ que\ deseja\ imprimir:\ "{}};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ filename;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(std::cin,\ filename);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (existeMatriz(filename,\ matrizes))}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matrizes[filename].print();}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matriz\ não\ encontrada"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SOMAR\_MATRIZES:}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Quais\ as\ matrizes\ irá\ usar\ para\ somar"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ printMatrizes(matrizes);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ filename,\ filename2;}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ escolherMatrizes(filename,\ filename2);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!existeMatriz(filename,\ matrizes)\ ||\ !existeMatriz(filename2,\ matrizes))}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Alguma\ matriz\ não\ foi\ encontrada"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ Matriz\ matriz;}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriz\ =\ sum(matrizes[filename],\ matrizes[filename2]);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what()\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ matriz.print();}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ salvarMatriz(matriz,\ matrizes);}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ MULTIPLICAR\_MATRIZES:}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Quais\ as\ matrizes\ irá\ usar\ para\ multiplicar"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ printMatrizes(matrizes);}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ filename,\ filename2;}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ escolherMatrizes(filename,\ filename2);}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!existeMatriz(filename,\ matrizes)\ ||\ !existeMatriz(filename2,\ matrizes))}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Alguma\ matriz\ não\ foi\ encontrada"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ Matriz\ matriz;}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriz\ =\ multiply(matrizes[filename],\ matrizes[filename2]);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what()\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ matriz.print();}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ salvarMatriz(matriz,\ matrizes);}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ SAIR:}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Saindo..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ inválida"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.clear();}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ std::system(\textcolor{stringliteral}{"{}pause\ ||\ read\ -\/p\ 'Pressione\ enter\ para\ continuar...'\ var"{}});}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ std::system(\textcolor{stringliteral}{"{}cls||clear"{}});}
+\DoxyCodeLine{00251\ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \}}
+
+\end{DoxyCode}
+\label{main_8cpp_aa0b28117de43b5ba82465f7c73ad2dff} 
+\index{main.cpp@{main.cpp}!printMatrizes@{printMatrizes}}
+\index{printMatrizes@{printMatrizes}!main.cpp@{main.cpp}}
+\doxysubsubsection{printMatrizes()}
+{\footnotesize\ttfamily void print\+Matrizes (\begin{DoxyParamCaption}\item[{const \textbf{ unordered\+\_\+map} \&}]{matrizes }\end{DoxyParamCaption})}
+
+
+
+Exibe informações sobre as matrizes armazenadas em um std\+::unordered\+\_\+map. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matrizes} & Um std\+::unordered\+\_\+map que mapeia uma chave (nome da matriz) para uma instância de uma classe que fornece métodos get\+Linhas() e get\+Colunas().\\
+\hline
+\end{DoxyParams}
+As dimensões exibidas são obtidas diretamente da instância armazenada em cada valor do map. A exibição é formatada para melhor leitura e compreensão dos dados de cada matriz. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00332\ \{}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&par\ :\ matrizes)}
+\DoxyCodeLine{00334\ \ \ \ \ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ std::cout\ <<\ par.first\ <<\ \textcolor{stringliteral}{"{}\ |"{}}\ <<\ par.second.getLinhas()\ <<\ \textcolor{stringliteral}{"{}\ x\ "{}}\ <<\ par.second.getColunas()\ <<\ \textcolor{stringliteral}{"{}|"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00338\ \ \ \ \ \}}
+\DoxyCodeLine{00339\ \}}
+
+\end{DoxyCode}
+\label{main_8cpp_a9be84a5d43ea2dd1c0bcdcd3614f11bd} 
+\index{main.cpp@{main.cpp}!readMatrix@{readMatrix}}
+\index{readMatrix@{readMatrix}!main.cpp@{main.cpp}}
+\doxysubsubsection{readMatrix()}
+{\footnotesize\ttfamily void read\+Matrix (\begin{DoxyParamCaption}\item[{\textbf{ Matriz} \&}]{matriz,  }\item[{const \textbf{ std\+::string}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Lê dados de um arquivo e insere em uma matriz esparsa. 
+
+Esta função abre um arquivo contendo o número de linhas e colunas de uma matriz, seguido por múltiplas linhas que descrevem itens não nulos da matriz. Cada linha deve conter índices (i, j) e o valor correspondente.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matriz} & Referência para o objeto \doxyref{Matriz}{p.}{classMatriz} que será inicializado e populado. \\
+\hline
+{\em filename} & Nome do arquivo a ser lido (sem o caminho completo).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & Quando não é possível acessar ou abrir o arquivo.\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyItemize}
+\item O arquivo é aberto a partir do diretório "{}src/arquivos/"{} concatenado ao nome do arquivo passado em {\ttfamily filename}.
+\item Os primeiros valores lidos do arquivo correspondem ao número de linhas ({\ttfamily linhas}) e de colunas ({\ttfamily colunas}) para inicializar corretamente a matriz.
+\item Em seguida, cada conjunto de três valores (índice de linha, índice de coluna e valor) é lido e inserido na matriz usando {\ttfamily matriz.\+insert()}.
+\item Caso o arquivo não seja encontrado ou ocorra algum outro problema, é gerada uma exceção do tipo {\ttfamily std\+::runtime\+\_\+error}. 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00255\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ std::ifstream\ file(\textcolor{stringliteral}{"{}src/arquivos/"{}}\ +\ filename);}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file\ ||\ !file.is\_open())}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ arquivo"{}});}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{int}\ linhas\{0\},\ colunas\{0\};}
+\DoxyCodeLine{00262\ \ \ \ \ file\ >>\ linhas\ >>\ colunas;}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ \ \ \ \ matriz\ =\ Matriz(linhas,\ colunas);}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{int}\ i\{0\},\ j\{0\};}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{double}\ valor\{0.0f\};}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordflow}{while}\ (file\ >>\ i\ >>\ j\ >>\ valor)}
+\DoxyCodeLine{00270\ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ matriz.insert(i,\ j,\ valor);}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ file.close();}
+\DoxyCodeLine{00275\ \}}
+
+\end{DoxyCode}
+\label{main_8cpp_a6e0b4a7da8cc03f7cb1023a6d4f75f32} 
+\index{main.cpp@{main.cpp}!salvarMatriz@{salvarMatriz}}
+\index{salvarMatriz@{salvarMatriz}!main.cpp@{main.cpp}}
+\doxysubsubsection{salvarMatriz()}
+{\footnotesize\ttfamily void salvar\+Matriz (\begin{DoxyParamCaption}\item[{const \textbf{ Matriz} \&}]{matriz,  }\item[{\textbf{ unordered\+\_\+map} \&}]{matrizes }\end{DoxyParamCaption})}
+
+
+
+Salva uma matriz em um mapa associativo de matrizes, permitindo que seja recuperada posteriormente. 
+
+A função solicita ao usuário se deseja salvar a matriz atual. Caso a resposta seja afirmativa, é solicitado um nome para identificar a nova matriz no mapa. Se esse nome já existir, o usuário é informado para tentar novamente com outro nome. Em caso de sucesso, a matriz é inserida no mapa com a chave fornecida pelo usuário, e é exibida uma mensagem de confirmação.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matriz} & Objeto do tipo \doxyref{Matriz}{p.}{classMatriz} que será salvo. \\
+\hline
+{\em matrizes} & Estrutura (unordered\+\_\+map) onde a matriz será armazenada, associada a um nome (string).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Observação}
+Essa função não retorna valores. É importante que o usuário insira corretamente as opções (s ou n) para prosseguir ou cancelar o salvamento, e que forneça um nome válido quando optar por salvar a matriz. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00283\ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{00285\ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Deseja\ salvar\ a\ matriz?\ [s/n]:\ "{}};}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ resposta;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ std::cin\ >>\ resposta;}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (resposta\ ==\ \textcolor{charliteral}{'n'}\ ||\ resposta\ ==\ \textcolor{charliteral}{'N'})}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (resposta\ ==\ \textcolor{charliteral}{'s'}\ ||\ resposta\ ==\ \textcolor{charliteral}{'S'})}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ nome\ que\ deseja\ salvar\ a\ matriz:\ "{}};}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ filename;}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ std::getline(std::cin,\ filename);}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (existeMatriz(filename,\ matrizes))}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Já\ existe\ uma\ matriz\ com\ esse\ nome,\ tente\ outro\ nome\ para\ salvar"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ matrizes.insert(std::make\_pair(filename,\ matriz));}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matriz\ salva\ com\ sucesso"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ inválida"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00319\ \ \ \ \ \}}
+\DoxyCodeLine{00320\ \}}
+
+\end{DoxyCode}
