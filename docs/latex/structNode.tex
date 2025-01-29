@@ -1,0 +1,144 @@
+\doxysection{Referência da Estrutura Node}
+\label{structNode}\index{Node@{Node}}
+
+
+Representa um nó em uma matriz esparsa.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{structNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Node} (const int \&\textbf{ linha}, const int \&\textbf{ coluna}, const double \&\textbf{ valor})
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Node}{p.}{structNode}. \end{DoxyCompactList}\item 
+void \textbf{ atualiza\+Valor} (const double \&novo\+Valor)
+\begin{DoxyCompactList}\small\item\em Atualiza o valor do nó. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Node} $\ast$ \textbf{ direita}
+\item 
+\textbf{ Node} $\ast$ \textbf{ abaixo}
+\item 
+int \textbf{ linha}
+\item 
+int \textbf{ coluna}
+\item 
+double \textbf{ valor}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um nó em uma matriz esparsa. 
+
+Esta struct é usada para representar um nó em uma matriz esparsa, que contém ponteiros para os nós à direita e abaixo, bem como a linha, coluna e valor do elemento. 
+
+\doxysubsection{Construtores e Destrutores}
+\label{structNode_a033bc2f78cb15881f734c4e89419fca1} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{Node()}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{const int \&}]{linha,  }\item[{const int \&}]{coluna,  }\item[{const double \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe \doxyref{Node}{p.}{structNode}. 
+
+Este construtor inicializa um objeto \doxyref{Node}{p.}{structNode} com os valores fornecidos para linha, coluna e valor.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & Referência constante para o número da linha. \\
+\hline
+{\em coluna} & Referência constante para o número da coluna. \\
+\hline
+{\em valor} & Referência constante para o valor armazenado no nó. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ linha(linha),\ coluna(coluna),\ valor(valor)}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ direita\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ abaixo\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{structNode_a4336ead86378a5871a13ec073415c8f5} 
+\index{Node@{Node}!atualizaValor@{atualizaValor}}
+\index{atualizaValor@{atualizaValor}!Node@{Node}}
+\doxysubsubsection{atualizaValor()}
+{\footnotesize\ttfamily void Node\+::atualiza\+Valor (\begin{DoxyParamCaption}\item[{const double \&}]{novo\+Valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza o valor do nó. 
+
+Esta função atualiza o valor armazenado no nó com um novo valor fornecido.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Valor} & O novo valor que substituirá o valor atual do nó. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ valor\ =\ novoValor;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\label{structNode_aad364c157638e1ab1667553325470723} 
+\index{Node@{Node}!abaixo@{abaixo}}
+\index{abaixo@{abaixo}!Node@{Node}}
+\doxysubsubsection{abaixo}
+{\footnotesize\ttfamily \textbf{ Node}$\ast$ Node\+::abaixo}
+
+Ponteiro para o próximo nó na mesma coluna. \label{structNode_a42f897b88b42ed9fc526b5794fcf934f} 
+\index{Node@{Node}!coluna@{coluna}}
+\index{coluna@{coluna}!Node@{Node}}
+\doxysubsubsection{coluna}
+{\footnotesize\ttfamily int Node\+::coluna}
+
+Número da coluna onde o nó está localizado. \label{structNode_a30f66714469c4152b77e3832ab278b2d} 
+\index{Node@{Node}!direita@{direita}}
+\index{direita@{direita}!Node@{Node}}
+\doxysubsubsection{direita}
+{\footnotesize\ttfamily \textbf{ Node}$\ast$ Node\+::direita}
+
+Ponteiro para o próximo nó na mesma linha. \label{structNode_aed29de4c5d116b3f4a9880896d0023d3} 
+\index{Node@{Node}!linha@{linha}}
+\index{linha@{linha}!Node@{Node}}
+\doxysubsubsection{linha}
+{\footnotesize\ttfamily int Node\+::linha}
+
+Número da linha onde o nó está localizado. \label{structNode_a393dcc9a0fe69032baa0efba9146dbed} 
+\index{Node@{Node}!valor@{valor}}
+\index{valor@{valor}!Node@{Node}}
+\doxysubsubsection{valor}
+{\footnotesize\ttfamily double Node\+::valor}
+
+Valor armazenado no nó. 
+
+A documentação para essa estrutura foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/node/\textbf{ Node.\+hpp}\end{DoxyCompactItemize}

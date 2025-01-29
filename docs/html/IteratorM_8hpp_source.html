@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Matriz Esparsa: Código-Fonte de include/IteratorM/IteratorM.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Matriz Esparsa<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">O projeto visa otimizar o armazenamento e as operações em matrizes esparsas, que possuem maioria de elementos zero. Armazenando apenas os valores não nulos, economiza-se memória e acelera-se operações como soma, multiplicação e inversão. Um exemplo prático é o uso de matrizes em programas de planilha como o Excel.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_2e701baa3b7f97bb3c81e7b6e9419636.html">IteratorM</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">IteratorM.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="IteratorM_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ITERATORM_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ITERATORM_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Matriz_8hpp.html">matriz/Matriz.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_class" href="classMatriz.html">Matriz</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classIteratorM.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classIteratorM.html">IteratorM</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classIteratorM.html#a24a0f67956fdfafc3154410dda29bf05">   18</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classMatriz.html">Matriz</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_struct" href="structNode.html">Node</a> *cabecalho; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_struct" href="structNode.html">Node</a> *current;   </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classIteratorM.html#a3003ca727c300406f186135bcc696788">   25</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classIteratorM.html#a3003ca727c300406f186135bcc696788">iterator_category</a> = std::forward_iterator_tag;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classIteratorM.html#aad0bf401a7e3da68296e841b32824467">   26</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classIteratorM.html#aad0bf401a7e3da68296e841b32824467">difference_type</a> = std::ptrdiff_t;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classIteratorM.html#a2ae64e0cae0d56a70417e4899b740f3b">   27</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classIteratorM.html#a2ae64e0cae0d56a70417e4899b740f3b">value_type</a> = double;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">   28</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">pointer</a> = <span class="keywordtype">double</span> *;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">   29</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">reference</a> = <span class="keywordtype">double</span> &amp;;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classIteratorM.html#aa9aad03200da4dedde254b87f8b9f913">   36</a></span>    <a class="code hl_function" href="classIteratorM.html#aa9aad03200da4dedde254b87f8b9f913">IteratorM</a>() : cabecalho(nullptr), current(nullptr) {}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classIteratorM.html#add04cb6264feaa7a09d922e2498360db">   46</a></span>    <a class="code hl_function" href="classIteratorM.html#add04cb6264feaa7a09d922e2498360db">IteratorM</a>(<a class="code hl_struct" href="structNode.html">Node</a> *cabecalho, <a class="code hl_struct" href="structNode.html">Node</a> *current) : cabecalho(cabecalho), current(current)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">while</span> (current == cabecalho)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            cabecalho = cabecalho-&gt;<a class="code hl_variable" href="structNode.html#aad364c157638e1ab1667553325470723">abaixo</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            current = current-&gt;<a class="code hl_variable" href="structNode.html#aad364c157638e1ab1667553325470723">abaixo</a>-&gt;<a class="code hl_variable" href="structNode.html#a30f66714469c4152b77e3832ab278b2d">direita</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classIteratorM.html#a92e5464078dbc7979472ebe70791d83b">   62</a></span>    <a class="code hl_typedef" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">reference</a> <a class="code hl_function" href="classIteratorM.html#a92e5464078dbc7979472ebe70791d83b">operator*</a>()</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> current-&gt;<a class="code hl_variable" href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">valor</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classIteratorM.html#abd743e71d325e39db7623779d4aa1b46">   74</a></span>    <a class="code hl_typedef" href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">reference</a> <a class="code hl_function" href="classIteratorM.html#abd743e71d325e39db7623779d4aa1b46">operator*</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> current-&gt;<a class="code hl_variable" href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">valor</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classIteratorM.html#a1be39ae06bd0b099ad0f728689de94c9">   86</a></span>    <a class="code hl_typedef" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">pointer</a> <a class="code hl_function" href="classIteratorM.html#a1be39ae06bd0b099ad0f728689de94c9">operator-&gt;</a>()</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> &amp;current-&gt;<a class="code hl_variable" href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">valor</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classIteratorM.html#a6366134c5544bb8e93a974e9f7d0ec84">   98</a></span>    <a class="code hl_typedef" href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">pointer</a> <a class="code hl_function" href="classIteratorM.html#a6366134c5544bb8e93a974e9f7d0ec84">operator-&gt;</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> &amp;current-&gt;<a class="code hl_variable" href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">valor</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classIteratorM.html#a5d799e6c31323e9f9afc4e80438e3da0">  110</a></span>    <a class="code hl_class" href="classIteratorM.html">IteratorM</a> &amp;<a class="code hl_function" href="classIteratorM.html#a5d799e6c31323e9f9afc4e80438e3da0">operator++</a>()</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        current = current-&gt;<a class="code hl_variable" href="structNode.html#a30f66714469c4152b77e3832ab278b2d">direita</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">while</span> (current == cabecalho)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            cabecalho = cabecalho-&gt;<a class="code hl_variable" href="structNode.html#aad364c157638e1ab1667553325470723">abaixo</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            current = current-&gt;<a class="code hl_variable" href="structNode.html#aad364c157638e1ab1667553325470723">abaixo</a>-&gt;<a class="code hl_variable" href="structNode.html#a30f66714469c4152b77e3832ab278b2d">direita</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classIteratorM.html#a6f921a41f3d1e58896872a2740d29833">  131</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classIteratorM.html#a6f921a41f3d1e58896872a2740d29833">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classIteratorM.html">IteratorM</a> &amp;it)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">return</span> cabecalho == it.cabecalho &amp;&amp; current == it.current;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classIteratorM.html#aafd0df0464eb6bffa1e74479cb485c99">  144</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classIteratorM.html#aafd0df0464eb6bffa1e74479cb485c99">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classIteratorM.html">IteratorM</a> &amp;it)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">return</span> cabecalho != it.cabecalho || current != it.current;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>};</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aMatriz_8hpp_html"><div class="ttname"><a href="Matriz_8hpp.html">Matriz.hpp</a></div></div>
+<div class="ttc" id="aclassIteratorM_html"><div class="ttname"><a href="classIteratorM.html">IteratorM</a></div><div class="ttdoc">Iterador para percorrer uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:17</div></div>
+<div class="ttc" id="aclassIteratorM_html_a1be39ae06bd0b099ad0f728689de94c9"><div class="ttname"><a href="classIteratorM.html#a1be39ae06bd0b099ad0f728689de94c9">IteratorM::operator-&gt;</a></div><div class="ttdeci">pointer operator-&gt;()</div><div class="ttdoc">Operador de acesso a membro (const).</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:86</div></div>
+<div class="ttc" id="aclassIteratorM_html_a2ae64e0cae0d56a70417e4899b740f3b"><div class="ttname"><a href="classIteratorM.html#a2ae64e0cae0d56a70417e4899b740f3b">IteratorM::value_type</a></div><div class="ttdeci">double value_type</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:27</div></div>
+<div class="ttc" id="aclassIteratorM_html_a3003ca727c300406f186135bcc696788"><div class="ttname"><a href="classIteratorM.html#a3003ca727c300406f186135bcc696788">IteratorM::iterator_category</a></div><div class="ttdeci">std::forward_iterator_tag iterator_category</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:25</div></div>
+<div class="ttc" id="aclassIteratorM_html_a5d799e6c31323e9f9afc4e80438e3da0"><div class="ttname"><a href="classIteratorM.html#a5d799e6c31323e9f9afc4e80438e3da0">IteratorM::operator++</a></div><div class="ttdeci">IteratorM &amp; operator++()</div><div class="ttdoc">Operador de incremento prefixado.</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:110</div></div>
+<div class="ttc" id="aclassIteratorM_html_a6366134c5544bb8e93a974e9f7d0ec84"><div class="ttname"><a href="classIteratorM.html#a6366134c5544bb8e93a974e9f7d0ec84">IteratorM::operator-&gt;</a></div><div class="ttdeci">pointer operator-&gt;() const</div><div class="ttdoc">Operador de acesso a membro (const).</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:98</div></div>
+<div class="ttc" id="aclassIteratorM_html_a67adb08fe732eedfa5172953d01ac2ef"><div class="ttname"><a href="classIteratorM.html#a67adb08fe732eedfa5172953d01ac2ef">IteratorM::pointer</a></div><div class="ttdeci">double * pointer</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:28</div></div>
+<div class="ttc" id="aclassIteratorM_html_a6f921a41f3d1e58896872a2740d29833"><div class="ttname"><a href="classIteratorM.html#a6f921a41f3d1e58896872a2740d29833">IteratorM::operator==</a></div><div class="ttdeci">bool operator==(const IteratorM &amp;it) const</div><div class="ttdoc">Operador de igualdade.</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:131</div></div>
+<div class="ttc" id="aclassIteratorM_html_a92e5464078dbc7979472ebe70791d83b"><div class="ttname"><a href="classIteratorM.html#a92e5464078dbc7979472ebe70791d83b">IteratorM::operator*</a></div><div class="ttdeci">reference operator*()</div><div class="ttdoc">Operador de desreferenciação.</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:62</div></div>
+<div class="ttc" id="aclassIteratorM_html_aa9aad03200da4dedde254b87f8b9f913"><div class="ttname"><a href="classIteratorM.html#aa9aad03200da4dedde254b87f8b9f913">IteratorM::IteratorM</a></div><div class="ttdeci">IteratorM()</div><div class="ttdoc">Construtor padrão.</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:36</div></div>
+<div class="ttc" id="aclassIteratorM_html_aad0bf401a7e3da68296e841b32824467"><div class="ttname"><a href="classIteratorM.html#aad0bf401a7e3da68296e841b32824467">IteratorM::difference_type</a></div><div class="ttdeci">std::ptrdiff_t difference_type</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:26</div></div>
+<div class="ttc" id="aclassIteratorM_html_aafd0df0464eb6bffa1e74479cb485c99"><div class="ttname"><a href="classIteratorM.html#aafd0df0464eb6bffa1e74479cb485c99">IteratorM::operator!=</a></div><div class="ttdeci">bool operator!=(const IteratorM &amp;it) const</div><div class="ttdoc">Operador de desigualdade.</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:144</div></div>
+<div class="ttc" id="aclassIteratorM_html_abaea49efe6d3b3e086c1da26c697526c"><div class="ttname"><a href="classIteratorM.html#abaea49efe6d3b3e086c1da26c697526c">IteratorM::reference</a></div><div class="ttdeci">double &amp; reference</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:29</div></div>
+<div class="ttc" id="aclassIteratorM_html_abd743e71d325e39db7623779d4aa1b46"><div class="ttname"><a href="classIteratorM.html#abd743e71d325e39db7623779d4aa1b46">IteratorM::operator*</a></div><div class="ttdeci">reference operator*() const</div><div class="ttdoc">Operador de desreferenciação (const).</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:74</div></div>
+<div class="ttc" id="aclassIteratorM_html_add04cb6264feaa7a09d922e2498360db"><div class="ttname"><a href="classIteratorM.html#add04cb6264feaa7a09d922e2498360db">IteratorM::IteratorM</a></div><div class="ttdeci">IteratorM(Node *cabecalho, Node *current)</div><div class="ttdoc">Construtor com parâmetros.</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:46</div></div>
+<div class="ttc" id="aclassMatriz_html"><div class="ttname"><a href="classMatriz.html">Matriz</a></div><div class="ttdoc">Classe que representa uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> Matriz.hpp:33</div></div>
+<div class="ttc" id="astructNode_html"><div class="ttname"><a href="structNode.html">Node</a></div><div class="ttdoc">Representa um nó em uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> Node.hpp:12</div></div>
+<div class="ttc" id="astructNode_html_a30f66714469c4152b77e3832ab278b2d"><div class="ttname"><a href="structNode.html#a30f66714469c4152b77e3832ab278b2d">Node::direita</a></div><div class="ttdeci">Node * direita</div><div class="ttdef"><b>Definição</b> Node.hpp:13</div></div>
+<div class="ttc" id="astructNode_html_a393dcc9a0fe69032baa0efba9146dbed"><div class="ttname"><a href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">Node::valor</a></div><div class="ttdeci">double valor</div><div class="ttdef"><b>Definição</b> Node.hpp:17</div></div>
+<div class="ttc" id="astructNode_html_aad364c157638e1ab1667553325470723"><div class="ttname"><a href="structNode.html#aad364c157638e1ab1667553325470723">Node::abaixo</a></div><div class="ttdeci">Node * abaixo</div><div class="ttdef"><b>Definição</b> Node.hpp:14</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,29 @@
+\doxysection{Node.\+hpp}
+\label{Node_8hpp_source}\index{include/node/Node.hpp@{include/node/Node.hpp}}
+\textbf{ Ir para a documentação desse arquivo.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NODE\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NODE\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }Node}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ Node\ *direita;\ }
+\DoxyCodeLine{00014\ \ \ \ \ Node\ *abaixo;\ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ linha;\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ coluna;\ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ valor;\ \ }
+\DoxyCodeLine{00028\ \ \ \ \ Node(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&linha,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&coluna,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \&valor)\ :\ linha(linha),\ coluna(coluna),\ valor(valor)}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ direita\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ abaixo\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ atualizaValor(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \&novoValor)}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ valor\ =\ novoValor;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

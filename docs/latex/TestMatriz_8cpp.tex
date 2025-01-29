@@ -1,0 +1,251 @@
+\doxysection{Referência do Arquivo tests/\+Test\+Matriz.cpp}
+\label{TestMatriz_8cpp}\index{tests/TestMatriz.cpp@{tests/TestMatriz.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include "{}matriz/\+Matriz.\+hpp"{}}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include "{}utils/utils.\+hpp"{}}\newline
+Gráfico de dependência de inclusões para Test\+Matriz.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TestMatriz_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ teste\+Insercao} ()
+\item 
+void \textbf{ teste\+Soma} (const \textbf{ Matriz} \&A, const \textbf{ Matriz} \&B, const \textbf{ Matriz} \&soma)
+\item 
+void \textbf{ teste\+Multiplicacao} (const \textbf{ Matriz} \&A, const \textbf{ Matriz} \&B, const \textbf{ Matriz} \&soma)
+\item 
+\textbf{ Matriz} \textbf{ leitura} (const \textbf{ std\+::string} \&arquivo)
+\item 
+bool \textbf{ arquivo\+Existe} (const \textbf{ std\+::string} \&caminho)
+\item 
+void \textbf{ teste\+Performance} ()
+\item 
+int \textbf{ main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções}
+\label{TestMatriz_8cpp_abf7a223284124557f76b2584cb8507b0} 
+\index{TestMatriz.cpp@{TestMatriz.cpp}!arquivoExiste@{arquivoExiste}}
+\index{arquivoExiste@{arquivoExiste}!TestMatriz.cpp@{TestMatriz.cpp}}
+\doxysubsubsection{arquivoExiste()}
+{\footnotesize\ttfamily bool arquivo\+Existe (\begin{DoxyParamCaption}\item[{const \textbf{ std\+::string} \&}]{caminho }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ std::ifstream\ file(caminho);}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{return}\ file.good();}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+\label{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5} 
+\index{TestMatriz.cpp@{TestMatriz.cpp}!leitura@{leitura}}
+\index{leitura@{leitura}!TestMatriz.cpp@{TestMatriz.cpp}}
+\doxysubsubsection{leitura()}
+{\footnotesize\ttfamily \textbf{ Matriz} leitura (\begin{DoxyParamCaption}\item[{const \textbf{ std\+::string} \&}]{arquivo }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ std::ifstream\ file(\textcolor{stringliteral}{"{}tests/arquivosTestes/"{}}\ +\ arquivo);\ \textcolor{comment}{//\ Abre\ o\ arquivo}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file.is\_open())}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ arquivo:\ "{}}\ +\ arquivo);}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ linhas,\ colunas;}
+\DoxyCodeLine{00089\ \ \ \ \ file\ >>\ linhas\ >>\ colunas;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ Matriz\ matriz(linhas,\ colunas);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ linha,\ coluna;}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{double}\ valor;}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{while}\ (file\ >>\ linha\ >>\ coluna\ >>\ valor)}
+\DoxyCodeLine{00096\ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lê\ os\ valores\ da\ matriz}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ matriz.insert(linha,\ coluna,\ valor);\ \textcolor{comment}{//\ Insere\ na\ matriz}}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ file.close();\ \textcolor{comment}{//\ Fecha\ o\ arquivo}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{return}\ matriz;}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}
+\label{TestMatriz_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{TestMatriz.cpp@{TestMatriz.cpp}!main@{main}}
+\index{main@{main}!TestMatriz.cpp@{TestMatriz.cpp}}
+\doxysubsubsection{main()}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00138\ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificando\ se\ os\ arquivos\ existem}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivoExiste(\textcolor{stringliteral}{"{}tests/arquivosTestes/Matrix1.txt"{}}))}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ Matrix1.txt\ não\ encontrado."{}});}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivoExiste(\textcolor{stringliteral}{"{}tests/arquivosTestes/Matrix2.txt"{}}))}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ Matrix2.txt\ não\ encontrado."{}});}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!arquivoExiste(\textcolor{stringliteral}{"{}tests/arquivosTestes/MatrixResult.txt"{}}))}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ MatrixResult.txt\ não\ encontrado."{}});}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lê\ as\ matrizes\ de\ arquivos}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ Matriz\ A\ =\ leitura(\textcolor{stringliteral}{"{}Matrix1.txt"{}});}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ Matriz\ B\ =\ leitura(\textcolor{stringliteral}{"{}Matrix2.txt"{}});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ Matriz\ soma\ =\ leitura(\textcolor{stringliteral}{"{}MatrixResult.txt"{}});}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ Matriz\ multi\ =\ leitura(\textcolor{stringliteral}{"{}MatrixMulti.txt"{}});}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matrizes\ lidas\ com\ sucesso"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Executa\ os\ testes}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ testeSoma(A,\ B,\ soma);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ testeMultiplicacao(A,\ B,\ multi);}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ testeInsercao();\ \ \ \ \textcolor{comment}{//\ Teste\ básico\ de\ inserção}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ testePerformance();\ \textcolor{comment}{//\ Teste\ de\ performance\ para\ matrizes\ grandes}}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::runtime\_error\ \&e)}
+\DoxyCodeLine{00166\ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Erro\ main:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00171\ \}}
+
+\end{DoxyCode}
+\label{TestMatriz_8cpp_a9aee728daffc67ff42f4e827514f0ff9} 
+\index{TestMatriz.cpp@{TestMatriz.cpp}!testeInsercao@{testeInsercao}}
+\index{testeInsercao@{testeInsercao}!TestMatriz.cpp@{TestMatriz.cpp}}
+\doxysubsubsection{testeInsercao()}
+{\footnotesize\ttfamily void teste\+Insercao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ Matriz\ matriz(5,\ 5);}
+\DoxyCodeLine{00013\ \ \ \ \ matriz.insert(1,\ 1,\ 1);}
+\DoxyCodeLine{00014\ \ \ \ \ assert(matriz.get(1,\ 1)\ ==\ 1);\ \textcolor{comment}{//\ Garantir\ que\ o\ valor\ foi\ inserido\ corretamente}}
+\DoxyCodeLine{00015\ \ \ \ \ matriz.insert(5,\ 5,\ 2);}
+\DoxyCodeLine{00016\ \ \ \ \ assert(matriz.get(5,\ 5)\ ==\ 2);\ \textcolor{comment}{//\ Garantir\ que\ o\ valor\ foi\ inserido\ corretamente}}
+\DoxyCodeLine{00017\ \ \ \ \ matriz.insert(3,\ 2,\ 2);}
+\DoxyCodeLine{00018\ \ \ \ \ assert(matriz.get(3,\ 2)\ ==\ 2);\ \textcolor{comment}{//\ Garantir\ que\ o\ valor\ foi\ inserido\ corretamente}}
+\DoxyCodeLine{00019\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Teste\ de\ inserção\ passou"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+\label{TestMatriz_8cpp_afa561a7f09e24d8ed4d09360378a6c76} 
+\index{TestMatriz.cpp@{TestMatriz.cpp}!testeMultiplicacao@{testeMultiplicacao}}
+\index{testeMultiplicacao@{testeMultiplicacao}!TestMatriz.cpp@{TestMatriz.cpp}}
+\doxysubsubsection{testeMultiplicacao()}
+{\footnotesize\ttfamily void teste\+Multiplicacao (\begin{DoxyParamCaption}\item[{const \textbf{ Matriz} \&}]{A,  }\item[{const \textbf{ Matriz} \&}]{B,  }\item[{const \textbf{ Matriz} \&}]{soma }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ Matriz\ D\ =\ multiply(A,\ B);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Verificando\ as\ dimensões}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{if}\ (D.getColunas()\ !=\ soma.getColunas()\ ||\ D.getLinhas()\ !=\ soma.getLinhas())}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Erro:\ Dimensões\ incorretas\ na\ multiplicação\ das\ matrizes."{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ Verificando\ cada\ valor\ da\ matriz\ resultante}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ soma.getLinhas();\ i++)}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <=\ soma.getColunas();\ j++)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (D.get(i,\ j)\ !=\ soma.get(i,\ j))}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Erro\ na\ multiplicação\ das\ matrizes:\ Valor\ incorreto\ na\ posição\ ("{}}\ +}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(i)\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ std::to\_string(j)\ +\ \textcolor{stringliteral}{"{}).\ Esperado:\ "{}}\ +}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(soma.get(i,\ j))\ +\ \textcolor{stringliteral}{"{},\ Obtido:\ "{}}\ +\ std::to\_string(D.get(i,\ j)));}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Teste\ de\ multiplicação\ passou"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+\label{TestMatriz_8cpp_aebde2beac67611f95badfd0112cb185d} 
+\index{TestMatriz.cpp@{TestMatriz.cpp}!testePerformance@{testePerformance}}
+\index{testePerformance@{testePerformance}!TestMatriz.cpp@{TestMatriz.cpp}}
+\doxysubsubsection{testePerformance()}
+{\footnotesize\ttfamily void teste\+Performance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ Matriz\ A(500,\ 500);}
+\DoxyCodeLine{00115\ \ \ \ \ Matriz\ B(500,\ 500);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ Preenche\ as\ matrizes\ com\ valores}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ 500;\ ++i)}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <=\ 500;\ ++j)}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ A.insert(i,\ j,\ i\ +\ j);}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ B.insert(i,\ j,\ i\ -\/\ j);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keyword}{auto}\ inicio\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00128\ \ \ \ \ Matriz\ soma\ =\ sum(A,\ B);\ \textcolor{comment}{//\ Soma\ as\ matrizes}}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{auto}\ fim\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{auto}\ duracao\ =\ std::chrono::duration\_cast<std::chrono::milliseconds>(fim\ -\/\ inicio);}
+\DoxyCodeLine{00132\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Tempo\ para\ soma:\ "{}}\ <<\ duracao.count()\ <<\ \textcolor{stringliteral}{"{}ms"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00133\ \}}
+
+\end{DoxyCode}
+\label{TestMatriz_8cpp_ad453eda85b2dfc4685a124e39a34955c} 
+\index{TestMatriz.cpp@{TestMatriz.cpp}!testeSoma@{testeSoma}}
+\index{testeSoma@{testeSoma}!TestMatriz.cpp@{TestMatriz.cpp}}
+\doxysubsubsection{testeSoma()}
+{\footnotesize\ttfamily void teste\+Soma (\begin{DoxyParamCaption}\item[{const \textbf{ Matriz} \&}]{A,  }\item[{const \textbf{ Matriz} \&}]{B,  }\item[{const \textbf{ Matriz} \&}]{soma }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ Matriz\ D\ =\ sum(A,\ B);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Verificando\ as\ dimensões}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (D.getColunas()\ !=\ soma.getColunas()\ ||\ D.getLinhas()\ !=\ soma.getLinhas())}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Erro:\ Dimensões\ incorretas\ na\ soma\ das\ matrizes."{}});}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Verificando\ cada\ valor\ da\ matriz\ resultante}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ soma.getLinhas();\ i++)}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <=\ soma.getColunas();\ j++)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (D.get(i,\ j)\ !=\ soma.get(i,\ j))}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Erro\ na\ soma\ das\ matrizes:\ Valor\ incorreto\ na\ posição\ ("{}}\ +}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(i)\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ std::to\_string(j)\ +\ \textcolor{stringliteral}{"{}).\ Esperado:\ "{}}\ +}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(soma.get(i,\ j))\ +\ \textcolor{stringliteral}{"{},\ Obtido:\ "{}}\ +\ std::to\_string(D.get(i,\ j)));}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Teste\ de\ soma\ passou"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Matriz Esparsa: Código-Fonte de include/matriz/Matriz.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Matriz Esparsa<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">O projeto visa otimizar o armazenamento e as operações em matrizes esparsas, que possuem maioria de elementos zero. Armazenando apenas os valores não nulos, economiza-se memória e acelera-se operações como soma, multiplicação e inversão. Um exemplo prático é o uso de matrizes em programas de planilha como o Excel.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_efd67e6abb6cb281e15f666aa80477ca.html">matriz</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Matriz.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Matriz_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MATRIZ_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MATRIZ_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="Node_8hpp.html">node/Node.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="IteratorM_8hpp.html">IteratorM/IteratorM.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classMatriz.html">   32</a></span><span class="keyword">class </span><a class="code hl_class" href="classMatriz.html">Matriz</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_struct" href="structNode.html">Node</a> *cabecalho; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">int</span> linhas;      </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> colunas;     </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="classMatriz.html#a7de756301bddbc4b0b5d2a0f2b1fc695">Matriz</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_function" href="classMatriz.html#a7de756301bddbc4b0b5d2a0f2b1fc695">Matriz</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;ln, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;cl);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="classMatriz.html#a2092b7a289ecec369e1da407d5839f5a">~Matriz</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_class" href="classIteratorM.html">IteratorM</a> <a class="code hl_function" href="classMatriz.html#a3a06127086fe26ecb1a8b2964d4dd54c">begin</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_class" href="classIteratorM.html">IteratorM</a> <a class="code hl_function" href="classMatriz.html#a50d46c6366b07dda1da18bcfcea762df">end</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_class" href="classIteratorM.html">IteratorM</a> <a class="code hl_function" href="classMatriz.html#a3a06127086fe26ecb1a8b2964d4dd54c">begin</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_class" href="classIteratorM.html">IteratorM</a> <a class="code hl_function" href="classMatriz.html#a50d46c6366b07dda1da18bcfcea762df">end</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMatriz.html#aac16f51b920e0ae269f5e2b78fa9fad5">getLinhas</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMatriz.html#a598a301d6e02ba9669e806116f15c396">getColunas</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMatriz.html#a45b783c49e5a4175487b121f5615790c">limpar</a>();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMatriz.html#add3295e730032050b85b6e9598c005db">insert</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;posI, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;posJ, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;value);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classMatriz.html#a9062dbfd6809c9d0a4f177f6df0269d6">get</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;posI, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;posJ);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classMatriz.html#a9062dbfd6809c9d0a4f177f6df0269d6">get</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;posI, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;posJ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMatriz.html#af8987741da4cabe0aa054f2e8b077a97">print</a>();</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>};</div>
+</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aIteratorM_8hpp_html"><div class="ttname"><a href="IteratorM_8hpp.html">IteratorM.hpp</a></div></div>
+<div class="ttc" id="aNode_8hpp_html"><div class="ttname"><a href="Node_8hpp.html">Node.hpp</a></div></div>
+<div class="ttc" id="aclassIteratorM_html"><div class="ttname"><a href="classIteratorM.html">IteratorM</a></div><div class="ttdoc">Iterador para percorrer uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> IteratorM.hpp:17</div></div>
+<div class="ttc" id="aclassMatriz_html"><div class="ttname"><a href="classMatriz.html">Matriz</a></div><div class="ttdoc">Classe que representa uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> Matriz.hpp:33</div></div>
+<div class="ttc" id="aclassMatriz_html_a2092b7a289ecec369e1da407d5839f5a"><div class="ttname"><a href="classMatriz.html#a2092b7a289ecec369e1da407d5839f5a">Matriz::~Matriz</a></div><div class="ttdeci">~Matriz()</div><div class="ttdoc">Destrutor da classe Matriz.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:72</div></div>
+<div class="ttc" id="aclassMatriz_html_a3a06127086fe26ecb1a8b2964d4dd54c"><div class="ttname"><a href="classMatriz.html#a3a06127086fe26ecb1a8b2964d4dd54c">Matriz::begin</a></div><div class="ttdeci">IteratorM begin()</div><div class="ttdoc">Inicializa um iterador que aponta para o primeiro elemento significativo da matriz.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:42</div></div>
+<div class="ttc" id="aclassMatriz_html_a45b783c49e5a4175487b121f5615790c"><div class="ttname"><a href="classMatriz.html#a45b783c49e5a4175487b121f5615790c">Matriz::limpar</a></div><div class="ttdeci">void limpar()</div><div class="ttdoc">Limpa a matriz esparsa, removendo todos os nós.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:77</div></div>
+<div class="ttc" id="aclassMatriz_html_a50d46c6366b07dda1da18bcfcea762df"><div class="ttname"><a href="classMatriz.html#a50d46c6366b07dda1da18bcfcea762df">Matriz::end</a></div><div class="ttdeci">IteratorM end()</div><div class="ttdoc">Iterador que aponta para o final da matriz.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:47</div></div>
+<div class="ttc" id="aclassMatriz_html_a598a301d6e02ba9669e806116f15c396"><div class="ttname"><a href="classMatriz.html#a598a301d6e02ba9669e806116f15c396">Matriz::getColunas</a></div><div class="ttdeci">int getColunas() const</div><div class="ttdoc">Retorna a quantidade de colunas da matriz.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:67</div></div>
+<div class="ttc" id="aclassMatriz_html_a7de756301bddbc4b0b5d2a0f2b1fc695"><div class="ttname"><a href="classMatriz.html#a7de756301bddbc4b0b5d2a0f2b1fc695">Matriz::Matriz</a></div><div class="ttdeci">Matriz()</div><div class="ttdoc">Construtor padrão da classe Matriz.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:4</div></div>
+<div class="ttc" id="aclassMatriz_html_a9062dbfd6809c9d0a4f177f6df0269d6"><div class="ttname"><a href="classMatriz.html#a9062dbfd6809c9d0a4f177f6df0269d6">Matriz::get</a></div><div class="ttdeci">double get(const int &amp;posI, const int &amp;posJ)</div><div class="ttdoc">Retorna o valor armazenado na matriz em uma posição específica.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:154</div></div>
+<div class="ttc" id="aclassMatriz_html_aac16f51b920e0ae269f5e2b78fa9fad5"><div class="ttname"><a href="classMatriz.html#aac16f51b920e0ae269f5e2b78fa9fad5">Matriz::getLinhas</a></div><div class="ttdeci">int getLinhas() const</div><div class="ttdoc">Retorna a quantidade de linhas da matriz.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:62</div></div>
+<div class="ttc" id="aclassMatriz_html_add3295e730032050b85b6e9598c005db"><div class="ttname"><a href="classMatriz.html#add3295e730032050b85b6e9598c005db">Matriz::insert</a></div><div class="ttdeci">void insert(const int &amp;posI, const int &amp;posJ, const double &amp;value)</div><div class="ttdoc">Insere um valor em uma posição específica da matriz esparsa.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:97</div></div>
+<div class="ttc" id="aclassMatriz_html_af8987741da4cabe0aa054f2e8b077a97"><div class="ttname"><a href="classMatriz.html#af8987741da4cabe0aa054f2e8b077a97">Matriz::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Imprime a matriz no console.</div><div class="ttdef"><b>Definição</b> Matriz.cpp:196</div></div>
+<div class="ttc" id="astructNode_html"><div class="ttname"><a href="structNode.html">Node</a></div><div class="ttdoc">Representa um nó em uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> Node.hpp:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
