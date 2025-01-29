@@ -12,6 +12,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -75,39 +76,40 @@ $(function() {
 <div class="contents">
 <p>Esta página explica como interpretar os grafos gerados pelo doxygen.</p>
 <p>Considere o seguinte exemplo: </p><div class="fragment"><div class="line"><span class="comment">/*! Classe oculta por causa da truncagem */</span></div>
-<div class="line"><span class="keyword">class </span>Invisible { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Invisible</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe Truncated, relação de herança está oculta */</span></div>
-<div class="line"><span class="keyword">class </span>Truncated : <span class="keyword">public</span> Invisible { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Truncated</a> : <span class="keyword">public</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Invisible</a> { };</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">/* Classe não documentada com os comentários do Doxygen */</span></div>
-<div class="line"><span class="keyword">class </span>Undocumented { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Undocumented</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe possui que possui uma relação de herança pública */</span></div>
-<div class="line"><span class="keyword">class </span>PublicBase : <span class="keyword">public</span> Truncated { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">PublicBase</a> : <span class="keyword">public</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Truncated</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Um template de classe */</span></div>
-<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span>Templ { };</div>
+<div class="line"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Templ</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe possui que possui uma relação de herança protegida  */</span></div>
-<div class="line"><span class="keyword">class </span>ProtectedBase { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">ProtectedBase</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe possui que possui uma relação de herança privada  */</span></div>
-<div class="line"><span class="keyword">class </span>PrivateBase { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">PrivateBase</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Classe utilizada pela classe Inherited */</span></div>
-<div class="line"><span class="keyword">class </span>Used { };</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Used</a> { };</div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/*! Super classe que herda outras classes */</span></div>
-<div class="line"><span class="keyword">class </span>Inherited : <span class="keyword">public</span> PublicBase,</div>
-<div class="line">                  <span class="keyword">protected</span> ProtectedBase,</div>
-<div class="line">                  <span class="keyword">private</span> PrivateBase,</div>
-<div class="line">                  <span class="keyword">public</span> Undocumented,</div>
-<div class="line">                  <span class="keyword">public</span> Templ&lt;int&gt;</div>
+<div class="line"><span class="keyword">class </span><a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Inherited</a> : <span class="keyword">public</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">PublicBase</a>,</div>
+<div class="line">                  <span class="keyword">protected</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">ProtectedBase</a>,</div>
+<div class="line">                  <span class="keyword">private</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">PrivateBase</a>,</div>
+<div class="line">                  <span class="keyword">public</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Undocumented</a>,</div>
+<div class="line">                  <span class="keyword">public</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Templ</a>&lt;int&gt;</div>
 <div class="line">{</div>
 <div class="line">  <span class="keyword">private</span>:</div>
-<div class="line">    Used *m_usedClass;</div>
+<div class="line">    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">Used</a> *<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">m_usedClass</a>;</div>
 <div class="line">};</div>
+<div class="ttc" id="amain_8cpp_html_a6df00753af83f180a3a7c7b440bf17d6"><div class="ttname"><a href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">unordered_map</a></div><div class="ttdeci">std::unordered_map&lt; string, Matriz &gt; unordered_map</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00013">main.cpp:13</a></div></div>
 </div><!-- fragment --><p> Isto irá gerar o seguinte gráfo:</p>
 <center><img src="graph_legend.png" alt="" class="inline"/></center> <p>As caixas no grafo acima possuem os seguintes significados: </p>
 <ul>
@@ -129,7 +131,7 @@ Uma seta verde escura denota a relação de herança protegida entre duas classe
 <li>
 Uma seta vermelha escura denota a relação de herança privada entre duas classes. </li>
 <li>
-Uma seta pontilhada púrpura denota a relação de uso e/ou agragação por outra classe/estrutura. A etiqueta da seta denota o nome do(s) campo(s) que representa(m) este apontamento. </li>
+Uma seta pontilhada púrpura denota a relação de uso e/ou agragação por outra classe/estrutura. A etiqueta da seta denota o nome <a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">do(s)</a> <a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">campo(s)</a> que <a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">representa(m)</a> este apontamento. </li>
 <li>
 Uma seta pontilhada amarela denota a relação de instanciação de uma <em>template</em>. A etiqueta da seta denota os parâmetros de instanciação desta <em>template</em>. </li>
 </ul>

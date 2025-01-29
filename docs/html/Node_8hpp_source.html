@@ -12,6 +12,7 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -111,14 +112,14 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="astructNode_html"><div class="ttname"><a href="structNode.html">Node</a></div><div class="ttdoc">Representa um nó em uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> Node.hpp:12</div></div>
-<div class="ttc" id="astructNode_html_a033bc2f78cb15881f734c4e89419fca1"><div class="ttname"><a href="structNode.html#a033bc2f78cb15881f734c4e89419fca1">Node::Node</a></div><div class="ttdeci">Node(const int &amp;linha, const int &amp;coluna, const double &amp;valor)</div><div class="ttdoc">Construtor da classe Node.</div><div class="ttdef"><b>Definição</b> Node.hpp:28</div></div>
-<div class="ttc" id="astructNode_html_a30f66714469c4152b77e3832ab278b2d"><div class="ttname"><a href="structNode.html#a30f66714469c4152b77e3832ab278b2d">Node::direita</a></div><div class="ttdeci">Node * direita</div><div class="ttdef"><b>Definição</b> Node.hpp:13</div></div>
-<div class="ttc" id="astructNode_html_a393dcc9a0fe69032baa0efba9146dbed"><div class="ttname"><a href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">Node::valor</a></div><div class="ttdeci">double valor</div><div class="ttdef"><b>Definição</b> Node.hpp:17</div></div>
-<div class="ttc" id="astructNode_html_a42f897b88b42ed9fc526b5794fcf934f"><div class="ttname"><a href="structNode.html#a42f897b88b42ed9fc526b5794fcf934f">Node::coluna</a></div><div class="ttdeci">int coluna</div><div class="ttdef"><b>Definição</b> Node.hpp:16</div></div>
-<div class="ttc" id="astructNode_html_a4336ead86378a5871a13ec073415c8f5"><div class="ttname"><a href="structNode.html#a4336ead86378a5871a13ec073415c8f5">Node::atualizaValor</a></div><div class="ttdeci">void atualizaValor(const double &amp;novoValor)</div><div class="ttdoc">Atualiza o valor do nó.</div><div class="ttdef"><b>Definição</b> Node.hpp:41</div></div>
-<div class="ttc" id="astructNode_html_aad364c157638e1ab1667553325470723"><div class="ttname"><a href="structNode.html#aad364c157638e1ab1667553325470723">Node::abaixo</a></div><div class="ttdeci">Node * abaixo</div><div class="ttdef"><b>Definição</b> Node.hpp:14</div></div>
-<div class="ttc" id="astructNode_html_aed29de4c5d116b3f4a9880896d0023d3"><div class="ttname"><a href="structNode.html#aed29de4c5d116b3f4a9880896d0023d3">Node::linha</a></div><div class="ttdeci">int linha</div><div class="ttdef"><b>Definição</b> Node.hpp:15</div></div>
+<div class="ttc" id="astructNode_html"><div class="ttname"><a href="structNode.html">Node</a></div><div class="ttdoc">Representa um nó em uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> <a href="Node_8hpp_source.html#l00011">Node.hpp:12</a></div></div>
+<div class="ttc" id="astructNode_html_a033bc2f78cb15881f734c4e89419fca1"><div class="ttname"><a href="structNode.html#a033bc2f78cb15881f734c4e89419fca1">Node::Node</a></div><div class="ttdeci">Node(const int &amp;linha, const int &amp;coluna, const double &amp;valor)</div><div class="ttdoc">Construtor da classe Node.</div><div class="ttdef"><b>Definição</b> <a href="Node_8hpp_source.html#l00028">Node.hpp:28</a></div></div>
+<div class="ttc" id="astructNode_html_a30f66714469c4152b77e3832ab278b2d"><div class="ttname"><a href="structNode.html#a30f66714469c4152b77e3832ab278b2d">Node::direita</a></div><div class="ttdeci">Node * direita</div><div class="ttdef"><b>Definição</b> <a href="Node_8hpp_source.html#l00013">Node.hpp:13</a></div></div>
+<div class="ttc" id="astructNode_html_a393dcc9a0fe69032baa0efba9146dbed"><div class="ttname"><a href="structNode.html#a393dcc9a0fe69032baa0efba9146dbed">Node::valor</a></div><div class="ttdeci">double valor</div><div class="ttdef"><b>Definição</b> <a href="Node_8hpp_source.html#l00017">Node.hpp:17</a></div></div>
+<div class="ttc" id="astructNode_html_a42f897b88b42ed9fc526b5794fcf934f"><div class="ttname"><a href="structNode.html#a42f897b88b42ed9fc526b5794fcf934f">Node::coluna</a></div><div class="ttdeci">int coluna</div><div class="ttdef"><b>Definição</b> <a href="Node_8hpp_source.html#l00016">Node.hpp:16</a></div></div>
+<div class="ttc" id="astructNode_html_a4336ead86378a5871a13ec073415c8f5"><div class="ttname"><a href="structNode.html#a4336ead86378a5871a13ec073415c8f5">Node::atualizaValor</a></div><div class="ttdeci">void atualizaValor(const double &amp;novoValor)</div><div class="ttdoc">Atualiza o valor do nó.</div><div class="ttdef"><b>Definição</b> <a href="Node_8hpp_source.html#l00041">Node.hpp:41</a></div></div>
+<div class="ttc" id="astructNode_html_aad364c157638e1ab1667553325470723"><div class="ttname"><a href="structNode.html#aad364c157638e1ab1667553325470723">Node::abaixo</a></div><div class="ttdeci">Node * abaixo</div><div class="ttdef"><b>Definição</b> <a href="Node_8hpp_source.html#l00014">Node.hpp:14</a></div></div>
+<div class="ttc" id="astructNode_html_aed29de4c5d116b3f4a9880896d0023d3"><div class="ttname"><a href="structNode.html#aed29de4c5d116b3f4a9880896d0023d3">Node::linha</a></div><div class="ttdeci">int linha</div><div class="ttdef"><b>Definição</b> <a href="Node_8hpp_source.html#l00015">Node.hpp:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,23 +1,24 @@
 \chapter{Matriz Esparsa}
-\label{md_README}\index{Matriz Esparsa@{Matriz Esparsa}}
+\hypertarget{md_README}{}\label{md_README}\index{Matriz Esparsa@{Matriz Esparsa}}
 \label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
      
 
 
 
 \begin{quote}
-Este projeto implementa uma \doxyref{Matriz}{p.}{classMatriz} Esparsa eficiente, otimizando espaço ao armazenar somente valores diferentes de zero. \end{quote}
-\doxysubsection{Ajustes e melhorias}\label{md_README_autotoc_md1}
-As próximas atualizações para a \doxyref{Matriz}{p.}{classMatriz} Esparsa serão\+:
+Este projeto implementa uma \doxylink{classMatriz}{Matriz} Esparsa eficiente, otimizando espaço ao armazenar somente valores diferentes de zero. \end{quote}
+\hypertarget{md_README_autotoc_md1}{}\doxysubsection{\texorpdfstring{Ajustes e melhorias}{Ajustes e melhorias}}\label{md_README_autotoc_md1}
+As próximas atualizações para a \doxylink{classMatriz}{Matriz} Esparsa serão\+:
 
 
 \begin{DoxyItemize}
-\item [x] Implementar inserção e remoção dinâmicas
-\item [ ] Otimizar a busca de elementos
-\item [x] Adicionar testes automatizados
-\item [ ] Melhorar documentação de uso
-\item [ ] Suporte a diferentes tipos de dados
-\end{DoxyItemize}\doxysection{💻 Pré-\/requisitos}\label{md_README_autotoc_md2}
+\item \mbox{[}x\mbox{]} Implementar inserção e remoção dinâmicas
+\item \mbox{[} \mbox{]} Otimizar a busca de elementos
+\item \mbox{[}x\mbox{]} Adicionar testes automatizados
+\item \mbox{[} \mbox{]} Melhorar documentação de uso
+\item \mbox{[} \mbox{]} Suporte a diferentes tipos de dados
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{💻 Pré-\/requisitos}{💻 Pré-requisitos}}\label{md_README_autotoc_md2}
 Antes de começar, verifique se você atendeu aos seguintes requisitos\+:
 
 
@@ -26,11 +27,16 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos\+:
 \item Compilador C++ instalado
 \item Makefile instalado
 \item Sistema operacional Windows / Linux / Mac
-\item Consultou a documentação
-\end{DoxyItemize}\doxysection{🚀 Compilando a Matriz Esparsa}\label{md_README_autotoc_md3}
-Para compilar a \doxyref{Matriz}{p.}{classMatriz} Esparsa, siga estas etapas\+:
+\item Consultou a \href{docs/DOCUMENTACAO.xml}{\texttt{ documentação}} do projeto
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysection{\texorpdfstring{🚀 Compilando a Matriz Esparsa}{🚀 Compilando a Matriz Esparsa}}\label{md_README_autotoc_md3}
+Para compilar a \doxylink{classMatriz}{Matriz} Esparsa, siga estas etapas\+:
 
-Linux e mac\+OS\+:
+Dentro do diretório do projeto, execute o seguinte comando\+:
+
+
+\begin{DoxyItemize}
+\item Linux e mac\+OS\+:
+\end{DoxyItemize}
 
 
 \begin{DoxyCode}{0}
@@ -39,52 +45,59 @@ Linux e mac\+OS\+:
 \end{DoxyCode}
 
 
-Windows\+:
+
+\begin{DoxyItemize}
+\item Windows\+:
+\end{DoxyItemize}
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{mingw32-\/make}
 
 \end{DoxyCode}
-\doxysection{☕ Executando a Matriz Esparsa}\label{md_README_autotoc_md4}
-Para usar a \doxyref{Matriz}{p.}{classMatriz} Esparsa, execute o seguinte comando\+:
+\hypertarget{md_README_autotoc_md4}{}\doxysection{\texorpdfstring{☕ Executando a Matriz Esparsa}{☕ Executando a Matriz Esparsa}}\label{md_README_autotoc_md4}
+Para usar a \doxylink{classMatriz}{Matriz} Esparsa, execute o seguinte comando\+:
 
-Windows\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{bin/Matriz-\/Esparsa.exe}
-
-\end{DoxyCode}
+Dentro do diretório do projeto, execute o seguinte comando\+:
 
 
-Linux e mac\+OS\+: 
+\begin{DoxyItemize}
+\item Linux e mac\+OS\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{./bin/Matriz-\/Esparsa}
 
 \end{DoxyCode}
 
+\item Windows\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bin/Matriz-\/Esparsa.exe}
 
-Personalize os exemplos conforme necessário.\doxysection{📫 Contribuindo para Matriz Esparsa}\label{md_README_autotoc_md5}
-Para contribuir com a \doxyref{Matriz}{p.}{classMatriz} Esparsa\+:
+\end{DoxyCode}
+ Personalize os exemplos conforme necessário.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md5}{}\doxysection{\texorpdfstring{📫 Contribuindo para Matriz Esparsa}{📫 Contribuindo para Matriz Esparsa}}\label{md_README_autotoc_md5}
+Para contribuir com a \doxylink{classMatriz}{Matriz} Esparsa\+:
 
 
 \begin{DoxyEnumerate}
 \item Bifurque este repositório.
-\item Crie um branch\+: {\ttfamily git checkout -\/b $<$nome\+\_\+branch$>$}.
+\item Crie um branch\+: {\ttfamily git checkout -\/b \texorpdfstring{$<$}{<}nome\+\_\+branch\texorpdfstring{$>$}{>}}.
 \item Faça suas alterações e confirme-\/as\+: `git commit -\/m '$<$mensagem\+\_\+commit$>$\textquotesingle{}{\ttfamily }
 \item {\ttfamily Envie para o branch original\+:}git push origin Matriz-\/\+Esparsa/$<$local$>$\`{}
 \item Crie a solicitação de pull.
 \end{DoxyEnumerate}
 
-Consulte {\texttt{ como criar uma solicitação pull}}.\doxysection{🤝 Colaboradores}\label{md_README_autotoc_md6}
+Consulte \href{https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request}{\texttt{ como criar uma solicitação pull}}.\hypertarget{md_README_autotoc_md6}{}\doxysection{\texorpdfstring{🤝 Colaboradores}{🤝 Colaboradores}}\label{md_README_autotoc_md6}
 Agradecimentos especiais aos seguintes colaboradores\+:
 
 \tabulinesep=1mm
-\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
 \hline
-\PBS\centering {\texttt{ ~\newline
- \textsubscript{ {\bfseries{Iuri Silva}} } }}  &\PBS\centering {\texttt{ ~\newline
- \textsubscript{ {\bfseries{Mark Zuckerberg}} } }}  &\PBS\centering {\texttt{ ~\newline
- \textsubscript{ {\bfseries{Steve Jobs}} } }}   \\\cline{1-3}
+\PBS\centering \href{\#}{\texttt{ ~\newline
+ \textsubscript{ Iago de Oliveira}}}     \\\cline{1-1}
 \end{longtabu}
-\doxysection{📝 Licença}\label{md_README_autotoc_md7}
-Este projeto está sob licença. Consulte [LICENÇA](LICENSE) para mais informações. 
+
+
+\textsubscript{}\hypertarget{md_README_autotoc_md7}{}\doxysection{\texorpdfstring{📝 Licença}{📝 Licença}}\label{md_README_autotoc_md7}
+\textsubscript{}
+
+\textsubscript{Este projeto está sob licença. Consulte \mbox{[}LICENÇA\mbox{]}(LICENSE) para mais informações. }
