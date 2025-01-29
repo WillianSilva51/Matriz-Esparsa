@@ -138,7 +138,7 @@ int main()
                 break;
             }
 
-            matrizes.insert(std::make_pair(filename, matriz));
+            matrizes.insert(std::make_pair(filename, matriz)); // usa make_pair para criar um par de chave e valor
             break;
         }
 
@@ -283,15 +283,17 @@ void salvarMatriz(const Matriz &matriz, unordered_map &matrizes)
 {
     while (true)
     {
-        std::cout << "Deseja salvar a matriz? [s/n]: ";
+        std::cout << "Deseja salvar a matriz? [S/N]: ";
         char resposta;
         std::cin >> resposta;
         std::cin.ignore();
 
-        if (resposta == 'n' || resposta == 'N')
-            break;
+        switch (tolower(resposta))
+        {
+        case 'n':
+            return;
 
-        else if (resposta == 's' || resposta == 'S')
+        case 's':
         {
             std::cout << "Digite o nome que deseja salvar a matriz: ";
             string filename;
@@ -307,12 +309,10 @@ void salvarMatriz(const Matriz &matriz, unordered_map &matrizes)
             matrizes.insert(std::make_pair(filename, matriz));
 
             std::cout << "Matriz salva com sucesso" << std::endl;
-
-            break;
+            return;
         }
 
-        else
-        {
+        default:
             std::cout << "Opção inválida" << std::endl;
             break;
         }

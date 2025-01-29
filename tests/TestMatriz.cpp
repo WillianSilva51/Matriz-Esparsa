@@ -22,7 +22,7 @@ void testeInsercao()
 // Função de teste de soma de matrizes
 void testeSoma(const Matriz &A, const Matriz &B, const Matriz &soma)
 {
-    
+
     Matriz D = sum(A, B);
 
     // Verificando as dimensões
@@ -30,7 +30,7 @@ void testeSoma(const Matriz &A, const Matriz &B, const Matriz &soma)
     {
         throw std::runtime_error("Erro: Dimensões incorretas na soma das matrizes.");
     }
-    
+
     // Verificando cada valor da matriz resultante
     for (int i = 1; i <= soma.getLinhas(); i++)
     {
@@ -111,29 +111,41 @@ bool arquivoExiste(const std::string &caminho)
 // Função para medir a performance
 void testePerformance()
 {
-    Matriz A(500, 500);
-    Matriz B(500, 500);
+    Matriz A(100, 100);
+    Matriz B(100, 100);
 
     // Preenche as matrizes com valores
-    for (int i = 1; i <= 500; ++i)
+    for (int i = 1; i <= A.getLinhas(); ++i)
     {
-        for (int j = 1; j <= 500; ++j)
+        for (int j = 1; j <= A.getColunas(); ++j)
         {
             A.insert(i, j, i + j);
             B.insert(i, j, i - j);
         }
     }
+    std::cout << "Matrizes preenchidas com sucesso" << std::endl;
+
+    std::cout << "Iniciando teste de performance" << std::endl;
 
     auto inicio = std::chrono::high_resolution_clock::now();
     Matriz soma = sum(A, B); // Soma as matrizes
     auto fim = std::chrono::high_resolution_clock::now();
 
     auto duracao = std::chrono::duration_cast<std::chrono::milliseconds>(fim - inicio);
-    std::cout << "Tempo para soma: " << duracao.count() << "ms" << std::endl;
+    std::cout << "Tempo para Soma: " << duracao.count() << "ms" << std::endl;
+
+    auto inicio2 = std::chrono::high_resolution_clock::now();
+    Matriz multi = multiply(A, B); // Soma as matrizes
+    auto fim2 = std::chrono::high_resolution_clock::now();
+
+    auto duracao2 = std::chrono::duration_cast<std::chrono::milliseconds>(fim2 - inicio2);
+    std::cout << "Tempo para Multiplição: " << duracao2.count() << "ms" << std::endl;
 }
 
 int main()
 {
+    setlocale(LC_ALL, "pt_BR.UTF-8");
+
     try
     {
         // Verificando se os arquivos existem
