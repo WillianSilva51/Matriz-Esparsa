@@ -6,7 +6,15 @@
 #include <cassert>
 #include "utils/utils.hpp"
 
-// Função de teste de inserção
+/*
+ *   @brief Função de teste de inserção de valores na matriz.
+ *
+ *  Esta função cria uma matriz 5x5 e insere valores em posições específicas.
+ *  Em seguida, a função verifica se os valores foram inseridos corretamente.
+ * Se algum valor não for inserido corretamente, a função lança uma exceção.
+ *
+ *   @throw std::runtime_error Se algum valor não for inserido corretamente.
+ */
 void testeInsercao()
 {
     Matriz matriz(5, 5);
@@ -19,7 +27,18 @@ void testeInsercao()
     std::cout << "Teste de inserção passou" << std::endl;
 }
 
-// Função de teste de soma de matrizes
+/*
+ *    @brief Função de teste de soma de matrizes.
+ *
+ *   Esta função recebe duas matrizes A e B e a matriz resultante da soma dessas matrizes.
+ *  A função calcula a soma das matrizes A e B e compara com a matriz resultante esperada.
+ * Se a matriz resultante da soma for diferente da matriz esperada, a função lança uma exceção.
+ *
+ *   @param A Matriz A.
+ *  @param B Matriz B.
+ *
+ *   @throw std::runtime_error Se a matriz resultante da soma for diferente da matriz esperada.
+ */
 void testeSoma(const Matriz &A, const Matriz &B, const Matriz &soma)
 {
 
@@ -48,7 +67,18 @@ void testeSoma(const Matriz &A, const Matriz &B, const Matriz &soma)
     std::cout << "Teste de soma passou" << std::endl;
 }
 
-// Função de teste de multiplicação de matrizes
+/*
+ *    @brief Função de teste de multiplicação de matrizes.
+ *
+ *   Esta função recebe duas matrizes A e B e a matriz resultante da multiplicação dessas matrizes.
+ *  A função calcula a multiplicação das matrizes A e B e compara com a matriz resultante esperada.
+ * Se a matriz resultante da multiplicação for diferente da matriz esperada, a função lança uma exceção.
+ *
+ *   @param A Matriz A.
+ *  @param B Matriz B.
+ *
+ *   @throw std::runtime_error Se a matriz resultante da multiplicação for diferente da matriz esperada.
+ */
 void testeMultiplicacao(const Matriz &A, const Matriz &B, const Matriz &soma)
 {
     Matriz D = multiply(A, B);
@@ -76,7 +106,12 @@ void testeMultiplicacao(const Matriz &A, const Matriz &B, const Matriz &soma)
     std::cout << "Teste de multiplicação passou" << std::endl;
 }
 
-// Função para ler uma matriz de um arquivo
+/*
+ * @brief Função para ler uma matriz de um arquivo.
+ *
+ * @param arquivo Nome do arquivo a ser lido.
+ * @return Matriz Matriz lida do arquivo.
+ */
 Matriz leitura(const std::string &arquivo)
 {
     std::ifstream file("tests/arquivosTestes/" + arquivo); // Abre o arquivo
@@ -101,14 +136,41 @@ Matriz leitura(const std::string &arquivo)
     return matriz;
 }
 
-// Função para verificar se um arquivo existe
+/*
+ * @brief função para verificar se um arquivo existe
+ *
+ * @param caminho Caminho do arquivo a ser verificado.
+ * @return bool Verdadeiro se o arquivo existir, falso caso contrário.
+ */
 bool arquivoExiste(const std::string &caminho)
 {
     std::ifstream file(caminho);
     return file.good();
 }
 
-// Função para medir a performance
+/**
+ * @brief Testa a performance das operações de soma e multiplicação de matrizes.
+ *
+ * Esta função cria duas matrizes A e B de tamanho 100x100, preenche-as com valores específicos,
+ * e então mede o tempo necessário para realizar a soma e a multiplicação dessas matrizes.
+ *
+ * A matriz A é preenchida com valores onde cada elemento é a soma dos índices de linha e coluna (i + j).
+ * A matriz B é preenchida com valores onde cada elemento é a diferença dos índices de linha e coluna (i - j).
+ *
+ * A função utiliza a biblioteca <chrono> para medir o tempo de execução das operações de soma e multiplicação.
+ *
+ * @details
+ * Passos executados pela função:
+ * 1. Cria duas matrizes A e B de tamanho 100x100.
+ * 2. Preenche as matrizes A e B com valores específicos.
+ * 3. Exibe uma mensagem indicando que as matrizes foram preenchidas com sucesso.
+ * 4. Mede o tempo necessário para somar as matrizes A e B.
+ * 5. Exibe o tempo de execução da soma.
+ * 6. Mede o tempo necessário para multiplicar as matrizes A e B.
+ * 7. Exibe o tempo de execução da multiplicação.
+ *
+ * @return void
+ */
 void testePerformance()
 {
     Matriz A(100, 100);
@@ -142,6 +204,13 @@ void testePerformance()
     std::cout << "Tempo para Multiplição: " << duracao2.count() << "ms" << std::endl;
 }
 
+/**
+ * @file TestMatriz.cpp
+ * @brief Arquivo de teste para operações com matrizes esparsas.
+ *
+ * Este arquivo contém a função principal que realiza testes de operações com matrizes esparsas,
+ * incluindo leitura de arquivos, soma, multiplicação, inserção e performance.
+ */
 int main()
 {
     setlocale(LC_ALL, "pt_BR.UTF-8");

@@ -96,17 +96,36 @@ void escolherMatrizes(string &filename, string &filename2);
  */
 void printMatrizes(const unordered_map &matrizes);
 
+/**
+ * @file main.cpp
+ * @brief Programa para manipulação de matrizes esparsas.
+ *
+ * Este programa permite ao usuário ler, imprimir, somar e multiplicar matrizes esparsas.
+ * As matrizes são armazenadas em um mapa associativo, onde a chave é o nome do arquivo
+ * e o valor é a matriz correspondente.
+ *
+ * @details
+ * O programa apresenta um menu interativo com as seguintes opções:
+ * - Ler Matriz: Lê uma matriz a partir de um arquivo.
+ * - Imprimir Matriz: Imprime uma matriz armazenada.
+ * - Somar Matrizes: Soma duas matrizes armazenadas.
+ * - Multiplicar Matrizes: Multiplica duas matrizes armazenadas.
+ * - Sair: Encerra o programa.
+ */
 int main()
 {
+    // Configura a localização para suportar caracteres especiais em português
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     std::cout << "Bem-vindo ao programa de manipulação de matrizes esparsas" << std::endl;
     std::cout << "-----------------------------------------------------------" << std::endl;
 
-    unordered_map matrizes; /**< Mapa associativo para armazenar as matrizes */
+    // Mapa associativo para armazenar as matrizes
+    unordered_map matrizes;
 
     while (true)
     {
+        // Exibe o menu de opções
         std::cout << "Escolha uma opção:" << std::endl;
         std::cout << "[1] - Ler Matriz" << std::endl;
         std::cout << "[2] - Imprimir Matriz" << std::endl;
@@ -121,8 +140,8 @@ int main()
         {
         case LER_MATRIZ:
         {
+            // Lê uma matriz a partir de um arquivo
             string filename;
-
             std::cout << "Digite o nome do arquivo: ";
             std::getline(std::cin, filename);
 
@@ -138,23 +157,22 @@ int main()
                 break;
             }
 
-            matrizes.insert(std::make_pair(filename, matriz)); // usa make_pair para criar um par de chave e valor
+            // Armazena a matriz no mapa associativo
+            matrizes.insert(std::make_pair(filename, matriz));
             break;
         }
 
         case IMPRIMIR_MATRIZ:
         {
+            // Imprime uma matriz armazenada
             std::cout << "Qual matriz deseja imprimir?" << std::endl;
-
             printMatrizes(matrizes);
-
             std::cout << "Coloque o nome do arquivo que deseja imprimir: ";
             string filename;
             std::getline(std::cin, filename);
 
             if (existeMatriz(filename, matrizes))
                 matrizes[filename].print();
-
             else
                 std::cout << "Matriz não encontrada" << std::endl;
 
@@ -163,12 +181,10 @@ int main()
 
         case SOMAR_MATRIZES:
         {
+            // Soma duas matrizes armazenadas
             std::cout << "Quais as matrizes irá usar para somar" << std::endl;
-
             printMatrizes(matrizes);
-
             std::string filename, filename2;
-
             escolherMatrizes(filename, filename2);
 
             if (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))
@@ -190,20 +206,16 @@ int main()
             }
 
             matriz.print();
-
             salvarMatriz(matriz, matrizes);
-
             break;
         }
 
         case MULTIPLICAR_MATRIZES:
         {
+            // Multiplica duas matrizes armazenadas
             std::cout << "Quais as matrizes irá usar para multiplicar" << std::endl;
-
             printMatrizes(matrizes);
-
             std::string filename, filename2;
-
             escolherMatrizes(filename, filename2);
 
             if (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))
@@ -225,20 +237,20 @@ int main()
             }
 
             matriz.print();
-
             salvarMatriz(matriz, matrizes);
-
             break;
         }
 
         case SAIR:
         {
+            // Encerra o programa
             std::cout << "Saindo..." << std::endl;
             return 0;
         }
 
         default:
         {
+            // Opção inválida
             std::cout << "Opção inválida" << std::endl;
             std::cin.clear();
             std::cin.ignore();
@@ -246,6 +258,7 @@ int main()
         }
         }
 
+        // Pausa e limpa a tela
         std::system("pause || read -p 'Pressione enter para continuar...' var");
         std::system("cls||clear");
     }
