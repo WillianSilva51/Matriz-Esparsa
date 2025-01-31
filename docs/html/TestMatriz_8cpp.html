@@ -22,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Matriz Esparsa<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">Matriz Esparsa<span id="projectnumber">&#160;1.3</span>
    </div>
    <div id="projectbrief">O projeto visa otimizar o armazenamento e as operações em matrizes esparsas, que possuem maioria de elementos zero. Armazenando apenas os valores não nulos, economiza-se memória e acelera-se operações como soma, multiplicação e inversão. Um exemplo prático é o uso de matrizes em programas de planilha como o Excel.</div>
   </td>
@@ -80,6 +80,9 @@ $(function() {
   <div class="headertitle"><div class="title">Referência do Arquivo TestMatriz.cpp</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Arquivo de teste para operações com matrizes esparsas.  
+<a href="#details">Mais...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
@@ -87,14 +90,12 @@ $(function() {
 <code>#include &quot;<a class="el" href="Matriz_8hpp_source.html">matriz/Matriz.hpp</a>&quot;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils/utils.hpp</a>&quot;</code><br />
-</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Gráfico de dependência de inclusões para TestMatriz.cpp:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para TestMatriz.cpp:</div>
+<div class="dyncontent">
 <div class="center"><img src="TestMatriz_8cpp__incl.png" border="0" usemap="#atests_2TestMatriz_8cpp" alt=""/></div>
 <map name="atests_2TestMatriz_8cpp" id="atests_2TestMatriz_8cpp">
-<area shape="rect" title=" " alt="" coords="221,5,373,31"/>
+<area shape="rect" title="Arquivo de teste para operações com matrizes esparsas." alt="" coords="221,5,373,31"/>
 <area shape="rect" title=" " alt="" coords="5,225,85,251"/>
 <area shape="poly" title=" " alt="" coords="222,29,116,48,72,62,55,71,45,80,36,95,30,112,27,147,31,182,39,212,34,213,26,183,21,147,25,110,31,93,41,77,52,67,69,58,115,43,221,24"/>
 <area shape="rect" title=" " alt="" coords="55,79,129,104"/>
@@ -134,11 +135,17 @@ Funções</h2></td></tr>
 <tr class="memitem:abf7a223284124557f76b2584cb8507b0" id="r_abf7a223284124557f76b2584cb8507b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a> (<a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">const</a> <a class="el" href="main_8cpp.html#aca454f84dd198a937af6499dd758aa3d">std::string</a> &amp;<a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">caminho</a>)</td></tr>
 <tr class="separator:abf7a223284124557f76b2584cb8507b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebde2beac67611f95badfd0112cb185d" id="r_aebde2beac67611f95badfd0112cb185d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestMatriz_8cpp.html#aebde2beac67611f95badfd0112cb185d">testePerformance</a> ()</td></tr>
+<tr class="memdesc:aebde2beac67611f95badfd0112cb185d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testa a performance das operações de soma e multiplicação de matrizes.  <br /></td></tr>
 <tr class="separator:aebde2beac67611f95badfd0112cb185d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TestMatriz_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Funções</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Arquivo de teste para operações com matrizes esparsas. </p>
+<p>Este arquivo contém a função principal que realiza testes de operações com matrizes esparsas, incluindo leitura de arquivos, soma, multiplicação, inserção e performance. </p>
+
+<p class="definition">Definição no arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
+</div><h2 class="groupheader">Funções</h2>
 <a id="abf7a223284124557f76b2584cb8507b0" name="abf7a223284124557f76b2584cb8507b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf7a223284124557f76b2584cb8507b0">&#9670;&#160;</a></span>arquivoExiste()</h2>
 
@@ -155,11 +162,11 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00105">105</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>{</div>
-<div class="line"><span class="lineno">  107</span>    std::ifstream <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">caminho</a>);</div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.good();</div>
-<div class="line"><span class="lineno">  109</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00145">145</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>{</div>
+<div class="line"><span class="lineno">  147</span>    std::ifstream <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">caminho</a>);</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.good();</div>
+<div class="line"><span class="lineno">  149</span>}</div>
 <div class="ttc" id="amain_8cpp_html_a6df00753af83f180a3a7c7b440bf17d6"><div class="ttname"><a href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">unordered_map</a></div><div class="ttdeci">std::unordered_map&lt; string, Matriz &gt; unordered_map</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00013">main.cpp:13</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -180,29 +187,29 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00080">80</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>{</div>
-<div class="line"><span class="lineno">   82</span>    std::ifstream <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>(<span class="stringliteral">&quot;tests/arquivosTestes/&quot;</span> + <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">arquivo</a>); <span class="comment">// Abre o arquivo</span></div>
-<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.is_open())</div>
-<div class="line"><span class="lineno">   84</span>    {</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro ao abrir o arquivo: &quot;</span> + <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">arquivo</a>);</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>    <span class="keywordtype">int</span> linhas, colunas;</div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> &gt;&gt; linhas &gt;&gt; colunas;</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>(linhas, colunas);</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>    <span class="keywordtype">int</span> linha, coluna;</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keywordtype">double</span> valor;</div>
-<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">while</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> &gt;&gt; linha &gt;&gt; coluna &gt;&gt; valor)</div>
-<div class="line"><span class="lineno">   96</span>    {                                        <span class="comment">// Lê os valores da matriz</span></div>
-<div class="line"><span class="lineno">   97</span>        <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(linha, coluna, valor); <span class="comment">// Insere na matriz</span></div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.close(); <span class="comment">// Fecha o arquivo</span></div>
-<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>;</div>
-<div class="line"><span class="lineno">  102</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00115">115</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
+<div class="line"><span class="lineno">  117</span>    std::ifstream <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>(<span class="stringliteral">&quot;tests/arquivosTestes/&quot;</span> + <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">arquivo</a>); <span class="comment">// Abre o arquivo</span></div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.is_open())</div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro ao abrir o arquivo: &quot;</span> + <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">arquivo</a>);</div>
+<div class="line"><span class="lineno">  121</span>    }</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordtype">int</span> linhas, colunas;</div>
+<div class="line"><span class="lineno">  124</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> &gt;&gt; linhas &gt;&gt; colunas;</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>(linhas, colunas);</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordtype">int</span> linha, coluna;</div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordtype">double</span> valor;</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">while</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> &gt;&gt; linha &gt;&gt; coluna &gt;&gt; valor)</div>
+<div class="line"><span class="lineno">  131</span>    {                                        <span class="comment">// Lê os valores da matriz</span></div>
+<div class="line"><span class="lineno">  132</span>        <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(linha, coluna, valor); <span class="comment">// Insere na matriz</span></div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.close(); <span class="comment">// Fecha o arquivo</span></div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>;</div>
+<div class="line"><span class="lineno">  137</span>}</div>
 <div class="ttc" id="aclassMatriz_html"><div class="ttname"><a href="classMatriz.html">Matriz</a></div><div class="ttdoc">Classe que representa uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> <a href="Matriz_8hpp_source.html#l00032">Matriz.hpp:33</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -222,51 +229,51 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00145">145</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>{</div>
-<div class="line"><span class="lineno">  147</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">setlocale</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">LC_ALL</a>, <span class="stringliteral">&quot;pt_BR.UTF-8&quot;</span>);</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  150</span>    {</div>
-<div class="line"><span class="lineno">  151</span>        <span class="comment">// Verificando se os arquivos existem</span></div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a>(<span class="stringliteral">&quot;tests/arquivosTestes/Matrix1.txt&quot;</span>))</div>
-<div class="line"><span class="lineno">  153</span>        {</div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Arquivo Matrix1.txt não encontrado.&quot;</span>);</div>
-<div class="line"><span class="lineno">  155</span>        }</div>
-<div class="line"><span class="lineno">  156</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a>(<span class="stringliteral">&quot;tests/arquivosTestes/Matrix2.txt&quot;</span>))</div>
-<div class="line"><span class="lineno">  157</span>        {</div>
-<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Arquivo Matrix2.txt não encontrado.&quot;</span>);</div>
-<div class="line"><span class="lineno">  159</span>        }</div>
-<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a>(<span class="stringliteral">&quot;tests/arquivosTestes/MatrixResult.txt&quot;</span>))</div>
-<div class="line"><span class="lineno">  161</span>        {</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Arquivo MatrixResult.txt não encontrado.&quot;</span>);</div>
-<div class="line"><span class="lineno">  163</span>        }</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>        <span class="comment">// Lê as matrizes de arquivos</span></div>
-<div class="line"><span class="lineno">  166</span>        <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a> = <a class="code hl_function" href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a>(<span class="stringliteral">&quot;Matrix1.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  167</span>        <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a> = <a class="code hl_function" href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a>(<span class="stringliteral">&quot;Matrix2.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  168</span>        <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a> = <a class="code hl_function" href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a>(<span class="stringliteral">&quot;MatrixResult.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  169</span>        <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">multi</a> = <a class="code hl_function" href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a>(<span class="stringliteral">&quot;MatrixMulti.txt&quot;</span>);</div>
-<div class="line"><span class="lineno">  170</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Matrizes lidas com sucesso&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  171</span>        <span class="comment">// Executa os testes</span></div>
-<div class="line"><span class="lineno">  172</span>        <a class="code hl_function" href="TestMatriz_8cpp.html#ad453eda85b2dfc4685a124e39a34955c">testeSoma</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>);</div>
-<div class="line"><span class="lineno">  173</span>        <a class="code hl_function" href="TestMatriz_8cpp.html#afa561a7f09e24d8ed4d09360378a6c76">testeMultiplicacao</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">multi</a>);</div>
-<div class="line"><span class="lineno">  174</span>        <a class="code hl_function" href="TestMatriz_8cpp.html#a9aee728daffc67ff42f4e827514f0ff9">testeInsercao</a>();    <span class="comment">// Teste básico de inserção</span></div>
-<div class="line"><span class="lineno">  175</span>        <a class="code hl_function" href="TestMatriz_8cpp.html#aebde2beac67611f95badfd0112cb185d">testePerformance</a>(); <span class="comment">// Teste de performance para matrizes grandes</span></div>
-<div class="line"><span class="lineno">  176</span>    }</div>
-<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::runtime_error &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>)</div>
-<div class="line"><span class="lineno">  178</span>    {</div>
-<div class="line"><span class="lineno">  179</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;Erro main: &quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>.what() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  180</span>    }</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  183</span>}</div>
-<div class="ttc" id="aTestMatriz_8cpp_html_a9363c2f4c05587c8306dcea1123288d5"><div class="ttname"><a href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a></div><div class="ttdeci">Matriz leitura(const std::string &amp;arquivo)</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00080">TestMatriz.cpp:80</a></div></div>
-<div class="ttc" id="aTestMatriz_8cpp_html_a9aee728daffc67ff42f4e827514f0ff9"><div class="ttname"><a href="TestMatriz_8cpp.html#a9aee728daffc67ff42f4e827514f0ff9">testeInsercao</a></div><div class="ttdeci">void testeInsercao()</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00010">TestMatriz.cpp:10</a></div></div>
-<div class="ttc" id="aTestMatriz_8cpp_html_abf7a223284124557f76b2584cb8507b0"><div class="ttname"><a href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a></div><div class="ttdeci">bool arquivoExiste(const std::string &amp;caminho)</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00105">TestMatriz.cpp:105</a></div></div>
-<div class="ttc" id="aTestMatriz_8cpp_html_ad453eda85b2dfc4685a124e39a34955c"><div class="ttname"><a href="TestMatriz_8cpp.html#ad453eda85b2dfc4685a124e39a34955c">testeSoma</a></div><div class="ttdeci">void testeSoma(const Matriz &amp;A, const Matriz &amp;B, const Matriz &amp;soma)</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00023">TestMatriz.cpp:23</a></div></div>
-<div class="ttc" id="aTestMatriz_8cpp_html_aebde2beac67611f95badfd0112cb185d"><div class="ttname"><a href="TestMatriz_8cpp.html#aebde2beac67611f95badfd0112cb185d">testePerformance</a></div><div class="ttdeci">void testePerformance()</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00112">TestMatriz.cpp:112</a></div></div>
-<div class="ttc" id="aTestMatriz_8cpp_html_afa561a7f09e24d8ed4d09360378a6c76"><div class="ttname"><a href="TestMatriz_8cpp.html#afa561a7f09e24d8ed4d09360378a6c76">testeMultiplicacao</a></div><div class="ttdeci">void testeMultiplicacao(const Matriz &amp;A, const Matriz &amp;B, const Matriz &amp;soma)</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00052">TestMatriz.cpp:52</a></div></div>
+<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00214">214</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  215</span>{</div>
+<div class="line"><span class="lineno">  216</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">setlocale</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">LC_ALL</a>, <span class="stringliteral">&quot;pt_BR.UTF-8&quot;</span>);</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  219</span>    {</div>
+<div class="line"><span class="lineno">  220</span>        <span class="comment">// Verificando se os arquivos existem</span></div>
+<div class="line"><span class="lineno">  221</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a>(<span class="stringliteral">&quot;tests/arquivosTestes/Matrix1.txt&quot;</span>))</div>
+<div class="line"><span class="lineno">  222</span>        {</div>
+<div class="line"><span class="lineno">  223</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Arquivo Matrix1.txt não encontrado.&quot;</span>);</div>
+<div class="line"><span class="lineno">  224</span>        }</div>
+<div class="line"><span class="lineno">  225</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a>(<span class="stringliteral">&quot;tests/arquivosTestes/Matrix2.txt&quot;</span>))</div>
+<div class="line"><span class="lineno">  226</span>        {</div>
+<div class="line"><span class="lineno">  227</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Arquivo Matrix2.txt não encontrado.&quot;</span>);</div>
+<div class="line"><span class="lineno">  228</span>        }</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a>(<span class="stringliteral">&quot;tests/arquivosTestes/MatrixResult.txt&quot;</span>))</div>
+<div class="line"><span class="lineno">  230</span>        {</div>
+<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Arquivo MatrixResult.txt não encontrado.&quot;</span>);</div>
+<div class="line"><span class="lineno">  232</span>        }</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>        <span class="comment">// Lê as matrizes de arquivos</span></div>
+<div class="line"><span class="lineno">  235</span>        <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a> = <a class="code hl_function" href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a>(<span class="stringliteral">&quot;Matrix1.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  236</span>        <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a> = <a class="code hl_function" href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a>(<span class="stringliteral">&quot;Matrix2.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  237</span>        <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a> = <a class="code hl_function" href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a>(<span class="stringliteral">&quot;MatrixResult.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  238</span>        <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">multi</a> = <a class="code hl_function" href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a>(<span class="stringliteral">&quot;MatrixMulti.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  239</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Matrizes lidas com sucesso&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  240</span>        <span class="comment">// Executa os testes</span></div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_function" href="TestMatriz_8cpp.html#ad453eda85b2dfc4685a124e39a34955c">testeSoma</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>);</div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_function" href="TestMatriz_8cpp.html#afa561a7f09e24d8ed4d09360378a6c76">testeMultiplicacao</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">multi</a>);</div>
+<div class="line"><span class="lineno">  243</span>        <a class="code hl_function" href="TestMatriz_8cpp.html#a9aee728daffc67ff42f4e827514f0ff9">testeInsercao</a>();    <span class="comment">// Teste básico de inserção</span></div>
+<div class="line"><span class="lineno">  244</span>        <a class="code hl_function" href="TestMatriz_8cpp.html#aebde2beac67611f95badfd0112cb185d">testePerformance</a>(); <span class="comment">// Teste de performance para matrizes grandes</span></div>
+<div class="line"><span class="lineno">  245</span>    }</div>
+<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::runtime_error &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>)</div>
+<div class="line"><span class="lineno">  247</span>    {</div>
+<div class="line"><span class="lineno">  248</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;Erro main: &quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>.what() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  252</span>}</div>
+<div class="ttc" id="aTestMatriz_8cpp_html_a9363c2f4c05587c8306dcea1123288d5"><div class="ttname"><a href="TestMatriz_8cpp.html#a9363c2f4c05587c8306dcea1123288d5">leitura</a></div><div class="ttdeci">Matriz leitura(const std::string &amp;arquivo)</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00115">TestMatriz.cpp:115</a></div></div>
+<div class="ttc" id="aTestMatriz_8cpp_html_a9aee728daffc67ff42f4e827514f0ff9"><div class="ttname"><a href="TestMatriz_8cpp.html#a9aee728daffc67ff42f4e827514f0ff9">testeInsercao</a></div><div class="ttdeci">void testeInsercao()</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00018">TestMatriz.cpp:18</a></div></div>
+<div class="ttc" id="aTestMatriz_8cpp_html_abf7a223284124557f76b2584cb8507b0"><div class="ttname"><a href="TestMatriz_8cpp.html#abf7a223284124557f76b2584cb8507b0">arquivoExiste</a></div><div class="ttdeci">bool arquivoExiste(const std::string &amp;caminho)</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00145">TestMatriz.cpp:145</a></div></div>
+<div class="ttc" id="aTestMatriz_8cpp_html_ad453eda85b2dfc4685a124e39a34955c"><div class="ttname"><a href="TestMatriz_8cpp.html#ad453eda85b2dfc4685a124e39a34955c">testeSoma</a></div><div class="ttdeci">void testeSoma(const Matriz &amp;A, const Matriz &amp;B, const Matriz &amp;soma)</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00042">TestMatriz.cpp:42</a></div></div>
+<div class="ttc" id="aTestMatriz_8cpp_html_aebde2beac67611f95badfd0112cb185d"><div class="ttname"><a href="TestMatriz_8cpp.html#aebde2beac67611f95badfd0112cb185d">testePerformance</a></div><div class="ttdeci">void testePerformance()</div><div class="ttdoc">Testa a performance das operações de soma e multiplicação de matrizes.</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00174">TestMatriz.cpp:174</a></div></div>
+<div class="ttc" id="aTestMatriz_8cpp_html_afa561a7f09e24d8ed4d09360378a6c76"><div class="ttname"><a href="TestMatriz_8cpp.html#afa561a7f09e24d8ed4d09360378a6c76">testeMultiplicacao</a></div><div class="ttdeci">void testeMultiplicacao(const Matriz &amp;A, const Matriz &amp;B, const Matriz &amp;soma)</div><div class="ttdef"><b>Definição</b> <a href="TestMatriz_8cpp_source.html#l00082">TestMatriz.cpp:82</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -285,17 +292,17 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00010">10</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   11</span>{</div>
-<div class="line"><span class="lineno">   12</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>(5, 5);</div>
-<div class="line"><span class="lineno">   13</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(1, 1, 1);</div>
-<div class="line"><span class="lineno">   14</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">assert</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.get(1, 1) == 1); <span class="comment">// Garantir que o valor foi inserido corretamente</span></div>
-<div class="line"><span class="lineno">   15</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(5, 5, 2);</div>
-<div class="line"><span class="lineno">   16</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">assert</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.get(5, 5) == 2); <span class="comment">// Garantir que o valor foi inserido corretamente</span></div>
-<div class="line"><span class="lineno">   17</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(3, 2, 2);</div>
-<div class="line"><span class="lineno">   18</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">assert</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.get(3, 2) == 2); <span class="comment">// Garantir que o valor foi inserido corretamente</span></div>
-<div class="line"><span class="lineno">   19</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Teste de inserção passou&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   20</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00018">18</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>{</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>(5, 5);</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(1, 1, 1);</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">assert</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.get(1, 1) == 1); <span class="comment">// Garantir que o valor foi inserido corretamente</span></div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(5, 5, 2);</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">assert</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.get(5, 5) == 2); <span class="comment">// Garantir que o valor foi inserido corretamente</span></div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(3, 2, 2);</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">assert</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.get(3, 2) == 2); <span class="comment">// Garantir que o valor foi inserido corretamente</span></div>
+<div class="line"><span class="lineno">   27</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Teste de inserção passou&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   28</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -331,32 +338,32 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00052">52</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>{</div>
-<div class="line"><span class="lineno">   54</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a> = <a class="code hl_function" href="utils_8hpp.html#a2d6ea721bca7e924fd81570dd9dc6266">multiply</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>);</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>    <span class="comment">// Verificando as dimensões</span></div>
-<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.getColunas() != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getColunas() || <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.getLinhas() != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getLinhas())</div>
-<div class="line"><span class="lineno">   58</span>    {</div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro: Dimensões incorretas na multiplicação das matrizes.&quot;</span>);</div>
-<div class="line"><span class="lineno">   60</span>    }</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>    <span class="comment">// Verificando cada valor da matriz resultante</span></div>
-<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getLinhas(); <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>++)</div>
-<div class="line"><span class="lineno">   64</span>    {</div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getColunas(); <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>++)</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>) != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>))</div>
-<div class="line"><span class="lineno">   68</span>            {</div>
-<div class="line"><span class="lineno">   69</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro na multiplicação das matrizes: Valor incorreto na posição (&quot;</span> +</div>
-<div class="line"><span class="lineno">   70</span>                                         std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>) + <span class="stringliteral">&quot;, &quot;</span> + std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>) + <span class="stringliteral">&quot;). Esperado: &quot;</span> +</div>
-<div class="line"><span class="lineno">   71</span>                                         std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)) + <span class="stringliteral">&quot;, Obtido: &quot;</span> + std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)));</div>
-<div class="line"><span class="lineno">   72</span>            }</div>
-<div class="line"><span class="lineno">   73</span>        }</div>
-<div class="line"><span class="lineno">   74</span>    }</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Teste de multiplicação passou&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   77</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00082">82</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a> = <a class="code hl_function" href="utils_8hpp.html#a2d6ea721bca7e924fd81570dd9dc6266">multiply</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>);</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    <span class="comment">// Verificando as dimensões</span></div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.getColunas() != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getColunas() || <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.getLinhas() != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getLinhas())</div>
+<div class="line"><span class="lineno">   88</span>    {</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro: Dimensões incorretas na multiplicação das matrizes.&quot;</span>);</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="comment">// Verificando cada valor da matriz resultante</span></div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getLinhas(); <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>++)</div>
+<div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getColunas(); <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>++)</div>
+<div class="line"><span class="lineno">   96</span>        {</div>
+<div class="line"><span class="lineno">   97</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>) != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>))</div>
+<div class="line"><span class="lineno">   98</span>            {</div>
+<div class="line"><span class="lineno">   99</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro na multiplicação das matrizes: Valor incorreto na posição (&quot;</span> +</div>
+<div class="line"><span class="lineno">  100</span>                                         std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>) + <span class="stringliteral">&quot;, &quot;</span> + std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>) + <span class="stringliteral">&quot;). Esperado: &quot;</span> +</div>
+<div class="line"><span class="lineno">  101</span>                                         std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)) + <span class="stringliteral">&quot;, Obtido: &quot;</span> + std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)));</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+<div class="line"><span class="lineno">  103</span>        }</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Teste de multiplicação passou&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  107</span>}</div>
 <div class="ttc" id="autils_8hpp_html_a2d6ea721bca7e924fd81570dd9dc6266"><div class="ttname"><a href="utils_8hpp.html#a2d6ea721bca7e924fd81570dd9dc6266">multiply</a></div><div class="ttdeci">Matriz multiply(const Matriz &amp;matrizA, const Matriz &amp;matrizB)</div><div class="ttdoc">Multiplica duas matrizes e retorna a matriz resultante.</div><div class="ttdef"><b>Definição</b> <a href="utils_8hpp_source.html#l00060">utils.hpp:60</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -376,38 +383,53 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00112">112</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  113</span>{</div>
-<div class="line"><span class="lineno">  114</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>(100, 100);</div>
-<div class="line"><span class="lineno">  115</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>(100, 100);</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>    <span class="comment">// Preenche as matrizes com valores</span></div>
-<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>.getLinhas(); ++<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>)</div>
-<div class="line"><span class="lineno">  119</span>    {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>.getColunas(); ++<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)</div>
-<div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>.insert(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> + <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>);</div>
-<div class="line"><span class="lineno">  123</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>.insert(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> - <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>);</div>
-<div class="line"><span class="lineno">  124</span>        }</div>
-<div class="line"><span class="lineno">  125</span>    }</div>
-<div class="line"><span class="lineno">  126</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Matrizes preenchidas com sucesso&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  127</span> </div>
-<div class="line"><span class="lineno">  128</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Iniciando teste de performance&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  129</span> </div>
-<div class="line"><span class="lineno">  130</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">inicio</a> = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><span class="lineno">  131</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a> = <a class="code hl_function" href="utils_8hpp.html#a3cbccd713cd5551833ad82c9bcfc1df6">sum</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>); <span class="comment">// Soma as matrizes</span></div>
-<div class="line"><span class="lineno">  132</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">fim</a> = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">duracao</a> = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">fim</a> - <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">inicio</a>);</div>
-<div class="line"><span class="lineno">  135</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Tempo para Soma: &quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">duracao</a>.count() &lt;&lt; <span class="stringliteral">&quot;ms&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">inicio2</a> = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><span class="lineno">  138</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">multi</a> = <a class="code hl_function" href="utils_8hpp.html#a2d6ea721bca7e924fd81570dd9dc6266">multiply</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>); <span class="comment">// Soma as matrizes</span></div>
-<div class="line"><span class="lineno">  139</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">fim2</a> = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">duracao2</a> = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">fim2</a> - <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">inicio2</a>);</div>
-<div class="line"><span class="lineno">  142</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Tempo para Multiplição: &quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">duracao2</a>.count() &lt;&lt; <span class="stringliteral">&quot;ms&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  143</span>}</div>
+<p>Testa a performance das operações de soma e multiplicação de matrizes. </p>
+<p>Esta função cria duas matrizes A e B de tamanho 100x100, preenche-as com valores específicos, e então mede o tempo necessário para realizar a soma e a multiplicação dessas matrizes.</p>
+<p>A matriz A é preenchida com valores onde cada elemento é a soma dos índices de linha e coluna (i + j). A matriz B é preenchida com valores onde cada elemento é a diferença dos índices de linha e coluna (i - j).</p>
+<p>A função utiliza a biblioteca &lt;chrono&gt; para medir o tempo de execução das operações de soma e multiplicação.</p>
+<p>Passos executados pela função:</p><ol type="1">
+<li>Cria duas matrizes A e B de tamanho 100x100.</li>
+<li>Preenche as matrizes A e B com valores específicos.</li>
+<li>Exibe uma mensagem indicando que as matrizes foram preenchidas com sucesso.</li>
+<li>Mede o tempo necessário para somar as matrizes A e B.</li>
+<li>Exibe o tempo de execução da soma.</li>
+<li>Mede o tempo necessário para multiplicar as matrizes A e B.</li>
+<li>Exibe o tempo de execução da multiplicação.</li>
+</ol>
+<dl class="section return"><dt>Retorna</dt><dd>void </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00174">174</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>{</div>
+<div class="line"><span class="lineno">  176</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>(100, 100);</div>
+<div class="line"><span class="lineno">  177</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>(100, 100);</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>    <span class="comment">// Preenche as matrizes com valores</span></div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>.getLinhas(); ++<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>)</div>
+<div class="line"><span class="lineno">  181</span>    {</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>.getColunas(); ++<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)</div>
+<div class="line"><span class="lineno">  183</span>        {</div>
+<div class="line"><span class="lineno">  184</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>.insert(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> + <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>);</div>
+<div class="line"><span class="lineno">  185</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>.insert(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> - <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>);</div>
+<div class="line"><span class="lineno">  186</span>        }</div>
+<div class="line"><span class="lineno">  187</span>    }</div>
+<div class="line"><span class="lineno">  188</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Matrizes preenchidas com sucesso&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Iniciando teste de performance&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">inicio</a> = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  193</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a> = <a class="code hl_function" href="utils_8hpp.html#a3cbccd713cd5551833ad82c9bcfc1df6">sum</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>); <span class="comment">// Soma as matrizes</span></div>
+<div class="line"><span class="lineno">  194</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">fim</a> = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">duracao</a> = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">fim</a> - <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">inicio</a>);</div>
+<div class="line"><span class="lineno">  197</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Tempo para Soma: &quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">duracao</a>.count() &lt;&lt; <span class="stringliteral">&quot;ms&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">inicio2</a> = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  200</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">multi</a> = <a class="code hl_function" href="utils_8hpp.html#a2d6ea721bca7e924fd81570dd9dc6266">multiply</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>); <span class="comment">// Soma as matrizes</span></div>
+<div class="line"><span class="lineno">  201</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">fim2</a> = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>    <span class="keyword">auto</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">duracao2</a> = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">fim2</a> - <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">inicio2</a>);</div>
+<div class="line"><span class="lineno">  204</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Tempo para Multiplição: &quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">duracao2</a>.count() &lt;&lt; <span class="stringliteral">&quot;ms&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  205</span>}</div>
 <div class="ttc" id="autils_8hpp_html_a3cbccd713cd5551833ad82c9bcfc1df6"><div class="ttname"><a href="utils_8hpp.html#a3cbccd713cd5551833ad82c9bcfc1df6">sum</a></div><div class="ttdeci">Matriz sum(const Matriz &amp;matrixA, const Matriz &amp;matrizB)</div><div class="ttdoc">Soma duas matrizes de mesmo tamanho.</div><div class="ttdef"><b>Definição</b> <a href="utils_8hpp_source.html#l00023">utils.hpp:23</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -444,33 +466,33 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00023">23</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>{</div>
-<div class="line"><span class="lineno">   25</span> </div>
-<div class="line"><span class="lineno">   26</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a> = <a class="code hl_function" href="utils_8hpp.html#a3cbccd713cd5551833ad82c9bcfc1df6">sum</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>);</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>    <span class="comment">// Verificando as dimensões</span></div>
-<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.getColunas() != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getColunas() || <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.getLinhas() != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getLinhas())</div>
-<div class="line"><span class="lineno">   30</span>    {</div>
-<div class="line"><span class="lineno">   31</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro: Dimensões incorretas na soma das matrizes.&quot;</span>);</div>
-<div class="line"><span class="lineno">   32</span>    }</div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>    <span class="comment">// Verificando cada valor da matriz resultante</span></div>
-<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getLinhas(); <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>++)</div>
-<div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getColunas(); <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>++)</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>) != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>))</div>
-<div class="line"><span class="lineno">   40</span>            {</div>
-<div class="line"><span class="lineno">   41</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro na soma das matrizes: Valor incorreto na posição (&quot;</span> +</div>
-<div class="line"><span class="lineno">   42</span>                                         std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>) + <span class="stringliteral">&quot;, &quot;</span> + std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>) + <span class="stringliteral">&quot;). Esperado: &quot;</span> +</div>
-<div class="line"><span class="lineno">   43</span>                                         std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)) + <span class="stringliteral">&quot;, Obtido: &quot;</span> + std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)));</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Teste de soma passou&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   49</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="TestMatriz_8cpp_source.html#l00042">42</a> do arquivo <a class="el" href="TestMatriz_8cpp_source.html">TestMatriz.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a> = <a class="code hl_function" href="utils_8hpp.html#a3cbccd713cd5551833ad82c9bcfc1df6">sum</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">A</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">B</a>);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    <span class="comment">// Verificando as dimensões</span></div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.getColunas() != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getColunas() || <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.getLinhas() != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getLinhas())</div>
+<div class="line"><span class="lineno">   49</span>    {</div>
+<div class="line"><span class="lineno">   50</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro: Dimensões incorretas na soma das matrizes.&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>    <span class="comment">// Verificando cada valor da matriz resultante</span></div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getLinhas(); <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>++)</div>
+<div class="line"><span class="lineno">   55</span>    {</div>
+<div class="line"><span class="lineno">   56</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> = 1; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> &lt;= <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.getColunas(); <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>++)</div>
+<div class="line"><span class="lineno">   57</span>        {</div>
+<div class="line"><span class="lineno">   58</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>) != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>))</div>
+<div class="line"><span class="lineno">   59</span>            {</div>
+<div class="line"><span class="lineno">   60</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro na soma das matrizes: Valor incorreto na posição (&quot;</span> +</div>
+<div class="line"><span class="lineno">   61</span>                                         std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>) + <span class="stringliteral">&quot;, &quot;</span> + std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>) + <span class="stringliteral">&quot;). Esperado: &quot;</span> +</div>
+<div class="line"><span class="lineno">   62</span>                                         std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">soma</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)) + <span class="stringliteral">&quot;, Obtido: &quot;</span> + std::to_string(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">D</a>.get(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>)));</div>
+<div class="line"><span class="lineno">   63</span>            }</div>
+<div class="line"><span class="lineno">   64</span>        }</div>
+<div class="line"><span class="lineno">   65</span>    }</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Teste de soma passou&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   68</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

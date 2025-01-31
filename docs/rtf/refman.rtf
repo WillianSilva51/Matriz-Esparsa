@@ -107,7 +107,7 @@
 }
 {\info 
 {\title {\comment Matriz Esparsa  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-1.0 \par
+1.3 \par
 }}Matriz Esparsa}
 {\comment Gerado por doxygen 1.9.8.}
 }\pard\plain 
@@ -122,7 +122,7 @@
 \par\par\par\par\par\par\par\par\par\par\par\par
 \pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
 {\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
-Vers\'E3o 1.0\par\page\page\vertalt
+Vers\'E3o 1.3\par\page\page\vertalt
 \pard\plain 
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Sum\'E1rio\par
 \pard\plain \par
@@ -327,11 +327,13 @@ Lista de Arquivos\par \pard\plain
 \par
 {\b include/utils/{\b utils.hpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAK \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b src/main/{\b main.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAO \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b src/main/{\b main.cpp} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Programa para manipula\'E7\'E3o de matrizes esparsas })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAO \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 {\b src/matriz/{\b Matriz.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABD \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
-{\b tests/{\b TestMatriz.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}
+{\b tests/{\b TestMatriz.cpp} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Arquivo de teste para opera\'E7\'F5es com matrizes esparsas })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABE \\*MERGEFORMAT}{\fldrslt pagenum}}
 \par
 \par}
 \pard\plain \sect\sbkpage
@@ -2466,6 +2468,10 @@ Refer\'EAncia do Arquivo src/main/main.cpp\par \pard\plain
 {\xe \v src/main/main.cpp}
 {\bkmkstart AAAAAAAAAO}
 {\bkmkend AAAAAAAAAO}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Programa para manipula\'E7\'E3o de matrizes esparsas. }}\par
 {
 \pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <fstream>}\par
 {\f2 #include <unordered_map>}\par
@@ -2544,6 +2550,31 @@ Exibe informa\'E7\'F5es sobre as matrizes armazenadas em um std::unordered_map. 
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 {\b int} {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descri\'E7\'E3o detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Programa para manipula\'E7\'E3o de matrizes esparsas. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Este programa permite ao usu\'E1rio ler, imprimir, somar e multiplicar matrizes esparsas. As matrizes s\'E3o armazenadas em um mapa associativo, onde a chave \'E9 o nome do arquivo e o valor \'E9 a matriz correspondente.\par
+O programa apresenta um menu interativo com as seguintes op\'E7\'F5es:{
+\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Ler {\b Matriz}: L\'EA uma matriz a partir de um arquivo.\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Imprimir {\b Matriz}: Imprime uma matriz armazenada.\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Somar Matrizes: Soma duas matrizes armazenadas.\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Multiplicar Matrizes: Multiplica duas matrizes armazenadas.\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+Sair: Encerra o programa. \par}
+\par
+}{
+Defini\'E7\'E3o no arquivo {\b main.cpp}.}\par
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
@@ -2682,15 +2713,15 @@ Par\'E2metros\par}
 {\row }
 }
 }{
-Defini\'E7\'E3o na linha {\b 322} do arquivo {\b main.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 335} do arquivo {\b main.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00323 \{\par
-00324     std::cout << {\cf22 "Coloque o nome da primeira matriz: "};\par
-00325     std::getline(std::cin, filename);\par
-00326 \par
-00327     std::cout << {\cf22 "Coloque o nome da segunda matriz: "};\par
-00328     std::getline(std::cin, filename2);\par
-00329 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00336 \{\par
+00337     std::cout << {\cf22 "Coloque o nome da primeira matriz: "};\par
+00338     std::getline(std::cin, filename);\par
+00339 \par
+00340     std::cout << {\cf22 "Coloque o nome da segunda matriz: "};\par
+00341     std::getline(std::cin, filename2);\par
+00342 \}\par
 }
 }
 {\xe \v existeMatriz\:main.cpp}
@@ -2731,11 +2762,11 @@ Retorna {\f2 true}  se existir a matriz correspondente ao nome do arquivo; caso 
 Observa\'E7\'E3o\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 O uso do {\f2 unordered_map}  permite que a busca ocorra de maneira eficiente, pois a busca possui complexidade m\'E9dia {\b O(1)}. \par
 }}}{
-Defini\'E7\'E3o na linha {\b 277} do arquivo {\b main.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 290} do arquivo {\b main.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00278 \{\par
-00279     {\cf19 return} matrizes.find(filename) != matrizes.end();\par
-00280 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00291 \{\par
+00292     {\cf19 return} matrizes.find(filename) != matrizes.end();\par
+00293 \}\par
 }
 }
 {\xe \v main\:main.cpp}
@@ -2748,165 +2779,160 @@ Defini\'E7\'E3o na linha {\b 277} do arquivo {\b main.cpp}.}\par
 {\bkmkend AAAAAAAAAZ}
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
-{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 \par
-}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-< Mapa associativo para armazenar as matrizes\par
-}{
-Defini\'E7\'E3o na linha {\b 99} do arquivo {\b main.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00100 \{\par
-00101     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
-00102 \par
-00103     std::cout << {\cf22 "Bem-vindo ao programa de manipula\'E7\'E3o de matrizes esparsas"} << std::endl;\par
-00104     std::cout << {\cf22 "-----------------------------------------------------------"} << std::endl;\par
-00105 \par
-00106     unordered_map matrizes; \par
-00108     {\cf19 while} ({\cf17 true})\par
-00109     \{\par
-00110         std::cout << {\cf22 "Escolha uma op\'E7\'E3o:"} << std::endl;\par
-00111         std::cout << {\cf22 "[1] - Ler Matriz"} << std::endl;\par
-00112         std::cout << {\cf22 "[2] - Imprimir Matriz"} << std::endl;\par
-00113         std::cout << {\cf22 "[3] - Somar Matrizes"} << std::endl;\par
-00114         std::cout << {\cf22 "[4] - Multiplicar Matrizes"} << std::endl;\par
-00115         std::cout << {\cf22 "[5] - Sair"} << std::endl;\par
-00116         {\cf18 int} opcao;\par
-00117         std::cin >> opcao;\par
-00118         std::cin.ignore();\par
+Defini\'E7\'E3o na linha {\b 115} do arquivo {\b main.cpp}.}\par
+{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00116 \{\par
+00117     {\cf20 // Configura a localiza\'E7\'E3o para suportar caracteres especiais em portugu\'EAs}\par
+00118     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
 00119 \par
-00120         {\cf19 switch} (opcao)\par
-00121         \{\par
-00122         {\cf19 case} LER_MATRIZ:\par
-00123         \{\par
-00124             {\cf18 string} filename;\par
+00120     std::cout << {\cf22 "Bem-vindo ao programa de manipula\'E7\'E3o de matrizes esparsas"} << std::endl;\par
+00121     std::cout << {\cf22 "-----------------------------------------------------------"} << std::endl;\par
+00122 \par
+00123     {\cf20 // Mapa associativo para armazenar as matrizes}\par
+00124     unordered_map matrizes;\par
 00125 \par
-00126             std::cout << {\cf22 "Digite o nome do arquivo: "};\par
-00127             std::getline(std::cin, filename);\par
-00128 \par
-00129             Matriz matriz;\par
-00130 \par
-00131             {\cf19 try}\par
-00132             \{\par
-00133                 readMatrix(matriz, filename);\par
-00134             \}\par
-00135             {\cf19 catch} ({\cf17 const} std::exception &e)\par
-00136             \{\par
-00137                 std::cerr << e.what() << {\cf23 '\\n'};\par
-00138                 {\cf19 break};\par
-00139             \}\par
-00140 \par
-00141             matrizes.insert(std::make_pair(filename, matriz)); {\cf20 // usa make_pair para criar um par de chave e valor}\par
-00142             {\cf19 break};\par
-00143         \}\par
-00144 \par
-00145         {\cf19 case} IMPRIMIR_MATRIZ:\par
-00146         \{\par
-00147             std::cout << {\cf22 "Qual matriz deseja imprimir?"} << std::endl;\par
-00148 \par
-00149             printMatrizes(matrizes);\par
-00150 \par
-00151             std::cout << {\cf22 "Coloque o nome do arquivo que deseja imprimir: "};\par
-00152             {\cf18 string} filename;\par
-00153             std::getline(std::cin, filename);\par
-00154 \par
-00155             {\cf19 if} (existeMatriz(filename, matrizes))\par
-00156                 matrizes[filename].print();\par
-00157 \par
-00158             {\cf19 else}\par
-00159                 std::cout << {\cf22 "Matriz n\'E3o encontrada"} << std::endl;\par
-00160 \par
-00161             {\cf19 break};\par
-00162         \}\par
-00163 \par
-00164         {\cf19 case} SOMAR_MATRIZES:\par
-00165         \{\par
-00166             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para somar"} << std::endl;\par
-00167 \par
-00168             printMatrizes(matrizes);\par
-00169 \par
-00170             std::string filename, filename2;\par
-00171 \par
-00172             escolherMatrizes(filename, filename2);\par
+00126     {\cf19 while} ({\cf17 true})\par
+00127     \{\par
+00128         {\cf20 // Exibe o menu de op\'E7\'F5es}\par
+00129         std::cout << {\cf22 "Escolha uma op\'E7\'E3o:"} << std::endl;\par
+00130         std::cout << {\cf22 "[1] - Ler Matriz"} << std::endl;\par
+00131         std::cout << {\cf22 "[2] - Imprimir Matriz"} << std::endl;\par
+00132         std::cout << {\cf22 "[3] - Somar Matrizes"} << std::endl;\par
+00133         std::cout << {\cf22 "[4] - Multiplicar Matrizes"} << std::endl;\par
+00134         std::cout << {\cf22 "[5] - Sair"} << std::endl;\par
+00135         {\cf18 int} opcao;\par
+00136         std::cin >> opcao;\par
+00137         std::cin.ignore();\par
+00138 \par
+00139         {\cf19 switch} (opcao)\par
+00140         \{\par
+00141         {\cf19 case} LER_MATRIZ:\par
+00142         \{\par
+00143             {\cf20 // L\'EA uma matriz a partir de um arquivo}\par
+00144             {\cf18 string} filename;\par
+00145             std::cout << {\cf22 "Digite o nome do arquivo: "};\par
+00146             std::getline(std::cin, filename);\par
+00147 \par
+00148             Matriz matriz;\par
+00149 \par
+00150             {\cf19 try}\par
+00151             \{\par
+00152                 readMatrix(matriz, filename);\par
+00153             \}\par
+00154             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+00155             \{\par
+00156                 std::cerr << e.what() << {\cf23 '\\n'};\par
+00157                 {\cf19 break};\par
+00158             \}\par
+00159 \par
+00160             {\cf20 // Armazena a matriz no mapa associativo}\par
+00161             matrizes.insert(std::make_pair(filename, matriz));\par
+00162             {\cf19 break};\par
+00163         \}\par
+00164 \par
+00165         {\cf19 case} IMPRIMIR_MATRIZ:\par
+00166         \{\par
+00167             {\cf20 // Imprime uma matriz armazenada}\par
+00168             std::cout << {\cf22 "Qual matriz deseja imprimir?"} << std::endl;\par
+00169             printMatrizes(matrizes);\par
+00170             std::cout << {\cf22 "Coloque o nome do arquivo que deseja imprimir: "};\par
+00171             {\cf18 string} filename;\par
+00172             std::getline(std::cin, filename);\par
 00173 \par
-00174             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
-00175             \{\par
-00176                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
-00177                 {\cf19 break};\par
-00178             \}\par
-00179 \par
-00180             Matriz matriz;\par
+00174             {\cf19 if} (existeMatriz(filename, matrizes))\par
+00175                 matrizes[filename].print();\par
+00176             {\cf19 else}\par
+00177                 std::cout << {\cf22 "Matriz n\'E3o encontrada"} << std::endl;\par
+00178 \par
+00179             {\cf19 break};\par
+00180         \}\par
 00181 \par
-00182             {\cf19 try}\par
-00183             \{\par
-00184                 matriz = sum(matrizes[filename], matrizes[filename2]);\par
-00185             \}\par
-00186             {\cf19 catch} ({\cf17 const} std::exception &e)\par
-00187             \{\par
-00188                 std::cerr << e.what() << {\cf23 '\\n'};\par
-00189                 {\cf19 break};\par
-00190             \}\par
-00191 \par
-00192             matriz.print();\par
-00193 \par
-00194             salvarMatriz(matriz, matrizes);\par
+00182         {\cf19 case} SOMAR_MATRIZES:\par
+00183         \{\par
+00184             {\cf20 // Soma duas matrizes armazenadas}\par
+00185             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para somar"} << std::endl;\par
+00186             printMatrizes(matrizes);\par
+00187             std::string filename, filename2;\par
+00188             escolherMatrizes(filename, filename2);\par
+00189 \par
+00190             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
+00191             \{\par
+00192                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
+00193                 {\cf19 break};\par
+00194             \}\par
 00195 \par
-00196             {\cf19 break};\par
-00197         \}\par
-00198 \par
-00199         {\cf19 case} MULTIPLICAR_MATRIZES:\par
-00200         \{\par
-00201             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para multiplicar"} << std::endl;\par
-00202 \par
-00203             printMatrizes(matrizes);\par
-00204 \par
-00205             std::string filename, filename2;\par
-00206 \par
-00207             escolherMatrizes(filename, filename2);\par
-00208 \par
-00209             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
-00210             \{\par
-00211                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
-00212                 {\cf19 break};\par
-00213             \}\par
-00214 \par
-00215             Matriz matriz;\par
-00216 \par
-00217             {\cf19 try}\par
-00218             \{\par
-00219                 matriz = multiply(matrizes[filename], matrizes[filename2]);\par
-00220             \}\par
-00221             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+00196             Matriz matriz;\par
+00197 \par
+00198             {\cf19 try}\par
+00199             \{\par
+00200                 matriz = sum(matrizes[filename], matrizes[filename2]);\par
+00201             \}\par
+00202             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+00203             \{\par
+00204                 std::cerr << e.what() << {\cf23 '\\n'};\par
+00205                 {\cf19 break};\par
+00206             \}\par
+00207 \par
+00208             matriz.print();\par
+00209             salvarMatriz(matriz, matrizes);\par
+00210             {\cf19 break};\par
+00211         \}\par
+00212 \par
+00213         {\cf19 case} MULTIPLICAR_MATRIZES:\par
+00214         \{\par
+00215             {\cf20 // Multiplica duas matrizes armazenadas}\par
+00216             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para multiplicar"} << std::endl;\par
+00217             printMatrizes(matrizes);\par
+00218             std::string filename, filename2;\par
+00219             escolherMatrizes(filename, filename2);\par
+00220 \par
+00221             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
 00222             \{\par
-00223                 std::cerr << e.what() << {\cf23 '\\n'};\par
+00223                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
 00224                 {\cf19 break};\par
 00225             \}\par
 00226 \par
-00227             matriz.print();\par
+00227             Matriz matriz;\par
 00228 \par
-00229             salvarMatriz(matriz, matrizes);\par
-00230 \par
-00231             {\cf19 break};\par
-00232         \}\par
-00233 \par
-00234         {\cf19 case} SAIR:\par
-00235         \{\par
-00236             std::cout << {\cf22 "Saindo..."} << std::endl;\par
-00237             {\cf19 return} 0;\par
-00238         \}\par
-00239 \par
-00240         {\cf19 default}:\par
-00241         \{\par
-00242             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
-00243             std::cin.clear();\par
-00244             std::cin.ignore();\par
-00245             {\cf19 break};\par
-00246         \}\par
-00247         \}\par
-00248 \par
-00249         std::system({\cf22 "pause || read -p 'Pressione enter para continuar...' var"});\par
-00250         std::system({\cf22 "cls||clear"});\par
-00251     \}\par
-00252 \}\par
+00229             {\cf19 try}\par
+00230             \{\par
+00231                 matriz = multiply(matrizes[filename], matrizes[filename2]);\par
+00232             \}\par
+00233             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+00234             \{\par
+00235                 std::cerr << e.what() << {\cf23 '\\n'};\par
+00236                 {\cf19 break};\par
+00237             \}\par
+00238 \par
+00239             matriz.print();\par
+00240             salvarMatriz(matriz, matrizes);\par
+00241             {\cf19 break};\par
+00242         \}\par
+00243 \par
+00244         {\cf19 case} SAIR:\par
+00245         \{\par
+00246             {\cf20 // Encerra o programa}\par
+00247             std::cout << {\cf22 "Saindo..."} << std::endl;\par
+00248             {\cf19 return} 0;\par
+00249         \}\par
+00250 \par
+00251         {\cf19 default}:\par
+00252         \{\par
+00253             {\cf20 // Op\'E7\'E3o inv\'E1lida}\par
+00254             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
+00255             std::cin.clear();\par
+00256             std::cin.ignore();\par
+00257             {\cf19 break};\par
+00258         \}\par
+00259         \}\par
+00260 \par
+00261         {\cf20 // Pausa e limpa a tela}\par
+00262         std::system({\cf22 "pause || read -p 'Pressione enter para continuar...' var"});\par
+00263         std::system({\cf22 "cls||clear"});\par
+00264     \}\par
+00265 \}\par
 }
 }
 {\xe \v printMatrizes\:main.cpp}
@@ -2936,16 +2962,16 @@ Par\'E2metros\par}
 }
 As dimens\'F5es exibidas s\'E3o obtidas diretamente da inst\'E2ncia armazenada em cada valor do map. A exibi\'E7\'E3o \'E9 formatada para melhor leitura e compreens\'E3o dos dados de cada matriz. \par
 }{
-Defini\'E7\'E3o na linha {\b 331} do arquivo {\b main.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 344} do arquivo {\b main.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00332 \{\par
-00333     {\cf19 for} ({\cf17 const} {\cf17 auto} &par : matrizes)\par
-00334     \{\par
-00335         std::cout << {\cf22 "------------------"} << std::endl;\par
-00336         std::cout << par.first << {\cf22 " |"} << par.second.getLinhas() << {\cf22 " x "} << par.second.getColunas() << {\cf22 "|"} << std::endl;\par
-00337         std::cout << {\cf22 "------------------"} << std::endl;\par
-00338     \}\par
-00339 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00345 \{\par
+00346     {\cf19 for} ({\cf17 const} {\cf17 auto} &par : matrizes)\par
+00347     \{\par
+00348         std::cout << {\cf22 "------------------"} << std::endl;\par
+00349         std::cout << par.first << {\cf22 " |"} << par.second.getLinhas() << {\cf22 " x "} << par.second.getColunas() << {\cf22 "|"} << std::endl;\par
+00350         std::cout << {\cf22 "------------------"} << std::endl;\par
+00351     \}\par
+00352 \}\par
 }
 }
 {\xe \v readMatrix\:main.cpp}
@@ -2999,29 +3025,29 @@ Em seguida, cada conjunto de tr\'EAs valores (\'EDndice de linha, \'EDndice de c
 \pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 Caso o arquivo n\'E3o seja encontrado ou ocorra algum outro problema, \'E9 gerada uma exce\'E7\'E3o do tipo {\f2 std::runtime_error} . \par}
 }{
-Defini\'E7\'E3o na linha {\b 254} do arquivo {\b main.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 267} do arquivo {\b main.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00255 \{\par
-00256     std::ifstream file({\cf22 "src/arquivos/"} + filename);\par
-00257 \par
-00258     {\cf19 if} (!file || !file.is_open())\par
-00259         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo"});\par
-00260 \par
-00261     {\cf18 int} linhas\{0\}, colunas\{0\};\par
-00262     file >> linhas >> colunas;\par
-00263 \par
-00264     matriz = Matriz(linhas, colunas);\par
-00265 \par
-00266     {\cf18 int} i\{0\}, j\{0\};\par
-00267     {\cf18 double} valor\{0.0f\};\par
-00268 \par
-00269     {\cf19 while} (file >> i >> j >> valor)\par
-00270     \{\par
-00271         matriz.insert(i, j, valor);\par
-00272     \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00268 \{\par
+00269     std::ifstream file({\cf22 "src/arquivos/"} + filename);\par
+00270 \par
+00271     {\cf19 if} (!file || !file.is_open())\par
+00272         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo"});\par
 00273 \par
-00274     file.close();\par
-00275 \}\par
+00274     {\cf18 int} linhas\{0\}, colunas\{0\};\par
+00275     file >> linhas >> colunas;\par
+00276 \par
+00277     matriz = Matriz(linhas, colunas);\par
+00278 \par
+00279     {\cf18 int} i\{0\}, j\{0\};\par
+00280     {\cf18 double} valor\{0.0f\};\par
+00281 \par
+00282     {\cf19 while} (file >> i >> j >> valor)\par
+00283     \{\par
+00284         matriz.insert(i, j, valor);\par
+00285     \}\par
+00286 \par
+00287     file.close();\par
+00288 \}\par
 }
 }
 {\xe \v salvarMatriz\:main.cpp}
@@ -3059,46 +3085,46 @@ Par\'E2metros\par}
 Observa\'E7\'E3o\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
 Essa fun\'E7\'E3o n\'E3o retorna valores. \'C9 importante que o usu\'E1rio insira corretamente as op\'E7\'F5es (s ou n) para prosseguir ou cancelar o salvamento, e que forne\'E7a um nome v\'E1lido quando optar por salvar a matriz. \par
 }}}{
-Defini\'E7\'E3o na linha {\b 282} do arquivo {\b main.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 295} do arquivo {\b main.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00283 \{\par
-00284     {\cf19 while} ({\cf17 true})\par
-00285     \{\par
-00286         std::cout << {\cf22 "Deseja salvar a matriz? [S/N]: "};\par
-00287         {\cf18 char} resposta;\par
-00288         std::cin >> resposta;\par
-00289         std::cin.ignore();\par
-00290 \par
-00291         {\cf19 switch} (tolower(resposta))\par
-00292         \{\par
-00293         {\cf19 case} {\cf23 'n'}:\par
-00294             {\cf19 return};\par
-00295 \par
-00296         {\cf19 case} {\cf23 's'}:\par
-00297         \{\par
-00298             std::cout << {\cf22 "Digite o nome que deseja salvar a matriz: "};\par
-00299             {\cf18 string} filename;\par
-00300 \par
-00301             std::getline(std::cin, filename);\par
-00302 \par
-00303             {\cf19 if} (existeMatriz(filename, matrizes))\par
-00304             \{\par
-00305                 std::cout << {\cf22 "J\'E1 existe uma matriz com esse nome, tente outro nome para salvar"} << std::endl;\par
-00306                 {\cf19 break};\par
-00307             \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00296 \{\par
+00297     {\cf19 while} ({\cf17 true})\par
+00298     \{\par
+00299         std::cout << {\cf22 "Deseja salvar a matriz? [S/N]: "};\par
+00300         {\cf18 char} resposta;\par
+00301         std::cin >> resposta;\par
+00302         std::cin.ignore();\par
+00303 \par
+00304         {\cf19 switch} (tolower(resposta))\par
+00305         \{\par
+00306         {\cf19 case} {\cf23 'n'}:\par
+00307             {\cf19 return};\par
 00308 \par
-00309             matrizes.insert(std::make_pair(filename, matriz));\par
-00310 \par
-00311             std::cout << {\cf22 "Matriz salva com sucesso"} << std::endl;\par
-00312             {\cf19 return};\par
-00313         \}\par
-00314 \par
-00315         {\cf19 default}:\par
-00316             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
-00317             {\cf19 break};\par
-00318         \}\par
-00319     \}\par
-00320 \}\par
+00309         {\cf19 case} {\cf23 's'}:\par
+00310         \{\par
+00311             std::cout << {\cf22 "Digite o nome que deseja salvar a matriz: "};\par
+00312             {\cf18 string} filename;\par
+00313 \par
+00314             std::getline(std::cin, filename);\par
+00315 \par
+00316             {\cf19 if} (existeMatriz(filename, matrizes))\par
+00317             \{\par
+00318                 std::cout << {\cf22 "J\'E1 existe uma matriz com esse nome, tente outro nome para salvar"} << std::endl;\par
+00319                 {\cf19 break};\par
+00320             \}\par
+00321 \par
+00322             matrizes.insert(std::make_pair(filename, matriz));\par
+00323 \par
+00324             std::cout << {\cf22 "Matriz salva com sucesso"} << std::endl;\par
+00325             {\cf19 return};\par
+00326         \}\par
+00327 \par
+00328         {\cf19 default}:\par
+00329             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
+00330             {\cf19 break};\par
+00331         \}\par
+00332     \}\par
+00333 \}\par
 }
 }
 \par \pard\plain 
@@ -3141,246 +3167,244 @@ Ir para a documenta\'E7\'E3o desse arquivo.\par
 00087 \par
 00097 {\cf18 void} printMatrizes({\cf17 const} unordered_map &matrizes);\par
 00098 \par
-00099 {\cf18 int} main()\par
-00100 \{\par
-00101     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
-00102 \par
-00103     std::cout << {\cf22 "Bem-vindo ao programa de manipula\'E7\'E3o de matrizes esparsas"} << std::endl;\par
-00104     std::cout << {\cf22 "-----------------------------------------------------------"} << std::endl;\par
-00105 \par
-00106     unordered_map matrizes; \par
-00108     {\cf19 while} ({\cf17 true})\par
-00109     \{\par
-00110         std::cout << {\cf22 "Escolha uma op\'E7\'E3o:"} << std::endl;\par
-00111         std::cout << {\cf22 "[1] - Ler Matriz"} << std::endl;\par
-00112         std::cout << {\cf22 "[2] - Imprimir Matriz"} << std::endl;\par
-00113         std::cout << {\cf22 "[3] - Somar Matrizes"} << std::endl;\par
-00114         std::cout << {\cf22 "[4] - Multiplicar Matrizes"} << std::endl;\par
-00115         std::cout << {\cf22 "[5] - Sair"} << std::endl;\par
-00116         {\cf18 int} opcao;\par
-00117         std::cin >> opcao;\par
-00118         std::cin.ignore();\par
+00115 {\cf18 int} main()\par
+00116 \{\par
+00117     {\cf20 // Configura a localiza\'E7\'E3o para suportar caracteres especiais em portugu\'EAs}\par
+00118     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
 00119 \par
-00120         {\cf19 switch} (opcao)\par
-00121         \{\par
-00122         {\cf19 case} LER_MATRIZ:\par
-00123         \{\par
-00124             {\cf18 string} filename;\par
+00120     std::cout << {\cf22 "Bem-vindo ao programa de manipula\'E7\'E3o de matrizes esparsas"} << std::endl;\par
+00121     std::cout << {\cf22 "-----------------------------------------------------------"} << std::endl;\par
+00122 \par
+00123     {\cf20 // Mapa associativo para armazenar as matrizes}\par
+00124     unordered_map matrizes;\par
 00125 \par
-00126             std::cout << {\cf22 "Digite o nome do arquivo: "};\par
-00127             std::getline(std::cin, filename);\par
-00128 \par
-00129             Matriz matriz;\par
-00130 \par
-00131             {\cf19 try}\par
-00132             \{\par
-00133                 readMatrix(matriz, filename);\par
-00134             \}\par
-00135             {\cf19 catch} ({\cf17 const} std::exception &e)\par
-00136             \{\par
-00137                 std::cerr << e.what() << {\cf23 '\\n'};\par
-00138                 {\cf19 break};\par
-00139             \}\par
-00140 \par
-00141             matrizes.insert(std::make_pair(filename, matriz)); {\cf20 // usa make_pair para criar um par de chave e valor}\par
-00142             {\cf19 break};\par
-00143         \}\par
-00144 \par
-00145         {\cf19 case} IMPRIMIR_MATRIZ:\par
-00146         \{\par
-00147             std::cout << {\cf22 "Qual matriz deseja imprimir?"} << std::endl;\par
-00148 \par
-00149             printMatrizes(matrizes);\par
-00150 \par
-00151             std::cout << {\cf22 "Coloque o nome do arquivo que deseja imprimir: "};\par
-00152             {\cf18 string} filename;\par
-00153             std::getline(std::cin, filename);\par
-00154 \par
-00155             {\cf19 if} (existeMatriz(filename, matrizes))\par
-00156                 matrizes[filename].print();\par
-00157 \par
-00158             {\cf19 else}\par
-00159                 std::cout << {\cf22 "Matriz n\'E3o encontrada"} << std::endl;\par
-00160 \par
-00161             {\cf19 break};\par
-00162         \}\par
-00163 \par
-00164         {\cf19 case} SOMAR_MATRIZES:\par
-00165         \{\par
-00166             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para somar"} << std::endl;\par
-00167 \par
-00168             printMatrizes(matrizes);\par
-00169 \par
-00170             std::string filename, filename2;\par
-00171 \par
-00172             escolherMatrizes(filename, filename2);\par
+00126     {\cf19 while} ({\cf17 true})\par
+00127     \{\par
+00128         {\cf20 // Exibe o menu de op\'E7\'F5es}\par
+00129         std::cout << {\cf22 "Escolha uma op\'E7\'E3o:"} << std::endl;\par
+00130         std::cout << {\cf22 "[1] - Ler Matriz"} << std::endl;\par
+00131         std::cout << {\cf22 "[2] - Imprimir Matriz"} << std::endl;\par
+00132         std::cout << {\cf22 "[3] - Somar Matrizes"} << std::endl;\par
+00133         std::cout << {\cf22 "[4] - Multiplicar Matrizes"} << std::endl;\par
+00134         std::cout << {\cf22 "[5] - Sair"} << std::endl;\par
+00135         {\cf18 int} opcao;\par
+00136         std::cin >> opcao;\par
+00137         std::cin.ignore();\par
+00138 \par
+00139         {\cf19 switch} (opcao)\par
+00140         \{\par
+00141         {\cf19 case} LER_MATRIZ:\par
+00142         \{\par
+00143             {\cf20 // L\'EA uma matriz a partir de um arquivo}\par
+00144             {\cf18 string} filename;\par
+00145             std::cout << {\cf22 "Digite o nome do arquivo: "};\par
+00146             std::getline(std::cin, filename);\par
+00147 \par
+00148             Matriz matriz;\par
+00149 \par
+00150             {\cf19 try}\par
+00151             \{\par
+00152                 readMatrix(matriz, filename);\par
+00153             \}\par
+00154             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+00155             \{\par
+00156                 std::cerr << e.what() << {\cf23 '\\n'};\par
+00157                 {\cf19 break};\par
+00158             \}\par
+00159 \par
+00160             {\cf20 // Armazena a matriz no mapa associativo}\par
+00161             matrizes.insert(std::make_pair(filename, matriz));\par
+00162             {\cf19 break};\par
+00163         \}\par
+00164 \par
+00165         {\cf19 case} IMPRIMIR_MATRIZ:\par
+00166         \{\par
+00167             {\cf20 // Imprime uma matriz armazenada}\par
+00168             std::cout << {\cf22 "Qual matriz deseja imprimir?"} << std::endl;\par
+00169             printMatrizes(matrizes);\par
+00170             std::cout << {\cf22 "Coloque o nome do arquivo que deseja imprimir: "};\par
+00171             {\cf18 string} filename;\par
+00172             std::getline(std::cin, filename);\par
 00173 \par
-00174             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
-00175             \{\par
-00176                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
-00177                 {\cf19 break};\par
-00178             \}\par
-00179 \par
-00180             Matriz matriz;\par
+00174             {\cf19 if} (existeMatriz(filename, matrizes))\par
+00175                 matrizes[filename].print();\par
+00176             {\cf19 else}\par
+00177                 std::cout << {\cf22 "Matriz n\'E3o encontrada"} << std::endl;\par
+00178 \par
+00179             {\cf19 break};\par
+00180         \}\par
 00181 \par
-00182             {\cf19 try}\par
-00183             \{\par
-00184                 matriz = sum(matrizes[filename], matrizes[filename2]);\par
-00185             \}\par
-00186             {\cf19 catch} ({\cf17 const} std::exception &e)\par
-00187             \{\par
-00188                 std::cerr << e.what() << {\cf23 '\\n'};\par
-00189                 {\cf19 break};\par
-00190             \}\par
-00191 \par
-00192             matriz.print();\par
-00193 \par
-00194             salvarMatriz(matriz, matrizes);\par
+00182         {\cf19 case} SOMAR_MATRIZES:\par
+00183         \{\par
+00184             {\cf20 // Soma duas matrizes armazenadas}\par
+00185             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para somar"} << std::endl;\par
+00186             printMatrizes(matrizes);\par
+00187             std::string filename, filename2;\par
+00188             escolherMatrizes(filename, filename2);\par
+00189 \par
+00190             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
+00191             \{\par
+00192                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
+00193                 {\cf19 break};\par
+00194             \}\par
 00195 \par
-00196             {\cf19 break};\par
-00197         \}\par
-00198 \par
-00199         {\cf19 case} MULTIPLICAR_MATRIZES:\par
-00200         \{\par
-00201             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para multiplicar"} << std::endl;\par
-00202 \par
-00203             printMatrizes(matrizes);\par
-00204 \par
-00205             std::string filename, filename2;\par
-00206 \par
-00207             escolherMatrizes(filename, filename2);\par
-00208 \par
-00209             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
-00210             \{\par
-00211                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
-00212                 {\cf19 break};\par
-00213             \}\par
-00214 \par
-00215             Matriz matriz;\par
-00216 \par
-00217             {\cf19 try}\par
-00218             \{\par
-00219                 matriz = multiply(matrizes[filename], matrizes[filename2]);\par
-00220             \}\par
-00221             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+00196             Matriz matriz;\par
+00197 \par
+00198             {\cf19 try}\par
+00199             \{\par
+00200                 matriz = sum(matrizes[filename], matrizes[filename2]);\par
+00201             \}\par
+00202             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+00203             \{\par
+00204                 std::cerr << e.what() << {\cf23 '\\n'};\par
+00205                 {\cf19 break};\par
+00206             \}\par
+00207 \par
+00208             matriz.print();\par
+00209             salvarMatriz(matriz, matrizes);\par
+00210             {\cf19 break};\par
+00211         \}\par
+00212 \par
+00213         {\cf19 case} MULTIPLICAR_MATRIZES:\par
+00214         \{\par
+00215             {\cf20 // Multiplica duas matrizes armazenadas}\par
+00216             std::cout << {\cf22 "Quais as matrizes ir\'E1 usar para multiplicar"} << std::endl;\par
+00217             printMatrizes(matrizes);\par
+00218             std::string filename, filename2;\par
+00219             escolherMatrizes(filename, filename2);\par
+00220 \par
+00221             {\cf19 if} (!existeMatriz(filename, matrizes) || !existeMatriz(filename2, matrizes))\par
 00222             \{\par
-00223                 std::cerr << e.what() << {\cf23 '\\n'};\par
+00223                 std::cout << {\cf22 "Alguma matriz n\'E3o foi encontrada"} << std::endl;\par
 00224                 {\cf19 break};\par
 00225             \}\par
 00226 \par
-00227             matriz.print();\par
+00227             Matriz matriz;\par
 00228 \par
-00229             salvarMatriz(matriz, matrizes);\par
-00230 \par
-00231             {\cf19 break};\par
-00232         \}\par
-00233 \par
-00234         {\cf19 case} SAIR:\par
-00235         \{\par
-00236             std::cout << {\cf22 "Saindo..."} << std::endl;\par
-00237             {\cf19 return} 0;\par
-00238         \}\par
-00239 \par
-00240         {\cf19 default}:\par
-00241         \{\par
-00242             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
-00243             std::cin.clear();\par
-00244             std::cin.ignore();\par
-00245             {\cf19 break};\par
-00246         \}\par
-00247         \}\par
-00248 \par
-00249         std::system({\cf22 "pause || read -p 'Pressione enter para continuar...' var"});\par
-00250         std::system({\cf22 "cls||clear"});\par
-00251     \}\par
-00252 \}\par
-00253 \par
-00254 {\cf18 void} readMatrix(Matriz &matriz, {\cf17 const} std::string filename)\par
-00255 \{\par
-00256     std::ifstream file({\cf22 "src/arquivos/"} + filename);\par
-00257 \par
-00258     {\cf19 if} (!file || !file.is_open())\par
-00259         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo"});\par
+00229             {\cf19 try}\par
+00230             \{\par
+00231                 matriz = multiply(matrizes[filename], matrizes[filename2]);\par
+00232             \}\par
+00233             {\cf19 catch} ({\cf17 const} std::exception &e)\par
+00234             \{\par
+00235                 std::cerr << e.what() << {\cf23 '\\n'};\par
+00236                 {\cf19 break};\par
+00237             \}\par
+00238 \par
+00239             matriz.print();\par
+00240             salvarMatriz(matriz, matrizes);\par
+00241             {\cf19 break};\par
+00242         \}\par
+00243 \par
+00244         {\cf19 case} SAIR:\par
+00245         \{\par
+00246             {\cf20 // Encerra o programa}\par
+00247             std::cout << {\cf22 "Saindo..."} << std::endl;\par
+00248             {\cf19 return} 0;\par
+00249         \}\par
+00250 \par
+00251         {\cf19 default}:\par
+00252         \{\par
+00253             {\cf20 // Op\'E7\'E3o inv\'E1lida}\par
+00254             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
+00255             std::cin.clear();\par
+00256             std::cin.ignore();\par
+00257             {\cf19 break};\par
+00258         \}\par
+00259         \}\par
 00260 \par
-00261     {\cf18 int} linhas\{0\}, colunas\{0\};\par
-00262     file >> linhas >> colunas;\par
-00263 \par
-00264     matriz = Matriz(linhas, colunas);\par
-00265 \par
-00266     {\cf18 int} i\{0\}, j\{0\};\par
-00267     {\cf18 double} valor\{0.0f\};\par
-00268 \par
-00269     {\cf19 while} (file >> i >> j >> valor)\par
-00270     \{\par
-00271         matriz.insert(i, j, valor);\par
-00272     \}\par
+00261         {\cf20 // Pausa e limpa a tela}\par
+00262         std::system({\cf22 "pause || read -p 'Pressione enter para continuar...' var"});\par
+00263         std::system({\cf22 "cls||clear"});\par
+00264     \}\par
+00265 \}\par
+00266 \par
+00267 {\cf18 void} readMatrix(Matriz &matriz, {\cf17 const} std::string filename)\par
+00268 \{\par
+00269     std::ifstream file({\cf22 "src/arquivos/"} + filename);\par
+00270 \par
+00271     {\cf19 if} (!file || !file.is_open())\par
+00272         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo"});\par
 00273 \par
-00274     file.close();\par
-00275 \}\par
+00274     {\cf18 int} linhas\{0\}, colunas\{0\};\par
+00275     file >> linhas >> colunas;\par
 00276 \par
-00277 {\cf18 bool} existeMatriz({\cf17 const} std::string filename, {\cf17 const} unordered_map &matrizes)\par
-00278 \{\par
-00279     {\cf19 return} matrizes.find(filename) != matrizes.end();\par
-00280 \}\par
+00277     matriz = Matriz(linhas, colunas);\par
+00278 \par
+00279     {\cf18 int} i\{0\}, j\{0\};\par
+00280     {\cf18 double} valor\{0.0f\};\par
 00281 \par
-00282 {\cf18 void} salvarMatriz({\cf17 const} Matriz &matriz, unordered_map &matrizes)\par
-00283 \{\par
-00284     {\cf19 while} ({\cf17 true})\par
-00285     \{\par
-00286         std::cout << {\cf22 "Deseja salvar a matriz? [S/N]: "};\par
-00287         {\cf18 char} resposta;\par
-00288         std::cin >> resposta;\par
-00289         std::cin.ignore();\par
-00290 \par
-00291         {\cf19 switch} (tolower(resposta))\par
-00292         \{\par
-00293         {\cf19 case} {\cf23 'n'}:\par
-00294             {\cf19 return};\par
-00295 \par
-00296         {\cf19 case} {\cf23 's'}:\par
-00297         \{\par
-00298             std::cout << {\cf22 "Digite o nome que deseja salvar a matriz: "};\par
-00299             {\cf18 string} filename;\par
-00300 \par
-00301             std::getline(std::cin, filename);\par
-00302 \par
-00303             {\cf19 if} (existeMatriz(filename, matrizes))\par
-00304             \{\par
-00305                 std::cout << {\cf22 "J\'E1 existe uma matriz com esse nome, tente outro nome para salvar"} << std::endl;\par
-00306                 {\cf19 break};\par
-00307             \}\par
+00282     {\cf19 while} (file >> i >> j >> valor)\par
+00283     \{\par
+00284         matriz.insert(i, j, valor);\par
+00285     \}\par
+00286 \par
+00287     file.close();\par
+00288 \}\par
+00289 \par
+00290 {\cf18 bool} existeMatriz({\cf17 const} std::string filename, {\cf17 const} unordered_map &matrizes)\par
+00291 \{\par
+00292     {\cf19 return} matrizes.find(filename) != matrizes.end();\par
+00293 \}\par
+00294 \par
+00295 {\cf18 void} salvarMatriz({\cf17 const} Matriz &matriz, unordered_map &matrizes)\par
+00296 \{\par
+00297     {\cf19 while} ({\cf17 true})\par
+00298     \{\par
+00299         std::cout << {\cf22 "Deseja salvar a matriz? [S/N]: "};\par
+00300         {\cf18 char} resposta;\par
+00301         std::cin >> resposta;\par
+00302         std::cin.ignore();\par
+00303 \par
+00304         {\cf19 switch} (tolower(resposta))\par
+00305         \{\par
+00306         {\cf19 case} {\cf23 'n'}:\par
+00307             {\cf19 return};\par
 00308 \par
-00309             matrizes.insert(std::make_pair(filename, matriz));\par
-00310 \par
-00311             std::cout << {\cf22 "Matriz salva com sucesso"} << std::endl;\par
-00312             {\cf19 return};\par
-00313         \}\par
-00314 \par
-00315         {\cf19 default}:\par
-00316             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
-00317             {\cf19 break};\par
-00318         \}\par
-00319     \}\par
-00320 \}\par
+00309         {\cf19 case} {\cf23 's'}:\par
+00310         \{\par
+00311             std::cout << {\cf22 "Digite o nome que deseja salvar a matriz: "};\par
+00312             {\cf18 string} filename;\par
+00313 \par
+00314             std::getline(std::cin, filename);\par
+00315 \par
+00316             {\cf19 if} (existeMatriz(filename, matrizes))\par
+00317             \{\par
+00318                 std::cout << {\cf22 "J\'E1 existe uma matriz com esse nome, tente outro nome para salvar"} << std::endl;\par
+00319                 {\cf19 break};\par
+00320             \}\par
 00321 \par
-00322 {\cf18 void} escolherMatrizes({\cf18 string} &filename, {\cf18 string} &filename2)\par
-00323 \{\par
-00324     std::cout << {\cf22 "Coloque o nome da primeira matriz: "};\par
-00325     std::getline(std::cin, filename);\par
-00326 \par
-00327     std::cout << {\cf22 "Coloque o nome da segunda matriz: "};\par
-00328     std::getline(std::cin, filename2);\par
-00329 \}\par
-00330 \par
-00331 {\cf18 void} printMatrizes({\cf17 const} unordered_map &matrizes)\par
-00332 \{\par
-00333     {\cf19 for} ({\cf17 const} {\cf17 auto} &par : matrizes)\par
-00334     \{\par
-00335         std::cout << {\cf22 "------------------"} << std::endl;\par
-00336         std::cout << par.first << {\cf22 " |"} << par.second.getLinhas() << {\cf22 " x "} << par.second.getColunas() << {\cf22 "|"} << std::endl;\par
-00337         std::cout << {\cf22 "------------------"} << std::endl;\par
-00338     \}\par
-00339 \}\par
+00322             matrizes.insert(std::make_pair(filename, matriz));\par
+00323 \par
+00324             std::cout << {\cf22 "Matriz salva com sucesso"} << std::endl;\par
+00325             {\cf19 return};\par
+00326         \}\par
+00327 \par
+00328         {\cf19 default}:\par
+00329             std::cout << {\cf22 "Op\'E7\'E3o inv\'E1lida"} << std::endl;\par
+00330             {\cf19 break};\par
+00331         \}\par
+00332     \}\par
+00333 \}\par
+00334 \par
+00335 {\cf18 void} escolherMatrizes({\cf18 string} &filename, {\cf18 string} &filename2)\par
+00336 \{\par
+00337     std::cout << {\cf22 "Coloque o nome da primeira matriz: "};\par
+00338     std::getline(std::cin, filename);\par
+00339 \par
+00340     std::cout << {\cf22 "Coloque o nome da segunda matriz: "};\par
+00341     std::getline(std::cin, filename2);\par
+00342 \}\par
+00343 \par
+00344 {\cf18 void} printMatrizes({\cf17 const} unordered_map &matrizes)\par
+00345 \{\par
+00346     {\cf19 for} ({\cf17 const} {\cf17 auto} &par : matrizes)\par
+00347     \{\par
+00348         std::cout << {\cf22 "------------------"} << std::endl;\par
+00349         std::cout << par.first << {\cf22 " |"} << par.second.getLinhas() << {\cf22 " x "} << par.second.getColunas() << {\cf22 "|"} << std::endl;\par
+00350         std::cout << {\cf22 "------------------"} << std::endl;\par
+00351     \}\par
+00352 \}\par
 }
 \par \pard\plain 
 
@@ -3644,6 +3668,10 @@ Refer\'EAncia do Arquivo tests/TestMatriz.cpp\par \pard\plain
 {\xe \v tests/TestMatriz.cpp}
 {\bkmkstart AAAAAAAABE}
 {\bkmkend AAAAAAAABE}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Arquivo de teste para opera\'E7\'F5es com matrizes esparsas. }}\par
 {
 \pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <iostream>}\par
 {\f2 #include <fstream>}\par
@@ -3677,8 +3705,25 @@ Fun\'E7\'F5es\par
 {\b bool} {\b arquivoExiste} ({\b const} {\b std::string} &{\b caminho})\par
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 {\b void} {\b testePerformance} ()\par
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Testa a performance das opera\'E7\'F5es de soma e multiplica\'E7\'E3o de matrizes. }{
+}\par
+}\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 {\b int} {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descri\'E7\'E3o detalhada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Arquivo de teste para opera\'E7\'F5es com matrizes esparsas. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Este arquivo cont\'E9m a fun\'E7\'E3o principal que realiza testes de opera\'E7\'F5es com matrizes esparsas, incluindo leitura de arquivos, soma, multiplica\'E7\'E3o, inser\'E7\'E3o e performance. \par
+}{
+Defini\'E7\'E3o no arquivo {\b TestMatriz.cpp}.}\par
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
 \pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
@@ -3696,12 +3741,12 @@ Fun\'E7\'F5es\par
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
 {
-Defini\'E7\'E3o na linha {\b 105} do arquivo {\b TestMatriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 145} do arquivo {\b TestMatriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00106 \{\par
-00107     std::ifstream file(caminho);\par
-00108     {\cf19 return} file.good();\par
-00109 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00146 \{\par
+00147     std::ifstream file(caminho);\par
+00148     {\cf19 return} file.good();\par
+00149 \}\par
 }
 }
 {\xe \v leitura\:TestMatriz.cpp}
@@ -3716,30 +3761,30 @@ Defini\'E7\'E3o na linha {\b 105} do arquivo {\b TestMatriz.cpp}.}\par
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
 {
-Defini\'E7\'E3o na linha {\b 80} do arquivo {\b TestMatriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 115} do arquivo {\b TestMatriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00081 \{\par
-00082     std::ifstream file({\cf22 "tests/arquivosTestes/"} + arquivo); {\cf20 // Abre o arquivo}\par
-00083     {\cf19 if} (!file.is_open())\par
-00084     \{\par
-00085         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo: "} + arquivo);\par
-00086     \}\par
-00087 \par
-00088     {\cf18 int} linhas, colunas;\par
-00089     file >> linhas >> colunas;\par
-00090 \par
-00091     Matriz matriz(linhas, colunas);\par
-00092 \par
-00093     {\cf18 int} linha, coluna;\par
-00094     {\cf18 double} valor;\par
-00095     {\cf19 while} (file >> linha >> coluna >> valor)\par
-00096     \{                                        {\cf20 // L\'EA os valores da matriz}\par
-00097         matriz.insert(linha, coluna, valor); {\cf20 // Insere na matriz}\par
-00098     \}\par
-00099 \par
-00100     file.close(); {\cf20 // Fecha o arquivo}\par
-00101     {\cf19 return} matriz;\par
-00102 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00116 \{\par
+00117     std::ifstream file({\cf22 "tests/arquivosTestes/"} + arquivo); {\cf20 // Abre o arquivo}\par
+00118     {\cf19 if} (!file.is_open())\par
+00119     \{\par
+00120         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo: "} + arquivo);\par
+00121     \}\par
+00122 \par
+00123     {\cf18 int} linhas, colunas;\par
+00124     file >> linhas >> colunas;\par
+00125 \par
+00126     Matriz matriz(linhas, colunas);\par
+00127 \par
+00128     {\cf18 int} linha, coluna;\par
+00129     {\cf18 double} valor;\par
+00130     {\cf19 while} (file >> linha >> coluna >> valor)\par
+00131     \{                                        {\cf20 // L\'EA os valores da matriz}\par
+00132         matriz.insert(linha, coluna, valor); {\cf20 // Insere na matriz}\par
+00133     \}\par
+00134 \par
+00135     file.close(); {\cf20 // Fecha o arquivo}\par
+00136     {\cf19 return} matriz;\par
+00137 \}\par
 }
 }
 {\xe \v main\:TestMatriz.cpp}
@@ -3754,46 +3799,46 @@ Defini\'E7\'E3o na linha {\b 80} do arquivo {\b TestMatriz.cpp}.}\par
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
 {
-Defini\'E7\'E3o na linha {\b 145} do arquivo {\b TestMatriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 214} do arquivo {\b TestMatriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00146 \{\par
-00147     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
-00148 \par
-00149     {\cf19 try}\par
-00150     \{\par
-00151         {\cf20 // Verificando se os arquivos existem}\par
-00152         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix1.txt"}))\par
-00153         \{\par
-00154             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix1.txt n\'E3o encontrado."});\par
-00155         \}\par
-00156         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix2.txt"}))\par
-00157         \{\par
-00158             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix2.txt n\'E3o encontrado."});\par
-00159         \}\par
-00160         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/MatrixResult.txt"}))\par
-00161         \{\par
-00162             {\cf19 throw} std::runtime_error({\cf22 "Arquivo MatrixResult.txt n\'E3o encontrado."});\par
-00163         \}\par
-00164 \par
-00165         {\cf20 // L\'EA as matrizes de arquivos}\par
-00166         Matriz A = leitura({\cf22 "Matrix1.txt"});\par
-00167         Matriz B = leitura({\cf22 "Matrix2.txt"});\par
-00168         Matriz soma = leitura({\cf22 "MatrixResult.txt"});\par
-00169         Matriz multi = leitura({\cf22 "MatrixMulti.txt"});\par
-00170         std::cout << {\cf22 "Matrizes lidas com sucesso"} << std::endl;\par
-00171         {\cf20 // Executa os testes}\par
-00172         testeSoma(A, B, soma);\par
-00173         testeMultiplicacao(A, B, multi);\par
-00174         testeInsercao();    {\cf20 // Teste b\'E1sico de inser\'E7\'E3o}\par
-00175         testePerformance(); {\cf20 // Teste de performance para matrizes grandes}\par
-00176     \}\par
-00177     {\cf19 catch} ({\cf17 const} std::runtime_error &e)\par
-00178     \{\par
-00179         std::cerr << {\cf22 "Erro main: "} << e.what() << std::endl;\par
-00180     \}\par
-00181 \par
-00182     {\cf19 return} 0;\par
-00183 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00215 \{\par
+00216     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
+00217 \par
+00218     {\cf19 try}\par
+00219     \{\par
+00220         {\cf20 // Verificando se os arquivos existem}\par
+00221         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix1.txt"}))\par
+00222         \{\par
+00223             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix1.txt n\'E3o encontrado."});\par
+00224         \}\par
+00225         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix2.txt"}))\par
+00226         \{\par
+00227             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix2.txt n\'E3o encontrado."});\par
+00228         \}\par
+00229         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/MatrixResult.txt"}))\par
+00230         \{\par
+00231             {\cf19 throw} std::runtime_error({\cf22 "Arquivo MatrixResult.txt n\'E3o encontrado."});\par
+00232         \}\par
+00233 \par
+00234         {\cf20 // L\'EA as matrizes de arquivos}\par
+00235         Matriz A = leitura({\cf22 "Matrix1.txt"});\par
+00236         Matriz B = leitura({\cf22 "Matrix2.txt"});\par
+00237         Matriz soma = leitura({\cf22 "MatrixResult.txt"});\par
+00238         Matriz multi = leitura({\cf22 "MatrixMulti.txt"});\par
+00239         std::cout << {\cf22 "Matrizes lidas com sucesso"} << std::endl;\par
+00240         {\cf20 // Executa os testes}\par
+00241         testeSoma(A, B, soma);\par
+00242         testeMultiplicacao(A, B, multi);\par
+00243         testeInsercao();    {\cf20 // Teste b\'E1sico de inser\'E7\'E3o}\par
+00244         testePerformance(); {\cf20 // Teste de performance para matrizes grandes}\par
+00245     \}\par
+00246     {\cf19 catch} ({\cf17 const} std::runtime_error &e)\par
+00247     \{\par
+00248         std::cerr << {\cf22 "Erro main: "} << e.what() << std::endl;\par
+00249     \}\par
+00250 \par
+00251     {\cf19 return} 0;\par
+00252 \}\par
 }
 }
 {\xe \v testeInsercao\:TestMatriz.cpp}
@@ -3808,18 +3853,18 @@ Defini\'E7\'E3o na linha {\b 145} do arquivo {\b TestMatriz.cpp}.}\par
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
 {
-Defini\'E7\'E3o na linha {\b 10} do arquivo {\b TestMatriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 18} do arquivo {\b TestMatriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00011 \{\par
-00012     Matriz matriz(5, 5);\par
-00013     matriz.insert(1, 1, 1);\par
-00014     assert(matriz.get(1, 1) == 1); {\cf20 // Garantir que o valor foi inserido corretamente}\par
-00015     matriz.insert(5, 5, 2);\par
-00016     assert(matriz.get(5, 5) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
-00017     matriz.insert(3, 2, 2);\par
-00018     assert(matriz.get(3, 2) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
-00019     std::cout << {\cf22 "Teste de inser\'E7\'E3o passou"} << std::endl;\par
-00020 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00019 \{\par
+00020     Matriz matriz(5, 5);\par
+00021     matriz.insert(1, 1, 1);\par
+00022     assert(matriz.get(1, 1) == 1); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+00023     matriz.insert(5, 5, 2);\par
+00024     assert(matriz.get(5, 5) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+00025     matriz.insert(3, 2, 2);\par
+00026     assert(matriz.get(3, 2) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+00027     std::cout << {\cf22 "Teste de inser\'E7\'E3o passou"} << std::endl;\par
+00028 \}\par
 }
 }
 {\xe \v testeMultiplicacao\:TestMatriz.cpp}
@@ -3834,33 +3879,33 @@ Defini\'E7\'E3o na linha {\b 10} do arquivo {\b TestMatriz.cpp}.}\par
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
 {
-Defini\'E7\'E3o na linha {\b 52} do arquivo {\b TestMatriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 82} do arquivo {\b TestMatriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00053 \{\par
-00054     Matriz D = multiply(A, B);\par
-00055 \par
-00056     {\cf20 // Verificando as dimens\'F5es}\par
-00057     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
-00058     \{\par
-00059         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na multiplica\'E7\'E3o das matrizes."});\par
-00060     \}\par
-00061 \par
-00062     {\cf20 // Verificando cada valor da matriz resultante}\par
-00063     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
-00064     \{\par
-00065         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
-00066         \{\par
-00067             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
-00068             \{\par
-00069                 {\cf19 throw} std::runtime_error({\cf22 "Erro na multiplica\'E7\'E3o das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
-00070                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
-00071                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
-00072             \}\par
-00073         \}\par
-00074     \}\par
-00075 \par
-00076     std::cout << {\cf22 "Teste de multiplica\'E7\'E3o passou"} << std::endl;\par
-00077 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00083 \{\par
+00084     Matriz D = multiply(A, B);\par
+00085 \par
+00086     {\cf20 // Verificando as dimens\'F5es}\par
+00087     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
+00088     \{\par
+00089         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na multiplica\'E7\'E3o das matrizes."});\par
+00090     \}\par
+00091 \par
+00092     {\cf20 // Verificando cada valor da matriz resultante}\par
+00093     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
+00094     \{\par
+00095         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
+00096         \{\par
+00097             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
+00098             \{\par
+00099                 {\cf19 throw} std::runtime_error({\cf22 "Erro na multiplica\'E7\'E3o das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
+00100                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
+00101                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
+00102             \}\par
+00103         \}\par
+00104     \}\par
+00105 \par
+00106     std::cout << {\cf22 "Teste de multiplica\'E7\'E3o passou"} << std::endl;\par
+00107 \}\par
 }
 }
 {\xe \v testePerformance\:TestMatriz.cpp}
@@ -3875,39 +3920,65 @@ Defini\'E7\'E3o na linha {\b 52} do arquivo {\b TestMatriz.cpp}.}\par
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
 {
-Defini\'E7\'E3o na linha {\b 112} do arquivo {\b TestMatriz.cpp}.}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Testa a performance das opera\'E7\'F5es de soma e multiplica\'E7\'E3o de matrizes. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Esta fun\'E7\'E3o cria duas matrizes A e B de tamanho 100x100, preenche-as com valores espec\'EDficos, e ent\'E3o mede o tempo necess\'E1rio para realizar a soma e a multiplica\'E7\'E3o dessas matrizes.\par
+A matriz A \'E9 preenchida com valores onde cada elemento \'E9 a soma dos \'EDndices de linha e coluna (i + j). A matriz B \'E9 preenchida com valores onde cada elemento \'E9 a diferen\'E7a dos \'EDndices de linha e coluna (i - j).\par
+A fun\'E7\'E3o utiliza a biblioteca <chrono> para medir o tempo de execu\'E7\'E3o das opera\'E7\'F5es de soma e multiplica\'E7\'E3o.\par
+Passos executados pela fun\'E7\'E3o:{
+\par
+\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
+1.\tab Cria duas matrizes A e B de tamanho 100x100.\par
+\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
+2.\tab Preenche as matrizes A e B com valores espec\'EDficos.\par
+\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
+3.\tab Exibe uma mensagem indicando que as matrizes foram preenchidas com sucesso.\par
+\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
+4.\tab Mede o tempo necess\'E1rio para somar as matrizes A e B.\par
+\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
+5.\tab Exibe o tempo de execu\'E7\'E3o da soma.\par
+\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
+6.\tab Mede o tempo necess\'E1rio para multiplicar as matrizes A e B.\par
+\pard\plain \s141\fi-360\li720\widctlpar\fs20\cgrid 
+7.\tab Exibe o tempo de execu\'E7\'E3o da multiplica\'E7\'E3o.\par}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+void \par
+}}}{
+Defini\'E7\'E3o na linha {\b 174} do arquivo {\b TestMatriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00113 \{\par
-00114     Matriz A(100, 100);\par
-00115     Matriz B(100, 100);\par
-00116 \par
-00117     {\cf20 // Preenche as matrizes com valores}\par
-00118     {\cf19 for} ({\cf18 int} i = 1; i <= A.getLinhas(); ++i)\par
-00119     \{\par
-00120         {\cf19 for} ({\cf18 int} j = 1; j <= A.getColunas(); ++j)\par
-00121         \{\par
-00122             A.insert(i, j, i + j);\par
-00123             B.insert(i, j, i - j);\par
-00124         \}\par
-00125     \}\par
-00126     std::cout << {\cf22 "Matrizes preenchidas com sucesso"} << std::endl;\par
-00127 \par
-00128     std::cout << {\cf22 "Iniciando teste de performance"} << std::endl;\par
-00129 \par
-00130     {\cf17 auto} inicio = std::chrono::high_resolution_clock::now();\par
-00131     Matriz soma = sum(A, B); {\cf20 // Soma as matrizes}\par
-00132     {\cf17 auto} fim = std::chrono::high_resolution_clock::now();\par
-00133 \par
-00134     {\cf17 auto} duracao = std::chrono::duration_cast<std::chrono::milliseconds>(fim - inicio);\par
-00135     std::cout << {\cf22 "Tempo para Soma: "} << duracao.count() << {\cf22 "ms"} << std::endl;\par
-00136 \par
-00137     {\cf17 auto} inicio2 = std::chrono::high_resolution_clock::now();\par
-00138     Matriz multi = multiply(A, B); {\cf20 // Soma as matrizes}\par
-00139     {\cf17 auto} fim2 = std::chrono::high_resolution_clock::now();\par
-00140 \par
-00141     {\cf17 auto} duracao2 = std::chrono::duration_cast<std::chrono::milliseconds>(fim2 - inicio2);\par
-00142     std::cout << {\cf22 "Tempo para Multipli\'E7\'E3o: "} << duracao2.count() << {\cf22 "ms"} << std::endl;\par
-00143 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00175 \{\par
+00176     Matriz A(100, 100);\par
+00177     Matriz B(100, 100);\par
+00178 \par
+00179     {\cf20 // Preenche as matrizes com valores}\par
+00180     {\cf19 for} ({\cf18 int} i = 1; i <= A.getLinhas(); ++i)\par
+00181     \{\par
+00182         {\cf19 for} ({\cf18 int} j = 1; j <= A.getColunas(); ++j)\par
+00183         \{\par
+00184             A.insert(i, j, i + j);\par
+00185             B.insert(i, j, i - j);\par
+00186         \}\par
+00187     \}\par
+00188     std::cout << {\cf22 "Matrizes preenchidas com sucesso"} << std::endl;\par
+00189 \par
+00190     std::cout << {\cf22 "Iniciando teste de performance"} << std::endl;\par
+00191 \par
+00192     {\cf17 auto} inicio = std::chrono::high_resolution_clock::now();\par
+00193     Matriz soma = sum(A, B); {\cf20 // Soma as matrizes}\par
+00194     {\cf17 auto} fim = std::chrono::high_resolution_clock::now();\par
+00195 \par
+00196     {\cf17 auto} duracao = std::chrono::duration_cast<std::chrono::milliseconds>(fim - inicio);\par
+00197     std::cout << {\cf22 "Tempo para Soma: "} << duracao.count() << {\cf22 "ms"} << std::endl;\par
+00198 \par
+00199     {\cf17 auto} inicio2 = std::chrono::high_resolution_clock::now();\par
+00200     Matriz multi = multiply(A, B); {\cf20 // Soma as matrizes}\par
+00201     {\cf17 auto} fim2 = std::chrono::high_resolution_clock::now();\par
+00202 \par
+00203     {\cf17 auto} duracao2 = std::chrono::duration_cast<std::chrono::milliseconds>(fim2 - inicio2);\par
+00204     std::cout << {\cf22 "Tempo para Multipli\'E7\'E3o: "} << duracao2.count() << {\cf22 "ms"} << std::endl;\par
+00205 \}\par
 }
 }
 {\xe \v testeSoma\:TestMatriz.cpp}
@@ -3922,34 +3993,34 @@ Defini\'E7\'E3o na linha {\b 112} do arquivo {\b TestMatriz.cpp}.}\par
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 \par
 {
-Defini\'E7\'E3o na linha {\b 23} do arquivo {\b TestMatriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 42} do arquivo {\b TestMatriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00024 \{\par
-00025 \par
-00026     Matriz D = sum(A, B);\par
-00027 \par
-00028     {\cf20 // Verificando as dimens\'F5es}\par
-00029     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
-00030     \{\par
-00031         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na soma das matrizes."});\par
-00032     \}\par
-00033 \par
-00034     {\cf20 // Verificando cada valor da matriz resultante}\par
-00035     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
-00036     \{\par
-00037         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
-00038         \{\par
-00039             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
-00040             \{\par
-00041                 {\cf19 throw} std::runtime_error({\cf22 "Erro na soma das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
-00042                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
-00043                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
-00044             \}\par
-00045         \}\par
-00046     \}\par
-00047 \par
-00048     std::cout << {\cf22 "Teste de soma passou"} << std::endl;\par
-00049 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00043 \{\par
+00044 \par
+00045     Matriz D = sum(A, B);\par
+00046 \par
+00047     {\cf20 // Verificando as dimens\'F5es}\par
+00048     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
+00049     \{\par
+00050         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na soma das matrizes."});\par
+00051     \}\par
+00052 \par
+00053     {\cf20 // Verificando cada valor da matriz resultante}\par
+00054     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
+00055     \{\par
+00056         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
+00057         \{\par
+00058             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
+00059             \{\par
+00060                 {\cf19 throw} std::runtime_error({\cf22 "Erro na soma das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
+00061                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
+00062                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
+00063             \}\par
+00064         \}\par
+00065     \}\par
+00066 \par
+00067     std::cout << {\cf22 "Teste de soma passou"} << std::endl;\par
+00068 \}\par
 }
 }
 \par \pard\plain 
@@ -3972,181 +4043,220 @@ Ir para a documenta\'E7\'E3o desse arquivo.\par
 00006 {\cf21 #include <cassert>}\par
 00007 {\cf21 #include "utils/utils.hpp"}\par
 00008 \par
-00009 {\cf20 // Fun\'E7\'E3o de teste de inser\'E7\'E3o}\par
-00010 {\cf18 void} testeInsercao()\par
-00011 \{\par
-00012     Matriz matriz(5, 5);\par
-00013     matriz.insert(1, 1, 1);\par
-00014     assert(matriz.get(1, 1) == 1); {\cf20 // Garantir que o valor foi inserido corretamente}\par
-00015     matriz.insert(5, 5, 2);\par
-00016     assert(matriz.get(5, 5) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
-00017     matriz.insert(3, 2, 2);\par
-00018     assert(matriz.get(3, 2) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
-00019     std::cout << {\cf22 "Teste de inser\'E7\'E3o passou"} << std::endl;\par
-00020 \}\par
-00021 \par
-00022 {\cf20 // Fun\'E7\'E3o de teste de soma de matrizes}\par
-00023 {\cf18 void} testeSoma({\cf17 const} Matriz &A, {\cf17 const} Matriz &B, {\cf17 const} Matriz &soma)\par
-00024 \{\par
-00025 \par
-00026     Matriz D = sum(A, B);\par
-00027 \par
-00028     {\cf20 // Verificando as dimens\'F5es}\par
-00029     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
-00030     \{\par
-00031         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na soma das matrizes."});\par
-00032     \}\par
-00033 \par
-00034     {\cf20 // Verificando cada valor da matriz resultante}\par
-00035     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
-00036     \{\par
-00037         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
-00038         \{\par
-00039             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
-00040             \{\par
-00041                 {\cf19 throw} std::runtime_error({\cf22 "Erro na soma das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
-00042                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
-00043                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
-00044             \}\par
-00045         \}\par
-00046     \}\par
-00047 \par
-00048     std::cout << {\cf22 "Teste de soma passou"} << std::endl;\par
-00049 \}\par
-00050 \par
-00051 {\cf20 // Fun\'E7\'E3o de teste de multiplica\'E7\'E3o de matrizes}\par
-00052 {\cf18 void} testeMultiplicacao({\cf17 const} Matriz &A, {\cf17 const} Matriz &B, {\cf17 const} Matriz &soma)\par
-00053 \{\par
-00054     Matriz D = multiply(A, B);\par
-00055 \par
-00056     {\cf20 // Verificando as dimens\'F5es}\par
-00057     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
-00058     \{\par
-00059         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na multiplica\'E7\'E3o das matrizes."});\par
-00060     \}\par
-00061 \par
-00062     {\cf20 // Verificando cada valor da matriz resultante}\par
-00063     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
-00064     \{\par
-00065         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
-00066         \{\par
-00067             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
-00068             \{\par
-00069                 {\cf19 throw} std::runtime_error({\cf22 "Erro na multiplica\'E7\'E3o das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
-00070                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
-00071                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
-00072             \}\par
-00073         \}\par
-00074     \}\par
-00075 \par
-00076     std::cout << {\cf22 "Teste de multiplica\'E7\'E3o passou"} << std::endl;\par
-00077 \}\par
-00078 \par
-00079 {\cf20 // Fun\'E7\'E3o para ler uma matriz de um arquivo}\par
-00080 Matriz leitura({\cf17 const} std::string &arquivo)\par
-00081 \{\par
-00082     std::ifstream file({\cf22 "tests/arquivosTestes/"} + arquivo); {\cf20 // Abre o arquivo}\par
-00083     {\cf19 if} (!file.is_open())\par
-00084     \{\par
-00085         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo: "} + arquivo);\par
-00086     \}\par
-00087 \par
-00088     {\cf18 int} linhas, colunas;\par
-00089     file >> linhas >> colunas;\par
-00090 \par
-00091     Matriz matriz(linhas, colunas);\par
-00092 \par
-00093     {\cf18 int} linha, coluna;\par
-00094     {\cf18 double} valor;\par
-00095     {\cf19 while} (file >> linha >> coluna >> valor)\par
-00096     \{                                        {\cf20 // L\'EA os valores da matriz}\par
-00097         matriz.insert(linha, coluna, valor); {\cf20 // Insere na matriz}\par
-00098     \}\par
-00099 \par
-00100     file.close(); {\cf20 // Fecha o arquivo}\par
-00101     {\cf19 return} matriz;\par
-00102 \}\par
-00103 \par
-00104 {\cf20 // Fun\'E7\'E3o para verificar se um arquivo existe}\par
-00105 {\cf18 bool} arquivoExiste({\cf17 const} std::string &caminho)\par
-00106 \{\par
-00107     std::ifstream file(caminho);\par
-00108     {\cf19 return} file.good();\par
-00109 \}\par
-00110 \par
-00111 {\cf20 // Fun\'E7\'E3o para medir a performance}\par
-00112 {\cf18 void} testePerformance()\par
-00113 \{\par
-00114     Matriz A(100, 100);\par
-00115     Matriz B(100, 100);\par
-00116 \par
-00117     {\cf20 // Preenche as matrizes com valores}\par
-00118     {\cf19 for} ({\cf18 int} i = 1; i <= A.getLinhas(); ++i)\par
+00009 {\cf20 /*}\par
+00010 {\cf20  *   @brief Fun\'E7\'E3o de teste de inser\'E7\'E3o de valores na matriz.}\par
+00011 {\cf20  *}\par
+00012 {\cf20  *  Esta fun\'E7\'E3o cria uma matriz 5x5 e insere valores em posi\'E7\'F5es espec\'EDficas.}\par
+00013 {\cf20  *  Em seguida, a fun\'E7\'E3o verifica se os valores foram inseridos corretamente.}\par
+00014 {\cf20  * Se algum valor n\'E3o for inserido corretamente, a fun\'E7\'E3o lan\'E7a uma exce\'E7\'E3o.}\par
+00015 {\cf20  *}\par
+00016 {\cf20  *   @throw std::runtime_error Se algum valor n\'E3o for inserido corretamente.}\par
+00017 {\cf20  */}\par
+00018 {\cf18 void} testeInsercao()\par
+00019 \{\par
+00020     Matriz matriz(5, 5);\par
+00021     matriz.insert(1, 1, 1);\par
+00022     assert(matriz.get(1, 1) == 1); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+00023     matriz.insert(5, 5, 2);\par
+00024     assert(matriz.get(5, 5) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+00025     matriz.insert(3, 2, 2);\par
+00026     assert(matriz.get(3, 2) == 2); {\cf20 // Garantir que o valor foi inserido corretamente}\par
+00027     std::cout << {\cf22 "Teste de inser\'E7\'E3o passou"} << std::endl;\par
+00028 \}\par
+00029 \par
+00030 {\cf20 /*}\par
+00031 {\cf20  *    @brief Fun\'E7\'E3o de teste de soma de matrizes.}\par
+00032 {\cf20  *}\par
+00033 {\cf20  *   Esta fun\'E7\'E3o recebe duas matrizes A e B e a matriz resultante da soma dessas matrizes.}\par
+00034 {\cf20  *  A fun\'E7\'E3o calcula a soma das matrizes A e B e compara com a matriz resultante esperada.}\par
+00035 {\cf20  * Se a matriz resultante da soma for diferente da matriz esperada, a fun\'E7\'E3o lan\'E7a uma exce\'E7\'E3o.}\par
+00036 {\cf20  *}\par
+00037 {\cf20  *   @param A Matriz A.}\par
+00038 {\cf20  *  @param B Matriz B.}\par
+00039 {\cf20  *}\par
+00040 {\cf20  *   @throw std::runtime_error Se a matriz resultante da soma for diferente da matriz esperada.}\par
+00041 {\cf20  */}\par
+00042 {\cf18 void} testeSoma({\cf17 const} Matriz &A, {\cf17 const} Matriz &B, {\cf17 const} Matriz &soma)\par
+00043 \{\par
+00044 \par
+00045     Matriz D = sum(A, B);\par
+00046 \par
+00047     {\cf20 // Verificando as dimens\'F5es}\par
+00048     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
+00049     \{\par
+00050         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na soma das matrizes."});\par
+00051     \}\par
+00052 \par
+00053     {\cf20 // Verificando cada valor da matriz resultante}\par
+00054     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
+00055     \{\par
+00056         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
+00057         \{\par
+00058             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
+00059             \{\par
+00060                 {\cf19 throw} std::runtime_error({\cf22 "Erro na soma das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
+00061                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
+00062                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
+00063             \}\par
+00064         \}\par
+00065     \}\par
+00066 \par
+00067     std::cout << {\cf22 "Teste de soma passou"} << std::endl;\par
+00068 \}\par
+00069 \par
+00070 {\cf20 /*}\par
+00071 {\cf20  *    @brief Fun\'E7\'E3o de teste de multiplica\'E7\'E3o de matrizes.}\par
+00072 {\cf20  *}\par
+00073 {\cf20  *   Esta fun\'E7\'E3o recebe duas matrizes A e B e a matriz resultante da multiplica\'E7\'E3o dessas matrizes.}\par
+00074 {\cf20  *  A fun\'E7\'E3o calcula a multiplica\'E7\'E3o das matrizes A e B e compara com a matriz resultante esperada.}\par
+00075 {\cf20  * Se a matriz resultante da multiplica\'E7\'E3o for diferente da matriz esperada, a fun\'E7\'E3o lan\'E7a uma exce\'E7\'E3o.}\par
+00076 {\cf20  *}\par
+00077 {\cf20  *   @param A Matriz A.}\par
+00078 {\cf20  *  @param B Matriz B.}\par
+00079 {\cf20  *}\par
+00080 {\cf20  *   @throw std::runtime_error Se a matriz resultante da multiplica\'E7\'E3o for diferente da matriz esperada.}\par
+00081 {\cf20  */}\par
+00082 {\cf18 void} testeMultiplicacao({\cf17 const} Matriz &A, {\cf17 const} Matriz &B, {\cf17 const} Matriz &soma)\par
+00083 \{\par
+00084     Matriz D = multiply(A, B);\par
+00085 \par
+00086     {\cf20 // Verificando as dimens\'F5es}\par
+00087     {\cf19 if} (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())\par
+00088     \{\par
+00089         {\cf19 throw} std::runtime_error({\cf22 "Erro: Dimens\'F5es incorretas na multiplica\'E7\'E3o das matrizes."});\par
+00090     \}\par
+00091 \par
+00092     {\cf20 // Verificando cada valor da matriz resultante}\par
+00093     {\cf19 for} ({\cf18 int} i = 1; i <= soma.getLinhas(); i++)\par
+00094     \{\par
+00095         {\cf19 for} ({\cf18 int} j = 1; j <= soma.getColunas(); j++)\par
+00096         \{\par
+00097             {\cf19 if} (D.get(i, j) != soma.get(i, j))\par
+00098             \{\par
+00099                 {\cf19 throw} std::runtime_error({\cf22 "Erro na multiplica\'E7\'E3o das matrizes: Valor incorreto na posi\'E7\'E3o ("} +\par
+00100                                          std::to_string(i) + {\cf22 ", "} + std::to_string(j) + {\cf22 "). Esperado: "} +\par
+00101                                          std::to_string(soma.get(i, j)) + {\cf22 ", Obtido: "} + std::to_string(D.get(i, j)));\par
+00102             \}\par
+00103         \}\par
+00104     \}\par
+00105 \par
+00106     std::cout << {\cf22 "Teste de multiplica\'E7\'E3o passou"} << std::endl;\par
+00107 \}\par
+00108 \par
+00109 {\cf20 /*}\par
+00110 {\cf20  * @brief Fun\'E7\'E3o para ler uma matriz de um arquivo.}\par
+00111 {\cf20  *}\par
+00112 {\cf20  * @param arquivo Nome do arquivo a ser lido.}\par
+00113 {\cf20  * @return Matriz Matriz lida do arquivo.}\par
+00114 {\cf20  */}\par
+00115 Matriz leitura({\cf17 const} std::string &arquivo)\par
+00116 \{\par
+00117     std::ifstream file({\cf22 "tests/arquivosTestes/"} + arquivo); {\cf20 // Abre o arquivo}\par
+00118     {\cf19 if} (!file.is_open())\par
 00119     \{\par
-00120         {\cf19 for} ({\cf18 int} j = 1; j <= A.getColunas(); ++j)\par
-00121         \{\par
-00122             A.insert(i, j, i + j);\par
-00123             B.insert(i, j, i - j);\par
-00124         \}\par
-00125     \}\par
-00126     std::cout << {\cf22 "Matrizes preenchidas com sucesso"} << std::endl;\par
+00120         {\cf19 throw} std::runtime_error({\cf22 "Erro ao abrir o arquivo: "} + arquivo);\par
+00121     \}\par
+00122 \par
+00123     {\cf18 int} linhas, colunas;\par
+00124     file >> linhas >> colunas;\par
+00125 \par
+00126     Matriz matriz(linhas, colunas);\par
 00127 \par
-00128     std::cout << {\cf22 "Iniciando teste de performance"} << std::endl;\par
-00129 \par
-00130     {\cf17 auto} inicio = std::chrono::high_resolution_clock::now();\par
-00131     Matriz soma = sum(A, B); {\cf20 // Soma as matrizes}\par
-00132     {\cf17 auto} fim = std::chrono::high_resolution_clock::now();\par
-00133 \par
-00134     {\cf17 auto} duracao = std::chrono::duration_cast<std::chrono::milliseconds>(fim - inicio);\par
-00135     std::cout << {\cf22 "Tempo para Soma: "} << duracao.count() << {\cf22 "ms"} << std::endl;\par
-00136 \par
-00137     {\cf17 auto} inicio2 = std::chrono::high_resolution_clock::now();\par
-00138     Matriz multi = multiply(A, B); {\cf20 // Soma as matrizes}\par
-00139     {\cf17 auto} fim2 = std::chrono::high_resolution_clock::now();\par
-00140 \par
-00141     {\cf17 auto} duracao2 = std::chrono::duration_cast<std::chrono::milliseconds>(fim2 - inicio2);\par
-00142     std::cout << {\cf22 "Tempo para Multipli\'E7\'E3o: "} << duracao2.count() << {\cf22 "ms"} << std::endl;\par
-00143 \}\par
-00144 \par
-00145 {\cf18 int} main()\par
+00128     {\cf18 int} linha, coluna;\par
+00129     {\cf18 double} valor;\par
+00130     {\cf19 while} (file >> linha >> coluna >> valor)\par
+00131     \{                                        {\cf20 // L\'EA os valores da matriz}\par
+00132         matriz.insert(linha, coluna, valor); {\cf20 // Insere na matriz}\par
+00133     \}\par
+00134 \par
+00135     file.close(); {\cf20 // Fecha o arquivo}\par
+00136     {\cf19 return} matriz;\par
+00137 \}\par
+00138 \par
+00139 {\cf20 /*}\par
+00140 {\cf20  * @brief fun\'E7\'E3o para verificar se um arquivo existe}\par
+00141 {\cf20  *}\par
+00142 {\cf20  * @param caminho Caminho do arquivo a ser verificado.}\par
+00143 {\cf20  * @return bool Verdadeiro se o arquivo existir, falso caso contr\'E1rio.}\par
+00144 {\cf20  */}\par
+00145 {\cf18 bool} arquivoExiste({\cf17 const} std::string &caminho)\par
 00146 \{\par
-00147     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
-00148 \par
-00149     {\cf19 try}\par
-00150     \{\par
-00151         {\cf20 // Verificando se os arquivos existem}\par
-00152         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix1.txt"}))\par
-00153         \{\par
-00154             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix1.txt n\'E3o encontrado."});\par
-00155         \}\par
-00156         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix2.txt"}))\par
-00157         \{\par
-00158             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix2.txt n\'E3o encontrado."});\par
-00159         \}\par
-00160         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/MatrixResult.txt"}))\par
-00161         \{\par
-00162             {\cf19 throw} std::runtime_error({\cf22 "Arquivo MatrixResult.txt n\'E3o encontrado."});\par
-00163         \}\par
-00164 \par
-00165         {\cf20 // L\'EA as matrizes de arquivos}\par
-00166         Matriz A = leitura({\cf22 "Matrix1.txt"});\par
-00167         Matriz B = leitura({\cf22 "Matrix2.txt"});\par
-00168         Matriz soma = leitura({\cf22 "MatrixResult.txt"});\par
-00169         Matriz multi = leitura({\cf22 "MatrixMulti.txt"});\par
-00170         std::cout << {\cf22 "Matrizes lidas com sucesso"} << std::endl;\par
-00171         {\cf20 // Executa os testes}\par
-00172         testeSoma(A, B, soma);\par
-00173         testeMultiplicacao(A, B, multi);\par
-00174         testeInsercao();    {\cf20 // Teste b\'E1sico de inser\'E7\'E3o}\par
-00175         testePerformance(); {\cf20 // Teste de performance para matrizes grandes}\par
-00176     \}\par
-00177     {\cf19 catch} ({\cf17 const} std::runtime_error &e)\par
-00178     \{\par
-00179         std::cerr << {\cf22 "Erro main: "} << e.what() << std::endl;\par
-00180     \}\par
-00181 \par
-00182     {\cf19 return} 0;\par
-00183 \}\par
+00147     std::ifstream file(caminho);\par
+00148     {\cf19 return} file.good();\par
+00149 \}\par
+00150 \par
+00174 {\cf18 void} testePerformance()\par
+00175 \{\par
+00176     Matriz A(100, 100);\par
+00177     Matriz B(100, 100);\par
+00178 \par
+00179     {\cf20 // Preenche as matrizes com valores}\par
+00180     {\cf19 for} ({\cf18 int} i = 1; i <= A.getLinhas(); ++i)\par
+00181     \{\par
+00182         {\cf19 for} ({\cf18 int} j = 1; j <= A.getColunas(); ++j)\par
+00183         \{\par
+00184             A.insert(i, j, i + j);\par
+00185             B.insert(i, j, i - j);\par
+00186         \}\par
+00187     \}\par
+00188     std::cout << {\cf22 "Matrizes preenchidas com sucesso"} << std::endl;\par
+00189 \par
+00190     std::cout << {\cf22 "Iniciando teste de performance"} << std::endl;\par
+00191 \par
+00192     {\cf17 auto} inicio = std::chrono::high_resolution_clock::now();\par
+00193     Matriz soma = sum(A, B); {\cf20 // Soma as matrizes}\par
+00194     {\cf17 auto} fim = std::chrono::high_resolution_clock::now();\par
+00195 \par
+00196     {\cf17 auto} duracao = std::chrono::duration_cast<std::chrono::milliseconds>(fim - inicio);\par
+00197     std::cout << {\cf22 "Tempo para Soma: "} << duracao.count() << {\cf22 "ms"} << std::endl;\par
+00198 \par
+00199     {\cf17 auto} inicio2 = std::chrono::high_resolution_clock::now();\par
+00200     Matriz multi = multiply(A, B); {\cf20 // Soma as matrizes}\par
+00201     {\cf17 auto} fim2 = std::chrono::high_resolution_clock::now();\par
+00202 \par
+00203     {\cf17 auto} duracao2 = std::chrono::duration_cast<std::chrono::milliseconds>(fim2 - inicio2);\par
+00204     std::cout << {\cf22 "Tempo para Multipli\'E7\'E3o: "} << duracao2.count() << {\cf22 "ms"} << std::endl;\par
+00205 \}\par
+00206 \par
+00214 {\cf18 int} main()\par
+00215 \{\par
+00216     setlocale(LC_ALL, {\cf22 "pt_BR.UTF-8"});\par
+00217 \par
+00218     {\cf19 try}\par
+00219     \{\par
+00220         {\cf20 // Verificando se os arquivos existem}\par
+00221         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix1.txt"}))\par
+00222         \{\par
+00223             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix1.txt n\'E3o encontrado."});\par
+00224         \}\par
+00225         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/Matrix2.txt"}))\par
+00226         \{\par
+00227             {\cf19 throw} std::runtime_error({\cf22 "Arquivo Matrix2.txt n\'E3o encontrado."});\par
+00228         \}\par
+00229         {\cf19 if} (!arquivoExiste({\cf22 "tests/arquivosTestes/MatrixResult.txt"}))\par
+00230         \{\par
+00231             {\cf19 throw} std::runtime_error({\cf22 "Arquivo MatrixResult.txt n\'E3o encontrado."});\par
+00232         \}\par
+00233 \par
+00234         {\cf20 // L\'EA as matrizes de arquivos}\par
+00235         Matriz A = leitura({\cf22 "Matrix1.txt"});\par
+00236         Matriz B = leitura({\cf22 "Matrix2.txt"});\par
+00237         Matriz soma = leitura({\cf22 "MatrixResult.txt"});\par
+00238         Matriz multi = leitura({\cf22 "MatrixMulti.txt"});\par
+00239         std::cout << {\cf22 "Matrizes lidas com sucesso"} << std::endl;\par
+00240         {\cf20 // Executa os testes}\par
+00241         testeSoma(A, B, soma);\par
+00242         testeMultiplicacao(A, B, multi);\par
+00243         testeInsercao();    {\cf20 // Teste b\'E1sico de inser\'E7\'E3o}\par
+00244         testePerformance(); {\cf20 // Teste de performance para matrizes grandes}\par
+00245     \}\par
+00246     {\cf19 catch} ({\cf17 const} std::runtime_error &e)\par
+00247     \{\par
+00248         std::cerr << {\cf22 "Erro main: "} << e.what() << std::endl;\par
+00249     \}\par
+00250 \par
+00251     {\cf19 return} 0;\par
+00252 \}\par
 }
 
 \pard\plain \sect\sbkpage

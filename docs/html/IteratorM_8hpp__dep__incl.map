@@ -5,9 +5,9 @@
 <area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="228,79,227,46,233,45,233,79"/>
 <area shape="rect" id="Node000003" href="$utils_8hpp.html" title=" " alt="" coords="83,167,244,192"/>
 <area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="206,131,175,168,171,165,202,128"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="5,240,148,265"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title="Programa para manipulação de matrizes esparsas." alt="" coords="5,240,148,265"/>
 <area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="134,126,100,142,74,168,67,186,66,205,74,239,69,240,61,205,62,184,69,165,97,138,132,121"/>
-<area shape="rect" id="Node000005" href="$TestMatriz_8cpp.html" title=" " alt="" coords="189,240,341,265"/>
+<area shape="rect" id="Node000005" href="$TestMatriz_8cpp.html" title="Arquivo de teste para operações com matrizes esparsas." alt="" coords="189,240,341,265"/>
 <area shape="poly" id="edge8_Node000002_Node000005" title=" " alt="" coords="241,129,259,166,267,206,268,239,262,240,261,207,254,168,236,131"/>
 <area shape="rect" id="Node000006" href="$Matriz_8cpp.html" title=" " alt="" coords="320,167,479,192"/>
 <area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="264,121,371,164,369,169,262,126"/>
