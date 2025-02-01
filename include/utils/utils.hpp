@@ -62,7 +62,7 @@ Matriz multiply(const Matriz &matrizA, const Matriz &matrizB)
     // Verificação se a multiplicação é possível
     if (matrizA.getColunas() != matrizB.getLinhas())
     {
-        throw std::invalid_argument("Erro: As matrizes precisam ter o mesmo número de colunas e linhas");
+        throw std::invalid_argument("Erro: A matriz A precisa possui o número de colunas iguais ao número de linhas");
     }
 
     // Criando a matriz resultante (C)

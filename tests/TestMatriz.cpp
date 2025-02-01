@@ -79,26 +79,26 @@ void testeSoma(const Matriz &A, const Matriz &B, const Matriz &soma)
  *
  *   @throw std::runtime_error Se a matriz resultante da multiplicação for diferente da matriz esperada.
  */
-void testeMultiplicacao(const Matriz &A, const Matriz &B, const Matriz &soma)
+void testeMultiplicacao(const Matriz &A, const Matriz &B, const Matriz &multi)
 {
     Matriz D = multiply(A, B);
 
     // Verificando as dimensões
-    if (D.getColunas() != soma.getColunas() || D.getLinhas() != soma.getLinhas())
+    if (D.getColunas() != multi.getColunas() || D.getLinhas() != multi.getLinhas())
     {
         throw std::runtime_error("Erro: Dimensões incorretas na multiplicação das matrizes.");
     }
 
     // Verificando cada valor da matriz resultante
-    for (int i = 1; i <= soma.getLinhas(); i++)
+    for (int i = 1; i <= multi.getLinhas(); i++)
     {
-        for (int j = 1; j <= soma.getColunas(); j++)
+        for (int j = 1; j <= multi.getColunas(); j++)
         {
-            if (D.get(i, j) != soma.get(i, j))
+            if (D.get(i, j) != multi.get(i, j))
             {
                 throw std::runtime_error("Erro na multiplicação das matrizes: Valor incorreto na posição (" +
                                          std::to_string(i) + ", " + std::to_string(j) + "). Esperado: " +
-                                         std::to_string(soma.get(i, j)) + ", Obtido: " + std::to_string(D.get(i, j)));
+                                         std::to_string(multi.get(i, j)) + ", Obtido: " + std::to_string(D.get(i, j)));
             }
         }
     }
@@ -226,22 +226,70 @@ int main()
         {
             throw std::runtime_error("Arquivo Matrix2.txt não encontrado.");
         }
-        if (!arquivoExiste("tests/arquivosTestes/MatrixResult.txt"))
+        if (!arquivoExiste("tests/arquivosTestes/MatrixSoma1.txt"))
         {
-            throw std::runtime_error("Arquivo MatrixResult.txt não encontrado.");
+            throw std::runtime_error("Arquivo MatrixSoma1.txt não encontrado.");
         }
-
+        if (!arquivoExiste("tests/arquivosTestes/MatrixMulti1.txt"))
+        {
+            throw std::runtime_error("Arquivo MatrizMulti.txt não encontrado.");
+        }
+        if (!arquivoExiste("tests/arquivosTestes/Matrix3.txt"))
+        {
+            throw std::runtime_error("Arquivo Matriz3.txt não encontrado.");
+        }
+        if (!arquivoExiste("tests/arquivosTestes/MatrixSoma2.txt"))
+        {
+            throw std::runtime_error("Arquivo MatrixSoma1.txt não encontrado.");
+        }
+        if (!arquivoExiste("tests/arquivosTestes/MatrixMulti2.txt"))
+        {
+            throw std::runtime_error("Arquivo MatrizMulti.txt não encontrado.");
+        }
+        
         // Lê as matrizes de arquivos
         Matriz A = leitura("Matrix1.txt");
         Matriz B = leitura("Matrix2.txt");
-        Matriz soma = leitura("MatrixResult.txt");
-        Matriz multi = leitura("MatrixMulti.txt");
         std::cout << "Matrizes lidas com sucesso" << std::endl;
+
+        std::cout << "Teste 1 usando matrizes com o mesmo tamanho 3x3" << std::endl;
+        Matriz soma = leitura("MatrixSoma1.txt");
+        Matriz multi = leitura("MatrixMulti1.txt");
         // Executa os testes
         testeSoma(A, B, soma);
         testeMultiplicacao(A, B, multi);
+
+        std::cout << "Teste 2 usando matrizes com tamanho diferentes, sendo uma 3x3 e outra 4x4 " << std::endl;
+        Matriz C = leitura("Matrix3.txt");
+        soma = leitura("MatrixSoma2.txt");
+        multi = leitura("MatrixMulti2.txt");
+        std::cout << "Matrizes lidas com sucesso" << std::endl;
+
+        // Executa os testes
+        try 
+        {
+            
+            testeSoma(A, C, soma);
+            testeMultiplicacao(A, C, multi);
+
+        } 
+        catch(std::exception& e) {
+            std::cerr << e.what() << "\n";
+        }
+
+        try 
+        {
+            testeMultiplicacao(A, C, multi);
+
+        } 
+        catch(std::exception& e) {
+            std::cerr << e.what() << "\n";
+        }
+
+        std::cout << "Testes de inserção e de Performance, sendo esta com uma martriz 100x100" << std::endl;
         testeInsercao();    // Teste básico de inserção
         testePerformance(); // Teste de performance para matrizes grandes
+    
     }
     catch (const std::runtime_error &e)
     {
