@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include "matriz/Matriz.hpp"
 #include "utils/utils.hpp"
+#include "manipMatriz/manipMatriz.hpp"
 
 using string = std::string;
 using unordered_map = std::unordered_map<string, Matriz>;
@@ -15,6 +16,7 @@ using unordered_map = std::unordered_map<string, Matriz>;
 enum Opcoes // Enumeração para as opções do menu
 {
     LER_MATRIZ = 1,
+    MANIPULAR_MATRIZ,
     IMPRIMIR_MATRIZ,
     SOMAR_MATRIZES,
     MULTIPLICAR_MATRIZES,
@@ -128,10 +130,11 @@ int main()
         // Exibe o menu de opções
         std::cout << "Escolha uma opção:" << std::endl;
         std::cout << "[1] - Ler Matriz" << std::endl;
-        std::cout << "[2] - Imprimir Matriz" << std::endl;
-        std::cout << "[3] - Somar Matrizes" << std::endl;
-        std::cout << "[4] - Multiplicar Matrizes" << std::endl;
-        std::cout << "[5] - Sair" << std::endl;
+        std::cout << "[2] - Manipular Matriz" << std::endl;
+        std::cout << "[3] - Imprimir Matriz" << std::endl;
+        std::cout << "[4] - Somar Matrizes" << std::endl;
+        std::cout << "[5] - Multiplicar Matrizes" << std::endl;
+        std::cout << "[6] - Sair" << std::endl;
         int opcao;
         std::cin >> opcao;
         std::cin.ignore();
@@ -162,8 +165,41 @@ int main()
             break;
         }
 
+        case MANIPULAR_MATRIZ:
+        {
+            if (matrizes.empty())
+            {
+                std::cout << "Não há matrizes armazenadas" << std::endl;
+                break;
+            }
+
+            // Manipula uma matriz armazenada
+            printMatrizes(matrizes);
+
+            std::cout << "Qual matriz deseja manipular?" << std::endl;
+            string filename;
+            std::getline(std::cin, filename);
+
+            if (!existeMatriz(filename, matrizes))
+            {
+                std::cout << "Matriz não encontrada" << std::endl;
+                break;
+            }
+
+            std::system("cls||clear");
+            manipMatrix(matrizes[filename], filename);
+
+            break;
+        }
+
         case IMPRIMIR_MATRIZ:
         {
+            if (matrizes.empty())
+            {
+                std::cout << "Não há matrizes armazenadas" << std::endl;
+                break;
+            }
+
             // Imprime uma matriz armazenada
             std::cout << "Qual matriz deseja imprimir?" << std::endl;
             printMatrizes(matrizes);
@@ -181,6 +217,12 @@ int main()
 
         case SOMAR_MATRIZES:
         {
+            if (matrizes.empty())
+            {
+                std::cout << "Não há matrizes armazenadas" << std::endl;
+                break;
+            }
+
             // Soma duas matrizes armazenadas
             std::cout << "Quais as matrizes irá usar para somar" << std::endl;
             printMatrizes(matrizes);
@@ -212,6 +254,12 @@ int main()
 
         case MULTIPLICAR_MATRIZES:
         {
+            if (matrizes.empty())
+            {
+                std::cout << "Não há matrizes armazenadas" << std::endl;
+                break;
+            }
+
             // Multiplica duas matrizes armazenadas
             std::cout << "Quais as matrizes irá usar para multiplicar" << std::endl;
             printMatrizes(matrizes);

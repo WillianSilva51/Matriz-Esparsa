@@ -28,7 +28,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Compilador C++ instalado
 - Makefile instalado
 - Sistema operacional Windows / Linux / Mac
-- Consultou a [documentação](docs/DOCUMENTACAO.xml) do projeto
+- Consultou a [documentação](docs/latex/refman.tex) do projeto
 
 ## 🚀 Compilando a Matriz Esparsa
 
