@@ -2,6 +2,14 @@
 
 #include "matriz/Matriz.hpp"
 
+/**
+ * @file manipMatriz.hpp
+ *
+ * @brief Menu para as funções para manipulação de matrizes
+ *
+ * @param matriz Matriz a ser manipulada
+ * @param nomeMatriz Nome da matriz a ser manipulada
+ */
 void manipMatrix(Matriz &matriz, const std::string &nomeMatriz)
 {
     while (true)
@@ -73,6 +81,28 @@ void manipMatrix(Matriz &matriz, const std::string &nomeMatriz)
 
         case 3:
         {
+            std::cout << "Tem certeza que deseja limpar a matriz? [s/n]" << std::endl;
+            char confirmacao;
+            std::cin >> confirmacao;
+
+            switch (confirmacao)
+            {
+            case 's':
+            case 'S':
+                matriz.limpar();
+                std::cout << "Matriz limpa" << std::endl;
+                break;
+
+            case 'n':
+            case 'N':
+                std::cout << "Operação cancelada" << std::endl;
+                break;
+
+            default:
+                std::cout << "Opção inválida" << std::endl;
+                break;
+            }
+
             matriz.limpar();
             std::cout << "Matriz limpa" << std::endl;
             break;
@@ -80,6 +110,9 @@ void manipMatrix(Matriz &matriz, const std::string &nomeMatriz)
 
         case 4:
         {
+
+            std::cout << "Voltando..." << std::endl;
+
             return;
         }
 
