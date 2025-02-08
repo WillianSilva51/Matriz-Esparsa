@@ -97,22 +97,12 @@ void manipMatrix(Matriz &matriz, const std::string &nomeMatriz)
             case 'N':
                 std::cout << "Operação cancelada" << std::endl;
                 break;
-
-            default:
-                std::cout << "Opção inválida" << std::endl;
-                break;
             }
-
-            matriz.limpar();
-            std::cout << "Matriz limpa" << std::endl;
             break;
         }
-
         case 4:
         {
-
             std::cout << "Voltando..." << std::endl;
-
             return;
         }
 
