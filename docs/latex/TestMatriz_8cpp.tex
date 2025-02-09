@@ -26,7 +26,7 @@ Gráfico de dependência de inclusões para Test\+Matriz.\+cpp\+:\nopagebreak
 \item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} \mbox{\hyperlink{TestMatriz_8cpp_ad453eda85b2dfc4685a124e39a34955c}{teste\+Soma}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}})
 \item 
-\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} \mbox{\hyperlink{TestMatriz_8cpp_afa561a7f09e24d8ed4d09360378a6c76}{teste\+Multiplicacao}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}})
+\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} \mbox{\hyperlink{TestMatriz_8cpp_aa2c207812cd003599c39f588aca63b2e}{teste\+Multiplicacao}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}})
 \item 
 \mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_aca454f84dd198a937af6499dd758aa3d}{std\+::string}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{arquivo}})
 \item 
@@ -128,30 +128,78 @@ Definição na linha \mbox{\hyperlink{TestMatriz_8cpp_source_l00214}{214}} do ar
 \DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ Matrix2.txt\ não\ encontrado."{}});}
 \DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{TestMatriz_8cpp_abf7a223284124557f76b2584cb8507b0}{arquivoExiste}}(\textcolor{stringliteral}{"{}tests/arquivosTestes/MatrixResult.txt"{}}))}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{TestMatriz_8cpp_abf7a223284124557f76b2584cb8507b0}{arquivoExiste}}(\textcolor{stringliteral}{"{}tests/arquivosTestes/MatrixSoma1.txt"{}}))}
 \DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ MatrixResult.txt\ não\ encontrado."{}});}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ MatrixSoma1.txt\ não\ encontrado."{}});}
 \DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00233\ }
-\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lê\ as\ matrizes\ de\ arquivos}}
-\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}Matrix1.txt"{}});}
-\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}Matrix2.txt"{}});}
-\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}MatrixResult.txt"{}});}
-\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}MatrixMulti.txt"{}});}
-\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matrizes\ lidas\ com\ sucesso"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Executa\ os\ testes}}
-\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_ad453eda85b2dfc4685a124e39a34955c}{testeSoma}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}});}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_afa561a7f09e24d8ed4d09360378a6c76}{testeMultiplicacao}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}});}
-\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_a9aee728daffc67ff42f4e827514f0ff9}{testeInsercao}}();\ \ \ \ \textcolor{comment}{//\ Teste\ básico\ de\ inserção}}
-\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_aebde2beac67611f95badfd0112cb185d}{testePerformance}}();\ \textcolor{comment}{//\ Teste\ de\ performance\ para\ matrizes\ grandes}}
-\DoxyCodeLine{00245\ \ \ \ \ \}}
-\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::runtime\_error\ \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}})}
-\DoxyCodeLine{00247\ \ \ \ \ \{}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Erro\ main:\ "{}}\ <<\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}}.what()\ <<\ std::endl;}
-\DoxyCodeLine{00249\ \ \ \ \ \}}
-\DoxyCodeLine{00250\ }
-\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00252\ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{TestMatriz_8cpp_abf7a223284124557f76b2584cb8507b0}{arquivoExiste}}(\textcolor{stringliteral}{"{}tests/arquivosTestes/MatrixMulti1.txt"{}}))}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ MatrizMulti.txt\ não\ encontrado."{}});}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{TestMatriz_8cpp_abf7a223284124557f76b2584cb8507b0}{arquivoExiste}}(\textcolor{stringliteral}{"{}tests/arquivosTestes/Matrix3.txt"{}}))}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ Matriz3.txt\ não\ encontrado."{}});}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{TestMatriz_8cpp_abf7a223284124557f76b2584cb8507b0}{arquivoExiste}}(\textcolor{stringliteral}{"{}tests/arquivosTestes/MatrixSoma2.txt"{}}))}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ MatrixSoma1.txt\ não\ encontrado."{}});}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{TestMatriz_8cpp_abf7a223284124557f76b2584cb8507b0}{arquivoExiste}}(\textcolor{stringliteral}{"{}tests/arquivosTestes/MatrixMulti2.txt"{}}))}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Arquivo\ MatrizMulti.txt\ não\ encontrado."{}});}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lê\ as\ matrizes\ de\ arquivos}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}Matrix1.txt"{}});}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}Matrix2.txt"{}});}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matrizes\ lidas\ com\ sucesso"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Teste\ 1\ usando\ matrizes\ com\ o\ mesmo\ tamanho\ 3x3"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}MatrixSoma1.txt"{}});}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}MatrixMulti1.txt"{}});}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Executa\ os\ testes}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_ad453eda85b2dfc4685a124e39a34955c}{testeSoma}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}});}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_aa2c207812cd003599c39f588aca63b2e}{testeMultiplicacao}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}});}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Teste\ 2\ usando\ matrizes\ com\ tamanho\ diferentes,\ sendo\ uma\ 3x3\ e\ outra\ 4x4\ "{}}\ <<\ std::endl;}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{C}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}Matrix3.txt"{}});}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}MatrixSoma2.txt"{}});}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}\ =\ \mbox{\hyperlink{TestMatriz_8cpp_a9363c2f4c05587c8306dcea1123288d5}{leitura}}(\textcolor{stringliteral}{"{}MatrixMulti2.txt"{}});}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matrizes\ lidas\ com\ sucesso"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Executa\ os\ testes}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_ad453eda85b2dfc4685a124e39a34955c}{testeSoma}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{C}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}});}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_aa2c207812cd003599c39f588aca63b2e}{testeMultiplicacao}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{C}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}});}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}(std::exception\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}})\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}}.what()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_aa2c207812cd003599c39f588aca63b2e}{testeMultiplicacao}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{C}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}});}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}(std::exception\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}})\ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}}.what()\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Testes\ de\ inserção\ e\ de\ Performance,\ sendo\ esta\ com\ uma\ martriz\ 100x100"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_a9aee728daffc67ff42f4e827514f0ff9}{testeInsercao}}();\ \ \ \ \textcolor{comment}{//\ Teste\ básico\ de\ inserção}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{TestMatriz_8cpp_aebde2beac67611f95badfd0112cb185d}{testePerformance}}();\ \textcolor{comment}{//\ Teste\ de\ performance\ para\ matrizes\ grandes}}
+\DoxyCodeLine{00292\ \ \ \ \ }
+\DoxyCodeLine{00293\ \ \ \ \ \}}
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::runtime\_error\ \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}})}
+\DoxyCodeLine{00295\ \ \ \ \ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Erro\ main:\ "{}}\ <<\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}}.what()\ <<\ std::endl;}
+\DoxyCodeLine{00297\ \ \ \ \ \}}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00300\ \}}
 
 \end{DoxyCode}
 \Hypertarget{TestMatriz_8cpp_a9aee728daffc67ff42f4e827514f0ff9}\label{TestMatriz_8cpp_a9aee728daffc67ff42f4e827514f0ff9} 
@@ -178,11 +226,11 @@ Definição na linha \mbox{\hyperlink{TestMatriz_8cpp_source_l00018}{18}} do arq
 \DoxyCodeLine{00028\ \}}
 
 \end{DoxyCode}
-\Hypertarget{TestMatriz_8cpp_afa561a7f09e24d8ed4d09360378a6c76}\label{TestMatriz_8cpp_afa561a7f09e24d8ed4d09360378a6c76} 
+\Hypertarget{TestMatriz_8cpp_aa2c207812cd003599c39f588aca63b2e}\label{TestMatriz_8cpp_aa2c207812cd003599c39f588aca63b2e} 
 \index{TestMatriz.cpp@{TestMatriz.cpp}!testeMultiplicacao@{testeMultiplicacao}}
 \index{testeMultiplicacao@{testeMultiplicacao}!TestMatriz.cpp@{TestMatriz.cpp}}
 \doxysubsubsection{\texorpdfstring{testeMultiplicacao()}{testeMultiplicacao()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} teste\+Multiplicacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{A,  }\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{B,  }\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{soma }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} teste\+Multiplicacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{A,  }\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{B,  }\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{multi }\end{DoxyParamCaption})}
 
 
 
@@ -194,21 +242,21 @@ Definição na linha \mbox{\hyperlink{TestMatriz_8cpp_source_l00082}{82}} do arq
 \DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classMatriz}{Matriz}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}\ =\ \mbox{\hyperlink{utils_8hpp_a2d6ea721bca7e924fd81570dd9dc6266}{multiply}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{A}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{B}});}
 \DoxyCodeLine{00085\ }
 \DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//\ Verificando\ as\ dimensões}}
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}.getColunas()\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}.getColunas()\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}.getLinhas()\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}.getLinhas())}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}.getColunas()\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}.getColunas()\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}.getLinhas()\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}.getLinhas())}
 \DoxyCodeLine{00088\ \ \ \ \ \{}
 \DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Erro:\ Dimensões\ incorretas\ na\ multiplicação\ das\ matrizes."{}});}
 \DoxyCodeLine{00090\ \ \ \ \ \}}
 \DoxyCodeLine{00091\ }
 \DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\ Verificando\ cada\ valor\ da\ matriz\ resultante}}
-\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ <=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}.getLinhas();\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}++)}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ <=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}.getLinhas();\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}++)}
 \DoxyCodeLine{00094\ \ \ \ \ \{}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ <=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}.getColunas();\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}++)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ <=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}.getColunas();\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}++)}
 \DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}.get(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}.get(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}))}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}.get(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}.get(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}))}
 \DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Erro\ na\ multiplicação\ das\ matrizes:\ Valor\ incorreto\ na\ posição\ ("{}}\ +}
 \DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}})\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})\ +\ \textcolor{stringliteral}{"{}).\ Esperado:\ "{}}\ +}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{soma}}.get(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}))\ +\ \textcolor{stringliteral}{"{},\ Obtido:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}.get(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})));}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::to\_string(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{multi}}.get(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}))\ +\ \textcolor{stringliteral}{"{},\ Obtido:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{D}}.get(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})));}
 \DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00104\ \ \ \ \ \}}

@@ -22,7 +22,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Matriz Esparsa<span id="projectnumber">&#160;1.3</span>
+   <div id="projectname">Matriz Esparsa<span id="projectnumber">&#160;2.0</span>
    </div>
    <div id="projectbrief">O projeto visa otimizar o armazenamento e as operações em matrizes esparsas, que possuem maioria de elementos zero. Armazenando apenas os valores não nulos, economiza-se memória e acelera-se operações como soma, multiplicação e inversão. Um exemplo prático é o uso de matrizes em programas de planilha como o Excel.</div>
   </td>
@@ -89,28 +89,32 @@ $(function() {
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &quot;<a class="el" href="Matriz_8hpp_source.html">matriz/Matriz.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils/utils.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="manipMatriz_8hpp_source.html">manipMatriz/manipMatriz.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_2main_8cpp" id="asrc_2main_2main_8cpp">
-<area shape="rect" title="Programa para manipulação de matrizes esparsas." alt="" coords="143,5,285,31"/>
+<area shape="rect" title="Programa para manipulação de matrizes esparsas." alt="" coords="193,5,336,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,79,104"/>
-<area shape="poly" title=" " alt="" coords="187,33,84,76,82,71,185,28"/>
+<area shape="poly" title=" " alt="" coords="230,33,92,77,90,72,228,28"/>
 <area shape="rect" title=" " alt="" coords="103,79,227,104"/>
-<area shape="poly" title=" " alt="" coords="208,33,183,69,178,66,204,29"/>
-<area shape="rect" href="Matriz_8hpp.html" title=" " alt="" coords="243,152,380,177"/>
-<area shape="poly" title=" " alt="" coords="224,30,298,139,294,142,220,33"/>
+<area shape="poly" title=" " alt="" coords="250,33,194,73,191,68,247,29"/>
+<area shape="rect" href="Matriz_8hpp.html" title=" " alt="" coords="289,152,427,177"/>
+<area shape="poly" title=" " alt="" coords="269,31,277,64,294,103,311,124,331,141,328,145,307,127,289,105,272,66,264,32"/>
 <area shape="rect" href="utils_8hpp.html" title=" " alt="" coords="303,79,413,104"/>
-<area shape="poly" title=" " alt="" coords="238,28,323,70,321,75,236,33"/>
-<area shape="rect" title=" " alt="" coords="62,225,142,251"/>
-<area shape="poly" title=" " alt="" coords="279,180,150,223,148,218,277,175"/>
-<area shape="rect" href="Node_8hpp.html" title=" " alt="" coords="166,225,286,251"/>
-<area shape="poly" title=" " alt="" coords="299,179,252,219,249,214,296,175"/>
-<area shape="rect" href="IteratorM_8hpp.html" title=" " alt="" coords="311,225,485,251"/>
-<area shape="poly" title=" " alt="" coords="320,176,368,215,364,219,317,180"/>
-<area shape="poly" title=" " alt="" coords="389,227,342,188,345,183,392,223"/>
-<area shape="poly" title=" " alt="" coords="353,106,329,142,324,139,348,103"/>
+<area shape="poly" title=" " alt="" coords="281,29,334,68,330,72,278,33"/>
+<area shape="rect" href="manipMatriz_8hpp.html" title="Menu para as funções para manipulação de matrizes." alt="" coords="438,79,657,104"/>
+<area shape="poly" title=" " alt="" coords="311,28,489,73,488,78,309,33"/>
+<area shape="rect" title=" " alt="" coords="109,225,189,251"/>
+<area shape="poly" title=" " alt="" coords="325,180,197,223,195,218,324,175"/>
+<area shape="rect" href="Node_8hpp.html" title=" " alt="" coords="213,225,333,251"/>
+<area shape="poly" title=" " alt="" coords="346,179,299,219,295,214,343,175"/>
+<area shape="rect" href="IteratorM_8hpp.html" title=" " alt="" coords="357,225,532,251"/>
+<area shape="poly" title=" " alt="" coords="367,176,414,215,411,219,364,180"/>
+<area shape="poly" title=" " alt="" coords="436,227,388,188,392,183,439,223"/>
+<area shape="poly" title=" " alt="" coords="361,104,361,138,355,138,355,104"/>
+<area shape="poly" title=" " alt="" coords="518,107,403,149,401,144,516,102"/>
 </map>
 </div>
 </div>
@@ -127,11 +131,12 @@ Definições de Tipos</h2></td></tr>
 Enumerações</h2></td></tr>
 <tr class="memitem:afc7b89e9b222cd8c2a531906c5d4b6b4" id="r_afc7b89e9b222cd8c2a531906c5d4b6b4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4">Opcoes</a> { <br />
 &#160;&#160;<a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef">LER_MATRIZ</a> = 1
+, <a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4adcbaaf0e6bc4b106a754a4391ddb30c5">MANIPULAR_MATRIZ</a>
 , <a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec">IMPRIMIR_MATRIZ</a>
 , <a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56">SOMAR_MATRIZES</a>
-, <a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c">MULTIPLICAR_MATRIZES</a>
 , <br />
-&#160;&#160;<a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755">SAIR</a>
+&#160;&#160;<a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c">MULTIPLICAR_MATRIZES</a>
+, <a class="el" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755">SAIR</a>
 <br />
  }</td></tr>
 <tr class="separator:afc7b89e9b222cd8c2a531906c5d4b6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,7 +191,7 @@ Funções</h2></td></tr>
 </ul>
 </dd></dl>
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00012">12</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00013">13</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -202,7 +207,7 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00013">13</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00014">14</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -220,25 +225,28 @@ Funções</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumeradores</th></tr><tr><td class="fieldname"><a id="afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef" name="afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef"></a>LER_MATRIZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afc7b89e9b222cd8c2a531906c5d4b6b4adcbaaf0e6bc4b106a754a4391ddb30c5" name="afc7b89e9b222cd8c2a531906c5d4b6b4adcbaaf0e6bc4b106a754a4391ddb30c5"></a>MANIPULAR_MATRIZ&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec" name="afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec"></a>IMPRIMIR_MATRIZ&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56" name="afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56"></a>SOMAR_MATRIZES&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c" name="afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c"></a>MULTIPLICAR_MATRIZES&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755" name="afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755"></a>SAIR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00015">15</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   16</span>{</div>
-<div class="line"><span class="lineno">   17</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef">LER_MATRIZ</a> = 1,</div>
-<div class="line"><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec">IMPRIMIR_MATRIZ</a>,</div>
-<div class="line"><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56">SOMAR_MATRIZES</a>,</div>
-<div class="line"><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c">MULTIPLICAR_MATRIZES</a>,</div>
-<div class="line"><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755">SAIR</a></div>
-<div class="line"><span class="lineno">   22</span>};</div>
-<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755">SAIR</a></div><div class="ttdeci">@ SAIR</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00022">main.cpp:21</a></div></div>
-<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c">MULTIPLICAR_MATRIZES</a></div><div class="ttdeci">@ MULTIPLICAR_MATRIZES</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00020">main.cpp:20</a></div></div>
-<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56">SOMAR_MATRIZES</a></div><div class="ttdeci">@ SOMAR_MATRIZES</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00019">main.cpp:19</a></div></div>
-<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef">LER_MATRIZ</a></div><div class="ttdeci">@ LER_MATRIZ</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00017">main.cpp:17</a></div></div>
-<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec">IMPRIMIR_MATRIZ</a></div><div class="ttdeci">@ IMPRIMIR_MATRIZ</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00016">16</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>{</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef">LER_MATRIZ</a> = 1,</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4adcbaaf0e6bc4b106a754a4391ddb30c5">MANIPULAR_MATRIZ</a>,</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec">IMPRIMIR_MATRIZ</a>,</div>
+<div class="line"><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56">SOMAR_MATRIZES</a>,</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c">MULTIPLICAR_MATRIZES</a>,</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755">SAIR</a></div>
+<div class="line"><span class="lineno">   24</span>};</div>
+<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755">SAIR</a></div><div class="ttdeci">@ SAIR</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00024">main.cpp:23</a></div></div>
+<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c">MULTIPLICAR_MATRIZES</a></div><div class="ttdeci">@ MULTIPLICAR_MATRIZES</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00022">main.cpp:22</a></div></div>
+<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56">SOMAR_MATRIZES</a></div><div class="ttdeci">@ SOMAR_MATRIZES</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00021">main.cpp:21</a></div></div>
+<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef">LER_MATRIZ</a></div><div class="ttdeci">@ LER_MATRIZ</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
+<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec">IMPRIMIR_MATRIZ</a></div><div class="ttdeci">@ IMPRIMIR_MATRIZ</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00020">main.cpp:20</a></div></div>
+<div class="ttc" id="amain_8cpp_html_afc7b89e9b222cd8c2a531906c5d4b6b4adcbaaf0e6bc4b106a754a4391ddb30c5"><div class="ttname"><a href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4adcbaaf0e6bc4b106a754a4391ddb30c5">MANIPULAR_MATRIZ</a></div><div class="ttdeci">@ MANIPULAR_MATRIZ</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00019">main.cpp:19</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -278,15 +286,15 @@ Funções</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00335">335</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  336</span>{</div>
-<div class="line"><span class="lineno">  337</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Coloque o nome da primeira matriz: &quot;</span>;</div>
-<div class="line"><span class="lineno">  338</span>    std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
-<div class="line"><span class="lineno">  339</span> </div>
-<div class="line"><span class="lineno">  340</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Coloque o nome da segunda matriz: &quot;</span>;</div>
-<div class="line"><span class="lineno">  341</span>    std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>);</div>
-<div class="line"><span class="lineno">  342</span>}</div>
-<div class="ttc" id="amain_8cpp_html_a6df00753af83f180a3a7c7b440bf17d6"><div class="ttname"><a href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">unordered_map</a></div><div class="ttdeci">std::unordered_map&lt; string, Matriz &gt; unordered_map</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00013">main.cpp:13</a></div></div>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00383">383</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  384</span>{</div>
+<div class="line"><span class="lineno">  385</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Coloque o nome da primeira matriz: &quot;</span>;</div>
+<div class="line"><span class="lineno">  386</span>    std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
+<div class="line"><span class="lineno">  387</span> </div>
+<div class="line"><span class="lineno">  388</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Coloque o nome da segunda matriz: &quot;</span>;</div>
+<div class="line"><span class="lineno">  389</span>    std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>);</div>
+<div class="line"><span class="lineno">  390</span>}</div>
+<div class="ttc" id="amain_8cpp_html_a6df00753af83f180a3a7c7b440bf17d6"><div class="ttname"><a href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">unordered_map</a></div><div class="ttdeci">std::unordered_map&lt; string, Matriz &gt; unordered_map</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00014">main.cpp:14</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -328,10 +336,10 @@ Funções</h2></td></tr>
 <dl class="section return"><dt>Retorna</dt><dd>Retorna <code>true</code> se existir a matriz correspondente ao nome do arquivo; caso contrário, <code>false</code>.</dd></dl>
 <dl class="section note"><dt>Observação</dt><dd>O uso do <code>unordered_map</code> permite que a busca ocorra de maneira eficiente, pois a busca possui complexidade média <a class="el" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">O(1)</a>. </dd></dl>
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00290">290</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  291</span>{</div>
-<div class="line"><span class="lineno">  292</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.find(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>) != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.end();</div>
-<div class="line"><span class="lineno">  293</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00338">338</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  339</span>{</div>
+<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.find(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>) != <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.end();</div>
+<div class="line"><span class="lineno">  341</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -350,163 +358,210 @@ Funções</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00115">115</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
-<div class="line"><span class="lineno">  117</span>    <span class="comment">// Configura a localização para suportar caracteres especiais em português</span></div>
-<div class="line"><span class="lineno">  118</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">setlocale</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">LC_ALL</a>, <span class="stringliteral">&quot;pt_BR.UTF-8&quot;</span>);</div>
-<div class="line"><span class="lineno">  119</span> </div>
-<div class="line"><span class="lineno">  120</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Bem-vindo ao programa de manipulação de matrizes esparsas&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  121</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-----------------------------------------------------------&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>    <span class="comment">// Mapa associativo para armazenar as matrizes</span></div>
-<div class="line"><span class="lineno">  124</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">unordered_map</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>;</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">  127</span>    {</div>
-<div class="line"><span class="lineno">  128</span>        <span class="comment">// Exibe o menu de opções</span></div>
-<div class="line"><span class="lineno">  129</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Escolha uma opção:&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  130</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[1] - Ler Matriz&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  131</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[2] - Imprimir Matriz&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  132</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[3] - Somar Matrizes&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  133</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[4] - Multiplicar Matrizes&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  134</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[5] - Sair&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  135</span>        <span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">opcao</a>;</div>
-<div class="line"><span class="lineno">  136</span>        std::cin &gt;&gt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">opcao</a>;</div>
-<div class="line"><span class="lineno">  137</span>        std::cin.ignore();</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">switch</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">opcao</a>)</div>
-<div class="line"><span class="lineno">  140</span>        {</div>
-<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef">LER_MATRIZ</a>:</div>
-<div class="line"><span class="lineno">  142</span>        {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="comment">// Lê uma matriz a partir de um arquivo</span></div>
-<div class="line"><span class="lineno">  144</span>            <span class="keywordtype">string</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>;</div>
-<div class="line"><span class="lineno">  145</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Digite o nome do arquivo: &quot;</span>;</div>
-<div class="line"><span class="lineno">  146</span>            std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>            <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>;</div>
-<div class="line"><span class="lineno">  149</span> </div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  151</span>            {</div>
-<div class="line"><span class="lineno">  152</span>                <a class="code hl_function" href="main_8cpp.html#a9be84a5d43ea2dd1c0bcdcd3614f11bd">readMatrix</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
-<div class="line"><span class="lineno">  153</span>            }</div>
-<div class="line"><span class="lineno">  154</span>            <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>)</div>
-<div class="line"><span class="lineno">  155</span>            {</div>
-<div class="line"><span class="lineno">  156</span>                std::cerr &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  157</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  158</span>            }</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>            <span class="comment">// Armazena a matriz no mapa associativo</span></div>
-<div class="line"><span class="lineno">  161</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.insert(std::make_pair(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>));</div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  163</span>        }</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec">IMPRIMIR_MATRIZ</a>:</div>
-<div class="line"><span class="lineno">  166</span>        {</div>
-<div class="line"><span class="lineno">  167</span>            <span class="comment">// Imprime uma matriz armazenada</span></div>
-<div class="line"><span class="lineno">  168</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Qual matriz deseja imprimir?&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  169</span>            <a class="code hl_function" href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
-<div class="line"><span class="lineno">  170</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Coloque o nome do arquivo que deseja imprimir: &quot;</span>;</div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordtype">string</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>;</div>
-<div class="line"><span class="lineno">  172</span>            std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
-<div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
-<div class="line"><span class="lineno">  175</span>                <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>].print();</div>
-<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  177</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Matriz não encontrada&quot;</span> &lt;&lt; std::endl;</div>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00117">117</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
+<div class="line"><span class="lineno">  119</span>    <span class="comment">// Configura a localização para suportar caracteres especiais em português</span></div>
+<div class="line"><span class="lineno">  120</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">setlocale</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">LC_ALL</a>, <span class="stringliteral">&quot;pt_BR.UTF-8&quot;</span>);</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Bem-vindo ao programa de manipulação de matrizes esparsas&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  123</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-----------------------------------------------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    <span class="comment">// Mapa associativo para armazenar as matrizes</span></div>
+<div class="line"><span class="lineno">  126</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">unordered_map</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>;</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>        <span class="comment">// Exibe o menu de opções</span></div>
+<div class="line"><span class="lineno">  131</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Escolha uma opção:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  132</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[1] - Ler Matriz&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  133</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[2] - Manipular Matriz&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  134</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[3] - Imprimir Matriz&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  135</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[4] - Somar Matrizes&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  136</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[5] - Multiplicar Matrizes&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  137</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;[6] - Sair&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">opcao</a>;</div>
+<div class="line"><span class="lineno">  139</span>        std::cin &gt;&gt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">opcao</a>;</div>
+<div class="line"><span class="lineno">  140</span>        std::cin.ignore();</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">switch</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">opcao</a>)</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a90e14aafbdd55ec17e74fc382e1895ef">LER_MATRIZ</a>:</div>
+<div class="line"><span class="lineno">  145</span>        {</div>
+<div class="line"><span class="lineno">  146</span>            <span class="comment">// Lê uma matriz a partir de um arquivo</span></div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordtype">string</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>;</div>
+<div class="line"><span class="lineno">  148</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Digite o nome do arquivo: &quot;</span>;</div>
+<div class="line"><span class="lineno">  149</span>            std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>            <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>;</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                <a class="code hl_function" href="main_8cpp.html#a9be84a5d43ea2dd1c0bcdcd3614f11bd">readMatrix</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>            <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>)</div>
+<div class="line"><span class="lineno">  158</span>            {</div>
+<div class="line"><span class="lineno">  159</span>                std::cerr &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  161</span>            }</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>            <span class="comment">// Armazena a matriz no mapa associativo</span></div>
+<div class="line"><span class="lineno">  164</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.insert(std::make_pair(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>));</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  166</span>        }</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4adcbaaf0e6bc4b106a754a4391ddb30c5">MANIPULAR_MATRIZ</a>:</div>
+<div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.empty())</div>
+<div class="line"><span class="lineno">  171</span>            {</div>
+<div class="line"><span class="lineno">  172</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Não há matrizes armazenadas&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  173</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  174</span>            }</div>
+<div class="line"><span class="lineno">  175</span> </div>
+<div class="line"><span class="lineno">  176</span>            <span class="comment">// Manipula uma matriz armazenada</span></div>
+<div class="line"><span class="lineno">  177</span>            <a class="code hl_function" href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
 <div class="line"><span class="lineno">  178</span> </div>
-<div class="line"><span class="lineno">  179</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56">SOMAR_MATRIZES</a>:</div>
-<div class="line"><span class="lineno">  183</span>        {</div>
-<div class="line"><span class="lineno">  184</span>            <span class="comment">// Soma duas matrizes armazenadas</span></div>
-<div class="line"><span class="lineno">  185</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Quais as matrizes irá usar para somar&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  186</span>            <a class="code hl_function" href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
-<div class="line"><span class="lineno">  187</span>            std::string <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>;</div>
-<div class="line"><span class="lineno">  188</span>            <a class="code hl_function" href="main_8cpp.html#acd6381edd1d4ddcc77245a1887607307">escolherMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>);</div>
-<div class="line"><span class="lineno">  189</span> </div>
-<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>) || !<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
-<div class="line"><span class="lineno">  191</span>            {</div>
-<div class="line"><span class="lineno">  192</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Alguma matriz não foi encontrada&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  193</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  194</span>            }</div>
-<div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>            <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>;</div>
-<div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  199</span>            {</div>
-<div class="line"><span class="lineno">  200</span>                <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a> = <a class="code hl_function" href="utils_8hpp.html#a3cbccd713cd5551833ad82c9bcfc1df6">sum</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>], <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>]);</div>
+<div class="line"><span class="lineno">  179</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Qual matriz deseja manipular?&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  180</span>            <span class="keywordtype">string</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>;</div>
+<div class="line"><span class="lineno">  181</span>            std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
+<div class="line"><span class="lineno">  184</span>            {</div>
+<div class="line"><span class="lineno">  185</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Matriz não encontrada&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  186</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  187</span>            }</div>
+<div class="line"><span class="lineno">  188</span> </div>
+<div class="line"><span class="lineno">  189</span>            std::system(<span class="stringliteral">&quot;cls||clear&quot;</span>);</div>
+<div class="line"><span class="lineno">  190</span>            <a class="code hl_function" href="manipMatriz_8hpp.html#a04e2a1fad94687d39a0d4fd570c0663b">manipMatrix</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>], <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  193</span>        }</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4ad233ca333e68ad1aca1bc62c2a90faec">IMPRIMIR_MATRIZ</a>:</div>
+<div class="line"><span class="lineno">  196</span>        {</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.empty())</div>
+<div class="line"><span class="lineno">  198</span>            {</div>
+<div class="line"><span class="lineno">  199</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Não há matrizes armazenadas&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  200</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  201</span>            }</div>
-<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>)</div>
-<div class="line"><span class="lineno">  203</span>            {</div>
-<div class="line"><span class="lineno">  204</span>                std::cerr &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  205</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  206</span>            }</div>
-<div class="line"><span class="lineno">  207</span> </div>
-<div class="line"><span class="lineno">  208</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.print();</div>
-<div class="line"><span class="lineno">  209</span>            <a class="code hl_function" href="main_8cpp.html#a6e0b4a7da8cc03f7cb1023a6d4f75f32">salvarMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
-<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span> </div>
-<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c">MULTIPLICAR_MATRIZES</a>:</div>
-<div class="line"><span class="lineno">  214</span>        {</div>
-<div class="line"><span class="lineno">  215</span>            <span class="comment">// Multiplica duas matrizes armazenadas</span></div>
-<div class="line"><span class="lineno">  216</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Quais as matrizes irá usar para multiplicar&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  217</span>            <a class="code hl_function" href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
-<div class="line"><span class="lineno">  218</span>            std::string <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>;</div>
-<div class="line"><span class="lineno">  219</span>            <a class="code hl_function" href="main_8cpp.html#acd6381edd1d4ddcc77245a1887607307">escolherMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>);</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>) || !<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
-<div class="line"><span class="lineno">  222</span>            {</div>
-<div class="line"><span class="lineno">  223</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Alguma matriz não foi encontrada&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  224</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  225</span>            }</div>
-<div class="line"><span class="lineno">  226</span> </div>
-<div class="line"><span class="lineno">  227</span>            <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>;</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">  230</span>            {</div>
-<div class="line"><span class="lineno">  231</span>                <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a> = <a class="code hl_function" href="utils_8hpp.html#a2d6ea721bca7e924fd81570dd9dc6266">multiply</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>], <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>]);</div>
-<div class="line"><span class="lineno">  232</span>            }</div>
-<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>)</div>
-<div class="line"><span class="lineno">  234</span>            {</div>
-<div class="line"><span class="lineno">  235</span>                std::cerr &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line"><span class="lineno">  236</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  237</span>            }</div>
-<div class="line"><span class="lineno">  238</span> </div>
-<div class="line"><span class="lineno">  239</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.print();</div>
-<div class="line"><span class="lineno">  240</span>            <a class="code hl_function" href="main_8cpp.html#a6e0b4a7da8cc03f7cb1023a6d4f75f32">salvarMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
-<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  242</span>        }</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755">SAIR</a>:</div>
-<div class="line"><span class="lineno">  245</span>        {</div>
-<div class="line"><span class="lineno">  246</span>            <span class="comment">// Encerra o programa</span></div>
-<div class="line"><span class="lineno">  247</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Saindo...&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  248</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  249</span>        }</div>
-<div class="line"><span class="lineno">  250</span> </div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  252</span>        {</div>
-<div class="line"><span class="lineno">  253</span>            <span class="comment">// Opção inválida</span></div>
-<div class="line"><span class="lineno">  254</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Opção inválida&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  255</span>            std::cin.clear();</div>
-<div class="line"><span class="lineno">  256</span>            std::cin.ignore();</div>
-<div class="line"><span class="lineno">  257</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  258</span>        }</div>
-<div class="line"><span class="lineno">  259</span>        }</div>
-<div class="line"><span class="lineno">  260</span> </div>
-<div class="line"><span class="lineno">  261</span>        <span class="comment">// Pausa e limpa a tela</span></div>
-<div class="line"><span class="lineno">  262</span>        std::system(<span class="stringliteral">&quot;pause || read -p &#39;Pressione enter para continuar...&#39; var&quot;</span>);</div>
-<div class="line"><span class="lineno">  263</span>        std::system(<span class="stringliteral">&quot;cls||clear&quot;</span>);</div>
-<div class="line"><span class="lineno">  264</span>    }</div>
-<div class="line"><span class="lineno">  265</span>}</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>            <span class="comment">// Imprime uma matriz armazenada</span></div>
+<div class="line"><span class="lineno">  204</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Qual matriz deseja imprimir?&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  205</span>            <a class="code hl_function" href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
+<div class="line"><span class="lineno">  206</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Coloque o nome do arquivo que deseja imprimir: &quot;</span>;</div>
+<div class="line"><span class="lineno">  207</span>            <span class="keywordtype">string</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>;</div>
+<div class="line"><span class="lineno">  208</span>            std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
+<div class="line"><span class="lineno">  211</span>                <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>].print();</div>
+<div class="line"><span class="lineno">  212</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  213</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Matriz não encontrada&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  214</span> </div>
+<div class="line"><span class="lineno">  215</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  216</span>        }</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a45472804fe464b2a0d5d67c470855e56">SOMAR_MATRIZES</a>:</div>
+<div class="line"><span class="lineno">  219</span>        {</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.empty())</div>
+<div class="line"><span class="lineno">  221</span>            {</div>
+<div class="line"><span class="lineno">  222</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Não há matrizes armazenadas&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  223</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  224</span>            }</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>            <span class="comment">// Soma duas matrizes armazenadas</span></div>
+<div class="line"><span class="lineno">  227</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Quais as matrizes irá usar para somar&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  228</span>            <a class="code hl_function" href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
+<div class="line"><span class="lineno">  229</span>            std::string <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>;</div>
+<div class="line"><span class="lineno">  230</span>            <a class="code hl_function" href="main_8cpp.html#acd6381edd1d4ddcc77245a1887607307">escolherMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>);</div>
+<div class="line"><span class="lineno">  231</span> </div>
+<div class="line"><span class="lineno">  232</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>) || !<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
+<div class="line"><span class="lineno">  233</span>            {</div>
+<div class="line"><span class="lineno">  234</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Alguma matriz não foi encontrada&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  235</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  236</span>            }</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>            <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>;</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  241</span>            {</div>
+<div class="line"><span class="lineno">  242</span>                <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a> = <a class="code hl_function" href="utils_8hpp.html#a3cbccd713cd5551833ad82c9bcfc1df6">sum</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>], <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>]);</div>
+<div class="line"><span class="lineno">  243</span>            }</div>
+<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>)</div>
+<div class="line"><span class="lineno">  245</span>            {</div>
+<div class="line"><span class="lineno">  246</span>                std::cerr &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  247</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  248</span>            }</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.print();</div>
+<div class="line"><span class="lineno">  251</span>            <a class="code hl_function" href="main_8cpp.html#a6e0b4a7da8cc03f7cb1023a6d4f75f32">salvarMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
+<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a250aa5799f9fabfe4b9c1fc848341d7c">MULTIPLICAR_MATRIZES</a>:</div>
+<div class="line"><span class="lineno">  256</span>        {</div>
+<div class="line"><span class="lineno">  257</span>            <span class="keywordflow">if</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.empty())</div>
+<div class="line"><span class="lineno">  258</span>            {</div>
+<div class="line"><span class="lineno">  259</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Não há matrizes armazenadas&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  260</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  261</span>            }</div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>            <span class="comment">// Multiplica duas matrizes armazenadas</span></div>
+<div class="line"><span class="lineno">  264</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Quais as matrizes irá usar para multiplicar&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  265</span>            <a class="code hl_function" href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
+<div class="line"><span class="lineno">  266</span>            std::string <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>;</div>
+<div class="line"><span class="lineno">  267</span>            <a class="code hl_function" href="main_8cpp.html#acd6381edd1d4ddcc77245a1887607307">escolherMatrizes</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>);</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>) || !<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
+<div class="line"><span class="lineno">  270</span>            {</div>
+<div class="line"><span class="lineno">  271</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Alguma matriz não foi encontrada&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  272</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  273</span>            }</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>            <a class="code hl_class" href="classMatriz.html">Matriz</a> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>;</div>
+<div class="line"><span class="lineno">  276</span> </div>
+<div class="line"><span class="lineno">  277</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  278</span>            {</div>
+<div class="line"><span class="lineno">  279</span>                <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a> = <a class="code hl_function" href="utils_8hpp.html#a2d6ea721bca7e924fd81570dd9dc6266">multiply</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>], <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>[<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename2</a>]);</div>
+<div class="line"><span class="lineno">  280</span>            }</div>
+<div class="line"><span class="lineno">  281</span>            <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>)</div>
+<div class="line"><span class="lineno">  282</span>            {</div>
+<div class="line"><span class="lineno">  283</span>                std::cerr &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">e</a>.what() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  284</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  285</span>            }</div>
+<div class="line"><span class="lineno">  286</span> </div>
+<div class="line"><span class="lineno">  287</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.print();</div>
+<div class="line"><span class="lineno">  288</span>            <a class="code hl_function" href="main_8cpp.html#a6e0b4a7da8cc03f7cb1023a6d4f75f32">salvarMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>);</div>
+<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="main_8cpp.html#afc7b89e9b222cd8c2a531906c5d4b6b4a109d1f6a14fd6870ba891dec59fb9755">SAIR</a>:</div>
+<div class="line"><span class="lineno">  293</span>        {</div>
+<div class="line"><span class="lineno">  294</span>            <span class="comment">// Encerra o programa</span></div>
+<div class="line"><span class="lineno">  295</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Saindo...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  296</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  297</span>        }</div>
+<div class="line"><span class="lineno">  298</span> </div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  300</span>        {</div>
+<div class="line"><span class="lineno">  301</span>            <span class="comment">// Opção inválida</span></div>
+<div class="line"><span class="lineno">  302</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Opção inválida&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  303</span>            std::cin.clear();</div>
+<div class="line"><span class="lineno">  304</span>            std::cin.ignore();</div>
+<div class="line"><span class="lineno">  305</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  306</span>        }</div>
+<div class="line"><span class="lineno">  307</span>        }</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>        <span class="comment">// Pausa e limpa a tela</span></div>
+<div class="line"><span class="lineno">  310</span>        std::system(<span class="stringliteral">&quot;pause || read -p &#39;Pressione enter para continuar...&#39; var&quot;</span>);</div>
+<div class="line"><span class="lineno">  311</span>        std::system(<span class="stringliteral">&quot;cls||clear&quot;</span>);</div>
+<div class="line"><span class="lineno">  312</span>    }</div>
+<div class="line"><span class="lineno">  313</span>}</div>
 <div class="ttc" id="aclassMatriz_html"><div class="ttname"><a href="classMatriz.html">Matriz</a></div><div class="ttdoc">Classe que representa uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> <a href="Matriz_8hpp_source.html#l00032">Matriz.hpp:33</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a6e0b4a7da8cc03f7cb1023a6d4f75f32"><div class="ttname"><a href="main_8cpp.html#a6e0b4a7da8cc03f7cb1023a6d4f75f32">salvarMatriz</a></div><div class="ttdeci">void salvarMatriz(const Matriz &amp;matriz, unordered_map &amp;matrizes)</div><div class="ttdoc">Salva uma matriz em um mapa associativo de matrizes, permitindo que seja recuperada posteriormente.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00295">main.cpp:295</a></div></div>
-<div class="ttc" id="amain_8cpp_html_a9be84a5d43ea2dd1c0bcdcd3614f11bd"><div class="ttname"><a href="main_8cpp.html#a9be84a5d43ea2dd1c0bcdcd3614f11bd">readMatrix</a></div><div class="ttdeci">void readMatrix(Matriz &amp;matriz, const std::string filename)</div><div class="ttdoc">Lê dados de um arquivo e insere em uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00267">main.cpp:267</a></div></div>
-<div class="ttc" id="amain_8cpp_html_aa0b28117de43b5ba82465f7c73ad2dff"><div class="ttname"><a href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a></div><div class="ttdeci">void printMatrizes(const unordered_map &amp;matrizes)</div><div class="ttdoc">Exibe informações sobre as matrizes armazenadas em um std::unordered_map.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00344">main.cpp:344</a></div></div>
-<div class="ttc" id="amain_8cpp_html_aa2c1a3e96a2c6e834cacd5a9405cb603"><div class="ttname"><a href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a></div><div class="ttdeci">bool existeMatriz(const std::string filename, const unordered_map &amp;matrizes)</div><div class="ttdoc">Verifica se existe uma matriz previamente armazenada em um unordered_map.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00290">main.cpp:290</a></div></div>
-<div class="ttc" id="amain_8cpp_html_acd6381edd1d4ddcc77245a1887607307"><div class="ttname"><a href="main_8cpp.html#acd6381edd1d4ddcc77245a1887607307">escolherMatrizes</a></div><div class="ttdeci">void escolherMatrizes(string &amp;filename, string &amp;filename2)</div><div class="ttdoc">Solicita ao usuário o nome de duas matrizes a serem processadas.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00335">main.cpp:335</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a6e0b4a7da8cc03f7cb1023a6d4f75f32"><div class="ttname"><a href="main_8cpp.html#a6e0b4a7da8cc03f7cb1023a6d4f75f32">salvarMatriz</a></div><div class="ttdeci">void salvarMatriz(const Matriz &amp;matriz, unordered_map &amp;matrizes)</div><div class="ttdoc">Salva uma matriz em um mapa associativo de matrizes, permitindo que seja recuperada posteriormente.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00343">main.cpp:343</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a9be84a5d43ea2dd1c0bcdcd3614f11bd"><div class="ttname"><a href="main_8cpp.html#a9be84a5d43ea2dd1c0bcdcd3614f11bd">readMatrix</a></div><div class="ttdeci">void readMatrix(Matriz &amp;matriz, const std::string filename)</div><div class="ttdoc">Lê dados de um arquivo e insere em uma matriz esparsa.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00315">main.cpp:315</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aa0b28117de43b5ba82465f7c73ad2dff"><div class="ttname"><a href="main_8cpp.html#aa0b28117de43b5ba82465f7c73ad2dff">printMatrizes</a></div><div class="ttdeci">void printMatrizes(const unordered_map &amp;matrizes)</div><div class="ttdoc">Exibe informações sobre as matrizes armazenadas em um std::unordered_map.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00392">main.cpp:392</a></div></div>
+<div class="ttc" id="amain_8cpp_html_aa2c1a3e96a2c6e834cacd5a9405cb603"><div class="ttname"><a href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a></div><div class="ttdeci">bool existeMatriz(const std::string filename, const unordered_map &amp;matrizes)</div><div class="ttdoc">Verifica se existe uma matriz previamente armazenada em um unordered_map.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00338">main.cpp:338</a></div></div>
+<div class="ttc" id="amain_8cpp_html_acd6381edd1d4ddcc77245a1887607307"><div class="ttname"><a href="main_8cpp.html#acd6381edd1d4ddcc77245a1887607307">escolherMatrizes</a></div><div class="ttdeci">void escolherMatrizes(string &amp;filename, string &amp;filename2)</div><div class="ttdoc">Solicita ao usuário o nome de duas matrizes a serem processadas.</div><div class="ttdef"><b>Definição</b> <a href="main_8cpp_source.html#l00383">main.cpp:383</a></div></div>
+<div class="ttc" id="amanipMatriz_8hpp_html_a04e2a1fad94687d39a0d4fd570c0663b"><div class="ttname"><a href="manipMatriz_8hpp.html#a04e2a1fad94687d39a0d4fd570c0663b">manipMatrix</a></div><div class="ttdeci">void manipMatrix(Matriz &amp;matriz, const std::string &amp;nomeMatriz)</div><div class="ttdef"><b>Definição</b> <a href="manipMatriz_8hpp_source.html#l00013">manipMatriz.hpp:13</a></div></div>
 <div class="ttc" id="autils_8hpp_html_a2d6ea721bca7e924fd81570dd9dc6266"><div class="ttname"><a href="utils_8hpp.html#a2d6ea721bca7e924fd81570dd9dc6266">multiply</a></div><div class="ttdeci">Matriz multiply(const Matriz &amp;matrizA, const Matriz &amp;matrizB)</div><div class="ttdoc">Multiplica duas matrizes e retorna a matriz resultante.</div><div class="ttdef"><b>Definição</b> <a href="utils_8hpp_source.html#l00060">utils.hpp:60</a></div></div>
 <div class="ttc" id="autils_8hpp_html_a3cbccd713cd5551833ad82c9bcfc1df6"><div class="ttname"><a href="utils_8hpp.html#a3cbccd713cd5551833ad82c9bcfc1df6">sum</a></div><div class="ttdeci">Matriz sum(const Matriz &amp;matrixA, const Matriz &amp;matrizB)</div><div class="ttdoc">Soma duas matrizes de mesmo tamanho.</div><div class="ttdef"><b>Definição</b> <a href="utils_8hpp_source.html#l00023">utils.hpp:23</a></div></div>
 </div><!-- fragment -->
@@ -537,15 +592,15 @@ Funções</h2></td></tr>
 </dl>
 <p>As dimensões exibidas são obtidas diretamente da instância armazenada em cada valor do map. A exibição é formatada para melhor leitura e compreensão dos dados de cada matriz. </p>
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00344">344</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  345</span>{</div>
-<div class="line"><span class="lineno">  346</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">par</a> : <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>)</div>
-<div class="line"><span class="lineno">  347</span>    {</div>
-<div class="line"><span class="lineno">  348</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;------------------&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  349</span>        std::cout &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">par</a>.first &lt;&lt; <span class="stringliteral">&quot; |&quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">par</a>.second.getLinhas() &lt;&lt; <span class="stringliteral">&quot; x &quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">par</a>.second.getColunas() &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  350</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;------------------&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  351</span>    }</div>
-<div class="line"><span class="lineno">  352</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00392">392</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  393</span>{</div>
+<div class="line"><span class="lineno">  394</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">par</a> : <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>)</div>
+<div class="line"><span class="lineno">  395</span>    {</div>
+<div class="line"><span class="lineno">  396</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  397</span>        std::cout &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">par</a>.first &lt;&lt; <span class="stringliteral">&quot; |&quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">par</a>.second.getLinhas() &lt;&lt; <span class="stringliteral">&quot; x &quot;</span> &lt;&lt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">par</a>.second.getColunas() &lt;&lt; <span class="stringliteral">&quot;|&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  398</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  399</span>    }</div>
+<div class="line"><span class="lineno">  400</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -597,28 +652,28 @@ Funções</h2></td></tr>
 <li>Caso o arquivo não seja encontrado ou ocorra algum outro problema, é gerada uma exceção do tipo <code>std::runtime_error</code>. </li>
 </ul>
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00267">267</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  268</span>{</div>
-<div class="line"><span class="lineno">  269</span>    std::ifstream <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>(<span class="stringliteral">&quot;src/arquivos/&quot;</span> + <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
-<div class="line"><span class="lineno">  270</span> </div>
-<div class="line"><span class="lineno">  271</span>    <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> || !<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.is_open())</div>
-<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro ao abrir o arquivo&quot;</span>);</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>    <span class="keywordtype">int</span> linhas{0}, colunas{0};</div>
-<div class="line"><span class="lineno">  275</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> &gt;&gt; linhas &gt;&gt; colunas;</div>
-<div class="line"><span class="lineno">  276</span> </div>
-<div class="line"><span class="lineno">  277</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a> = <a class="code hl_class" href="classMatriz.html">Matriz</a>(linhas, colunas);</div>
-<div class="line"><span class="lineno">  278</span> </div>
-<div class="line"><span class="lineno">  279</span>    <span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>{0}, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>{0};</div>
-<div class="line"><span class="lineno">  280</span>    <span class="keywordtype">double</span> valor{0.0f};</div>
-<div class="line"><span class="lineno">  281</span> </div>
-<div class="line"><span class="lineno">  282</span>    <span class="keywordflow">while</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> &gt;&gt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> &gt;&gt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> &gt;&gt; valor)</div>
-<div class="line"><span class="lineno">  283</span>    {</div>
-<div class="line"><span class="lineno">  284</span>        <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>, valor);</div>
-<div class="line"><span class="lineno">  285</span>    }</div>
-<div class="line"><span class="lineno">  286</span> </div>
-<div class="line"><span class="lineno">  287</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.close();</div>
-<div class="line"><span class="lineno">  288</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00315">315</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  316</span>{</div>
+<div class="line"><span class="lineno">  317</span>    std::ifstream <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>(<span class="stringliteral">&quot;src/arquivos/&quot;</span> + <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">if</span> (!<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> || !<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.is_open())</div>
+<div class="line"><span class="lineno">  320</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Erro ao abrir o arquivo&quot;</span>);</div>
+<div class="line"><span class="lineno">  321</span> </div>
+<div class="line"><span class="lineno">  322</span>    <span class="keywordtype">int</span> linhas{0}, colunas{0};</div>
+<div class="line"><span class="lineno">  323</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> &gt;&gt; linhas &gt;&gt; colunas;</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a> = <a class="code hl_class" href="classMatriz.html">Matriz</a>(linhas, colunas);</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>    <span class="keywordtype">int</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>{0}, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>{0};</div>
+<div class="line"><span class="lineno">  328</span>    <span class="keywordtype">double</span> valor{0.0f};</div>
+<div class="line"><span class="lineno">  329</span> </div>
+<div class="line"><span class="lineno">  330</span>    <span class="keywordflow">while</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a> &gt;&gt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a> &gt;&gt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a> &gt;&gt; valor)</div>
+<div class="line"><span class="lineno">  331</span>    {</div>
+<div class="line"><span class="lineno">  332</span>        <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>.insert(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">i</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">j</a>, valor);</div>
+<div class="line"><span class="lineno">  333</span>    }</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>    <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">file</a>.close();</div>
+<div class="line"><span class="lineno">  336</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -659,45 +714,45 @@ Funções</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Observação</dt><dd>Essa função não retorna valores. É importante que o usuário insira corretamente as opções (s ou n) para prosseguir ou cancelar o salvamento, e que forneça um nome válido quando optar por salvar a matriz. </dd></dl>
 
-<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00295">295</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  296</span>{</div>
-<div class="line"><span class="lineno">  297</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">  298</span>    {</div>
-<div class="line"><span class="lineno">  299</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deseja salvar a matriz? [S/N]: &quot;</span>;</div>
-<div class="line"><span class="lineno">  300</span>        <span class="keywordtype">char</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">resposta</a>;</div>
-<div class="line"><span class="lineno">  301</span>        std::cin &gt;&gt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">resposta</a>;</div>
-<div class="line"><span class="lineno">  302</span>        std::cin.ignore();</div>
-<div class="line"><span class="lineno">  303</span> </div>
-<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">switch</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">tolower</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">resposta</a>))</div>
-<div class="line"><span class="lineno">  305</span>        {</div>
-<div class="line"><span class="lineno">  306</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
-<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  308</span> </div>
-<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:</div>
-<div class="line"><span class="lineno">  310</span>        {</div>
-<div class="line"><span class="lineno">  311</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Digite o nome que deseja salvar a matriz: &quot;</span>;</div>
-<div class="line"><span class="lineno">  312</span>            <span class="keywordtype">string</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>;</div>
-<div class="line"><span class="lineno">  313</span> </div>
-<div class="line"><span class="lineno">  314</span>            std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
-<div class="line"><span class="lineno">  315</span> </div>
-<div class="line"><span class="lineno">  316</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
-<div class="line"><span class="lineno">  317</span>            {</div>
-<div class="line"><span class="lineno">  318</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Já existe uma matriz com esse nome, tente outro nome para salvar&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  319</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  320</span>            }</div>
-<div class="line"><span class="lineno">  321</span> </div>
-<div class="line"><span class="lineno">  322</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.insert(std::make_pair(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>));</div>
-<div class="line"><span class="lineno">  323</span> </div>
-<div class="line"><span class="lineno">  324</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Matriz salva com sucesso&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  325</span>            <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  326</span>        }</div>
-<div class="line"><span class="lineno">  327</span> </div>
-<div class="line"><span class="lineno">  328</span>        <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  329</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Opção inválida&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  330</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  331</span>        }</div>
-<div class="line"><span class="lineno">  332</span>    }</div>
-<div class="line"><span class="lineno">  333</span>}</div>
+<p class="definition">Definição na linha <a class="el" href="main_8cpp_source.html#l00343">343</a> do arquivo <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  344</span>{</div>
+<div class="line"><span class="lineno">  345</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  346</span>    {</div>
+<div class="line"><span class="lineno">  347</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Deseja salvar a matriz? [S/N]: &quot;</span>;</div>
+<div class="line"><span class="lineno">  348</span>        <span class="keywordtype">char</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">resposta</a>;</div>
+<div class="line"><span class="lineno">  349</span>        std::cin &gt;&gt; <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">resposta</a>;</div>
+<div class="line"><span class="lineno">  350</span>        std::cin.ignore();</div>
+<div class="line"><span class="lineno">  351</span> </div>
+<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">switch</span> (<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">tolower</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">resposta</a>))</div>
+<div class="line"><span class="lineno">  353</span>        {</div>
+<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
+<div class="line"><span class="lineno">  355</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  356</span> </div>
+<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:</div>
+<div class="line"><span class="lineno">  358</span>        {</div>
+<div class="line"><span class="lineno">  359</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Digite o nome que deseja salvar a matriz: &quot;</span>;</div>
+<div class="line"><span class="lineno">  360</span>            <span class="keywordtype">string</span> <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>;</div>
+<div class="line"><span class="lineno">  361</span> </div>
+<div class="line"><span class="lineno">  362</span>            std::getline(std::cin, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>);</div>
+<div class="line"><span class="lineno">  363</span> </div>
+<div class="line"><span class="lineno">  364</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="main_8cpp.html#aa2c1a3e96a2c6e834cacd5a9405cb603">existeMatriz</a>(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>))</div>
+<div class="line"><span class="lineno">  365</span>            {</div>
+<div class="line"><span class="lineno">  366</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Já existe uma matriz com esse nome, tente outro nome para salvar&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  367</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  368</span>            }</div>
+<div class="line"><span class="lineno">  369</span> </div>
+<div class="line"><span class="lineno">  370</span>            <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matrizes</a>.insert(std::make_pair(<a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">filename</a>, <a class="code hl_typedef" href="main_8cpp.html#a6df00753af83f180a3a7c7b440bf17d6">matriz</a>));</div>
+<div class="line"><span class="lineno">  371</span> </div>
+<div class="line"><span class="lineno">  372</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Matriz salva com sucesso&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  373</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  374</span>        }</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  377</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Opção inválida&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  378</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  379</span>        }</div>
+<div class="line"><span class="lineno">  380</span>    }</div>
+<div class="line"><span class="lineno">  381</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

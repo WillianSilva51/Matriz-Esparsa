@@ -16,6 +16,8 @@ Classe que representa uma matriz esparsa.
 \begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classMatriz}{Matriz}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMatriz_a721eb10993176937db61ef9449d6c585}{Matriz}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ln}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cl}})
 \begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classMatriz}{Matriz} que inicializa uma matriz esparsa com linhas e colunas especificadas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz_a027f4dded26556aebb447cdf7ed6254c}{Matriz}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{outra}})
+\begin{DoxyCompactList}\small\item\em Construtor de cópia para a classe \doxylink{classMatriz}{Matriz}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMatriz_a2092b7a289ecec369e1da407d5839f5a}{\texorpdfstring{$\sim$}{\string~}\+Matriz}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{classMatriz}{Matriz}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classIteratorM}{IteratorM}} \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}} ()
@@ -26,12 +28,14 @@ Classe que representa uma matriz esparsa.
 \begin{DoxyCompactList}\small\item\em Iterador que aponta para o primeiro elemento significativo da matriz (versão const). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classIteratorM}{IteratorM}} \mbox{\hyperlink{classMatriz_a6782e1dd06775c6a4efccba3ffc85716}{end}} () \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}}
 \begin{DoxyCompactList}\small\item\em Iterador que aponta para o final da matriz (versão const). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classMatriz_ad9ae4337ffba545a2d0039ecfe8f556a}{operator=}} (\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{matriz}})
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de atribuição para a classe \doxylink{classMatriz}{Matriz}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \mbox{\hyperlink{classMatriz_aac16f51b920e0ae269f5e2b78fa9fad5}{get\+Linhas}} () \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}}
 \begin{DoxyCompactList}\small\item\em Retorna a quantidade de linhas da matriz. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \mbox{\hyperlink{classMatriz_a598a301d6e02ba9669e806116f15c396}{get\+Colunas}} () \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}}
 \begin{DoxyCompactList}\small\item\em Retorna a quantidade de colunas da matriz. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} \mbox{\hyperlink{classMatriz_a45b783c49e5a4175487b121f5615790c}{limpar}} ()
-\begin{DoxyCompactList}\small\item\em Limpa a matriz esparsa, removendo todos os nós. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Limpa os dados armazenados na matriz esparsa. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} \mbox{\hyperlink{classMatriz_add3295e730032050b85b6e9598c005db}{insert}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{double}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}})
 \begin{DoxyCompactList}\small\item\em Insere um valor em uma posição específica da matriz esparsa. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{double}} \mbox{\hyperlink{classMatriz_a9062dbfd6809c9d0a4f177f6df0269d6}{get}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})
@@ -73,7 +77,7 @@ Definição na linha \mbox{\hyperlink{Matriz_8hpp_source_l00032}{32}} do arquivo
 \Hypertarget{classMatriz_a7de756301bddbc4b0b5d2a0f2b1fc695}\label{classMatriz_a7de756301bddbc4b0b5d2a0f2b1fc695} 
 \index{Matriz@{Matriz}!Matriz@{Matriz}}
 \index{Matriz@{Matriz}!Matriz@{Matriz}}
-\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -95,7 +99,7 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00004}{4}} do arquivo 
 \Hypertarget{classMatriz_a721eb10993176937db61ef9449d6c585}\label{classMatriz_a721eb10993176937db61ef9449d6c585} 
 \index{Matriz@{Matriz}!Matriz@{Matriz}}
 \index{Matriz@{Matriz}!Matriz@{Matriz}}
-\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&}]{ln,  }\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&}]{cl }\end{DoxyParamCaption})}
 
 
@@ -167,6 +171,38 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00009}{9}} do arquivo 
 \DoxyCodeLine{00040\ \}}
 
 \end{DoxyCode}
+\Hypertarget{classMatriz_a027f4dded26556aebb447cdf7ed6254c}\label{classMatriz_a027f4dded26556aebb447cdf7ed6254c} 
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{outra }\end{DoxyParamCaption})}
+
+
+
+Construtor de cópia para a classe \doxylink{classMatriz}{Matriz}. 
+
+Este construtor cria uma nova instância de \doxylink{classMatriz}{Matriz} a partir de outra instância existente, realizando uma cópia profunda dos elementos da matriz original. Inicialmente, ele chama o construtor principal da classe, passando como argumentos o número de linhas e colunas da matriz a ser copiada, garantindo que a nova matriz possua a mesma estrutura de armazenamento.
+
+Após a alocação da estrutura adequada, o construtor itera por todos os elementos da matriz original ("{}outra"{}) usando um iterador (\doxylink{classIteratorM}{IteratorM}). Para cada elemento encontrado, o método insert é invocado para inserir o valor na nova matriz, mantendo a posição indicada pelos atributos "{}linha"{} e "{}coluna"{} presentes na estrutura apontada pelo iterador.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em outra} & Referência para a instância da matriz que será copiada. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00042}{42}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classMatriz_a7de756301bddbc4b0b5d2a0f2b1fc695}{Matriz}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{outra}}.linhas,\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{outra}}.colunas)}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{outra}}.begin();\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{outra}}.end();\ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}})}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classMatriz_add3295e730032050b85b6e9598c005db}{insert}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha,\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna,\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}});}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}
 \Hypertarget{classMatriz_a2092b7a289ecec369e1da407d5839f5a}\label{classMatriz_a2092b7a289ecec369e1da407d5839f5a} 
 \index{Matriz@{Matriz}!````~Matriz@{\texorpdfstring{$\sim$}{\string~}Matriz}}
 \index{````~Matriz@{\texorpdfstring{$\sim$}{\string~}Matriz}!Matriz@{Matriz}}
@@ -177,15 +213,58 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00009}{9}} do arquivo 
 
 Destrutor da classe \doxylink{classMatriz}{Matriz}. 
 
-Este destrutor é responsável por liberar os recursos alocados pela instância da classe \doxylink{classMatriz}{Matriz}. Ele chama a função \doxylink{classMatriz_a45b783c49e5a4175487b121f5615790c}{limpar()} para garantir que toda a memória dinâmica utilizada pela matriz seja devidamente desalocada, evitando vazamentos de memória. 
+Este destrutor é responsável por desalocar toda a memória alocada pela matriz esparsa, incluindo os nós de dados e os nós sentinela.
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00072}{72}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+A operação é realizada em várias etapas para evitar vazamento de memória e acessos inválidos\+:
+
+
+\begin{DoxyItemize}
+\item Verifica se o nó cabeçalho é nulo. Se for, a matriz está vazia e não há nada a ser desalocado
+\item Inicia a partir do primeiro nó sentinela abaixo do cabeçalho e, enquanto não retorna para o cabeçalho, desaloca cada nó.
+\item Inicia a partir do primeiro nó sentinela à direita do cabeçalho e, seguindo até retornar ao cabeçalho, desaloca cada nó.
+\item Após remover todos os nós sentinela nas linhas e colunas, o cabeçalho é removido.
+\item O ponteiro do cabeçalho é então definido como nullptr para evitar acessos inválidos posteriores.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Observação}
+Este método garante que todos os nós foram corretamente liberados, evitando vazamentos de memória e a tentativa de desalocar a mesma memória mais de uma vez. 
+\end{DoxyNote}
+
+
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00088}{88}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00073\ \{}
-\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{classMatriz_a45b783c49e5a4175487b121f5615790c}{limpar}}();}
-\DoxyCodeLine{00075\ \}}
+\DoxyCodeLine{00089\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Evita\ destruição\ múltipla}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (cabecalho\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ Limpa\ os\ nós\ de\ dados\ (não\ mexe\ nos\ sentinelas)}}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{classMatriz_a45b783c49e5a4175487b121f5615790c}{limpar}}();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//\ Remover\ sentinelas\ das\ linhas}}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ !=\ cabecalho)}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoLinha}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoLinha}};}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ Remover\ sentinelas\ das\ colunas}}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ !=\ cabecalho)}
+\DoxyCodeLine{00109\ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoColuna}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoColuna}};}
+\DoxyCodeLine{00113\ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ Deletar\ o\ cabeçalho}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{delete}\ cabecalho;}
+\DoxyCodeLine{00117\ \ \ \ \ cabecalho\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ Evitar\ acessos\ inválidos\ após\ a\ exclusão}}
+\DoxyCodeLine{00118\ \}}
 
 \end{DoxyCode}
 
@@ -211,13 +290,13 @@ Esse método presume que a matriz está devidamente inicializada e que o cabeça
 \end{DoxyNote}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00042}{42}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00048}{48}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00043\ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIteratorM}{IteratorM}}(cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}},\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}});}
-\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIteratorM}{IteratorM}}(cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}},\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}});}
+\DoxyCodeLine{00051\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a7ddf93c221713ab6f84a09d1d860379d}\label{classMatriz_a7ddf93c221713ab6f84a09d1d860379d} 
@@ -237,13 +316,13 @@ Esta função é uma sobrecarga da função \doxylink{classMatriz_a3a06127086fe2
 \end{DoxyReturn}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00052}{52}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00058}{58}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00053\ \{}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIteratorM}{IteratorM}}(cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}},\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}});}
-\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00059\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIteratorM}{IteratorM}}(cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}},\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}});}
+\DoxyCodeLine{00061\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a50d46c6366b07dda1da18bcfcea762df}\label{classMatriz_a50d46c6366b07dda1da18bcfcea762df} 
@@ -263,13 +342,13 @@ Esta função provê um objeto \doxylink{classIteratorM}{IteratorM} associado à
 \end{DoxyReturn}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00047}{47}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00053}{53}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00048\ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIteratorM}{IteratorM}}(cabecalho,\ cabecalho-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}});}
-\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIteratorM}{IteratorM}}(cabecalho,\ cabecalho-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}});}
+\DoxyCodeLine{00056\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a6782e1dd06775c6a4efccba3ffc85716}\label{classMatriz_a6782e1dd06775c6a4efccba3ffc85716} 
@@ -289,13 +368,13 @@ Esta função é uma sobrecarga da função \doxylink{classMatriz_a50d46c6366b07
 \end{DoxyReturn}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00057}{57}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00063}{63}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00058\ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIteratorM}{IteratorM}}(cabecalho,\ cabecalho-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}});}
-\DoxyCodeLine{00060\ \}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIteratorM}{IteratorM}}(cabecalho,\ cabecalho-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}});}
+\DoxyCodeLine{00066\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a9062dbfd6809c9d0a4f177f6df0269d6}\label{classMatriz_a9062dbfd6809c9d0a4f177f6df0269d6} 
@@ -327,29 +406,29 @@ O valor do tipo double encontrado na posição indicada, ou 0 caso não exista n
 \end{DoxyExceptions}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00154}{154}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00223}{223}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00155\ \{}
-\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
-\DoxyCodeLine{00158\ }
-\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
-\DoxyCodeLine{00160\ }
-\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
-\DoxyCodeLine{00162\ \ \ \ \ \{}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00165\ }
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00168\ }
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00170\ \ \ \ \ \}}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00173\ \}}
+\DoxyCodeLine{00224\ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
+\DoxyCodeLine{00231\ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00239\ \ \ \ \ \}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00242\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a9a5f501398bc63f5bf99c9061eea5b12}\label{classMatriz_a9a5f501398bc63f5bf99c9061eea5b12} 
@@ -383,29 +462,29 @@ O valor do tipo double encontrado na posição indicada, ou 0
 \end{DoxyExceptions}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00175}{175}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00244}{244}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00176\ \{}
-\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
-\DoxyCodeLine{00179\ }
-\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
-\DoxyCodeLine{00181\ }
-\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
-\DoxyCodeLine{00183\ \ \ \ \ \{}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00186\ }
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00189\ }
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00191\ \ \ \ \ \}}
-\DoxyCodeLine{00192\ }
-\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00194\ \}}
+\DoxyCodeLine{00245\ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
+\DoxyCodeLine{00252\ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00260\ \ \ \ \ \}}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00263\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a598a301d6e02ba9669e806116f15c396}\label{classMatriz_a598a301d6e02ba9669e806116f15c396} 
@@ -423,13 +502,13 @@ Número de colunas da matriz.
 \end{DoxyReturn}
 Semelhante a \doxylink{classMatriz_aac16f51b920e0ae269f5e2b78fa9fad5}{get\+Linhas()}, utilizada para consultar o total de colunas da estrutura. 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00067}{67}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00083}{83}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00068\ \{}
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{return}\ colunas;}
-\DoxyCodeLine{00070\ \}}
+\DoxyCodeLine{00084\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{return}\ colunas;}
+\DoxyCodeLine{00086\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_aac16f51b920e0ae269f5e2b78fa9fad5}\label{classMatriz_aac16f51b920e0ae269f5e2b78fa9fad5} 
@@ -447,13 +526,13 @@ Número de linhas da matriz.
 \end{DoxyReturn}
 Esta função permite consultar o total de linhas para verificação de limites ou para iterações relacionadas ao tamanho da matriz. 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00062}{62}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00078}{78}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00063\ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ linhas;}
-\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00079\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{return}\ linhas;}
+\DoxyCodeLine{00081\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_add3295e730032050b85b6e9598c005db}\label{classMatriz_add3295e730032050b85b6e9598c005db} 
@@ -484,65 +563,65 @@ Esta função permite inserir uma nova célula com valor diferente de zero em um
 \end{DoxyExceptions}
 A função percorre primeiro a lista horizontal (linha) correspondente para localizar a posição adequada. Caso já exista um nó na mesma coluna, o valor é atualizado. Se não existir, cria-\/se um novo nó para armazenar o valor na posição indicada. Após isso, a função também atualiza a referência vertical (coluna), posicionando o novo nó de forma adequada na estrutura de dados. 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00097}{97}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00166}{166}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00098\ \{}
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ Não\ armazena\ valores\ iguais\ a\ zero}}
-\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}}\ ==\ 0)}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//\ Validação\ dos\ índices}}
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ inserção\ inválido"{}});}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//\ Busca\ na\ lista\ horizontal\ (linha)}}
-\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ cabecalho;}
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}})}
-\DoxyCodeLine{00110\ \ \ \ \ \{}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00112\ \ \ \ \ \}}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ Procura\ pela\ posição\ correta\ na\ linha}}
-\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}};}
-\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00117\ \ \ \ \ \{}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
-\DoxyCodeLine{00119\ \ \ \ \ \}}
-\DoxyCodeLine{00120\ }
-\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ nó\ já\ existe}}
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00123\ \ \ \ \ \{}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}-\/>\mbox{\hyperlink{structNode_a4336ead86378a5871a13ec073415c8f5}{atualizaValor}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});\ \textcolor{comment}{//\ Atualiza\ o\ valor}}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00126\ \ \ \ \ \}}
-\DoxyCodeLine{00127\ }
-\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ Cria\ um\ novo\ nó}}
-\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNode}{Node}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});}
-\DoxyCodeLine{00130\ }
-\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ Insere\ o\ nó\ na\ lista\ horizontal}}
-\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}-\/>direita\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita;}
-\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}};}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \ \ \ \ \textcolor{comment}{//\ Busca\ na\ lista\ vertical\ (coluna)}}
-\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ cabecalho;}
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00138\ \ \ \ \ \{}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
-\DoxyCodeLine{00140\ \ \ \ \ \}}
-\DoxyCodeLine{00141\ }
-\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\ Procura\ pela\ posição\ correta\ na\ coluna}}
-\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}};}
-\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>abaixo\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>abaixo-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}})}
-\DoxyCodeLine{00145\ \ \ \ \ \{}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00147\ \ \ \ \ \}}
-\DoxyCodeLine{00148\ }
-\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//\ Insere\ o\ nó\ na\ lista\ vertical}}
-\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}};}
-\DoxyCodeLine{00152\ \}}
+\DoxyCodeLine{00167\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Não\ armazena\ valores\ iguais\ a\ zero}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}}\ ==\ 0)}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//\ Validação\ dos\ índices}}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ inserção\ inválido"{}});}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ Busca\ na\ lista\ horizontal\ (linha)dede}}
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ cabecalho;}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}})}
+\DoxyCodeLine{00179\ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//\ Procura\ pela\ posição\ correta\ na\ linha}}
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}};}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00186\ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00188\ \ \ \ \ \}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ nó\ já\ existe}}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00192\ \ \ \ \ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}-\/>\mbox{\hyperlink{structNode_a4336ead86378a5871a13ec073415c8f5}{atualizaValor}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});\ \textcolor{comment}{//\ Atualiza\ o\ valor}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{comment}{//\ Cria\ um\ novo\ nó}}
+\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNode}{Node}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//\ Insere\ o\ nó\ na\ lista\ horizontal}}
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}-\/>direita\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita;}
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//\ Busca\ na\ lista\ vertical\ (coluna)}}
+\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ cabecalho;}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00207\ \ \ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{comment}{//\ Procura\ pela\ posição\ correta\ na\ coluna}}
+\DoxyCodeLine{00212\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}};}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>abaixo\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>abaixo-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}})}
+\DoxyCodeLine{00214\ \ \ \ \ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//\ Insere\ o\ nó\ na\ lista\ vertical}}
+\DoxyCodeLine{00219\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00220\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}};}
+\DoxyCodeLine{00221\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a45b783c49e5a4175487b121f5615790c}\label{classMatriz_a45b783c49e5a4175487b121f5615790c} 
@@ -553,41 +632,129 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00097}{97}} do arquivo
 
 
 
-Limpa a matriz esparsa, removendo todos os nós. 
+Limpa os dados armazenados na matriz esparsa. 
 
-Esta função percorre todos os nós da matriz esparsa, começando pelo nó imediatamente abaixo do cabeçalho e, em seguida, removendo todos os nós em cada linha e coluna. A função utiliza dois loops aninhados\+: o loop externo percorre cada linha da matriz, enquanto o loop interno percorre cada nó em uma linha específica. Cada nó é deletado para liberar a memória alocada dinamicamente.
+Esta função remove todos os nós de dados presentes na matriz esparsa, liberando a memória alocada para estes nós.
 
-Variáveis\+:
+Procedimento\+:
+\begin{DoxyEnumerate}
+\item Verifica se o nó cabeçalho da matriz é nulo. Se for, a função retorna imediatamente, pois não há estrutura alocada para ser limpa.
+\item Obtém o primeiro sentinela de linha a partir do cabeçalho (cabecalho-\/\texorpdfstring{$>$}{>}abaixo). Caso esse sentinela seja o próprio cabeçalho, a matriz está vazia, e a função retorna sem realizar nenhuma ação.
+\item Quebra a circularidade vertical\+:
 \begin{DoxyItemize}
-\item linha\+Atual\+: Ponteiro para o nó atual na linha que está sendo processada.
-\item coluna\+Atual\+: Ponteiro para o nó atual na coluna que está sendo processada.
-\item aux\+: Ponteiro auxiliar que aponta para o nó imediatamente abaixo do cabeçalho.
+\item Percorre a lista de sentinelas de linha até encontrar a última linha (um nó cujo ponteiro "{}abaixo"{} aponta para o cabeçalho).
+\item Ajusta o ponteiro "{}abaixo"{} do último nó para nullptr, transformando a lista circular em uma lista linear, o que facilita a iteração e remoção dos nós.
 \end{DoxyItemize}
+\item Para cada linha (sentinela) na lista linear\+:
+\begin{DoxyItemize}
+\item Percorre a lista horizontal de nós de dados. Essa lista é circular, com os dados localizados entre o ponteiro "{}direita"{} do sentinela e o próprio sentinela.
+\item Exclui cada nó de dado da linha, armazenando o nó seguinte antes de chamar delete, de forma a não perder a referência.
+\item Após excluir os nós de dados, restaura o ponteiro "{}direita"{} do sentinela para que ele aponte para ele mesmo.
+\end{DoxyItemize}
+\item Restaura a circularidade vertical\+:
+\begin{DoxyItemize}
+\item Após a limpeza, percorre novamente a lista linear de linhas até o último nó.
+\item Reconfigura o ponteiro "{}abaixo"{} do último nó para apontar novamente ao cabeçalho da matriz.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
 
-O loop externo continua até que todas as linhas tenham sido processadas, e o loop interno continua até que todos os nós em uma linha específica tenham sido deletados. 
+\begin{DoxyNote}{Observação}
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00077}{77}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+\begin{DoxyItemize}
+\item A função somente remove os nós de dados e restaura os ponteiros dos sentinelas, mantendo o nó cabeçalho intacto.
+\item A estrutura original da matriz esparsa é preservada, permitindo que a mesma seja reutilizada posteriormente. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00120}{120}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00078\ \{}
-\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
-\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}})}
-\DoxyCodeLine{00084\ \ \ \ \ \{}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}})}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{temp}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}};}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{temp}};}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{temp}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}};}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{temp}};}
-\DoxyCodeLine{00094\ \ \ \ \ \}}
-\DoxyCodeLine{00095\ \}}
+\DoxyCodeLine{00121\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (cabecalho\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ Obter\ o\ primeiro\ sentinela\ de\ linha.}}
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ Se\ não\ houver\ linhas\ (ou\ se\ o\ único\ nó\ for\ o\ cabeçalho),\ nada\ a\ fazer.}}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}}\ ==\ cabecalho)}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ Quebrar\ a\ circularidade\ vertical:\ encontrar\ a\ última\ linha.}}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>abaixo\ !=\ cabecalho)}
+\DoxyCodeLine{00134\ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//\ Quebramos\ a\ circularidade:\ a\ última\ linha\ passa\ a\ apontar\ para\ nullptr.}}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ Percorrer\ cada\ sentinela\ de\ linha\ (a\ cadeia\ agora\ é\ linear)}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structNode}{Node}}\ *linha\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};\ linha\ !=\ \textcolor{keyword}{nullptr};\ linha\ =\ linha-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}})}
+\DoxyCodeLine{00142\ \ \ \ \ \{}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ lista\ horizontal\ de\ cada\ linha\ é\ circular,\ onde\ os\ nós\ de\ dados\ estão}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ entre\ 'linha-\/>direita'\ e\ o\ próprio\ sentinela\ (linha).}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}}\ =\ linha-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}}\ !=\ linha)}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};\ \textcolor{comment}{//\ Guarda\ o\ próximo\ nó\ antes\ de\ deletar}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Libera\ o\ nó\ de\ dado}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}};}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Restaura\ o\ ponteiro\ horizontal\ do\ sentinela\ para\ ele\ mesmo.}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ linha-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}\ =\ linha;}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ Restaura\ a\ circularidade\ vertical:\ o\ último\ sentinela\ volta\ a\ apontar\ para\ o\ cabeçalho.}}
+\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>abaixo\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00160\ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ cabecalho;}
+\DoxyCodeLine{00164\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classMatriz_ad9ae4337ffba545a2d0039ecfe8f556a}\label{classMatriz_ad9ae4337ffba545a2d0039ecfe8f556a} 
+\index{Matriz@{Matriz}!operator=@{operator=}}
+\index{operator=@{operator=}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} Matriz\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatriz}{Matriz}}}]{matriz }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador de atribuição para a classe \doxylink{classMatriz}{Matriz}. 
+
+Esta função utiliza a técnica de cópia e troca (copy-\/and-\/swap) para implementar o operador de atribuição de forma segura e eficiente. Ao receber o objeto \textquotesingle{}matriz\textquotesingle{} por valor, ele garante que todos os recursos sejam copiados e que, em seguida, uma troca (std\+::swap) seja realizada entre os atributos do objeto atual e os do objeto recebido. Assim, os dados antigos do objeto atual serão automaticamente liberados quando o objeto \textquotesingle{}matriz\textquotesingle{} passado por valor for destruído, proporcionando uma forte garantia de exceção.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matriz} & Objeto do tipo \doxylink{classMatriz}{Matriz} que contém os novos dados a serem atribuídos. Por ser passado por valor, uma cópia dos dados é criada, permitindo que a operação de troca seja efetuada sem riscos de perda de recursos em caso de erros.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o próprio objeto (\texorpdfstring{$\ast$}{*}this) já contendo os dados do objeto \textquotesingle{}matriz\textquotesingle{}. O retorno por valor, nesse contexto, assegura que o objeto resultante possui os recursos de forma consistente.
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item std\+::swap\+: São trocados os atributos \textquotesingle{}cabecalho\textquotesingle{}, \textquotesingle{}linhas\textquotesingle{} e \textquotesingle{}colunas\textquotesingle{} entre o objeto atual e o objeto recebido, o que permite que o estado do objeto atual seja atualizado com o novo conteúdo.
+\item Ao final da função, o objeto local \textquotesingle{}matriz\textquotesingle{} é destruído, liberando os recursos que anteriormente pertenciam ao objeto atual, evitando assim possíveis vazamentos de memória. 
+\end{DoxyItemize}
+
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00068}{68}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ Troca\ os\ dados\ do\ objeto\ atual\ com\ os\ dados\ de\ 'matriz'}}
+\DoxyCodeLine{00071\ \ \ \ \ std::swap(cabecalho,\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{matriz}}.cabecalho);}
+\DoxyCodeLine{00072\ \ \ \ \ std::swap(linhas,\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{matriz}}.linhas);}
+\DoxyCodeLine{00073\ \ \ \ \ std::swap(colunas,\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{matriz}}.colunas);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ 'matriz'\ é\ destruída,\ liberando\ os\ recursos\ antigos}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00076\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_af8987741da4cabe0aa054f2e8b077a97}\label{classMatriz_af8987741da4cabe0aa054f2e8b077a97} 
@@ -602,32 +769,31 @@ Imprime a matriz no console.
 
 Exibe todas as linhas e colunas da matriz, mostrando os valores armazenados. Para posições onde não há valor armazenado (na forma esparsa), é imprimido o número 0. 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00196}{196}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00265}{265}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00197\ \{}
-\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
-\DoxyCodeLine{00199\ \ \ \ \ }
-\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ <=\ linhas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}++)}
-\DoxyCodeLine{00201\ \ \ \ \ \{}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ <=\ colunas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}++)}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::fixed\ <<\ std::setprecision(1)\ <<\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}0.0"{}};}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
-\DoxyCodeLine{00217\ \ \ \ \ \}}
-\DoxyCodeLine{00218\ \}}
+\DoxyCodeLine{00266\ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ <=\ linhas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}++)}
+\DoxyCodeLine{00270\ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ <=\ colunas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}++)}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::fixed\ <<\ std::setprecision(1)\ <<\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}0.0"{}};}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00285\ \ \ \ \ \}}
+\DoxyCodeLine{00286\ \}}
 
 \end{DoxyCode}
 

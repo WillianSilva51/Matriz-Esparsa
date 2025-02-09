@@ -1,0 +1,142 @@
+\doxysection{Referência do Arquivo include/manip\+Matriz/manip\+Matriz.hpp}
+\hypertarget{manipMatriz_8hpp}{}\label{manipMatriz_8hpp}\index{include/manipMatriz/manipMatriz.hpp@{include/manipMatriz/manipMatriz.hpp}}
+
+
+Menu para as funções para manipulação de matrizes.  
+
+
+{\ttfamily \#include "{}matriz/\+Matriz.\+hpp"{}}\newline
+Gráfico de dependência de inclusões para manip\+Matriz.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{manipMatriz_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{manipMatriz_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} \mbox{\hyperlink{manipMatriz_8hpp_a04e2a1fad94687d39a0d4fd570c0663b}{manip\+Matrix}} (\mbox{\hyperlink{classMatriz}{Matriz}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{matriz}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_aca454f84dd198a937af6499dd758aa3d}{std\+::string}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{nome\+Matriz}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Menu para as funções para manipulação de matrizes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em matriz} & \doxylink{classMatriz}{Matriz} a ser manipulada \\
+\hline
+{\em nome\+Matriz} & Nome da matriz a ser manipulada \\
+\hline
+\end{DoxyParams}
+
+
+Definição no arquivo \mbox{\hyperlink{manipMatriz_8hpp_source}{manip\+Matriz.\+hpp}}.
+
+
+
+\doxysubsection{Funções}
+\Hypertarget{manipMatriz_8hpp_a04e2a1fad94687d39a0d4fd570c0663b}\label{manipMatriz_8hpp_a04e2a1fad94687d39a0d4fd570c0663b} 
+\index{manipMatriz.hpp@{manipMatriz.hpp}!manipMatrix@{manipMatrix}}
+\index{manipMatrix@{manipMatrix}!manipMatriz.hpp@{manipMatriz.hpp}}
+\doxysubsubsection{\texorpdfstring{manipMatrix()}{manipMatrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} manip\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatriz}{Matriz}} \&}]{matriz,  }\item[{\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_aca454f84dd198a937af6499dd758aa3d}{std\+::string}} \&}]{nome\+Matriz }\end{DoxyParamCaption})}
+
+
+
+Definição na linha \mbox{\hyperlink{manipMatriz_8hpp_source_l00013}{13}} do arquivo \mbox{\hyperlink{manipMatriz_8hpp_source}{manip\+Matriz.\+hpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matriz\ selecionada:\ "{}}\ <<\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{nomeMatriz}}\ <<\ std::endl;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{matriz}}.print();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Escolha\ uma\ opção:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ -\/\ Inserir\ Valor"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ -\/\ Limpar\ Matriz"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ -\/\ Voltar"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{opcao}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::cin\ >>\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{opcao}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{opcao}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ valor;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ linha:\ "{}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ coluna:\ "{}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ valor:\ "{}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ valor;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{matriz}}.insert(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}},\ valor);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}})}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{e}}.what()\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Tem\ certeza\ que\ deseja\ limpar\ a\ matriz?\ [s/n]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{confirmacao}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{confirmacao}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{confirmacao}})}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'s'}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'S'}:}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{matriz}}.limpar();}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matriz\ limpa"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'n'}:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'N'}:}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Operação\ cancelada"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Voltando..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ inválida"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \}}
+
+\end{DoxyCode}

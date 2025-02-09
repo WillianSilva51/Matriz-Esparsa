@@ -1,0 +1,91 @@
+\doxysection{manip\+Matriz.\+hpp}
+\hypertarget{manipMatriz_8hpp_source}{}\label{manipMatriz_8hpp_source}\index{include/manipMatriz/manipMatriz.hpp@{include/manipMatriz/manipMatriz.hpp}}
+\mbox{\hyperlink{manipMatriz_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Matriz_8hpp}{matriz/Matriz.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00013}\mbox{\hyperlink{manipMatriz_8hpp_a04e2a1fad94687d39a0d4fd570c0663b}{00013}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{manipMatriz_8hpp_a04e2a1fad94687d39a0d4fd570c0663b}{manipMatrix}}(\mbox{\hyperlink{classMatriz}{Matriz}}\ \&matriz,\ \textcolor{keyword}{const}\ std::string\ \&nomeMatriz)}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00017}00017\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matriz\ selecionada:\ "{}}\ <<\ nomeMatriz\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00018}00018\ \ \ \ \ \ \ \ \ matriz.\mbox{\hyperlink{classMatriz_af8987741da4cabe0aa054f2e8b077a97}{print}}();}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00019}00019\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Escolha\ uma\ opção:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00020}00020\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[1]\ -\/\ Inserir\ Valor"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00021}00021\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[2]\ -\/\ Limpar\ Matriz"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00022}00022\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}[3]\ -\/\ Voltar"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ opcao;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ std::cin\ >>\ opcao;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (opcao)}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i,\ j;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ valor;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ linha:\ "{}};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ i;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ a\ coluna:\ "{}};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ j;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ valor:\ "{}};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ valor;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriz.\mbox{\hyperlink{classMatriz_add3295e730032050b85b6e9598c005db}{insert}}(i,\ j,\ valor);}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::exception\ \&e)}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ e.what()\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Tem\ certeza\ que\ deseja\ limpar\ a\ matriz?\ [s/n]"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ confirmacao;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ confirmacao;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (confirmacao)}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'s'}:}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'S'}:}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ matriz.\mbox{\hyperlink{classMatriz_a45b783c49e5a4175487b121f5615790c}{limpar}}();}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Matriz\ limpa"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'n'}:}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'N'}:}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Operação\ cancelada"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Voltando..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ inválida"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{manipMatriz_8hpp_source_l00093}00093\ \}}
+
+\end{DoxyCode}
