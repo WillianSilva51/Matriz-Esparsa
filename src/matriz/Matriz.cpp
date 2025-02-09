@@ -136,31 +136,6 @@ void Matriz::limpar()
     }
 }
 
-Matriz::~Matriz()
-{
-    limpar(); // Remove apenas os nós de dados
-
-    // Agora remover os sentinelas das linhas
-    Node *linhaAtual = cabecalho->abaixo;
-    while (linhaAtual != cabecalho)
-    {
-        Node *temp = linhaAtual;
-        linhaAtual = linhaAtual->abaixo;
-        delete temp; // Remove os sentinelas das linhas
-    }
-
-    // Agora remover os sentinelas das colunas
-    Node *colunaAtual = cabecalho->direita;
-    while (colunaAtual != cabecalho)
-    {
-        Node *temp = colunaAtual;
-        colunaAtual = colunaAtual->direita;
-        delete temp; // Remove os sentinelas das colunas
-    }
-
-    delete cabecalho; // Por fim, remove o cabeçalho
-}
-
 void Matriz::insert(const int &posI, const int &posJ, const double &value)
 {
     // Não armazena valores iguais a zero
