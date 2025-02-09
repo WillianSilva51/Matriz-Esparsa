@@ -71,27 +71,94 @@ int Matriz::getColunas() const
 
 Matriz::~Matriz()
 {
-    limpar();
+    // Limpa apenas os nós de dados (não exclui os sentinelas)
+    limpar();  
+
+    if (!cabecalho) {
+        std::cout << "Cabeçalho já é nulo. Nada para destruir." << std::endl;
+        return;  // Prevenção de acesso inválido à memória
+    }
+
+    // Remover sentinelas das linhas
+    std::cout << "Removendo sentinelas das linhas..." << std::endl;
+    Node *linhaAtual = cabecalho->abaixo;
+    while (linhaAtual != cabecalho)
+    {   
+        std::cout << "Nó da linha atual: " << linhaAtual << std::endl;
+        Node *proximoLinha = linhaAtual->abaixo;
+        if (linhaAtual != cabecalho) {
+            std::cout << "Deletando linha sentinela: " << linhaAtual << std::endl;
+            delete linhaAtual;
+        }
+        linhaAtual = proximoLinha;
+    }
+
+    // Remover sentinelas das colunas
+    std::cout << "Removendo sentinelas das colunas..." << std::endl;
+    Node *colunaAtual = cabecalho->direita;
+    while (colunaAtual != cabecalho)
+    {   
+        std::cout << "Nó da coluna atual: " << colunaAtual << std::endl;
+        Node *proximoColuna = colunaAtual->direita;
+        if (colunaAtual != cabecalho) {
+            std::cout << "Deletando coluna sentinela: " << colunaAtual << std::endl;
+            delete colunaAtual;
+        }
+        colunaAtual = proximoColuna;
+    }
+
+    // Deletar o cabeçalho
+    std::cout << "Deletando o cabeçalho: " << cabecalho << std::endl;
+    delete cabecalho;
+    cabecalho = nullptr;  // Prevenir acessos inválidos após a exclusão
+
+    std::cout << "Destruição da matriz concluída!" << std::endl;
 }
+
 
 void Matriz::limpar()
 {
-    Node *linhaAtual = cabecalho->abaixo;
-    Node *colunaAtual = linhaAtual->direita;
-    Node *aux = cabecalho->abaixo;
+    Node *linhaAtual = cabecalho->abaixo; // Começa na primeira linha (ignorando o cabeçalho)
 
-    while (linhaAtual != aux)
+    while (linhaAtual != cabecalho) // Enquanto não voltarmos ao cabeçalho
     {
-        while (colunaAtual != linhaAtual)
+        Node *colunaAtual = linhaAtual->direita;
+
+        // Percorre a linha e remove os nós de dados (mas não o sentinela da linha)
+        while (colunaAtual != linhaAtual) // Para quando encontrar o sentinela da linha
         {
             Node *temp = colunaAtual;
             colunaAtual = colunaAtual->direita;
             delete temp;
         }
+
+        linhaAtual = linhaAtual->abaixo; // Move para a próxima linha
+    }
+}
+
+Matriz::~Matriz()
+{
+    limpar(); // Remove apenas os nós de dados
+
+    // Agora remover os sentinelas das linhas
+    Node *linhaAtual = cabecalho->abaixo;
+    while (linhaAtual != cabecalho)
+    {
         Node *temp = linhaAtual;
         linhaAtual = linhaAtual->abaixo;
-        delete temp;
+        delete temp; // Remove os sentinelas das linhas
     }
+
+    // Agora remover os sentinelas das colunas
+    Node *colunaAtual = cabecalho->direita;
+    while (colunaAtual != cabecalho)
+    {
+        Node *temp = colunaAtual;
+        colunaAtual = colunaAtual->direita;
+        delete temp; // Remove os sentinelas das colunas
+    }
+
+    delete cabecalho; // Por fim, remove o cabeçalho
 }
 
 void Matriz::insert(const int &posI, const int &posJ, const double &value)
