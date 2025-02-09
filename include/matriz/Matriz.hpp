@@ -77,11 +77,42 @@ public:
     Matriz(const int &ln, const int &cl);
 
     /**
+     * @brief Construtor de cópia para a classe Matriz.
+     *
+     * Este construtor cria uma nova instância de Matriz a partir de outra instância existente, realizando uma cópia profunda dos
+     * elementos da matriz original. Inicialmente, ele chama o construtor principal da classe, passando como argumentos o número
+     * de linhas e colunas da matriz a ser copiada, garantindo que a nova matriz possua a mesma estrutura de armazenamento.
+     *
+     * Após a alocação da estrutura adequada, o construtor itera por todos os elementos da matriz original ("outra") usando um
+     * iterador (IteratorM). Para cada elemento encontrado, o método insert é invocado para inserir o valor na nova matriz,
+     * mantendo a posição indicada pelos atributos "linha" e "coluna" presentes na estrutura apontada pelo iterador.
+     *
+     * @param outra Referência para a instância da matriz que será copiada.
+     */
+    Matriz(const Matriz &outra);
+
+    /**
      * @brief Destrutor da classe Matriz.
      *
-     * Este destrutor é responsável por liberar os recursos alocados pela instância da classe Matriz.
-     * Ele chama a função limpar() para garantir que toda a memória dinâmica utilizada pela matriz
-     * seja devidamente desalocada, evitando vazamentos de memória.
+     * Este destrutor é responsável por desalocar toda a memória alocada pela matriz esparsa, incluindo os nós de dados e os nós sentinela.
+     *
+     * @details
+     * A operação é realizada em várias etapas para evitar vazamento de memória e acessos inválidos:
+     *
+     *    - Verifica se o nó cabeçalho é nulo. Se for, a matriz está vazia e não há nada a ser desalocado
+     *
+     *    - Inicia a partir do primeiro nó sentinela abaixo do cabeçalho e, enquanto não retorna para o cabeçalho,
+     *      desaloca cada nó.
+     *
+     *    - Inicia a partir do primeiro nó sentinela à direita do cabeçalho e, seguindo até retornar ao cabeçalho,
+     *      desaloca cada nó.
+     *
+     *    - Após remover todos os nós sentinela nas linhas e colunas, o cabeçalho é removido.
+     *
+     *    - O ponteiro do cabeçalho é então definido como nullptr para evitar acessos inválidos posteriores.
+     *
+     * @note Este método garante que todos os nós foram corretamente liberados, evitando vazamentos de memória e a
+     *       tentativa de desalocar a mesma memória mais de uma vez.
      */
     ~Matriz();
 
@@ -136,6 +167,29 @@ public:
     IteratorM end() const;
 
     /**
+     * @brief Sobrecarga do operador de atribuição para a classe Matriz.
+     *
+     * Esta função utiliza a técnica de cópia e troca (copy-and-swap) para implementar o operador de atribuição de forma segura e eficiente.
+     * Ao receber o objeto 'matriz' por valor, ele garante que todos os recursos sejam copiados e que, em seguida, uma troca
+     * (std::swap) seja realizada entre os atributos do objeto atual e os do objeto recebido. Assim, os dados antigos do objeto
+     * atual serão automaticamente liberados quando o objeto 'matriz' passado por valor for destruído, proporcionando uma forte
+     * garantia de exceção.
+     *
+     * @param matriz Objeto do tipo Matriz que contém os novos dados a serem atribuídos. Por ser passado por valor, uma cópia
+     * dos dados é criada, permitindo que a operação de troca seja efetuada sem riscos de perda de recursos em caso de erros.
+     *
+     * @return Retorna o próprio objeto (*this) já contendo os dados do objeto 'matriz'. O retorno por valor, nesse contexto,
+     * assegura que o objeto resultante possui os recursos de forma consistente.
+     *
+     * @details
+     * - std::swap: São trocados os atributos 'cabecalho', 'linhas' e 'colunas' entre o objeto atual e o objeto recebido,
+     *   o que permite que o estado do objeto atual seja atualizado com o novo conteúdo.
+     * - Ao final da função, o objeto local 'matriz' é destruído, liberando os recursos que anteriormente pertenciam ao objeto
+     *   atual, evitando assim possíveis vazamentos de memória.
+     */
+    Matriz operator=(Matriz matriz);
+
+    /**
      * @brief Retorna a quantidade de linhas da matriz.
      *
      * @return Número de linhas da matriz.
@@ -156,24 +210,32 @@ public:
     int getColunas() const;
 
     /**
-     * @brief Limpa a matriz esparsa, removendo todos os nós.
+     * @brief Limpa os dados armazenados na matriz esparsa.
+     *
+     * Esta função remove todos os nós de dados presentes na matriz esparsa, liberando a memória alocada para estes nós.
      *
      * @details
-     * Esta função percorre todos os nós da matriz esparsa, começando pelo nó
-     * imediatamente abaixo do cabeçalho e, em seguida, removendo todos os nós
-     * em cada linha e coluna. A função utiliza dois loops aninhados: o loop
-     * externo percorre cada linha da matriz, enquanto o loop interno percorre
-     * cada nó em uma linha específica. Cada nó é deletado para liberar a memória
-     * alocada dinamicamente.
+     * Procedimento:
+     * 1. Verifica se o nó cabeçalho da matriz é nulo. Se for, a função retorna imediatamente,
+     *    pois não há estrutura alocada para ser limpa.
+     * 2. Obtém o primeiro sentinela de linha a partir do cabeçalho (cabecalho->abaixo). Caso esse
+     *    sentinela seja o próprio cabeçalho, a matriz está vazia, e a função retorna sem realizar nenhuma ação.
+     * 3. Quebra a circularidade vertical:
+     *    - Percorre a lista de sentinelas de linha até encontrar a última linha (um nó cujo ponteiro "abaixo" aponta para o cabeçalho).
+     *    - Ajusta o ponteiro "abaixo" do último nó para nullptr, transformando a lista circular em uma lista linear,
+     *      o que facilita a iteração e remoção dos nós.
+     * 4. Para cada linha (sentinela) na lista linear:
+     *    - Percorre a lista horizontal de nós de dados. Essa lista é circular, com os dados localizados entre
+     *      o ponteiro "direita" do sentinela e o próprio sentinela.
+     *    - Exclui cada nó de dado da linha, armazenando o nó seguinte antes de chamar delete, de forma a não perder a referência.
+     *    - Após excluir os nós de dados, restaura o ponteiro "direita" do sentinela para que ele aponte para ele mesmo.
+     * 5. Restaura a circularidade vertical:
+     *    - Após a limpeza, percorre novamente a lista linear de linhas até o último nó.
+     *    - Reconfigura o ponteiro "abaixo" do último nó para apontar novamente ao cabeçalho da matriz.
      *
-     * Variáveis:
-     * - linhaAtual: Ponteiro para o nó atual na linha que está sendo processada.
-     * - colunaAtual: Ponteiro para o nó atual na coluna que está sendo processada.
-     * - aux: Ponteiro auxiliar que aponta para o nó imediatamente abaixo do cabeçalho.
-     *
-     * O loop externo continua até que todas as linhas tenham sido processadas,
-     * e o loop interno continua até que todos os nós em uma linha específica
-     * tenham sido deletados.
+     * @note
+     * - A função somente remove os nós de dados e restaura os ponteiros dos sentinelas, mantendo o nó cabeçalho intacto.
+     * - A estrutura original da matriz esparsa é preservada, permitindo que a mesma seja reutilizada posteriormente.
      */
     void limpar();
 
@@ -258,8 +320,6 @@ public:
      * esparsa), é imprimido o número 0.
      */
     void print();
-
-    Matriz& operator=(const Matriz& matriz);
 };
 
 #endif

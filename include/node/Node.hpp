@@ -42,18 +42,6 @@ struct Node
     {
         valor = novoValor;
     }
-
-    /**
-     * @brief Destrutor da classe Node.
-     *
-     * Este destrutor é responsável por liberar a memória alocada para os ponteiros
-     * direita e abaixo, que são membros da classe Node.
-     */
-    ~Node()
-    {
-        delete direita;
-        delete abaixo;
-    }
 };
 
 #endif

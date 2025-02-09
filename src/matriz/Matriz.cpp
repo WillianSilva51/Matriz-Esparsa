@@ -39,6 +39,12 @@ Matriz::Matriz(const int &lin, const int &col)
     auxColuna->direita = cabecalho;
 }
 
+Matriz::Matriz(const Matriz &outra) : Matriz(outra.linhas, outra.colunas)
+{
+    for (IteratorM it = outra.begin(); it != outra.end(); ++it)
+        this->insert(it.current->linha, it.current->coluna, *it);
+}
+
 IteratorM Matriz::begin()
 {
     return IteratorM(cabecalho->abaixo, cabecalho->abaixo->direita);
@@ -59,6 +65,16 @@ IteratorM Matriz::end() const
     return IteratorM(cabecalho, cabecalho->direita);
 }
 
+Matriz Matriz::operator=(Matriz matriz)
+{
+    // Troca os dados do objeto atual com os dados de 'matriz'
+    std::swap(cabecalho, matriz.cabecalho);
+    std::swap(linhas, matriz.linhas);
+    std::swap(colunas, matriz.colunas);
+    // 'matriz' é destruída, liberando os recursos antigos
+    return *this;
+}
+
 int Matriz::getLinhas() const
 {
     return linhas;
@@ -71,69 +87,80 @@ int Matriz::getColunas() const
 
 Matriz::~Matriz()
 {
-    // Limpa apenas os nós de dados (não exclui os sentinelas)
-    limpar();  
+    // Evita destruição múltipla
+    if (cabecalho == nullptr)
+        return;
 
-    if (!cabecalho) {
-        std::cout << "Cabeçalho já é nulo. Nada para destruir." << std::endl;
-        return;  // Prevenção de acesso inválido à memória
-    }
+    // Limpa os nós de dados (não mexe nos sentinelas)
+    limpar();
 
     // Remover sentinelas das linhas
-    std::cout << "Removendo sentinelas das linhas..." << std::endl;
     Node *linhaAtual = cabecalho->abaixo;
     while (linhaAtual != cabecalho)
-    {   
-        std::cout << "Nó da linha atual: " << linhaAtual << std::endl;
+    {
         Node *proximoLinha = linhaAtual->abaixo;
-        if (linhaAtual != cabecalho) {
-            std::cout << "Deletando linha sentinela: " << linhaAtual << std::endl;
-            delete linhaAtual;
-        }
+        delete linhaAtual;
         linhaAtual = proximoLinha;
     }
 
     // Remover sentinelas das colunas
-    std::cout << "Removendo sentinelas das colunas..." << std::endl;
     Node *colunaAtual = cabecalho->direita;
     while (colunaAtual != cabecalho)
-    {   
-        std::cout << "Nó da coluna atual: " << colunaAtual << std::endl;
+    {
         Node *proximoColuna = colunaAtual->direita;
-        if (colunaAtual != cabecalho) {
-            std::cout << "Deletando coluna sentinela: " << colunaAtual << std::endl;
-            delete colunaAtual;
-        }
+        delete colunaAtual;
         colunaAtual = proximoColuna;
     }
 
     // Deletar o cabeçalho
-    std::cout << "Deletando o cabeçalho: " << cabecalho << std::endl;
     delete cabecalho;
-    cabecalho = nullptr;  // Prevenir acessos inválidos após a exclusão
-
-    std::cout << "Destruição da matriz concluída!" << std::endl;
+    cabecalho = nullptr; // Evitar acessos inválidos após a exclusão
 }
-
 
 void Matriz::limpar()
 {
-    Node *linhaAtual = cabecalho->abaixo; // Começa na primeira linha (ignorando o cabeçalho)
+    if (cabecalho == nullptr)
+        return;
 
-    while (linhaAtual != cabecalho) // Enquanto não voltarmos ao cabeçalho
+    // Obter o primeiro sentinela de linha.
+    Node *LinhaAtual = cabecalho->abaixo;
+    // Se não houver linhas (ou se o único nó for o cabeçalho), nada a fazer.
+    if (LinhaAtual == cabecalho)
+        return;
+
+    // Quebrar a circularidade vertical: encontrar a última linha.
+    Node *ColunaAtual = LinhaAtual;
+    while (ColunaAtual->abaixo != cabecalho)
     {
-        Node *colunaAtual = linhaAtual->direita;
-
-        // Percorre a linha e remove os nós de dados (mas não o sentinela da linha)
-        while (colunaAtual != linhaAtual) // Para quando encontrar o sentinela da linha
-        {
-            Node *temp = colunaAtual;
-            colunaAtual = colunaAtual->direita;
-            delete temp;
-        }
-
-        linhaAtual = linhaAtual->abaixo; // Move para a próxima linha
+        ColunaAtual = ColunaAtual->abaixo;
     }
+    // Quebramos a circularidade: a última linha passa a apontar para nullptr.
+    ColunaAtual->abaixo = nullptr;
+
+    // Percorrer cada sentinela de linha (a cadeia agora é linear)
+    for (Node *linha = LinhaAtual; linha != nullptr; linha = linha->abaixo)
+    {
+
+        // A lista horizontal de cada linha é circular, onde os nós de dados estão
+        // entre 'linha->direita' e o próprio sentinela (linha).
+        Node *cur = linha->direita;
+        while (cur != linha)
+        {
+            Node *proximo = cur->direita; // Guarda o próximo nó antes de deletar
+            delete cur;                   // Libera o nó de dado
+            cur = proximo;
+        }
+        // Restaura o ponteiro horizontal do sentinela para ele mesmo.
+        linha->direita = linha;
+    }
+
+    // Restaura a circularidade vertical: o último sentinela volta a apontar para o cabeçalho.
+    ColunaAtual = LinhaAtual;
+    while (ColunaAtual->abaixo != nullptr)
+    {
+        ColunaAtual = ColunaAtual->abaixo;
+    }
+    ColunaAtual->abaixo = cabecalho;
 }
 
 void Matriz::insert(const int &posI, const int &posJ, const double &value)
@@ -238,7 +265,7 @@ double Matriz::get(const int &posI, const int &posJ) const
 void Matriz::print()
 {
     IteratorM it = begin();
-    
+
     for (int i = 1; i <= linhas; i++)
     {
         for (int j = 1; j <= colunas; j++)
@@ -253,49 +280,7 @@ void Matriz::print()
                 std::cout << "0.0";
             }
             std::cout << " ";
-            
         }
         std::cout << std::endl;
     }
-}
-
-Matriz&Matriz::operator=(const Matriz& matriz){
-    if (this == &matriz) return *this;
-
-    limpar(); // Remove os nós de dados
-
-    linhas = matriz.linhas;
-    colunas = matriz.colunas;
-
-    cabecalho = new Node(0, 0, 0);
-    cabecalho->direita = cabecalho->abaixo = cabecalho;
-
-    Node *auxLinha = cabecalho;
-    for (int i = 1; i <= linhas; i++)
-    {
-        Node *novo = new Node(i, 0, 0);
-        auxLinha->abaixo = novo;
-        novo->direita = novo;
-        auxLinha = novo;
-    }
-    auxLinha->abaixo = cabecalho;
-
-    Node *auxColuna = cabecalho;
-    for (int j = 1; j <= colunas; j++)
-    {
-        Node *novo = new Node(0, j, 0);
-        auxColuna->direita = novo;
-        novo->abaixo = novo;
-        auxColuna = novo;
-    }
-    auxColuna->direita = cabecalho;
-    
-    IteratorM it = matriz.begin();
-    while (it != matriz.end())
-    {
-        insert(it.current->linha, it.current->coluna, *it);
-        ++it;
-    }
-
-    return *this;
 }

@@ -18,9 +18,8 @@ void manipMatrix(Matriz &matriz, const std::string &nomeMatriz)
         matriz.print();
         std::cout << "Escolha uma opção:" << std::endl;
         std::cout << "[1] - Inserir Valor" << std::endl;
-        std::cout << "[2] - Remover Valor" << std::endl;
-        std::cout << "[3] - Limpar Matriz" << std::endl;
-        std::cout << "[4] - Voltar" << std::endl;
+        std::cout << "[2] - Limpar Matriz" << std::endl;
+        std::cout << "[3] - Voltar" << std::endl;
 
         int opcao;
         std::cin >> opcao;
@@ -58,29 +57,6 @@ void manipMatrix(Matriz &matriz, const std::string &nomeMatriz)
 
         case 2:
         {
-            int i, j;
-
-            std::cout << "Digite a linha: ";
-            std::cin >> i;
-            std::cin.ignore();
-
-            std::cout << "Digite a coluna: ";
-            std::cin >> j;
-            std::cin.ignore();
-
-            try
-            {
-                std::cout << "Valor: " << matriz.get(i, j) << std::endl;
-            }
-            catch (const std::exception &e)
-            {
-                std::cerr << e.what() << '\n';
-            }
-            break;
-        }
-
-        case 3:
-        {
             std::cout << "Tem certeza que deseja limpar a matriz? [s/n]" << std::endl;
             char confirmacao;
             std::cin >> confirmacao;
@@ -100,7 +76,8 @@ void manipMatrix(Matriz &matriz, const std::string &nomeMatriz)
             }
             break;
         }
-        case 4:
+
+        case 3:
         {
             std::cout << "Voltando..." << std::endl;
             return;
