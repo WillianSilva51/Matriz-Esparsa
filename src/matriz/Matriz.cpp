@@ -283,3 +283,44 @@ void Matriz::print()
         std::cout << std::endl;
     }
 }
+
+Matriz&Matriz::operator=(const Matriz& matriz){
+    if (this == &matriz) return *this;
+
+    limpar(); // Remove os nós de dados
+
+    linhas = matriz.linhas;
+    colunas = matriz.colunas;
+
+    cabecalho = new Node(0, 0, 0);
+    cabecalho->direita = cabecalho->abaixo = cabecalho;
+
+    Node *auxLinha = cabecalho;
+    for (int i = 1; i <= linhas; i++)
+    {
+        Node *novo = new Node(i, 0, 0);
+        auxLinha->abaixo = novo;
+        novo->direita = novo;
+        auxLinha = novo;
+    }
+    auxLinha->abaixo = cabecalho;
+
+    Node *auxColuna = cabecalho;
+    for (int j = 1; j <= colunas; j++)
+    {
+        Node *novo = new Node(0, j, 0);
+        auxColuna->direita = novo;
+        novo->abaixo = novo;
+        auxColuna = novo;
+    }
+    auxColuna->direita = cabecalho;
+    
+    IteratorM it = matriz.begin();
+    while (it != matriz.end())
+    {
+        insert(it.current->linha, it.current->coluna, *it);
+        ++it;
+    }
+
+    return *this;
+}
