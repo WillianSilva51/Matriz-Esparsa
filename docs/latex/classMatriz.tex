@@ -236,35 +236,30 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00088}{88}} do arquivo
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00089\ \{}
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Evita\ destruição\ múltipla}}
-\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (cabecalho\ ==\ \textcolor{keyword}{nullptr})}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ Limpa\ os\ nós\ de\ dados\ (não\ mexe\ nos\ sentinelas)}}
-\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{classMatriz_a45b783c49e5a4175487b121f5615790c}{limpar}}();}
-\DoxyCodeLine{00096\ }
-\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//\ Remover\ sentinelas\ das\ linhas}}
-\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ !=\ cabecalho)}
-\DoxyCodeLine{00100\ \ \ \ \ \{}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoLinha}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}};}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoLinha}};}
-\DoxyCodeLine{00104\ \ \ \ \ \}}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ Remover\ sentinelas\ das\ colunas}}
-\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
-\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ !=\ cabecalho)}
-\DoxyCodeLine{00109\ \ \ \ \ \{}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoColuna}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}};}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoColuna}};}
-\DoxyCodeLine{00113\ \ \ \ \ \}}
-\DoxyCodeLine{00114\ }
-\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ Deletar\ o\ cabeçalho}}
-\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{delete}\ cabecalho;}
-\DoxyCodeLine{00117\ \ \ \ \ cabecalho\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ Evitar\ acessos\ inválidos\ após\ a\ exclusão}}
-\DoxyCodeLine{00118\ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (cabecalho\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classMatriz_a45b783c49e5a4175487b121f5615790c}{limpar}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ !=\ cabecalho)}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoLinha}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoLinha}};}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ !=\ cabecalho)}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoColuna}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximoColuna}};}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{delete}\ cabecalho;}
+\DoxyCodeLine{00112\ \ \ \ \ cabecalho\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00113\ \}}
 
 \end{DoxyCode}
 
@@ -406,29 +401,29 @@ O valor do tipo double encontrado na posição indicada, ou 0 caso não exista n
 \end{DoxyExceptions}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00223}{223}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00200}{200}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00224\ \{}
-\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
-\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
-\DoxyCodeLine{00227\ }
-\DoxyCodeLine{00228\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
-\DoxyCodeLine{00229\ }
-\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
-\DoxyCodeLine{00231\ \ \ \ \ \{}
-\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00234\ }
-\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
-\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00237\ }
-\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00239\ \ \ \ \ \}}
-\DoxyCodeLine{00240\ }
-\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00242\ \}}
+\DoxyCodeLine{00201\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
+\DoxyCodeLine{00208\ \ \ \ \ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00216\ \ \ \ \ \}}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00219\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a9a5f501398bc63f5bf99c9061eea5b12}\label{classMatriz_a9a5f501398bc63f5bf99c9061eea5b12} 
@@ -462,29 +457,29 @@ O valor do tipo double encontrado na posição indicada, ou 0
 \end{DoxyExceptions}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00244}{244}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00221}{221}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00245\ \{}
-\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
-\DoxyCodeLine{00248\ }
-\DoxyCodeLine{00249\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
-\DoxyCodeLine{00250\ }
-\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
-\DoxyCodeLine{00252\ \ \ \ \ \{}
-\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00255\ }
-\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
-\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00258\ }
-\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00260\ \ \ \ \ \}}
-\DoxyCodeLine{00261\ }
-\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00263\ \}}
+\DoxyCodeLine{00222\ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
+\DoxyCodeLine{00229\ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00237\ \ \ \ \ \}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00240\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a598a301d6e02ba9669e806116f15c396}\label{classMatriz_a598a301d6e02ba9669e806116f15c396} 
@@ -563,65 +558,55 @@ Esta função permite inserir uma nova célula com valor diferente de zero em um
 \end{DoxyExceptions}
 A função percorre primeiro a lista horizontal (linha) correspondente para localizar a posição adequada. Caso já exista um nó na mesma coluna, o valor é atualizado. Se não existir, cria-\/se um novo nó para armazenar o valor na posição indicada. Após isso, a função também atualiza a referência vertical (coluna), posicionando o novo nó de forma adequada na estrutura de dados. 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00166}{166}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00153}{153}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00167\ \{}
-\DoxyCodeLine{00168\ \ \ \ \ \textcolor{comment}{//\ Não\ armazena\ valores\ iguais\ a\ zero}}
-\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}}\ ==\ 0)}
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//\ Validação\ dos\ índices}}
-\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ inserção\ inválido"{}});}
-\DoxyCodeLine{00175\ }
-\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ Busca\ na\ lista\ horizontal\ (linha)dede}}
-\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ cabecalho;}
-\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}})}
-\DoxyCodeLine{00179\ \ \ \ \ \{}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00181\ \ \ \ \ \}}
-\DoxyCodeLine{00182\ }
-\DoxyCodeLine{00183\ \ \ \ \ \textcolor{comment}{//\ Procura\ pela\ posição\ correta\ na\ linha}}
-\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}};}
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00154\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}}\ ==\ 0)}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ inserção\ inválido"{}});}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ cabecalho;}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}})}
+\DoxyCodeLine{00163\ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00165\ \ \ \ \ \}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}};}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{linhaAtual}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00169\ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00174\ \ \ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}-\/>\mbox{\hyperlink{structNode_a4336ead86378a5871a13ec073415c8f5}{atualizaValor}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNode}{Node}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}-\/>direita\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita;}
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}};}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ cabecalho;}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
 \DoxyCodeLine{00186\ \ \ \ \ \{}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
 \DoxyCodeLine{00188\ \ \ \ \ \}}
 \DoxyCodeLine{00189\ }
-\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ nó\ já\ existe}}
-\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00190\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}};}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>abaixo\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>abaixo-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}})}
 \DoxyCodeLine{00192\ \ \ \ \ \{}
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}-\/>\mbox{\hyperlink{structNode_a4336ead86378a5871a13ec073415c8f5}{atualizaValor}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});\ \textcolor{comment}{//\ Atualiza\ o\ valor}}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00195\ \ \ \ \ \}}
-\DoxyCodeLine{00196\ }
-\DoxyCodeLine{00197\ \ \ \ \ \textcolor{comment}{//\ Cria\ um\ novo\ nó}}
-\DoxyCodeLine{00198\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNode}{Node}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}},\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});}
-\DoxyCodeLine{00199\ }
-\DoxyCodeLine{00200\ \ \ \ \ \textcolor{comment}{//\ Insere\ o\ nó\ na\ lista\ horizontal}}
-\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}-\/>direita\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita;}
-\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}};}
-\DoxyCodeLine{00203\ }
-\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//\ Busca\ na\ lista\ vertical\ (coluna)}}
-\DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ cabecalho;}
-\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00207\ \ \ \ \ \{}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
-\DoxyCodeLine{00209\ \ \ \ \ \}}
-\DoxyCodeLine{00210\ }
-\DoxyCodeLine{00211\ \ \ \ \ \textcolor{comment}{//\ Procura\ pela\ posição\ correta\ na\ coluna}}
-\DoxyCodeLine{00212\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}};}
-\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>abaixo\ !=\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{colunaAtual}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>abaixo-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}})}
-\DoxyCodeLine{00214\ \ \ \ \ \{}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00216\ \ \ \ \ \}}
-\DoxyCodeLine{00217\ }
-\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//\ Insere\ o\ nó\ na\ lista\ vertical}}
-\DoxyCodeLine{00219\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00220\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}};}
-\DoxyCodeLine{00221\ \}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00197\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{novo}};}
+\DoxyCodeLine{00198\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a45b783c49e5a4175487b121f5615790c}\label{classMatriz_a45b783c49e5a4175487b121f5615790c} 
@@ -667,54 +652,46 @@ Procedimento\+:
 \end{DoxyNote}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00120}{120}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00115}{115}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00121\ \{}
-\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}\ (cabecalho\ ==\ \textcolor{keyword}{nullptr})}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00124\ }
-\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ Obter\ o\ primeiro\ sentinela\ de\ linha.}}
-\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ Se\ não\ houver\ linhas\ (ou\ se\ o\ único\ nó\ for\ o\ cabeçalho),\ nada\ a\ fazer.}}
-\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}}\ ==\ cabecalho)}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00130\ }
-\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ Quebrar\ a\ circularidade\ vertical:\ encontrar\ a\ última\ linha.}}
-\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};}
-\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>abaixo\ !=\ cabecalho)}
-\DoxyCodeLine{00134\ \ \ \ \ \{}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00136\ \ \ \ \ \}}
-\DoxyCodeLine{00137\ \ \ \ \ \textcolor{comment}{//\ Quebramos\ a\ circularidade:\ a\ última\ linha\ passa\ a\ apontar\ para\ nullptr.}}
-\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00139\ }
-\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ Percorrer\ cada\ sentinela\ de\ linha\ (a\ cadeia\ agora\ é\ linear)}}
-\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structNode}{Node}}\ *linha\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};\ linha\ !=\ \textcolor{keyword}{nullptr};\ linha\ =\ linha-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}})}
-\DoxyCodeLine{00142\ \ \ \ \ \{}
-\DoxyCodeLine{00143\ }
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ A\ lista\ horizontal\ de\ cada\ linha\ é\ circular,\ onde\ os\ nós\ de\ dados\ estão}}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ entre\ 'linha-\/>direita'\ e\ o\ próprio\ sentinela\ (linha).}}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}}\ =\ linha-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}}\ !=\ linha)}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};\ \textcolor{comment}{//\ Guarda\ o\ próximo\ nó\ antes\ de\ deletar}}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Libera\ o\ nó\ de\ dado}}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{cur}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}};}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Restaura\ o\ ponteiro\ horizontal\ do\ sentinela\ para\ ele\ mesmo.}}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ linha-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}\ =\ linha;}
-\DoxyCodeLine{00155\ \ \ \ \ \}}
-\DoxyCodeLine{00156\ }
-\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ Restaura\ a\ circularidade\ vertical:\ o\ último\ sentinela\ volta\ a\ apontar\ para\ o\ cabeçalho.}}
-\DoxyCodeLine{00158\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};}
-\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>abaixo\ !=\ \textcolor{keyword}{nullptr})}
-\DoxyCodeLine{00160\ \ \ \ \ \{}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
-\DoxyCodeLine{00162\ \ \ \ \ \}}
-\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ cabecalho;}
-\DoxyCodeLine{00164\ \}}
+\DoxyCodeLine{00116\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{if}\ (cabecalho\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}}\ =\ cabecalho-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}}\ ==\ cabecalho)}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>abaixo\ !=\ cabecalho)}
+\DoxyCodeLine{00126\ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structNode}{Node}}\ *linha\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};\ linha\ !=\ \textcolor{keyword}{nullptr};\ linha\ =\ linha-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}})}
+\DoxyCodeLine{00133\ \ \ \ \ \{}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}\ =\ linha-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}\ !=\ linha)}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ linha-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}\ =\ linha;}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>abaixo\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00147\ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ cabecalho;}
+\DoxyCodeLine{00151\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_ad9ae4337ffba545a2d0039ecfe8f556a}\label{classMatriz_ad9ae4337ffba545a2d0039ecfe8f556a} 
@@ -769,31 +746,31 @@ Imprime a matriz no console.
 
 Exibe todas as linhas e colunas da matriz, mostrando os valores armazenados. Para posições onde não há valor armazenado (na forma esparsa), é imprimido o número 0. 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00265}{265}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00242}{242}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00266\ \{}
-\DoxyCodeLine{00267\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
-\DoxyCodeLine{00268\ }
-\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ <=\ linhas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}++)}
-\DoxyCodeLine{00270\ \ \ \ \ \{}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ <=\ colunas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}++)}
-\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})}
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::fixed\ <<\ std::setprecision(1)\ <<\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}0.0"{}};}
-\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
-\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
-\DoxyCodeLine{00285\ \ \ \ \ \}}
-\DoxyCodeLine{00286\ \}}
+\DoxyCodeLine{00243\ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ <=\ linhas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}++)}
+\DoxyCodeLine{00247\ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ <=\ colunas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}++)}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::fixed\ <<\ std::setprecision(1)\ <<\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}0.0"{}};}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00262\ \ \ \ \ \}}
+\DoxyCodeLine{00263\ \}}
 
 \end{DoxyCode}
 

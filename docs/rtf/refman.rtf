@@ -107,7 +107,7 @@
 }
 {\info 
 {\title {\comment Matriz Esparsa  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-2.0 \par
+2.1 \par
 }}Matriz Esparsa}
 {\comment Gerado por doxygen 1.9.8.}
 }\pard\plain 
@@ -122,7 +122,7 @@
 \par\par\par\par\par\par\par\par\par\par\par\par
 \pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
 {\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
-Vers\'E3o 2.0\par\page\page\vertalt
+Vers\'E3o 2.1\par\page\page\vertalt
 \pard\plain 
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Sum\'E1rio\par
 \pard\plain \par
@@ -1204,35 +1204,30 @@ Este m\'E9todo garante que todos os n\'F3s foram corretamente liberados, evitand
 Defini\'E7\'E3o na linha {\b 88} do arquivo {\b Matriz.cpp}.}\par
 {
 \pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00089 \{\par
-00090     {\cf20 // Evita destrui\'E7\'E3o m\'FAltipla}\par
-00091     {\cf19 if} (cabecalho == {\cf17 nullptr})\par
-00092         {\cf19 return};\par
-00093 \par
-00094     {\cf20 // Limpa os n\'F3s de dados (n\'E3o mexe nos sentinelas)}\par
-00095     limpar();\par
-00096 \par
-00097     {\cf20 // Remover sentinelas das linhas}\par
-00098     Node *linhaAtual = cabecalho->abaixo;\par
-00099     {\cf19 while} (linhaAtual != cabecalho)\par
-00100     \{\par
-00101         Node *proximoLinha = linhaAtual->abaixo;\par
-00102         {\cf17 delete} linhaAtual;\par
-00103         linhaAtual = proximoLinha;\par
-00104     \}\par
-00105 \par
-00106     {\cf20 // Remover sentinelas das colunas}\par
-00107     Node *colunaAtual = cabecalho->direita;\par
-00108     {\cf19 while} (colunaAtual != cabecalho)\par
-00109     \{\par
-00110         Node *proximoColuna = colunaAtual->direita;\par
-00111         {\cf17 delete} colunaAtual;\par
-00112         colunaAtual = proximoColuna;\par
-00113     \}\par
-00114 \par
-00115     {\cf20 // Deletar o cabe\'E7alho}\par
-00116     {\cf17 delete} cabecalho;\par
-00117     cabecalho = {\cf17 nullptr}; {\cf20 // Evitar acessos inv\'E1lidos ap\'F3s a exclus\'E3o}\par
-00118 \}\par
+00090     {\cf19 if} (cabecalho == {\cf17 nullptr})\par
+00091         {\cf19 return};\par
+00092 \par
+00093     limpar();\par
+00094 \par
+00095     Node *linhaAtual = cabecalho->abaixo;\par
+00096     {\cf19 while} (linhaAtual != cabecalho)\par
+00097     \{\par
+00098         Node *proximoLinha = linhaAtual->abaixo;\par
+00099         {\cf17 delete} linhaAtual;\par
+00100         linhaAtual = proximoLinha;\par
+00101     \}\par
+00102 \par
+00103     Node *colunaAtual = cabecalho->direita;\par
+00104     {\cf19 while} (colunaAtual != cabecalho)\par
+00105     \{\par
+00106         Node *proximoColuna = colunaAtual->direita;\par
+00107         {\cf17 delete} colunaAtual;\par
+00108         colunaAtual = proximoColuna;\par
+00109     \}\par
+00110 \par
+00111     {\cf17 delete} cabecalho;\par
+00112     cabecalho = {\cf17 nullptr};\par
+00113 \}\par
 }
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
@@ -1394,27 +1389,27 @@ Exce\'E7\'F5es\par}
 {\row }
 }
 }{
-Defini\'E7\'E3o na linha {\b 223} do arquivo {\b Matriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 200} do arquivo {\b Matriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00224 \{\par
-00225     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
-00226         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
-00227 \par
-00228     IteratorM it = begin();\par
-00229 \par
-00230     {\cf19 while} (it != end())\par
-00231     \{\par
-00232         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
-00233             {\cf19 return} *it;\par
-00234 \par
-00235         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
-00236             {\cf19 return} 0;\par
-00237 \par
-00238         ++it;\par
-00239     \}\par
-00240 \par
-00241     {\cf19 return} 0;\par
-00242 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00201 \{\par
+00202     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+00203         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+00204 \par
+00205     IteratorM it = begin();\par
+00206 \par
+00207     {\cf19 while} (it != end())\par
+00208     \{\par
+00209         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
+00210             {\cf19 return} *it;\par
+00211 \par
+00212         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
+00213             {\cf19 return} 0;\par
+00214 \par
+00215         ++it;\par
+00216     \}\par
+00217 \par
+00218     {\cf19 return} 0;\par
+00219 \}\par
 }
 }
 {\xe \v get\:Matriz}
@@ -1462,27 +1457,27 @@ Exce\'E7\'F5es\par}
 {\row }
 }
 }{
-Defini\'E7\'E3o na linha {\b 244} do arquivo {\b Matriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 221} do arquivo {\b Matriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00245 \{\par
-00246     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
-00247         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
-00248 \par
-00249     IteratorM it = begin();\par
-00250 \par
-00251     {\cf19 while} (it != end())\par
-00252     \{\par
-00253         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
-00254             {\cf19 return} *it;\par
-00255 \par
-00256         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
-00257             {\cf19 return} 0;\par
-00258 \par
-00259         ++it;\par
-00260     \}\par
-00261 \par
-00262     {\cf19 return} 0;\par
-00263 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00222 \{\par
+00223     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+00224         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+00225 \par
+00226     IteratorM it = begin();\par
+00227 \par
+00228     {\cf19 while} (it != end())\par
+00229     \{\par
+00230         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
+00231             {\cf19 return} *it;\par
+00232 \par
+00233         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
+00234             {\cf19 return} 0;\par
+00235 \par
+00236         ++it;\par
+00237     \}\par
+00238 \par
+00239     {\cf19 return} 0;\par
+00240 \}\par
 }
 }
 {\xe \v getColunas\:Matriz}
@@ -1589,63 +1584,53 @@ Exce\'E7\'F5es\par}
 }
 A fun\'E7\'E3o percorre primeiro a lista horizontal (linha) correspondente para localizar a posi\'E7\'E3o adequada. Caso j\'E1 exista um n\'F3 na mesma coluna, o valor \'E9 atualizado. Se n\'E3o existir, cria-se um novo n\'F3 para armazenar o valor na posi\'E7\'E3o indicada. Ap\'F3s isso, a fun\'E7\'E3o tamb\'E9m atualiza a refer\'EAncia vertical (coluna), posicionando o novo n\'F3 de forma adequada na estrutura de dados. \par
 }{
-Defini\'E7\'E3o na linha {\b 166} do arquivo {\b Matriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 153} do arquivo {\b Matriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00167 \{\par
-00168     {\cf20 // N\'E3o armazena valores iguais a zero}\par
-00169     {\cf19 if} (value == 0)\par
-00170         {\cf19 return};\par
-00171 \par
-00172     {\cf20 // Valida\'E7\'E3o dos \'EDndices}\par
-00173     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
-00174         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de inser\'E7\'E3o inv\'E1lido"});\par
-00175 \par
-00176     {\cf20 // Busca na lista horizontal (linha)dede}\par
-00177     Node *linhaAtual = cabecalho;\par
-00178     {\cf19 while} (linhaAtual->linha < posI)\par
-00179     \{\par
-00180         linhaAtual = linhaAtual->abaixo;\par
-00181     \}\par
-00182 \par
-00183     {\cf20 // Procura pela posi\'E7\'E3o correta na linha}\par
-00184     Node *aux = linhaAtual;\par
-00185     {\cf19 while} (aux->direita != linhaAtual && aux->direita->coluna < posJ)\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00154 \{\par
+00155     {\cf19 if} (value == 0)\par
+00156         {\cf19 return};\par
+00157 \par
+00158     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+00159         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de inser\'E7\'E3o inv\'E1lido"});\par
+00160 \par
+00161     Node *linhaAtual = cabecalho;\par
+00162     {\cf19 while} (linhaAtual->linha < posI)\par
+00163     \{\par
+00164         linhaAtual = linhaAtual->abaixo;\par
+00165     \}\par
+00166 \par
+00167     Node *aux = linhaAtual;\par
+00168     {\cf19 while} (aux->direita != linhaAtual && aux->direita->coluna < posJ)\par
+00169     \{\par
+00170         aux = aux->direita;\par
+00171     \}\par
+00172 \par
+00173     {\cf19 if} (aux->direita->coluna == posJ)\par
+00174     \{\par
+00175         aux->direita->atualizaValor(value); \par
+00176         {\cf19 return};\par
+00177     \}\par
+00178 \par
+00179     Node *novo = {\cf17 new} Node(posI, posJ, value);\par
+00180 \par
+00181     novo->direita = aux->direita;\par
+00182     aux->direita = novo;\par
+00183 \par
+00184     Node *colunaAtual = cabecalho;\par
+00185     {\cf19 while} (colunaAtual->coluna < posJ)\par
 00186     \{\par
-00187         aux = aux->direita;\par
+00187         colunaAtual = colunaAtual->direita;\par
 00188     \}\par
 00189 \par
-00190     {\cf20 // Verifica se o n\'F3 j\'E1 existe}\par
-00191     {\cf19 if} (aux->direita->coluna == posJ)\par
+00190     aux = colunaAtual;\par
+00191     {\cf19 while} (aux->abaixo != colunaAtual && aux->abaixo->linha < posI)\par
 00192     \{\par
-00193         aux->direita->atualizaValor(value); {\cf20 // Atualiza o valor}\par
-00194         {\cf19 return};\par
-00195     \}\par
-00196 \par
-00197     {\cf20 // Cria um novo n\'F3}\par
-00198     Node *novo = {\cf17 new} Node(posI, posJ, value);\par
-00199 \par
-00200     {\cf20 // Insere o n\'F3 na lista horizontal}\par
-00201     novo->direita = aux->direita;\par
-00202     aux->direita = novo;\par
-00203 \par
-00204     {\cf20 // Busca na lista vertical (coluna)}\par
-00205     Node *colunaAtual = cabecalho;\par
-00206     {\cf19 while} (colunaAtual->coluna < posJ)\par
-00207     \{\par
-00208         colunaAtual = colunaAtual->direita;\par
-00209     \}\par
-00210 \par
-00211     {\cf20 // Procura pela posi\'E7\'E3o correta na coluna}\par
-00212     aux = colunaAtual;\par
-00213     {\cf19 while} (aux->abaixo != colunaAtual && aux->abaixo->linha < posI)\par
-00214     \{\par
-00215         aux = aux->abaixo;\par
-00216     \}\par
-00217 \par
-00218     {\cf20 // Insere o n\'F3 na lista vertical}\par
-00219     novo->abaixo = aux->abaixo;\par
-00220     aux->abaixo = novo;\par
-00221 \}\par
+00193         aux = aux->abaixo;\par
+00194     \}\par
+00195 \par
+00196     novo->abaixo = aux->abaixo;\par
+00197     aux->abaixo = novo;\par
+00198 \}\par
 }
 }
 {\xe \v limpar\:Matriz}
@@ -1703,52 +1688,44 @@ A fun\'E7\'E3o somente remove os n\'F3s de dados e restaura os ponteiros dos sen
 \pard\plain \s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
 A estrutura original da matriz esparsa \'E9 preservada, permitindo que a mesma seja reutilizada posteriormente. \par}
 }}}{
-Defini\'E7\'E3o na linha {\b 120} do arquivo {\b Matriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 115} do arquivo {\b Matriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00121 \{\par
-00122     {\cf19 if} (cabecalho == {\cf17 nullptr})\par
-00123         {\cf19 return};\par
-00124 \par
-00125     {\cf20 // Obter o primeiro sentinela de linha.}\par
-00126     Node *LinhaAtual = cabecalho->abaixo;\par
-00127     {\cf20 // Se n\'E3o houver linhas (ou se o \'FAnico n\'F3 for o cabe\'E7alho), nada a fazer.}\par
-00128     {\cf19 if} (LinhaAtual == cabecalho)\par
-00129         {\cf19 return};\par
-00130 \par
-00131     {\cf20 // Quebrar a circularidade vertical: encontrar a \'FAltima linha.}\par
-00132     Node *ColunaAtual = LinhaAtual;\par
-00133     {\cf19 while} (ColunaAtual->abaixo != cabecalho)\par
-00134     \{\par
-00135         ColunaAtual = ColunaAtual->abaixo;\par
-00136     \}\par
-00137     {\cf20 // Quebramos a circularidade: a \'FAltima linha passa a apontar para nullptr.}\par
-00138     ColunaAtual->abaixo = {\cf17 nullptr};\par
-00139 \par
-00140     {\cf20 // Percorrer cada sentinela de linha (a cadeia agora \'E9 linear)}\par
-00141     {\cf19 for} (Node *linha = LinhaAtual; linha != {\cf17 nullptr}; linha = linha->abaixo)\par
-00142     \{\par
-00143 \par
-00144         {\cf20 // A lista horizontal de cada linha \'E9 circular, onde os n\'F3s de dados est\'E3o}\par
-00145         {\cf20 // entre 'linha->direita' e o pr\'F3prio sentinela (linha).}\par
-00146         Node *cur = linha->direita;\par
-00147         {\cf19 while} (cur != linha)\par
-00148         \{\par
-00149             Node *proximo = cur->direita; {\cf20 // Guarda o pr\'F3ximo n\'F3 antes de deletar}\par
-00150             {\cf17 delete} cur;                   {\cf20 // Libera o n\'F3 de dado}\par
-00151             cur = proximo;\par
-00152         \}\par
-00153         {\cf20 // Restaura o ponteiro horizontal do sentinela para ele mesmo.}\par
-00154         linha->direita = linha;\par
-00155     \}\par
-00156 \par
-00157     {\cf20 // Restaura a circularidade vertical: o \'FAltimo sentinela volta a apontar para o cabe\'E7alho.}\par
-00158     ColunaAtual = LinhaAtual;\par
-00159     {\cf19 while} (ColunaAtual->abaixo != {\cf17 nullptr})\par
-00160     \{\par
-00161         ColunaAtual = ColunaAtual->abaixo;\par
-00162     \}\par
-00163     ColunaAtual->abaixo = cabecalho;\par
-00164 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00116 \{\par
+00117     {\cf19 if} (cabecalho == {\cf17 nullptr})\par
+00118         {\cf19 return};\par
+00119 \par
+00120     Node *LinhaAtual = cabecalho->abaixo;\par
+00121     {\cf19 if} (LinhaAtual == cabecalho)\par
+00122         {\cf19 return};\par
+00123 \par
+00124     Node *ColunaAtual = LinhaAtual;\par
+00125     {\cf19 while} (ColunaAtual->abaixo != cabecalho)\par
+00126     \{\par
+00127         ColunaAtual = ColunaAtual->abaixo;\par
+00128     \}\par
+00129     \par
+00130     ColunaAtual->abaixo = {\cf17 nullptr};\par
+00131 \par
+00132     {\cf19 for} (Node *linha = LinhaAtual; linha != {\cf17 nullptr}; linha = linha->abaixo)\par
+00133     \{\par
+00134 \par
+00135         Node *atual = linha->direita;\par
+00136         {\cf19 while} (atual != linha)\par
+00137         \{\par
+00138             Node *proximo = atual->direita; \par
+00139             {\cf17 delete} atual;                   \par
+00140             atual = proximo;\par
+00141         \}\par
+00142         linha->direita = linha;\par
+00143     \}\par
+00144 \par
+00145     ColunaAtual = LinhaAtual;\par
+00146     {\cf19 while} (ColunaAtual->abaixo != {\cf17 nullptr})\par
+00147     \{\par
+00148         ColunaAtual = ColunaAtual->abaixo;\par
+00149     \}\par
+00150     ColunaAtual->abaixo = cabecalho;\par
+00151 \}\par
 }
 }
 {\xe \v operator=\:Matriz}
@@ -1815,29 +1792,29 @@ Imprime a matriz no console. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Exibe todas as linhas e colunas da matriz, mostrando os valores armazenados. Para posi\'E7\'F5es onde n\'E3o h\'E1 valor armazenado (na forma esparsa), \'E9 imprimido o n\'FAmero 0. \par
 }{
-Defini\'E7\'E3o na linha {\b 265} do arquivo {\b Matriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 242} do arquivo {\b Matriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00266 \{\par
-00267     IteratorM it = begin();\par
-00268 \par
-00269     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
-00270     \{\par
-00271         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
-00272         \{\par
-00273             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
-00274             \{\par
-00275                 std::cout << std::fixed << std::setprecision(1) << *it;\par
-00276                 ++it;\par
-00277             \}\par
-00278             {\cf19 else}\par
-00279             \{\par
-00280                 std::cout << {\cf22 "0.0"};\par
-00281             \}\par
-00282             std::cout << {\cf22 " "};\par
-00283         \}\par
-00284         std::cout << std::endl;\par
-00285     \}\par
-00286 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00243 \{\par
+00244     IteratorM it = begin();\par
+00245 \par
+00246     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
+00247     \{\par
+00248         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
+00249         \{\par
+00250             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
+00251             \{\par
+00252                 std::cout << std::fixed << std::setprecision(1) << *it;\par
+00253                 ++it;\par
+00254             \}\par
+00255             {\cf19 else}\par
+00256             \{\par
+00257                 std::cout << {\cf22 "0.0"};\par
+00258             \}\par
+00259             std::cout << {\cf22 " "};\par
+00260         \}\par
+00261         std::cout << std::endl;\par
+00262     \}\par
+00263 \}\par
 }
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
@@ -4095,203 +4072,180 @@ Ir para a documenta\'E7\'E3o desse arquivo.\par
 00087 \par
 00088 Matriz::~Matriz()\par
 00089 \{\par
-00090     {\cf20 // Evita destrui\'E7\'E3o m\'FAltipla}\par
-00091     {\cf19 if} (cabecalho == {\cf17 nullptr})\par
-00092         {\cf19 return};\par
-00093 \par
-00094     {\cf20 // Limpa os n\'F3s de dados (n\'E3o mexe nos sentinelas)}\par
-00095     limpar();\par
-00096 \par
-00097     {\cf20 // Remover sentinelas das linhas}\par
-00098     Node *linhaAtual = cabecalho->abaixo;\par
-00099     {\cf19 while} (linhaAtual != cabecalho)\par
-00100     \{\par
-00101         Node *proximoLinha = linhaAtual->abaixo;\par
-00102         {\cf17 delete} linhaAtual;\par
-00103         linhaAtual = proximoLinha;\par
-00104     \}\par
-00105 \par
-00106     {\cf20 // Remover sentinelas das colunas}\par
-00107     Node *colunaAtual = cabecalho->direita;\par
-00108     {\cf19 while} (colunaAtual != cabecalho)\par
-00109     \{\par
-00110         Node *proximoColuna = colunaAtual->direita;\par
-00111         {\cf17 delete} colunaAtual;\par
-00112         colunaAtual = proximoColuna;\par
-00113     \}\par
+00090     {\cf19 if} (cabecalho == {\cf17 nullptr})\par
+00091         {\cf19 return};\par
+00092 \par
+00093     limpar();\par
+00094 \par
+00095     Node *linhaAtual = cabecalho->abaixo;\par
+00096     {\cf19 while} (linhaAtual != cabecalho)\par
+00097     \{\par
+00098         Node *proximoLinha = linhaAtual->abaixo;\par
+00099         {\cf17 delete} linhaAtual;\par
+00100         linhaAtual = proximoLinha;\par
+00101     \}\par
+00102 \par
+00103     Node *colunaAtual = cabecalho->direita;\par
+00104     {\cf19 while} (colunaAtual != cabecalho)\par
+00105     \{\par
+00106         Node *proximoColuna = colunaAtual->direita;\par
+00107         {\cf17 delete} colunaAtual;\par
+00108         colunaAtual = proximoColuna;\par
+00109     \}\par
+00110 \par
+00111     {\cf17 delete} cabecalho;\par
+00112     cabecalho = {\cf17 nullptr};\par
+00113 \}\par
 00114 \par
-00115     {\cf20 // Deletar o cabe\'E7alho}\par
-00116     {\cf17 delete} cabecalho;\par
-00117     cabecalho = {\cf17 nullptr}; {\cf20 // Evitar acessos inv\'E1lidos ap\'F3s a exclus\'E3o}\par
-00118 \}\par
+00115 {\cf18 void} Matriz::limpar()\par
+00116 \{\par
+00117     {\cf19 if} (cabecalho == {\cf17 nullptr})\par
+00118         {\cf19 return};\par
 00119 \par
-00120 {\cf18 void} Matriz::limpar()\par
-00121 \{\par
-00122     {\cf19 if} (cabecalho == {\cf17 nullptr})\par
-00123         {\cf19 return};\par
-00124 \par
-00125     {\cf20 // Obter o primeiro sentinela de linha.}\par
-00126     Node *LinhaAtual = cabecalho->abaixo;\par
-00127     {\cf20 // Se n\'E3o houver linhas (ou se o \'FAnico n\'F3 for o cabe\'E7alho), nada a fazer.}\par
-00128     {\cf19 if} (LinhaAtual == cabecalho)\par
-00129         {\cf19 return};\par
-00130 \par
-00131     {\cf20 // Quebrar a circularidade vertical: encontrar a \'FAltima linha.}\par
-00132     Node *ColunaAtual = LinhaAtual;\par
-00133     {\cf19 while} (ColunaAtual->abaixo != cabecalho)\par
-00134     \{\par
-00135         ColunaAtual = ColunaAtual->abaixo;\par
-00136     \}\par
-00137     {\cf20 // Quebramos a circularidade: a \'FAltima linha passa a apontar para nullptr.}\par
-00138     ColunaAtual->abaixo = {\cf17 nullptr};\par
-00139 \par
-00140     {\cf20 // Percorrer cada sentinela de linha (a cadeia agora \'E9 linear)}\par
-00141     {\cf19 for} (Node *linha = LinhaAtual; linha != {\cf17 nullptr}; linha = linha->abaixo)\par
-00142     \{\par
-00143 \par
-00144         {\cf20 // A lista horizontal de cada linha \'E9 circular, onde os n\'F3s de dados est\'E3o}\par
-00145         {\cf20 // entre 'linha->direita' e o pr\'F3prio sentinela (linha).}\par
-00146         Node *cur = linha->direita;\par
-00147         {\cf19 while} (cur != linha)\par
-00148         \{\par
-00149             Node *proximo = cur->direita; {\cf20 // Guarda o pr\'F3ximo n\'F3 antes de deletar}\par
-00150             {\cf17 delete} cur;                   {\cf20 // Libera o n\'F3 de dado}\par
-00151             cur = proximo;\par
-00152         \}\par
-00153         {\cf20 // Restaura o ponteiro horizontal do sentinela para ele mesmo.}\par
-00154         linha->direita = linha;\par
-00155     \}\par
-00156 \par
-00157     {\cf20 // Restaura a circularidade vertical: o \'FAltimo sentinela volta a apontar para o cabe\'E7alho.}\par
-00158     ColunaAtual = LinhaAtual;\par
-00159     {\cf19 while} (ColunaAtual->abaixo != {\cf17 nullptr})\par
-00160     \{\par
-00161         ColunaAtual = ColunaAtual->abaixo;\par
-00162     \}\par
-00163     ColunaAtual->abaixo = cabecalho;\par
-00164 \}\par
-00165 \par
-00166 {\cf18 void} Matriz::insert({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ, {\cf17 const} {\cf18 double} &value)\par
-00167 \{\par
-00168     {\cf20 // N\'E3o armazena valores iguais a zero}\par
-00169     {\cf19 if} (value == 0)\par
-00170         {\cf19 return};\par
-00171 \par
-00172     {\cf20 // Valida\'E7\'E3o dos \'EDndices}\par
-00173     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
-00174         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de inser\'E7\'E3o inv\'E1lido"});\par
-00175 \par
-00176     {\cf20 // Busca na lista horizontal (linha)dede}\par
-00177     Node *linhaAtual = cabecalho;\par
-00178     {\cf19 while} (linhaAtual->linha < posI)\par
-00179     \{\par
-00180         linhaAtual = linhaAtual->abaixo;\par
-00181     \}\par
-00182 \par
-00183     {\cf20 // Procura pela posi\'E7\'E3o correta na linha}\par
-00184     Node *aux = linhaAtual;\par
-00185     {\cf19 while} (aux->direita != linhaAtual && aux->direita->coluna < posJ)\par
+00120     Node *LinhaAtual = cabecalho->abaixo;\par
+00121     {\cf19 if} (LinhaAtual == cabecalho)\par
+00122         {\cf19 return};\par
+00123 \par
+00124     Node *ColunaAtual = LinhaAtual;\par
+00125     {\cf19 while} (ColunaAtual->abaixo != cabecalho)\par
+00126     \{\par
+00127         ColunaAtual = ColunaAtual->abaixo;\par
+00128     \}\par
+00129     \par
+00130     ColunaAtual->abaixo = {\cf17 nullptr};\par
+00131 \par
+00132     {\cf19 for} (Node *linha = LinhaAtual; linha != {\cf17 nullptr}; linha = linha->abaixo)\par
+00133     \{\par
+00134 \par
+00135         Node *atual = linha->direita;\par
+00136         {\cf19 while} (atual != linha)\par
+00137         \{\par
+00138             Node *proximo = atual->direita; \par
+00139             {\cf17 delete} atual;                   \par
+00140             atual = proximo;\par
+00141         \}\par
+00142         linha->direita = linha;\par
+00143     \}\par
+00144 \par
+00145     ColunaAtual = LinhaAtual;\par
+00146     {\cf19 while} (ColunaAtual->abaixo != {\cf17 nullptr})\par
+00147     \{\par
+00148         ColunaAtual = ColunaAtual->abaixo;\par
+00149     \}\par
+00150     ColunaAtual->abaixo = cabecalho;\par
+00151 \}\par
+00152 \par
+00153 {\cf18 void} Matriz::insert({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ, {\cf17 const} {\cf18 double} &value)\par
+00154 \{\par
+00155     {\cf19 if} (value == 0)\par
+00156         {\cf19 return};\par
+00157 \par
+00158     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+00159         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de inser\'E7\'E3o inv\'E1lido"});\par
+00160 \par
+00161     Node *linhaAtual = cabecalho;\par
+00162     {\cf19 while} (linhaAtual->linha < posI)\par
+00163     \{\par
+00164         linhaAtual = linhaAtual->abaixo;\par
+00165     \}\par
+00166 \par
+00167     Node *aux = linhaAtual;\par
+00168     {\cf19 while} (aux->direita != linhaAtual && aux->direita->coluna < posJ)\par
+00169     \{\par
+00170         aux = aux->direita;\par
+00171     \}\par
+00172 \par
+00173     {\cf19 if} (aux->direita->coluna == posJ)\par
+00174     \{\par
+00175         aux->direita->atualizaValor(value); \par
+00176         {\cf19 return};\par
+00177     \}\par
+00178 \par
+00179     Node *novo = {\cf17 new} Node(posI, posJ, value);\par
+00180 \par
+00181     novo->direita = aux->direita;\par
+00182     aux->direita = novo;\par
+00183 \par
+00184     Node *colunaAtual = cabecalho;\par
+00185     {\cf19 while} (colunaAtual->coluna < posJ)\par
 00186     \{\par
-00187         aux = aux->direita;\par
+00187         colunaAtual = colunaAtual->direita;\par
 00188     \}\par
 00189 \par
-00190     {\cf20 // Verifica se o n\'F3 j\'E1 existe}\par
-00191     {\cf19 if} (aux->direita->coluna == posJ)\par
+00190     aux = colunaAtual;\par
+00191     {\cf19 while} (aux->abaixo != colunaAtual && aux->abaixo->linha < posI)\par
 00192     \{\par
-00193         aux->direita->atualizaValor(value); {\cf20 // Atualiza o valor}\par
-00194         {\cf19 return};\par
-00195     \}\par
-00196 \par
-00197     {\cf20 // Cria um novo n\'F3}\par
-00198     Node *novo = {\cf17 new} Node(posI, posJ, value);\par
+00193         aux = aux->abaixo;\par
+00194     \}\par
+00195 \par
+00196     novo->abaixo = aux->abaixo;\par
+00197     aux->abaixo = novo;\par
+00198 \}\par
 00199 \par
-00200     {\cf20 // Insere o n\'F3 na lista horizontal}\par
-00201     novo->direita = aux->direita;\par
-00202     aux->direita = novo;\par
-00203 \par
-00204     {\cf20 // Busca na lista vertical (coluna)}\par
-00205     Node *colunaAtual = cabecalho;\par
-00206     {\cf19 while} (colunaAtual->coluna < posJ)\par
-00207     \{\par
-00208         colunaAtual = colunaAtual->direita;\par
-00209     \}\par
-00210 \par
-00211     {\cf20 // Procura pela posi\'E7\'E3o correta na coluna}\par
-00212     aux = colunaAtual;\par
-00213     {\cf19 while} (aux->abaixo != colunaAtual && aux->abaixo->linha < posI)\par
-00214     \{\par
-00215         aux = aux->abaixo;\par
+00200 {\cf18 double} Matriz::get({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ)\par
+00201 \{\par
+00202     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+00203         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+00204 \par
+00205     IteratorM it = begin();\par
+00206 \par
+00207     {\cf19 while} (it != end())\par
+00208     \{\par
+00209         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
+00210             {\cf19 return} *it;\par
+00211 \par
+00212         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
+00213             {\cf19 return} 0;\par
+00214 \par
+00215         ++it;\par
 00216     \}\par
 00217 \par
-00218     {\cf20 // Insere o n\'F3 na lista vertical}\par
-00219     novo->abaixo = aux->abaixo;\par
-00220     aux->abaixo = novo;\par
-00221 \}\par
-00222 \par
-00223 {\cf18 double} Matriz::get({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ)\par
-00224 \{\par
-00225     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
-00226         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+00218     {\cf19 return} 0;\par
+00219 \}\par
+00220 \par
+00221 {\cf18 double} Matriz::get({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ){\cf17  const}\par
+00222 {\cf17 }\{\par
+00223     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+00224         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+00225 \par
+00226     IteratorM it = begin();\par
 00227 \par
-00228     IteratorM it = begin();\par
-00229 \par
-00230     {\cf19 while} (it != end())\par
-00231     \{\par
-00232         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
-00233             {\cf19 return} *it;\par
-00234 \par
-00235         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
-00236             {\cf19 return} 0;\par
-00237 \par
-00238         ++it;\par
-00239     \}\par
-00240 \par
-00241     {\cf19 return} 0;\par
-00242 \}\par
-00243 \par
-00244 {\cf18 double} Matriz::get({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ){\cf17  const}\par
-00245 {\cf17 }\{\par
-00246     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
-00247         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
-00248 \par
-00249     IteratorM it = begin();\par
-00250 \par
-00251     {\cf19 while} (it != end())\par
-00252     \{\par
-00253         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
-00254             {\cf19 return} *it;\par
-00255 \par
-00256         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
-00257             {\cf19 return} 0;\par
-00258 \par
-00259         ++it;\par
-00260     \}\par
-00261 \par
-00262     {\cf19 return} 0;\par
+00228     {\cf19 while} (it != end())\par
+00229     \{\par
+00230         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
+00231             {\cf19 return} *it;\par
+00232 \par
+00233         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
+00234             {\cf19 return} 0;\par
+00235 \par
+00236         ++it;\par
+00237     \}\par
+00238 \par
+00239     {\cf19 return} 0;\par
+00240 \}\par
+00241 \par
+00242 {\cf18 void} Matriz::print()\par
+00243 \{\par
+00244     IteratorM it = begin();\par
+00245 \par
+00246     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
+00247     \{\par
+00248         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
+00249         \{\par
+00250             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
+00251             \{\par
+00252                 std::cout << std::fixed << std::setprecision(1) << *it;\par
+00253                 ++it;\par
+00254             \}\par
+00255             {\cf19 else}\par
+00256             \{\par
+00257                 std::cout << {\cf22 "0.0"};\par
+00258             \}\par
+00259             std::cout << {\cf22 " "};\par
+00260         \}\par
+00261         std::cout << std::endl;\par
+00262     \}\par
 00263 \}\par
-00264 \par
-00265 {\cf18 void} Matriz::print()\par
-00266 \{\par
-00267     IteratorM it = begin();\par
-00268 \par
-00269     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
-00270     \{\par
-00271         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
-00272         \{\par
-00273             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
-00274             \{\par
-00275                 std::cout << std::fixed << std::setprecision(1) << *it;\par
-00276                 ++it;\par
-00277             \}\par
-00278             {\cf19 else}\par
-00279             \{\par
-00280                 std::cout << {\cf22 "0.0"};\par
-00281             \}\par
-00282             std::cout << {\cf22 " "};\par
-00283         \}\par
-00284         std::cout << std::endl;\par
-00285     \}\par
-00286 \}\par
 }
 \par \pard\plain 
 

@@ -87,14 +87,11 @@ int Matriz::getColunas() const
 
 Matriz::~Matriz()
 {
-    // Evita destruição múltipla
     if (cabecalho == nullptr)
         return;
 
-    // Limpa os nós de dados (não mexe nos sentinelas)
     limpar();
 
-    // Remover sentinelas das linhas
     Node *linhaAtual = cabecalho->abaixo;
     while (linhaAtual != cabecalho)
     {
@@ -103,7 +100,6 @@ Matriz::~Matriz()
         linhaAtual = proximoLinha;
     }
 
-    // Remover sentinelas das colunas
     Node *colunaAtual = cabecalho->direita;
     while (colunaAtual != cabecalho)
     {
@@ -112,9 +108,8 @@ Matriz::~Matriz()
         colunaAtual = proximoColuna;
     }
 
-    // Deletar o cabeçalho
     delete cabecalho;
-    cabecalho = nullptr; // Evitar acessos inválidos após a exclusão
+    cabecalho = nullptr;
 }
 
 void Matriz::limpar()
@@ -122,39 +117,31 @@ void Matriz::limpar()
     if (cabecalho == nullptr)
         return;
 
-    // Obter o primeiro sentinela de linha.
     Node *LinhaAtual = cabecalho->abaixo;
-    // Se não houver linhas (ou se o único nó for o cabeçalho), nada a fazer.
     if (LinhaAtual == cabecalho)
         return;
 
-    // Quebrar a circularidade vertical: encontrar a última linha.
     Node *ColunaAtual = LinhaAtual;
     while (ColunaAtual->abaixo != cabecalho)
     {
         ColunaAtual = ColunaAtual->abaixo;
     }
-    // Quebramos a circularidade: a última linha passa a apontar para nullptr.
+    
     ColunaAtual->abaixo = nullptr;
 
-    // Percorrer cada sentinela de linha (a cadeia agora é linear)
     for (Node *linha = LinhaAtual; linha != nullptr; linha = linha->abaixo)
     {
 
-        // A lista horizontal de cada linha é circular, onde os nós de dados estão
-        // entre 'linha->direita' e o próprio sentinela (linha).
-        Node *cur = linha->direita;
-        while (cur != linha)
+        Node *atual = linha->direita;
+        while (atual != linha)
         {
-            Node *proximo = cur->direita; // Guarda o próximo nó antes de deletar
-            delete cur;                   // Libera o nó de dado
-            cur = proximo;
+            Node *proximo = atual->direita; 
+            delete atual;                   
+            atual = proximo;
         }
-        // Restaura o ponteiro horizontal do sentinela para ele mesmo.
         linha->direita = linha;
     }
 
-    // Restaura a circularidade vertical: o último sentinela volta a apontar para o cabeçalho.
     ColunaAtual = LinhaAtual;
     while (ColunaAtual->abaixo != nullptr)
     {
@@ -165,57 +152,47 @@ void Matriz::limpar()
 
 void Matriz::insert(const int &posI, const int &posJ, const double &value)
 {
-    // Não armazena valores iguais a zero
     if (value == 0)
         return;
 
-    // Validação dos índices
     if (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)
         throw std::invalid_argument("Erro: Local de inserção inválido");
 
-    // Busca na lista horizontal (linha)dede
     Node *linhaAtual = cabecalho;
     while (linhaAtual->linha < posI)
     {
         linhaAtual = linhaAtual->abaixo;
     }
 
-    // Procura pela posição correta na linha
     Node *aux = linhaAtual;
     while (aux->direita != linhaAtual && aux->direita->coluna < posJ)
     {
         aux = aux->direita;
     }
 
-    // Verifica se o nó já existe
     if (aux->direita->coluna == posJ)
     {
-        aux->direita->atualizaValor(value); // Atualiza o valor
+        aux->direita->atualizaValor(value); 
         return;
     }
 
-    // Cria um novo nó
     Node *novo = new Node(posI, posJ, value);
 
-    // Insere o nó na lista horizontal
     novo->direita = aux->direita;
     aux->direita = novo;
 
-    // Busca na lista vertical (coluna)
     Node *colunaAtual = cabecalho;
     while (colunaAtual->coluna < posJ)
     {
         colunaAtual = colunaAtual->direita;
     }
 
-    // Procura pela posição correta na coluna
     aux = colunaAtual;
     while (aux->abaixo != colunaAtual && aux->abaixo->linha < posI)
     {
         aux = aux->abaixo;
     }
 
-    // Insere o nó na lista vertical
     novo->abaixo = aux->abaixo;
     aux->abaixo = novo;
 }
