@@ -258,6 +258,8 @@ public:
      * esparsa), é imprimido o número 0.
      */
     void print();
+
+    Matriz& operator=(const Matriz& matriz);
 };
 
 #endif

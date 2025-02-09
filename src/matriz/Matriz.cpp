@@ -104,7 +104,7 @@ void Matriz::insert(const int &posI, const int &posJ, const double &value)
     if (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)
         throw std::invalid_argument("Erro: Local de inserção inválido");
 
-    // Busca na lista horizontal (linha)
+    // Busca na lista horizontal (linha)dede
     Node *linhaAtual = cabecalho;
     while (linhaAtual->linha < posI)
     {
