@@ -39,7 +39,7 @@ Classe que representa uma matriz esparsa.
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} \mbox{\hyperlink{classMatriz_add3295e730032050b85b6e9598c005db}{insert}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{double}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}})
 \begin{DoxyCompactList}\small\item\em Insere um valor em uma posição específica da matriz esparsa. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{double}} \mbox{\hyperlink{classMatriz_a9062dbfd6809c9d0a4f177f6df0269d6}{get}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})
-\begin{DoxyCompactList}\small\item\em Retorna o valor armazenado na matriz em uma posição específica. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Retorna o valor armazenado em uma posição específica da matriz esparsa. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{double}} \mbox{\hyperlink{classMatriz_a9a5f501398bc63f5bf99c9061eea5b12}{get}} (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}, \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}} \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{int}} \&\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}) \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{const}}
 \begin{DoxyCompactList}\small\item\em Retorna o valor armazenado na matriz em uma posição específica (versão const). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{void}} \mbox{\hyperlink{classMatriz_af8987741da4cabe0aa054f2e8b077a97}{print}} ()
@@ -380,19 +380,21 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00063}{63}} do arquivo
 
 
 
-Retorna o valor armazenado na matriz em uma posição específica. 
+Retorna o valor armazenado em uma posição específica da matriz esparsa. 
 
-Esta função busca o valor localizado na linha e coluna indicadas por {\ttfamily posI} e {\ttfamily posJ}. Se não houver nenhum valor armazenado nessa posição (ou seja, se o nó correspondente não existir), a função retornará 0. Caso a posição seja inválida, será lançada uma exceção do tipo std\+::invalid\+\_\+argument.
+Esta função acessa o elemento na posição ( {\ttfamily posI}, {\ttfamily posJ}) da matriz esparsa. Ela espera que os índices informados sigam a convenção onde o primeiro índice é 1 e o último corresponde ao número total de linhas ou colunas da matriz.
+
+A função utiliza um iterador para percorrer a matriz, comparando as posições dos nós com os índices informados. Se o nó correspondente à posição ( {\ttfamily posI}, {\ttfamily posJ}) for encontrado, a função retorna o valor armazenado nele. Caso contrário, a função retornará 0, indicando que não há valor armazenado na posição informada.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em posI} & Índice da linha solicitada. \\
+{\em posI} & Constante que referencia o índice da linha desejada (deve estar no intervalo \mbox{[}1, linhas\mbox{]}). \\
 \hline
-{\em posJ} & Índice da coluna solicitada. \\
+{\em posJ} & Constante que referencia o índice da coluna desejada (deve estar no intervalo \mbox{[}1, colunas\mbox{]}). \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-O valor do tipo double encontrado na posição indicada, ou 0 caso não exista nenhum valor armazenado.
+double O elemento contido na posição especificada, ou 0 caso não exista um nó correspondente.
 \end{DoxyReturn}
 
 \begin{DoxyExceptions}{Exceções}
@@ -411,19 +413,20 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00200}{200}} do arquiv
 \DoxyCodeLine{00204\ }
 \DoxyCodeLine{00205\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
 \DoxyCodeLine{00206\ }
-\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
-\DoxyCodeLine{00208\ \ \ \ \ \{}
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00211\ }
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{comment}{//\ Avança\ enquanto\ o\ nó\ atual\ estiver\ "{}antes"{}\ da\ posição\ desejada.}}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}()\ \&\&}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})))}
+\DoxyCodeLine{00211\ \ \ \ \ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
 \DoxyCodeLine{00214\ }
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00216\ \ \ \ \ \}}
-\DoxyCodeLine{00217\ }
-\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00219\ \}}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//\ Se\ o\ nó\ atual\ corresponde\ exatamente\ à\ posição,\ retorna\ o\ valor.}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}()\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>\mbox{\hyperlink{structNode_aed29de4c5d116b3f4a9880896d0023d3}{linha}}\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00220\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a9a5f501398bc63f5bf99c9061eea5b12}\label{classMatriz_a9a5f501398bc63f5bf99c9061eea5b12} 
@@ -457,29 +460,30 @@ O valor do tipo double encontrado na posição indicada, ou 0
 \end{DoxyExceptions}
 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00221}{221}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00222}{222}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00222\ \{}
-\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
-\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
-\DoxyCodeLine{00225\ }
-\DoxyCodeLine{00226\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
-\DoxyCodeLine{00227\ }
-\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}())}
-\DoxyCodeLine{00229\ \ \ \ \ \{}
-\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
-\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00232\ }
-\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ >\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}}))}
-\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00235\ }
-\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00237\ \ \ \ \ \}}
-\DoxyCodeLine{00238\ }
-\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00240\ \}}
+\DoxyCodeLine{00223\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI\ <=\ 0\ ||\ posI\ >}}\ linhas\ ||\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ\ <=\ 0\ ||\ posJ\ >}}\ colunas)}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Erro:\ Local\ de\ acesso\ inválido"{}});}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{comment}{//\ Avança\ enquanto\ o\ nó\ atual\ estiver\ "{}antes"{}\ da\ posição\ desejada.}}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}()\ \&\&}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ ||}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ <\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})))}
+\DoxyCodeLine{00233\ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00235\ \ \ \ \ \}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{comment}{//\ Se\ o\ nó\ atual\ corresponde\ exatamente\ à\ posição,\ retorna\ o\ valor.}}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ !=\ \mbox{\hyperlink{classMatriz_a50d46c6366b07dda1da18bcfcea762df}{end}}()\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>\mbox{\hyperlink{structNode_aed29de4c5d116b3f4a9880896d0023d3}{linha}}\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posI}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00242\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classMatriz_a598a301d6e02ba9669e806116f15c396}\label{classMatriz_a598a301d6e02ba9669e806116f15c396} 
@@ -583,7 +587,7 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00153}{153}} do arquiv
 \DoxyCodeLine{00172\ }
 \DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>direita-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{posJ}})}
 \DoxyCodeLine{00174\ \ \ \ \ \{}
-\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}-\/>\mbox{\hyperlink{structNode_a4336ead86378a5871a13ec073415c8f5}{atualizaValor}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{aux}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}-\/>\mbox{\hyperlink{structNode_a4336ead86378a5871a13ec073415c8f5}{atualizaValor}}(\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{value}});}
 \DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00177\ \ \ \ \ \}}
 \DoxyCodeLine{00178\ }
@@ -669,7 +673,7 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00115}{115}} do arquiv
 \DoxyCodeLine{00126\ \ \ \ \ \{}
 \DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}};}
 \DoxyCodeLine{00128\ \ \ \ \ \}}
-\DoxyCodeLine{00129\ \ \ \ \ }
+\DoxyCodeLine{00129\ }
 \DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{ColunaAtual}}-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}}\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00131\ }
 \DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{structNode}{Node}}\ *linha\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{LinhaAtual}};\ linha\ !=\ \textcolor{keyword}{nullptr};\ linha\ =\ linha-\/>\mbox{\hyperlink{structNode_aad364c157638e1ab1667553325470723}{abaixo}})}
@@ -678,8 +682,8 @@ Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00115}{115}} do arquiv
 \DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}\ =\ linha-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
 \DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}\ !=\ linha)}
 \DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};\ }
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNode}{Node}}\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}};}
 \DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{atual}}\ =\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{proximo}};}
 \DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ linha-\/>\mbox{\hyperlink{structNode_a30f66714469c4152b77e3832ab278b2d}{direita}}\ =\ linha;}
@@ -746,31 +750,31 @@ Imprime a matriz no console.
 
 Exibe todas as linhas e colunas da matriz, mostrando os valores armazenados. Para posições onde não há valor armazenado (na forma esparsa), é imprimido o número 0. 
 
-Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00242}{242}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
+Definição na linha \mbox{\hyperlink{Matriz_8cpp_source_l00244}{244}} do arquivo \mbox{\hyperlink{Matriz_8cpp_source}{Matriz.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00243\ \{}
-\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
-\DoxyCodeLine{00245\ }
-\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ <=\ linhas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}++)}
-\DoxyCodeLine{00247\ \ \ \ \ \{}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ <=\ colunas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}++)}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})}
-\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::fixed\ <<\ std::setprecision(1)\ <<\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}0.0"{}};}
-\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
-\DoxyCodeLine{00262\ \ \ \ \ \}}
-\DoxyCodeLine{00263\ \}}
+\DoxyCodeLine{00245\ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \mbox{\hyperlink{classIteratorM}{IteratorM}}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}\ =\ \mbox{\hyperlink{classMatriz_a3a06127086fe26ecb1a8b2964d4dd54c}{begin}}();}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ <=\ linhas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}++)}
+\DoxyCodeLine{00249\ \ \ \ \ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ =\ 1;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}\ <=\ colunas;\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}}++)}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>linha\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{i}}\ \&\&\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}}.current-\/>coluna\ ==\ \mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{j}})}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ std::fixed\ <<\ std::setprecision(1)\ <<\ *\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++\mbox{\hyperlink{main_8cpp_a6df00753af83f180a3a7c7b440bf17d6}{it}};}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}0.0"{}};}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00264\ \ \ \ \ \}}
+\DoxyCodeLine{00265\ \}}
 
 \end{DoxyCode}
 

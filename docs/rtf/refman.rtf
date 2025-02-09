@@ -107,7 +107,7 @@
 }
 {\info 
 {\title {\comment Matriz Esparsa  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-2.1 \par
+2.2 \par
 }}Matriz Esparsa}
 {\comment Gerado por doxygen 1.9.8.}
 }\pard\plain 
@@ -122,7 +122,7 @@
 \par\par\par\par\par\par\par\par\par\par\par\par
 \pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
 {\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
-Vers\'E3o 2.1\par\page\page\vertalt
+Vers\'E3o 2.2\par\page\page\vertalt
 \pard\plain 
 \s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Sum\'E1rio\par
 \pard\plain \par
@@ -964,7 +964,7 @@ Insere um valor em uma posi\'E7\'E3o espec\'EDfica da matriz esparsa. }{
 {\b double} {\b get} ({\b const} {\b int} &{\b posI}, {\b const} {\b int} &{\b posJ})\par
 {
 \pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Retorna o valor armazenado na matriz em uma posi\'E7\'E3o espec\'EDfica. }{
+Retorna o valor armazenado em uma posi\'E7\'E3o espec\'EDfica da matriz esparsa. }{
 }\par
 }\par}
 \pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
@@ -1358,27 +1358,28 @@ Defini\'E7\'E3o na linha {\b 63} do arquivo {\b Matriz.cpp}.}\par
 \par
 {
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Retorna o valor armazenado na matriz em uma posi\'E7\'E3o espec\'EDfica. }}\par
+Retorna o valor armazenado em uma posi\'E7\'E3o espec\'EDfica da matriz esparsa. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Esta fun\'E7\'E3o busca o valor localizado na linha e coluna indicadas por {\f2 posI}  e {\f2 posJ} . Se n\'E3o houver nenhum valor armazenado nessa posi\'E7\'E3o (ou seja, se o n\'F3 correspondente n\'E3o existir), a fun\'E7\'E3o retornar\'E1 0. Caso a posi\'E7\'E3o seja inv\'E1lida, ser\'E1 lan\'E7ada uma exce\'E7\'E3o do tipo std::invalid_argument.\par
+Esta fun\'E7\'E3o acessa o elemento na posi\'E7\'E3o ( {\f2 posI} , {\f2 posJ} ) da matriz esparsa. Ela espera que os \'EDndices informados sigam a conven\'E7\'E3o onde o primeiro \'EDndice \'E9 1 e o \'FAltimo corresponde ao n\'FAmero total de linhas ou colunas da matriz.\par
+A fun\'E7\'E3o utiliza um iterador para percorrer a matriz, comparando as posi\'E7\'F5es dos n\'F3s com os \'EDndices informados. Se o n\'F3 correspondente \'E0 posi\'E7\'E3o ( {\f2 posI} , {\f2 posJ} ) for encontrado, a fun\'E7\'E3o retorna o valor armazenado nele. Caso contr\'E1rio, a fun\'E7\'E3o retornar\'E1 0, indicando que n\'E3o h\'E1 valor armazenado na posi\'E7\'E3o informada.\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Par\'E2metros\par}
 \pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i posI} \cell }{\'CDndice da linha solicitada. \cell }
+{{\i posI} \cell }{Constante que referencia o \'EDndice da linha desejada (deve estar no intervalo [1, linhas]). \cell }
 {\row }
 \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i posJ} \cell }{\'CDndice da coluna solicitada. \cell }
+{{\i posJ} \cell }{Constante que referencia o \'EDndice da coluna desejada (deve estar no intervalo [1, colunas]). \cell }
 {\row }
 }
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Retorna\par}\pard\plain \s82\li720\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
-O valor do tipo double encontrado na posi\'E7\'E3o indicada, ou 0 caso n\'E3o exista nenhum valor armazenado.\par
+double O elemento contido na posi\'E7\'E3o especificada, ou 0 caso n\'E3o exista um n\'F3 correspondente.\par
 }}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Exce\'E7\'F5es\par}
 \pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
@@ -1397,19 +1398,20 @@ Defini\'E7\'E3o na linha {\b 200} do arquivo {\b Matriz.cpp}.}\par
 00204 \par
 00205     IteratorM it = begin();\par
 00206 \par
-00207     {\cf19 while} (it != end())\par
-00208     \{\par
-00209         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
-00210             {\cf19 return} *it;\par
-00211 \par
-00212         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
-00213             {\cf19 return} 0;\par
+00207     {\cf20 // Avan\'E7a enquanto o n\'F3 atual estiver "antes" da posi\'E7\'E3o desejada.}\par
+00208     {\cf19 while} (it != end() &&\par
+00209            (it.current->linha < posI ||\par
+00210             (it.current->linha == posI && it.current->coluna < posJ)))\par
+00211     \{\par
+00212         ++it;\par
+00213     \}\par
 00214 \par
-00215         ++it;\par
-00216     \}\par
-00217 \par
-00218     {\cf19 return} 0;\par
-00219 \}\par
+00215     {\cf20 // Se o n\'F3 atual corresponde exatamente \'E0 posi\'E7\'E3o, retorna o valor.}\par
+00216     {\cf19 if} (it != end() && it.current->linha == posI && it.current->coluna == posJ)\par
+00217         {\cf19 return} *it;\par
+00218 \par
+00219     {\cf19 return} 0;\par
+00220 \}\par
 }
 }
 {\xe \v get\:Matriz}
@@ -1457,27 +1459,28 @@ Exce\'E7\'F5es\par}
 {\row }
 }
 }{
-Defini\'E7\'E3o na linha {\b 221} do arquivo {\b Matriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 222} do arquivo {\b Matriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00222 \{\par
-00223     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
-00224         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
-00225 \par
-00226     IteratorM it = begin();\par
-00227 \par
-00228     {\cf19 while} (it != end())\par
-00229     \{\par
-00230         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
-00231             {\cf19 return} *it;\par
-00232 \par
-00233         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
-00234             {\cf19 return} 0;\par
-00235 \par
-00236         ++it;\par
-00237     \}\par
-00238 \par
-00239     {\cf19 return} 0;\par
-00240 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00223 \{\par
+00224     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+00225         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+00226 \par
+00227     IteratorM it = begin();\par
+00228 \par
+00229     {\cf20 // Avan\'E7a enquanto o n\'F3 atual estiver "antes" da posi\'E7\'E3o desejada.}\par
+00230     {\cf19 while} (it != end() &&\par
+00231            (it.current->linha < posI ||\par
+00232             (it.current->linha == posI && it.current->coluna < posJ)))\par
+00233     \{\par
+00234         ++it;\par
+00235     \}\par
+00236 \par
+00237     {\cf20 // Se o n\'F3 atual corresponde exatamente \'E0 posi\'E7\'E3o, retorna o valor.}\par
+00238     {\cf19 if} (it != end() && it.current->linha == posI && it.current->coluna == posJ)\par
+00239         {\cf19 return} *it;\par
+00240 \par
+00241     {\cf19 return} 0;\par
+00242 \}\par
 }
 }
 {\xe \v getColunas\:Matriz}
@@ -1607,7 +1610,7 @@ Defini\'E7\'E3o na linha {\b 153} do arquivo {\b Matriz.cpp}.}\par
 00172 \par
 00173     {\cf19 if} (aux->direita->coluna == posJ)\par
 00174     \{\par
-00175         aux->direita->atualizaValor(value); \par
+00175         aux->direita->atualizaValor(value);\par
 00176         {\cf19 return};\par
 00177     \}\par
 00178 \par
@@ -1703,7 +1706,7 @@ Defini\'E7\'E3o na linha {\b 115} do arquivo {\b Matriz.cpp}.}\par
 00126     \{\par
 00127         ColunaAtual = ColunaAtual->abaixo;\par
 00128     \}\par
-00129     \par
+00129 \par
 00130     ColunaAtual->abaixo = {\cf17 nullptr};\par
 00131 \par
 00132     {\cf19 for} (Node *linha = LinhaAtual; linha != {\cf17 nullptr}; linha = linha->abaixo)\par
@@ -1712,8 +1715,8 @@ Defini\'E7\'E3o na linha {\b 115} do arquivo {\b Matriz.cpp}.}\par
 00135         Node *atual = linha->direita;\par
 00136         {\cf19 while} (atual != linha)\par
 00137         \{\par
-00138             Node *proximo = atual->direita; \par
-00139             {\cf17 delete} atual;                   \par
+00138             Node *proximo = atual->direita;\par
+00139             {\cf17 delete} atual;\par
 00140             atual = proximo;\par
 00141         \}\par
 00142         linha->direita = linha;\par
@@ -1792,29 +1795,29 @@ Imprime a matriz no console. }}\par
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
 Exibe todas as linhas e colunas da matriz, mostrando os valores armazenados. Para posi\'E7\'F5es onde n\'E3o h\'E1 valor armazenado (na forma esparsa), \'E9 imprimido o n\'FAmero 0. \par
 }{
-Defini\'E7\'E3o na linha {\b 242} do arquivo {\b Matriz.cpp}.}\par
+Defini\'E7\'E3o na linha {\b 244} do arquivo {\b Matriz.cpp}.}\par
 {
-\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00243 \{\par
-00244     IteratorM it = begin();\par
-00245 \par
-00246     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
-00247     \{\par
-00248         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
-00249         \{\par
-00250             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
-00251             \{\par
-00252                 std::cout << std::fixed << std::setprecision(1) << *it;\par
-00253                 ++it;\par
-00254             \}\par
-00255             {\cf19 else}\par
-00256             \{\par
-00257                 std::cout << {\cf22 "0.0"};\par
-00258             \}\par
-00259             std::cout << {\cf22 " "};\par
-00260         \}\par
-00261         std::cout << std::endl;\par
-00262     \}\par
-00263 \}\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00245 \{\par
+00246     IteratorM it = begin();\par
+00247 \par
+00248     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
+00249     \{\par
+00250         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
+00251         \{\par
+00252             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
+00253             \{\par
+00254                 std::cout << std::fixed << std::setprecision(1) << *it;\par
+00255                 ++it;\par
+00256             \}\par
+00257             {\cf19 else}\par
+00258             \{\par
+00259                 std::cout << {\cf22 "0.0"};\par
+00260             \}\par
+00261             std::cout << {\cf22 " "};\par
+00262         \}\par
+00263         std::cout << std::endl;\par
+00264     \}\par
+00265 \}\par
 }
 }
 {\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
@@ -4111,7 +4114,7 @@ Ir para a documenta\'E7\'E3o desse arquivo.\par
 00126     \{\par
 00127         ColunaAtual = ColunaAtual->abaixo;\par
 00128     \}\par
-00129     \par
+00129 \par
 00130     ColunaAtual->abaixo = {\cf17 nullptr};\par
 00131 \par
 00132     {\cf19 for} (Node *linha = LinhaAtual; linha != {\cf17 nullptr}; linha = linha->abaixo)\par
@@ -4120,8 +4123,8 @@ Ir para a documenta\'E7\'E3o desse arquivo.\par
 00135         Node *atual = linha->direita;\par
 00136         {\cf19 while} (atual != linha)\par
 00137         \{\par
-00138             Node *proximo = atual->direita; \par
-00139             {\cf17 delete} atual;                   \par
+00138             Node *proximo = atual->direita;\par
+00139             {\cf17 delete} atual;\par
 00140             atual = proximo;\par
 00141         \}\par
 00142         linha->direita = linha;\par
@@ -4157,7 +4160,7 @@ Ir para a documenta\'E7\'E3o desse arquivo.\par
 00172 \par
 00173     {\cf19 if} (aux->direita->coluna == posJ)\par
 00174     \{\par
-00175         aux->direita->atualizaValor(value); \par
+00175         aux->direita->atualizaValor(value);\par
 00176         {\cf19 return};\par
 00177     \}\par
 00178 \par
@@ -4189,63 +4192,65 @@ Ir para a documenta\'E7\'E3o desse arquivo.\par
 00204 \par
 00205     IteratorM it = begin();\par
 00206 \par
-00207     {\cf19 while} (it != end())\par
-00208     \{\par
-00209         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
-00210             {\cf19 return} *it;\par
-00211 \par
-00212         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
-00213             {\cf19 return} 0;\par
+00207     {\cf20 // Avan\'E7a enquanto o n\'F3 atual estiver "antes" da posi\'E7\'E3o desejada.}\par
+00208     {\cf19 while} (it != end() &&\par
+00209            (it.current->linha < posI ||\par
+00210             (it.current->linha == posI && it.current->coluna < posJ)))\par
+00211     \{\par
+00212         ++it;\par
+00213     \}\par
 00214 \par
-00215         ++it;\par
-00216     \}\par
-00217 \par
-00218     {\cf19 return} 0;\par
-00219 \}\par
-00220 \par
-00221 {\cf18 double} Matriz::get({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ){\cf17  const}\par
-00222 {\cf17 }\{\par
-00223     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
-00224         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
-00225 \par
-00226     IteratorM it = begin();\par
-00227 \par
-00228     {\cf19 while} (it != end())\par
-00229     \{\par
-00230         {\cf19 if} (it.current->linha == posI && it.current->coluna == posJ)\par
-00231             {\cf19 return} *it;\par
-00232 \par
-00233         {\cf19 if} (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))\par
-00234             {\cf19 return} 0;\par
-00235 \par
-00236         ++it;\par
-00237     \}\par
-00238 \par
-00239     {\cf19 return} 0;\par
-00240 \}\par
-00241 \par
-00242 {\cf18 void} Matriz::print()\par
-00243 \{\par
-00244     IteratorM it = begin();\par
-00245 \par
-00246     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
-00247     \{\par
-00248         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
-00249         \{\par
-00250             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
-00251             \{\par
-00252                 std::cout << std::fixed << std::setprecision(1) << *it;\par
-00253                 ++it;\par
-00254             \}\par
-00255             {\cf19 else}\par
-00256             \{\par
-00257                 std::cout << {\cf22 "0.0"};\par
-00258             \}\par
-00259             std::cout << {\cf22 " "};\par
-00260         \}\par
-00261         std::cout << std::endl;\par
-00262     \}\par
-00263 \}\par
+00215     {\cf20 // Se o n\'F3 atual corresponde exatamente \'E0 posi\'E7\'E3o, retorna o valor.}\par
+00216     {\cf19 if} (it != end() && it.current->linha == posI && it.current->coluna == posJ)\par
+00217         {\cf19 return} *it;\par
+00218 \par
+00219     {\cf19 return} 0;\par
+00220 \}\par
+00221 \par
+00222 {\cf18 double} Matriz::get({\cf17 const} {\cf18 int} &posI, {\cf17 const} {\cf18 int} &posJ){\cf17  const}\par
+00223 {\cf17 }\{\par
+00224     {\cf19 if} (posI <= 0 || posI > linhas || posJ <= 0 || posJ > colunas)\par
+00225         {\cf19 throw} std::invalid_argument({\cf22 "Erro: Local de acesso inv\'E1lido"});\par
+00226 \par
+00227     IteratorM it = begin();\par
+00228 \par
+00229     {\cf20 // Avan\'E7a enquanto o n\'F3 atual estiver "antes" da posi\'E7\'E3o desejada.}\par
+00230     {\cf19 while} (it != end() &&\par
+00231            (it.current->linha < posI ||\par
+00232             (it.current->linha == posI && it.current->coluna < posJ)))\par
+00233     \{\par
+00234         ++it;\par
+00235     \}\par
+00236 \par
+00237     {\cf20 // Se o n\'F3 atual corresponde exatamente \'E0 posi\'E7\'E3o, retorna o valor.}\par
+00238     {\cf19 if} (it != end() && it.current->linha == posI && it.current->coluna == posJ)\par
+00239         {\cf19 return} *it;\par
+00240 \par
+00241     {\cf19 return} 0;\par
+00242 \}\par
+00243 \par
+00244 {\cf18 void} Matriz::print()\par
+00245 \{\par
+00246     IteratorM it = begin();\par
+00247 \par
+00248     {\cf19 for} ({\cf18 int} i = 1; i <= linhas; i++)\par
+00249     \{\par
+00250         {\cf19 for} ({\cf18 int} j = 1; j <= colunas; j++)\par
+00251         \{\par
+00252             {\cf19 if} (it.current->linha == i && it.current->coluna == j)\par
+00253             \{\par
+00254                 std::cout << std::fixed << std::setprecision(1) << *it;\par
+00255                 ++it;\par
+00256             \}\par
+00257             {\cf19 else}\par
+00258             \{\par
+00259                 std::cout << {\cf22 "0.0"};\par
+00260             \}\par
+00261             std::cout << {\cf22 " "};\par
+00262         \}\par
+00263         std::cout << std::endl;\par
+00264     \}\par
+00265 \}\par
 }
 \par \pard\plain 
 
