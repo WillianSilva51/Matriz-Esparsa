@@ -272,19 +272,19 @@ public:
     void insert(const int &posI, const int &posJ, const double &value);
 
     /**
-     * @brief Retorna o valor armazenado na matriz em uma posição específica.
+     * @brief Retorna o valor armazenado em uma posição específica da matriz esparsa.
+     *
+     * Esta função acessa o elemento na posição ( @p posI, @p posJ) da matriz	esparsa. Ela espera que os índices informados sigam
+     * a convenção onde o primeiro índice é 1 e o último corresponde ao número total de linhas ou colunas da matriz.
      *
      * @details
-     * Esta função busca o valor localizado na linha e coluna indicadas
-     * por @p posI e @p posJ. Se não houver nenhum valor armazenado nessa
-     * posição (ou seja, se o nó correspondente não existir), a função
-     * retornará 0. Caso a posição seja inválida, será lançada uma
-     * exceção do tipo std::invalid_argument.
+     * A função utiliza um iterador para percorrer a matriz, comparando as posições dos nós com os índices informados.
+     * Se o nó correspondente à posição ( @p posI, @p posJ) for encontrado, a função retorna o valor armazenado nele. Caso contrário,
+     * a função retornará 0, indicando que não há valor armazenado na posição informada.
      *
-     * @param posI Índice da linha solicitada.
-     * @param posJ Índice da coluna solicitada.
-     * @return O valor do tipo double encontrado na posição indicada, ou 0
-     *         caso não exista nenhum valor armazenado.
+     * @param posI Constante que referencia o índice da linha desejada (deve estar no intervalo [1, linhas]).
+     * @param posJ Constante que referencia o índice da coluna desejada (deve estar no intervalo [1, colunas]).
+     * @return double O elemento contido na posição especificada, ou 0 caso não exista um nó correspondente.
      *
      * @exception std::invalid_argument Se @p posI ou @p posJ forem menores
      *            ou iguais a 0 ou excederem as dimensões da matriz.

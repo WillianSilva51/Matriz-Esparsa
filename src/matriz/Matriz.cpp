@@ -126,7 +126,7 @@ void Matriz::limpar()
     {
         ColunaAtual = ColunaAtual->abaixo;
     }
-    
+
     ColunaAtual->abaixo = nullptr;
 
     for (Node *linha = LinhaAtual; linha != nullptr; linha = linha->abaixo)
@@ -135,8 +135,8 @@ void Matriz::limpar()
         Node *atual = linha->direita;
         while (atual != linha)
         {
-            Node *proximo = atual->direita; 
-            delete atual;                   
+            Node *proximo = atual->direita;
+            delete atual;
             atual = proximo;
         }
         linha->direita = linha;
@@ -172,7 +172,7 @@ void Matriz::insert(const int &posI, const int &posJ, const double &value)
 
     if (aux->direita->coluna == posJ)
     {
-        aux->direita->atualizaValor(value); 
+        aux->direita->atualizaValor(value);
         return;
     }
 
@@ -204,16 +204,17 @@ double Matriz::get(const int &posI, const int &posJ)
 
     IteratorM it = begin();
 
-    while (it != end())
+    // Avança enquanto o nó atual estiver "antes" da posição desejada.
+    while (it != end() &&
+           (it.current->linha < posI ||
+            (it.current->linha == posI && it.current->coluna < posJ)))
     {
-        if (it.current->linha == posI && it.current->coluna == posJ)
-            return *it;
-
-        if (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))
-            return 0;
-
         ++it;
     }
+
+    // Se o nó atual corresponde exatamente à posição, retorna o valor.
+    if (it != end() && it.current->linha == posI && it.current->coluna == posJ)
+        return *it;
 
     return 0;
 }
@@ -225,16 +226,17 @@ double Matriz::get(const int &posI, const int &posJ) const
 
     IteratorM it = begin();
 
-    while (it != end())
+    // Avança enquanto o nó atual estiver "antes" da posição desejada.
+    while (it != end() &&
+           (it.current->linha < posI ||
+            (it.current->linha == posI && it.current->coluna < posJ)))
     {
-        if (it.current->linha == posI && it.current->coluna == posJ)
-            return *it;
-
-        if (it.current->linha > posI || (it.current->linha == posI && it.current->coluna > posJ))
-            return 0;
-
         ++it;
     }
+
+    // Se o nó atual corresponde exatamente à posição, retorna o valor.
+    if (it != end() && it.current->linha == posI && it.current->coluna == posJ)
+        return *it;
 
     return 0;
 }
