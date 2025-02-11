@@ -1,0 +1,27 @@
+% coding.sty
+\ProvidesPackage{code}[2025/02/02 Código em C++]
+
+\usepackage{listings}  % Carrega o pacote listings para formatação de código
+\usepackage{verbatim}  % Para permitir o uso correto de caracteres especiais no código
+
+% Configurações específicas para C++
+\lstset{
+  language=C++,                 % Define C++ como linguagem padrão
+  basicstyle=\ttfamily\small,   % Fonte monoespaçada, de tamanho pequeno
+  keywordstyle=\bfseries,       % Palavras-chave em negrito
+  commentstyle=\itshape,        % Comentários em itálico
+  breaklines=true,              % Quebra automática de linha
+  captionpos=b,                 % Coloca a legenda abaixo do código
+  frame=single,                 % Borda ao redor do código
+  numbers=left,                 % Números de linha à esquerda
+  numberstyle=\tiny,            % Tamanho pequeno para os números das linhas
+  stepnumber=1,                 % Exibe números a cada linha
+  showstringspaces=false,       % Não exibe espaços em strings
+  tabsize=2,                    % Tamanho da tabulação
+}
+
+\newcommand{\code}[2]{%
+  \begin{lstlisting}[caption={#1}]%
+  #2
+  \end{lstlisting}%
+}

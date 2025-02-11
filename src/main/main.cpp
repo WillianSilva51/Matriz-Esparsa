@@ -157,6 +157,7 @@ int main()
             catch (const std::exception &e)
             {
                 std::cerr << e.what() << '\n';
+                std::cout << "Exemplo de arquivo: matrix.txt" << std::endl;
                 break;
             }
 
@@ -186,7 +187,7 @@ int main()
                 break;
             }
 
-            std::system("cls||clear");
+            std::system("clear||cls");
             manipMatrix(matrizes[filename], filename);
 
             break;
@@ -307,8 +308,8 @@ int main()
         }
 
         // Pausa e limpa a tela
-        std::system("pause || read -p 'Pressione enter para continuar...' var");
-        std::system("cls||clear");
+        std::system("read -p 'Pressione enter para continuar...' var");
+        std::system("clear||cls");
     }
 }
 
