@@ -28,7 +28,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Compilador C++ instalado
 - Makefile instalado
 - Sistema operacional Windows / Linux / Mac
-- Consultou a [documentação](docs/docs_pdf/doc_matriz.pdf) do projeto
+- Consultou a [documentação](docs/relatorio_ed/doc_matriz.pdf) do projeto
 
 ## 🚀 Compilando a Matriz Esparsa
 
